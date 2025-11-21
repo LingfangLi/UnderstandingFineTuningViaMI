@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+
+# 输出文件
+*.out
+*.err
+slurm-*.out
+
+# 数据文件（根据需要调整）
+*.pkl
+
+# 模型文件
+models/*.pth
+models/*.pt
+
+# 日志
+logs/
+*.log
+wandb
+# 临时文件
+*.tmp
+*.bak
+*~
