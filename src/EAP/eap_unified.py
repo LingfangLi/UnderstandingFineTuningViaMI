@@ -8,41 +8,14 @@ import importlib
 from pathlib import Path
 from functools import partial
 from typing import List, Union, Optional, Tuple, Literal
-
+import eap
+from eap.graph import Graph
+from eap import evaluate
+from eap import attribute_mem as attribute
 # TransformerLens Imports
 from transformer_lens import HookedTransformer
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import PeftModel
-
-
-# ==========================================
-# 1. 动态导入 EAP 库
-# ==========================================
-def import_eap_modules(task_name):
-    """
-    根据任务动态导入包。
-    确保你的目录下有 eap_sentiment, eap_qa, eap_mt 这些文件夹
-    """
-    if task_name in ['sentiment', 'yelp', 'twitter' ]:
-        package_name = 'eap_sentiment'
-    elif task_name in ['qa', 'squad', 'coqa']:
-        package_name = 'eap'
-    elif task_name in ['mt', 'translation', 'kde4', 'tatoeba']:
-        package_name = 'eap'
-    else:
-        package_name = 'eap'
-
-    print(f"Importing EAP library from: {package_name}...")
-    try:
-        eap = importlib.import_module(package_name)
-        graph = importlib.import_module(f"{package_name}.graph")
-        evaluate = importlib.import_module(f"{package_name}.evaluate")
-        attribute = importlib.import_module(f"{package_name}.attribute_mem")
-        return graph.Graph, evaluate, attribute.attribute
-    except ImportError as e:
-        print(f"Error importing {package_name}. Please check folder name.")
-        raise e
-
 
 # ==========================================
 # 2. 核心函数：Prob Diff (原版逻辑复原)
@@ -358,18 +331,16 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--task", type=str,
                         choices=['yelp', 'qa', 'mt', 'squad', 'coqa', 'kde4', 'tatoeba'],default='tatoeba')
-    parser.add_argument("--data_path", type=str, default='/users/sglli24/fine-tuning-project/llama_eap/corrupted_data/tatoeba_corrupted.csv')
-    parser.add_argument("--ft_model_path", type=str, default="/mnt/data1/users/sglli24/fine-tuning-project-1/model/llama/mt/tatoeba_llama.pt")
-    parser.add_argument("--model_name", type=str, default="llama3.2-1B")
-    parser.add_argument("--base_model_name", type=str, default="meta-llama/Llama-3.2-1B")
+    parser.add_argument("--data_path", type=str, default='/users/sglli24/UnderstandingFineTuningViaMI/output/corrupted_data/yelp_corrupted.csv')
+    parser.add_argument("--ft_model_path", type=str, default="/mnt/data1/users/sglli24/fine-tuning-project-1/fine_tuned_models/gpt2-tatoeba.pt")
+    parser.add_argument("--model_name", type=str, default="gpt2")
+    parser.add_argument("--base_model_name", type=str, default="gpt2")
     parser.add_argument("--mode", type=str, default="single", choices=['single', 'compare'])
     parser.add_argument("--top_k", type=int, default=400)
     parser.add_argument("--batch_size", type=int, default=1)
     parser.add_argument("--output_dir", type=str, default="/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges")
     args = parser.parse_args()
 
-    # 1. 导入库
-    Graph, evaluate, attribute = import_eap_modules(args.task)
     os.makedirs(args.output_dir, exist_ok=True)
 
     # 2. 加载 CSV 数据
@@ -382,7 +353,7 @@ def main():
     if args.ft_model_path:
         print("Analyzing FINETUNED Model...")
         model_ft = load_model_unified(args.ft_model_path, args.base_model_name)
-        edges_ft = get_important_edges(model_ft, raw_dataset, prob_diff, args.top_k, Graph, attribute)
+        edges_ft = get_important_edges(model_ft, raw_dataset, prob_diff, args.top_k, Graph, attribute.attribute)
 
         save_path = os.path.join(args.output_dir, f"{args.model_name}_{args.task}_finetuned_edges.csv")
         pd.DataFrame(list(edges_ft.items()), columns=['edge', 'score']).to_csv(save_path, index=False)
