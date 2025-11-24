@@ -1,0 +1,51 @@
+clean,corrupted,label
+Attack result displayed,x x x,Résultat affiché de l' attaque
+"If the number of armies in the defender country reaches 0, the ownership of this country changes to the attacker: his flag is set up and one of his attacking armies is installed in his new country. The ""Move armies"" slider is displayed as for the moves of the end of the turn.",x x x x x x x x x x xx x x x x x x x x xx x x x x x x x x x x x x x x x x xx x xx xx x x x x x x x x x x x x xx,"Si le nombre d'armées dans le pays attaqué atteint 0, le propriétaire de ce pays change pour le pays attaquant & #160;: son drapeau est ajouté et une de ses armées d'attaque est installé sur son nouveau pays."
+Invasion slider,x x,Glissière d' invasion
+End of the turn,x x x x,Fin du tour
+"To finish your current turn, if you do n't want to move armies, you can hit the Next Player button in the toolbar.",x x x x xx x x x xxx x x x xx x x x x x x x x x xx,"Pour terminer le tour courant, si vous ne voulez pas déplacer des armées, vous pouvez cliquer sur le bouton Joueur suivant sur la barre d'outils."
+"When everybody has played, the turn is finished. Some armies are distributed to the players, in function of the countries they own: 1 for each group of three countries, with a minimum of 3. There is also a bonus for players that own a complete continent, different for each one. The values of the bonuses for the default skin are:",x x x xx x x x xx x x x x x x xx x x x x x x xx x x x x x x xx x x x x xx x x x x x x x x x x x xx x x x xx x x x x x x x x x xx,"Quand tous le monde a joué, le tour prend fin. Des armées sont distribuées aux joueurs, en fonction des pays leur appartenant & #160;: 1 armée pour chaque groupe de trois pays, avec un minimum de 3. Il y a aussi un bonus pour les joueurs qui détiennent un continent complet, différent pour chaque continent. Les valeurs de ces bonus pour le thème par défaut sont & #160;:"
+Bonus due to the continents,x x x x x,Bonus gagnés par continents
+Continent,x,Continent
+Bonus,x,Bonus
+North America,x x,Amérique du Nord
+5,x,5
+South America,x x,Amérique du Sud
+2,x,2
+Europe,x,Europe
+Africa,x,Afrique
+3,x,3
+Asia,x,Asie
+7,x,7
+Pacific Area,x x,Zone Pacifique
+"When a player has finished distributing his armies, he clicks the Valid button to allow the next player to distribute his bonus armies. As for the initial distribution, when all player have placed their armies, they can start a new redistribution cycle or start a new turn...",x x x x x x x xx x x x x x x x x x x x x x x xx x x x x xx x x x x x x xx x x x x x x x x x x x xxxx,"Quand un joueur a fini de distribuer ses armées, il clique sur le bouton Ok pour permettre au joueur suivant de distribuer à son tour ses armées. Comme pour la distribution initiale, quand tous les joueurs ont placé leurs armées, ils peuvent démarrer une nouveau cycle de distribution ou démarrer un nouveau tour."
+Sending messages to other players,x x x x x,Envoi de messages aux autres joueurs
+"If you play a local game and want to communicate with the other players, well, let's speak (supposing you have no accessibility problems)... But if you are playing a network game, you can use the chat frame at the bottom of the window (it can be hidden or showed using the arrows). Just type in your message and hit & Enter;.",x x x x x x x x x x x x x xx xx xxx x xx x x x x xxxxx x x x x x x x xx x x x x x x x x x x x x xx x x x x x x x xxx x x x x x x x x xxx,"Si vous jouez en mode local et voulez communiquer avec les autres joueurs, et bien, parlez (en supposant que vous n'avez pas de problèmes d'accessibilité)... Mais si vous jouez en mode réseau, vous pouvez utiliser la boîte de dialogue de discussion en bas de la fenêtre (elle peut être cachée ou affichée en utilisant les flèches). Saisissez simplement votre message et utilisez la touche & Enter;."
+Sending messages,x x,Envoi de messages
+Command Reference,x x,Référence de commande
+The main & kappname; window,x x x xx x,La fenêtre principale de & kappname;
+The buttons,x x,Les boutons
+Quit Game,x x,Quitter la partie
+Quit,x,Quitter
+Causes the program to quit.,x x x x xx,Permet de sortir du programme
+New Game,x x,Nouveau jeu
+"Starts a new game. It will cause the displaying of a dialog asking the number of players. After that, each player will be asked its name with another dialog.",x x x xx x x x x x x x x x x x x xx x xx x x x x x x x x x xx,"Démarre une nouvelle partie. Une boîte de dialogue apparaît vous demandant le nombre de joueurs. À l'étape suivante, chaque joueur doit saisir un nom."
+Developer's Guide to & kappname;,xxx x x x xx,Guide des développeurs de & kappname;
+Please refer to http: / /api. kde. org/ for the documentation of the API. It was quite complete but is currently a little bit outdated. There are no comments in the. cpp implementation files.,x x x xx x xxx xx xx x x x x x xx x x x x x x x x x x xx x x x x x xx x x xx,Veuillez consulter http: / /api. kde. org/ pour la documentation de l'API. Elle est assez complète mais n'est actuellement pas très à jour. Les commentaires sont inexistants dans les fichiers d'implantations. cpp.
+"Note that I originally developed this game under & Windows; with Borland C++ and WinG. I ported it to & Java; before converting back to C++ and & kde;. At the beginning I used French or a mix of French and English to name the identifiers (classnames, methods, members, & etc;). I also used French for the comments. When I decided to distribute this game, I decided to convert all to english... but I am clearly not a native English speaker: please suggest or make and submit corrections, to the code comments or to this documentation",x x x x x x x x x xx x x xxx x xx x x x x x xx x x x x xxx x x xxx x x x x x x x x x x x x x x x x x xxx xx xx x xxxx x x x x x x xx x x x x x x xx x x x x x x xxxx x x x x x x x x xx x x x x x x xx x x x x x x x x,"Remarquez que j'ai à l'origine développé ce jeu sous & Windows; avec Borland C++ et WinG. Je l'ai porté sous & Java; avant de le convertir en C++ pour & kde;. Au commencement, j'ai utilisé le français et un mixte de français et d'anglais pour nommer mes identifiants (noms de classe, méthodes, membres, & etc;). J'ai aussi utilisé le français pour les commentaires. Quand j'ai décidé de distribuer ce jeu, j'ai tout converti en anglais... Mais je ne suis clairement pas un orateur natif anglais. Veuillez suggérer ou corriger et soumettre vos corrections aux commentaires de ce code ou à cette documentation."
+Creating new skins,x x x,Création de nouveaux thèmes
+"& kappname; comes with a skin editor, named ksirkskineditor(!), that allows to edit all skin data, as soon as graphics (map, sprites, etc.) are available in a SVG file. Please see the ksirkskineditor manual for further details.",x xx x x x x xx x xxxxx x x x x x x xx x x x x xxx xx xxx x x x x x xx x x x x x x x xx,"& kappname; est fourni avec un éditeur de thèmes, appelé ksirkskineditor, qui vous permet de modifier toutes les données du thème, aussitôt que les fichiers graphiques (cartes, spirites, etc.) sont disponibles dans le fichier SVG. Veuillez lire le manuel de ksirkskineditor pour plus d'informations."
+Questions and Answers,x x x,Foire aux questions
+& reporting. bugs; & updating. documentation;,x xx xx x xx xx,& reporting. bugs; & updating. documentation;
+Credits and License,x x x,Remerciements et licence
+& kappname;,x xx,& kappname;
+Program copyright 2002-2008 Gael de Chalendar kleag@free. fr,x x xxx x x x xxxx x,Copyright du programme 2002-2008 Gael de Chalendar kleag@free. fr
+"Contributors: Robin Doer, Albert Astals Cid, Michal Golunski (Polish translation).",xx x xx x x xx x x xx xxx,"Contributeurs & #160;: Robin Doer, Albert Astals Cid, Michal Golunski (traduction polonaise)"
+Documentation copyright 2002-2008 Gael de Chalendar kleag@free. fr,x x xxx x x x xxxx x,Copyright de la documentation 2002-2008 Gael de Chalendar kleag@free. fr
+CREDIT_FOR_TRANSLATORS,x,Traduction française par & StanislasZeller;.
+& underFDL; & underGPL;,x xx x xx,& underFDL; & underGPL;
+Installation,x,Installation
+How to obtain & kappname;,x x x x xx,Comment obtenir & kappname;
+& install. intro. documentation;,x xx xx xx,& install. intro. documentation;
+Compilation and Installation,x x x,Compilation et Installation
+& install. compile. documentation;,x xx xx xx,& install. compile. documentation;
