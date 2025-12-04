@@ -27,7 +27,7 @@ class UserConfig:
 
     # 3. 路径配置 (根据你的截图修正)
     MODEL_ROOT_DIR = r"/mnt/data1/users/sglli24/fine-tuning-project-1/fine_tuned_models/"
-    OUTPUT_DIR = r"/mnt/scratch/users/sglli24/fine-tuning-project/attention_analysis_results"
+    OUTPUT_DIR = r"/users/sglli24/UnderstandingFineTuningViaMI/experiments/attention_matrix_analysis/attention_analysis_results/"
 
     # 4. 微调模型文件夹映射 (确保这里的文件名和你截图里的一模一样)
     FT_MODEL_MAP = {
@@ -43,7 +43,7 @@ class UserConfig:
             "qa_squad": "llama3.2-squad.pt",
             "mt_kde4": "llama3.2-kde4.pt",
             "mt_tatoeba": "llama3.2-tatoeba.pt",
-            "qa_coqa": "llama3.2-COQA.pt",
+            "qa_coqa": "llama3.2-coqa.pt",
         },
         "llama2": {
             # 截图里这些是文件夹

@@ -2,13 +2,15 @@
 # Use the current working directory and current environment for this job.
 #SBATCH -D ./
 #SBATCH --export=ALL
-##SBATCH -o attention_qwen2_loop_%j.out
-#SBATCH -o attention_figures_llama3_%j.out
+
+##SBATCH -o attention_kl_all_model_%j.out
+#SBATCH -o attention_figures_all_%j.out
+
 # Request 40 cores on 1 node
 #SBATCH --gres=gpu:1
 #SBATCH -p  gpu-a100-cs
+##SBATCH -p lowpriority  
 #SBTACH -N 1
-#SBATCH -n 16
 
 ##SBATCH -t 3-00:00:00
 
@@ -38,8 +40,8 @@ hostname
 # parallel environment.
 export CUDA_LAUNCH_BLOCKING=1
 
-python /users/sglli24/UnderstandingFineTuningViaMI/experiments/attention_matrix_analysis/measure_attention_kl.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/attention_matrix_analysis/kl_visualize_heatmap.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/attention_matrix_analysis/measure_attention_kl.py
+python /users/sglli24/UnderstandingFineTuningViaMI/experiments/attention_matrix_analysis/kl_visualize_heatmap.py
 
 echo --------------- 
 echo Job output ends 
