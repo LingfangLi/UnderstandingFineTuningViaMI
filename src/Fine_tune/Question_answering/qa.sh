@@ -4,9 +4,9 @@
 #SBATCH --export=ALL
 
 
-##SBATCH -o train_llama2-7b_qlora-coqa%j.out
+##SBATCH -o train_qwen2-coqa%j.out
 
-#SBATCH -o test-llama2-coqa-qlora%j.out
+#SBATCH -o test-qwen2-coqa%j.out
 
 
 # Request 40 cores on 1 node
@@ -51,7 +51,12 @@ export CUDA_LAUNCH_BLOCKING=1
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/LlaMA2-squad-eval.py
 
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/LlaMA2-7b-coqa-data.py
-python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/LlaMA2-coqa-eval.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/LlaMA2-coqa-eval.py
+
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/Qwen2-0.5b-squad-data.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/Qwen2-squad-eval.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/Qwen2-0.5b-coqa-data.py
+python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/Qwen2-coqa-eval.py
 echo --------------- 
 echo Job output ends 
 date_end=$(date +%s)

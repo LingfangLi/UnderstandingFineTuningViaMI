@@ -2,13 +2,14 @@
 # Use the current working directory and current environment for this job.
 #SBATCH -D ./
 #SBATCH --export=ALL
-#SBATCH -o unified_eap_loop_%j.out
+#SBATCH -o unified_eap_loop_pretrained-%j.out
 # Request 40 cores on 1 node
 #SBATCH --gres=gpu:1
 #SBATCH -p gpu-a100-cs
+##SBATCH -p gpu-h100
 #SBATCH -N 1
 #SBATCH -n 16
-##SBATCH -t 3-00:00:00
+#SBATCH -t 1-00:00:00
 
 # 加载环境
 module load miniforge3/25.3.0-python3.12.10
@@ -51,24 +52,36 @@ for ft_path in "$MODEL_DIR"/*; do
     task_name=""
 
     # --- 自动判定模型和提取任务名 ---
-    if [[ "$name_no_ext" == gpt2-* ]]; then
+    #if [[ "$name_no_ext" == qwen2-* ]]; then
+        # 匹配 llama3.2 (例如 llama3.2-tatoeba)
+        #base_model="Qwen/Qwen2-0.5B"
+        #model_name="qwen2"
+        #task_name="${name_no_ext#qwen2-}" 
+    #elif [[ "$name_no_ext" == gpt2-* ]]; then
         # 匹配 gpt2 (例如 gpt2-yelp)
-        base_model="gpt2"
-        model_name="gpt2"
+       # base_model="gpt2"
+        #model_name="gpt2"
         # 提取 gpt2- 之后的部分作为 task_name
-        task_name="${name_no_ext#gpt2-}"
+        #task_name="${name_no_ext#gpt2-}"
         
-    elif [[ "$name_no_ext" == llama2-* ]]; then
+    if [[ "$name_no_ext" == llama2-* ]]; then
+        suffix="${name_no_ext#llama2-}"
+         # 排除 tatoeba 和 yelp
+        if [[ "$suffix" == "tatoeba" || "$suffix" == "yelp" ]]; then
+            echo "跳过任务: $name_no_ext"
+            continue
+        fi
+        
         # 匹配 llama2 (例如 llama2-kde4)
         base_model="meta-llama/Llama-2-7b-hf"
         model_name="llama2"
         task_name="${name_no_ext#llama2-}"
         
-    elif [[ "$name_no_ext" == llama3.2-* ]]; then
+    #elif [[ "$name_no_ext" == llama3.2-* ]]; then
         # 匹配 llama3.2 (例如 llama3.2-tatoeba)
-        base_model="meta-llama/Llama-3.2-1B"
-        model_name="llama3.2"
-        task_name="${name_no_ext#llama3.2-}"
+        #base_model="meta-llama/Llama-3.2-1B"
+        #model_name="llama3.2"
+        #task_name="${name_no_ext#llama3.2-}"
         
     else
         echo "?? 跳过无法识别的模型格式: $filename"
@@ -99,11 +112,10 @@ for ft_path in "$MODEL_DIR"/*; do
     
     python "$SCRIPT_PATH" \
         --task "$task_name"\
-        --ft_model_path "$ft_path" \
         --base_model_name "$base_model" \
         --model_name "$model_name"\
         --data_path "$current_data_path"
-
+        #--ft_model_path "$ft_path" \
     echo "完成: $filename"
     echo ""
 

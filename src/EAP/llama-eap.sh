@@ -4,7 +4,7 @@
 #SBATCH --export=ALL
 
 
-#SBATCH -o unified_eap_llama3.2-tatoeba%j.out
+#SBATCH -o unified_eap_qwen2-coqa%j.out
 
 # Request 40 cores on 1 node
 #SBATCH --gres=gpu:1
@@ -12,7 +12,7 @@
 #SBTACH -N 1
 #SBATCH -n 16
 
-##SBATCH -t 3-00:00:00
+#SBATCH -t 3-00:00:00
 
 
 module load miniforge3/25.3.0-python3.12.10
@@ -46,7 +46,7 @@ export CUDA_LAUNCH_BLOCKING=1
 
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/EAP/LlaMA/Qlora_LlaMA2_EAP_sentiment.py
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/EAP/LlaMA/Qlora_LlaMA2_eap_unified.py
-python /users/sglli24/UnderstandingFineTuningViaMI/src/EAP/LlaMA/eap_unified.py
+python /users/sglli24/UnderstandingFineTuningViaMI/src/EAP/eap_unified.py
 
 echo --------------- 
 echo Job output ends 

@@ -40,13 +40,6 @@ def parse_component_type(component_id):
 def load_edges_from_csv(file_path, delimiter='auto'):
     """
     从CSV文件加载边数据
-
-    Parameters:
-    - file_path: CSV文件路径
-    - delimiter: 分隔符 ('auto' 自动检测, ',' 逗号, '\t' tab)
-
-    Returns:
-    - list of tuples: [(edge_string, importance_score), ...]
     """
     # 自动检测分隔符
     if delimiter == 'auto':
@@ -61,6 +54,8 @@ def load_edges_from_csv(file_path, delimiter='auto'):
     edges = []
     with open(file_path, 'r') as f:
         for line in f:
+            # 注意：删除了这里的 next(f)，因为它会跳过数据行
+            
             line = line.strip()
             if not line:
                 continue
@@ -68,8 +63,20 @@ def load_edges_from_csv(file_path, delimiter='auto'):
             parts = line.split(delimiter)
             if len(parts) >= 2:
                 edge_str = parts[0].strip()
-                score = float(parts[1].strip())
-                edges.append((edge_str, score))
+                raw_score = parts[1].strip() # 先获取字符串
+
+                # --- 核心修复开始 ---
+                # 1. 明确判断：如果第二列是单词 'score'，说明是表头，跳过
+                if raw_score == 'score':
+                    continue
+                
+                # 2. 安全转换：使用 try-except 防止其他非数字导致崩溃
+                try:
+                    score = float(raw_score)
+                    edges.append((edge_str, score))
+                except ValueError:
+                    print(f"Warning: Skipped invalid line: {line}")
+                    continue
 
     return edges
 
@@ -336,14 +343,28 @@ def compare_multiple_models(model_configs, save_path=None):
 
 # 使用示例
 if __name__ == "__main__":
-    # 示例：分析单个模型
-    analyze_and_plot(
-        file_path="/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges/llama2-7b_qlora_full_edges.csv",
-        model_name="LlaMA-2-7B",
-        task_name="Yelp Sentiment",
-        threshold_percentile=80,  # 保留前5%重要的边
-        save_path="./figure/llama2_top_20%_edges_component_distribution.png"
-    )
+    #for model_name, model_path_name in zip(["LlaMA-2-7B", "GPT2-Small", "LlaMA-3.2-1B"],["llama2", "gpt2", "llama3.2"]):
+    #    for task_name in ["yelp","squad","coqa","kde4","tatoeba"]:
+            # 示例：分析单个模型
+    #        analyze_and_plot(
+     #           file_path=f"/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges/{model_path_name}_{task_name}_finetuned_edges.csv",
+     #           model_name=model_name,
+     #           task_name= task_name,
+     #           threshold_percentile=0,  # 保留前5%重要的边
+     #           save_path=f"./figure/{model_path_name}_{task_name}_top_400_edges_component_distribution.png"
+     #       )
+    
+    #Analysis single model
+    for model_name, model_path_name in zip(["Qwen/Qwen2-0.5B"],["qwen2"]):
+        for task_name in ["yelp","squad","coqa","kde4","tatoeba"]:
+            # 示例：分析单个模型
+            analyze_and_plot(
+                file_path=f"/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges/{model_path_name}_{task_name}_finetuned_edges.csv",
+                model_name=model_name,
+                task_name= task_name,
+                threshold_percentile=0,  # 保留前5%重要的边
+                save_path=f"./figure/{model_path_name}_{task_name}_top_400_edges_component_distribution.png"
+            )        
 
     # 分析所有三个模型
     print("\n" + "=" * 80)

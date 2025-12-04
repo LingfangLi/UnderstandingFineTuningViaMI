@@ -25,50 +25,6 @@ def prob_diff(logits: torch.Tensor, corrupted_logits, input_lengths, labels: tor
     The probability difference metric.
     Returns the difference in prob assigned to valid (correct) and invalid (incorrect) tokens.
     """
-    # # 取最后一个 token 的 logits
-    # probs = torch.softmax(logits[:, -1], dim=-1)
-    #
-    # results = []
-    # # 获取 Top 5 概率，用于检查
-    # top_probs, top_tokens = torch.topk(probs, 5, dim=-1)
-    #
-    # batch_results = []
-    #
-    # # 遍历 batch 中的每一个样本
-    # for i in range(len(labels)):
-    #     label = labels[i]
-    #     # 简单的二分类逻辑：假设 label 是正确答案
-    #     # 我们计算 Prob(Label) - Prob(Not Label)
-    #     # 或者更准确地：Prob(Correct) - Prob(Incorrect_Top1)
-    #
-    #     # 这里复用你代码中的逻辑：
-    #     # 如果 top1 是 label，则 prob_b = top1_prob
-    #     # 否则 prob_a 累加
-    #
-    #     # 注意：原始代码这里的循环逻辑对于 Batch 可能需要调整
-    #     # 这里我使用更高效的向量化写法，效果等同于你原本的逻辑：
-    #
-    #     current_probs = probs[i]
-    #     label_prob = current_probs[label]
-    #
-    #     # 获取除了 label 之外最大的概率作为 "counterfeit" (错误选项)
-    #     # 先把 label 位置设为 -1 以便找第二大的
-    #     current_probs_clone = current_probs.clone()
-    #     current_probs_clone[label] = -1.0
-    #     max_incorrect_prob = torch.max(current_probs_clone)
-    #
-    #     # Metric = Prob(Correct) - Prob(Best_Incorrect)
-    #     diff = label_prob - max_incorrect_prob
-    #     batch_results.append(diff)
-    #
-    # results = torch.stack(batch_results)
-    #
-    # if loss:
-    #     results = -results
-    # if mean:
-    #     results = results.mean()
-    # return results
-
     # 1. 取出最后一个 token 的原始 Logits (无 Softmax)
     # shape: [batch_size, vocab_size]
     final_logits = logits[:, -1, :]
@@ -131,19 +87,46 @@ def batch_dataset(df, batch_size=2):
     return list(zip(clean_batches, corrupted_batches, label_batches))
 
 
-def validate_dataset_tokenization(model, dataset):
+def validate_dataset_tokenization(model, dataset, task):
     """
-    核心函数：确保 Clean 和 Corrupted 的 Token 长度完全一致。
-    如果不一致，EAP 计算梯度时会因维度不匹配而报错。
+    策略：
+    1. 使用 Tokenizer 将文本强制截断 (Truncation) 到安全长度 (防止 OOM)。
+    2. 将截断后的 Token ID '解码' (Decode) 回字符串。
+    3. 将这些短字符串传给 attribute_mem.py，既满足了它的类型要求，又限制了显存。
     """
     print("Validating dataset tokenization...")
     fixed_dataset = []
 
-    # Llama 需要左填充
     model.tokenizer.padding_side = "left"
     if model.tokenizer.pad_token is None:
         model.tokenizer.pad_token = model.tokenizer.eos_token
 
+    # 【关键设置】安全长度上限
+    # A100 80G 在开启 QKV 分离的情况下，建议设为 600-800。
+    # 如果依然 OOM，请调小这个数值 (例如 512)。
+    #SAFE_MAX_LEN = 800 
+    #print(f"Pre-processing: Truncating text to max {SAFE_MAX_LEN} tokens to prevent OOM.")
+
+    #for clean_batch, corrupted_batch, label_batch in dataset:
+        # 1. Tokenize 并强制截断 (得到 Tensor)
+    #    clean_enc = model.tokenizer(
+    #        clean_batch, 
+    #        truncation=True, 
+    #        max_length=SAFE_MAX_LEN, 
+    #        return_tensors='pt'
+    #    )
+    #    corr_enc = model.tokenizer(
+     #       corrupted_batch, 
+    #        truncation=True, 
+    #        max_length=SAFE_MAX_LEN, 
+    #        return_tensors='pt'
+    #    )
+
+        # 2. 【核心技巧】将截断后的 Tensor 解码回 String
+        # skip_special_tokens=True 是为了防止 attribute_mem 再次添加 BOS token 导致重复
+     #   clean_strs = model.tokenizer.batch_decode(clean_enc['input_ids'], skip_special_tokens=True)
+     #   corrupted_strs = model.tokenizer.batch_decode(corr_enc['input_ids'], skip_special_tokens=True)
+     
     for clean_batch, corrupted_batch, label_batch in dataset:
         # 1. Tokenize
         clean_enc = model.tokenizer(clean_batch, padding=True, return_tensors='pt')
@@ -173,135 +156,160 @@ def validate_dataset_tokenization(model, dataset):
             # 在这里我们选择：相信 model.tokenizer 的 padding='max_length' 能搞定
             pass
 
-            # 3. 处理 Label (转为 Tensor ID)
-        # 假设 label 是单词 (如 "positive")，我们需要它的 token id
+        # 3. 处理 Label (这部分保持不变)
         label_ids = []
         for l in label_batch:
-            # 注意前置空格，Llama 对空格敏感
-            # 如果是数字分类任务(0/1)，这里需要映射
-            if isinstance(l, int) or (isinstance(l, str) and l.isdigit()):
+            if task == "yelp":
+                # 情感任务才用 positive/negative
                 l_int = int(l)
-                map_to_word = True
-                if map_to_word:
-                    txt = " positive" if l_int == 1 else " negative"
-                else:
-                    # [模式 B] 模型预测数字 (适用于旧 GPT-2)
-                    # 这里的空格也很重要，取决于你训练时 Sentiment:1 (无空格) 还是 Sentiment: 1 (有空格)
-                    # 假设你旧代码是 f"Sentiment: {label}" -> 有空格 " 1"
-                    txt = " " + str(l_int)    
+                txt = " positive" if l_int == 1 else " negative"
             else:
-                txt = " " + str(l).strip()  # 加空格
-
+                # 其他任务，直接当作字符串 token
+                txt = " " + str(l).strip()
+                
             toks = model.tokenizer(txt, add_special_tokens=False)['input_ids']
-            label_ids.append(toks[-1] if len(toks) > 0 else 0)  # 取最后一个 token
+            label_ids.append(toks[-1] if len(toks) > 0 else 0)
 
         label_tensor = torch.tensor(label_ids).to(model.cfg.device)
 
-        # 重新组合
-        # 注意：EAP 库通常会在内部再次 tokenize。
-        # 为了确保万无一失，我们这里其实应该返回 input_ids。
-        # 但如果你的 EAP 库只接受 string list，那我们只能做到这里。
-        fixed_dataset.append((clean_batch, corrupted_batch, label_tensor))
+        # 4. 返回的是字符串列表 (clean_strs)，attribute_mem.py 能够正常处理
+        fixed_dataset.append((clean_batch, corrupted_batch, label_tensor))  ####fixed_dataset.append((clean_strs, corrupted_strs, label_tensor))
 
     print(f"Validation passed. Processed {len(fixed_dataset)} batches.")
     return fixed_dataset
 
 
-# ==========================================
-# Unified Model Loading Logic
-# ==========================================
 def load_model_unified(model_path: str, base_model_name: str = "meta-llama/Llama-2-7b-hf"):
     """
-    Smart loader that handles:
-    1. 'pretrained': Loads the pure base model.
-    2. Directory Path: Loads as QLoRA (PEFT) adapter + Base model.
-    3. File Path (.pt/.pth): Loads as standard state_dict (Non-QLoRA).
+    Universal model loader supporting three modes:
+    1. 'pretrained': Load pure base model (Llama2 or Qwen2)
+    2. Directory path (auto-detect):
+       - Contains adapter_config.json -> Load as PEFT/LoRA (Llama2 logic)
+       - Full model directory -> Load directly (Qwen2 full fine-tuning logic)
+    3. File path (.pt/.pth): Load state dict
     """
     device = "cuda" if torch.cuda.is_available() else "cpu"
     print(f"⬇️ Loading Model from: {model_path}")
+    print(f"   Base Model Name for Config: {base_model_name}")
 
-    # --- Case 1: Pure Pretrained (No path provided or explicit flag) ---
+    # Use bfloat16 for A100/3090/4090, fallback to float16
+    dtype = torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16
+
+    # --- Case 1: Pure Pretrained Model ---
     if model_path is None or model_path.lower() == 'pretrained':
-        print("   Type: Pure Pretrained Base Model")
+        print("   [Mode] Pure Pretrained Base Model")
         model = HookedTransformer.from_pretrained(
             base_model_name,
-            device=device,
-            fold_ln=False,
-            center_writing_weights=False,
-            center_unembed=False
-        )
-
-    # --- Case 2: QLoRA Adapter (Path is a directory) ---
-    elif os.path.isdir(model_path):
-        print("   Type: QLoRA Fine-tuned (Loading Base + Adapter...)")
-        # 1. Load Base Model in FP16 (CPU first to save GPU memory during merge)
-        hf_base = AutoModelForCausalLM.from_pretrained(
-            base_model_name,
-            torch_dtype=torch.float16,
-            device_map="cpu",
-            trust_remote_code=True
-        )
-        # 2. Load and Merge Adapter
-        hf_model = PeftModel.from_pretrained(hf_base, model_path)
-        hf_model = hf_model.merge_and_unload()
-
-        # 3. Convert to TransformerLens
-        print("   Converting to HookedTransformer...")
-        model = HookedTransformer.from_pretrained(
-            base_model_name,
-            hf_model=hf_model,
             device=device,
             fold_ln=False,
             center_writing_weights=False,
             center_unembed=False,
-            dtype=torch.float16  # Keep in FP16 to save memory
+            dtype=dtype
+            #hf_model_args={"trust_remote_code": True}
         )
-        del hf_base, hf_model
+
+    # --- Case 2: Directory Path (Auto-detect LoRA vs Full) ---
+    elif os.path.isdir(model_path):
+        # Detect if it's a LoRA adapter
+        is_lora = os.path.exists(os.path.join(model_path, "adapter_config.json"))
+        
+        if is_lora:
+            print("   [Mode] Directory detected as PEFT/LoRA Adapter (Llama2 style)")
+            print("   1. Loading Base Model...")
+            hf_base = AutoModelForCausalLM.from_pretrained(
+                base_model_name,
+                torch_dtype=dtype,
+                device_map="cpu",  # Load to CPU first, move to GPU after merging
+                trust_remote_code=True
+            )
+            
+            print("   2. Loading & Merging Adapter...")
+            hf_model = PeftModel.from_pretrained(hf_base, model_path)
+            hf_model = hf_model.merge_and_unload()
+            
+            # Enable gradient checkpointing to save memory
+            if hasattr(hf_model, "gradient_checkpointing_enable"):
+                hf_model.gradient_checkpointing_enable() 
+            
+            print("   3. Converting to HookedTransformer...")
+            model = HookedTransformer.from_pretrained(
+                base_model_name,
+                hf_model=hf_model,
+                device=device,
+                fold_ln=False,
+                center_writing_weights=False,
+                center_unembed=False,
+                dtype=dtype
+            )
+            del hf_base, hf_model
+
+        else:
+            print("   [Mode] Directory detected as Full Fine-Tuned Model (Qwen2 style)")
+            # Load complete model directly from directory
+            print("   1. Loading Full Model from directory...")
+            hf_model = AutoModelForCausalLM.from_pretrained(
+                model_path,
+                torch_dtype=dtype,
+                device_map="cpu",  # Load to CPU first
+                trust_remote_code=True
+            )
+            
+            print("   2. Converting to HookedTransformer...")
+            model = HookedTransformer.from_pretrained(
+                base_model_name,  # Still need base_name for TL to build computation graph
+                hf_model=hf_model,
+                device=device,
+                fold_ln=False,
+                center_writing_weights=False,
+                center_unembed=False,
+                dtype=dtype
+            )
+            del hf_model
+
         torch.cuda.empty_cache()
 
     # --- Case 3: Standard State Dict (.pt / .pth file) ---
     elif model_path.endswith('.pt') or model_path.endswith('.pth'):
-        print("   Type: Standard State Dict (.pt/.pth)")
-        # 1. Initialize the structure from pretrained
-        # Note: We assume the .pt file matches the structure of base_model_name
-        # If it's a Llama-3.2-1B .pt, change base_model_name accordingly!
+        print("   [Mode] Standard State Dict (.pt/.pth)")
+        # Initialize structure from pretrained
         model = HookedTransformer.from_pretrained(
             base_model_name,
-            device="cpu",  # Load on CPU first
+            device="cpu",
             fold_ln=False,
             center_writing_weights=False,
-            center_unembed=False
+            center_unembed=False,
+            dtype=dtype,
+            #hf_model_args={"trust_remote_code": True}
         )
-
-        # 2. Load weights
+        
+        # Load weights
         state_dict = torch.load(model_path, map_location="cpu")
         model.load_state_dict(state_dict, strict=False)
-
-        # 3. Move to GPU
         model.to(device)
 
     else:
         raise ValueError(f"Unknown model path format: {model_path}")
 
-    # --- Common Configuration for EAP ---
+    # --- Common Configuration ---
     model.cfg.use_attn_in = True
     model.cfg.use_split_qkv_input = True
     model.cfg.use_attn_result = True
     model.cfg.use_hook_mlp_in = True
 
-    # Ensure correct padding for Llama
+    # Unified tokenizer handling (compatible with Llama and Qwen)
     if model.tokenizer.pad_token is None:
         model.tokenizer.pad_token = model.tokenizer.eos_token
+    
+    # Force left padding (TransformerLens preference)
     model.tokenizer.padding_side = "left"
 
     return model
-
 # ==========================================
 # 5. EAP 执行逻辑
 # ==========================================
-def get_important_edges(model, dataset, metric, top_k, GraphClass, attribute_fn):
+def get_important_edges(model, dataset, metric, top_k, GraphClass, attribute_fn, task):
     # 1. 验证数据
-    dataset = validate_dataset_tokenization(model, dataset)
+    dataset = validate_dataset_tokenization(model, dataset,task)
 
     # 2. 建图
     g = GraphClass.from_model(model)
@@ -329,16 +337,24 @@ def get_important_edges(model, dataset, metric, top_k, GraphClass, attribute_fn)
 # ==========================================
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--task", type=str,
-                        choices=['yelp', 'qa', 'mt', 'squad', 'coqa', 'kde4', 'tatoeba'],default='tatoeba')
-    parser.add_argument("--data_path", type=str, default='/users/sglli24/UnderstandingFineTuningViaMI/output/corrupted_data/yelp_corrupted.csv')
-    parser.add_argument("--ft_model_path", type=str, default="/mnt/data1/users/sglli24/fine-tuning-project-1/fine_tuned_models/gpt2-tatoeba.pt")
-    parser.add_argument("--model_name", type=str, default="gpt2")
-    parser.add_argument("--base_model_name", type=str, default="gpt2")
-    parser.add_argument("--mode", type=str, default="single", choices=['single', 'compare'])
+    parser.add_argument("--task", type=str,choices=['yelp', 'qa', 'mt', 'coqa','squad', 'kde4', 'tatoeba'],default='kde4')
+    parser.add_argument("--model_name", type=str, default="llama2")  
+    parser.add_argument("--output_dir", type=str, default="/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges")
+    
+    # Selcet mode
+    parser.add_argument("--mode", type=str, default="pretrained", choices=['finetuned', 'pretrained', 'compare'])
+                      
+    parser.add_argument("--data_path", type=str, default='/users/sglli24/UnderstandingFineTuningViaMI/output/corrupted_data/kde4_corrupted.csv')
+    parser.add_argument("--ft_model_path", type=str,help="Path to fientuned model directory")#default="/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/qwen2-0.5b-coqa-full-20251125-182058/checkpoint-4500/"
+    parser.add_argument("--base_model_name", type=str, default="meta-llama/Llama-2-7b-hf",help="HF Hub name for config/tokenizer")#"meta-llama/Llama-2-7b-hf" default="Qwen/Qwen2-0.5B"
     parser.add_argument("--top_k", type=int, default=400)
     parser.add_argument("--batch_size", type=int, default=1)
-    parser.add_argument("--output_dir", type=str, default="/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges")
+    
+    
+    # [Compare Mode]
+    parser.add_argument("--edge_file_1", type=str, default=None, help="Path to first edge csv (e.g., finetuned)")
+    parser.add_argument("--edge_file_2", type=str, default=None, help="Path to second edge csv (e.g., pretrained)")
+    
     args = parser.parse_args()
 
     os.makedirs(args.output_dir, exist_ok=True)
@@ -350,10 +366,10 @@ def main():
 
     # 3. 分析微调模型
     edges_ft = None
-    if args.ft_model_path:
+    if args.ft_model_path and args.mode == 'finetuned':
         print("Analyzing FINETUNED Model...")
         model_ft = load_model_unified(args.ft_model_path, args.base_model_name)
-        edges_ft = get_important_edges(model_ft, raw_dataset, prob_diff, args.top_k, Graph, attribute.attribute)
+        edges_ft = get_important_edges(model_ft, raw_dataset, prob_diff, args.top_k, Graph, attribute.attribute,args.task)
 
         save_path = os.path.join(args.output_dir, f"{args.model_name}_{args.task}_finetuned_edges.csv")
         pd.DataFrame(list(edges_ft.items()), columns=['edge', 'score']).to_csv(save_path, index=False)
@@ -363,24 +379,54 @@ def main():
 
     # 4. 分析预训练模型
     edges_pt = None
-    if args.mode == 'compare':
+    if args.mode == 'pretrained':
         print("Analyzing PRETRAINED Model...")
-        model_pt = load_model_unified('pretrained', None, args.base_model_name)
-        edges_pt = get_important_edges(model_pt, raw_dataset, prob_diff, args.top_k, Graph, attribute)
-
-        save_path = os.path.join(args.output_dir, f"{args.model_name}_{args.task}_pretrained_edges.csv")
+        model_pt = load_model_unified(None, args.base_model_name)
+        edges_pt = get_important_edges(model_pt, raw_dataset, prob_diff, args.top_k, Graph, attribute.attribute,args.task)
+        
+        pretrain_dir = os.path.join(args.output_dir, "pretrained")
+        os.makedirs(pretrain_dir, exist_ok=True)
+        save_path = os.path.join(pretrain_dir, f"{args.model_name}_{args.task}_pretrained_edges.csv")
         pd.DataFrame(list(edges_pt.items()), columns=['edge', 'score']).to_csv(save_path, index=False)
         print(f"   Saved to {save_path}")
         del model_pt
         torch.cuda.empty_cache()
 
-    # 5. 计算重叠
-    if args.mode == 'compare' and edges_ft and edges_pt:
-        common = set(edges_ft.keys()) & set(edges_pt.keys())
-        print(f"Overlap Count: {len(common)}")
-        common_list = [{'edge': e, 'score_ft': edges_ft[e], 'score_pt': edges_pt[e]} for e in common]
-        pd.DataFrame(common_list).to_csv(os.path.join(args.output_dir, f"{args.model_name}_{args.task}_overlap.csv"), index=False)
-
+    # 5. Calculate overlap
+    if args.mode == 'compare':
+        if not args.edge_file_1 or not args.edge_file_2:
+            raise ValueError("In 'compare' mode, --edge_file_1 and --edge_file_2 are required.")
+        
+        print(f"Comparing:\n  File 1: {args.edge_file_1}\n  File 2: {args.edge_file_2}")
+        
+        # 1. Read CSV
+        df1 = pd.read_csv(args.edge_file_1)
+        df2 = pd.read_csv(args.edge_file_2)
+        edges_1 = set(df1['edge'].tolist())
+        edges_2 = set(df2['edge'].tolist())
+        common = edges_1 & edges_2
+        print(f"  Intersection (Common): {len(common)}")
+        
+        scores_1 = dict(zip(df1['edge'], df1['score']))
+        scores_2 = dict(zip(df2['edge'], df2['score']))
+        
+        common_list = [{'edge': e, 'score_1': scores_1[e], 'score_2': scores_2[e]} for e in common]
+        
+        overlap_dir = os.path.join(args.output_dir, "overlap")
+        os.makedirs(overlap_dir, exist_ok=True)
+        
+        # --- Dynamic Filename Generation Logic ---
+        # Extract filename without extension (e.g., "gpt2_coqa_finetuned_edges")
+        name1 = os.path.splitext(os.path.basename(args.edge_file_1))[0]
+        name2 = os.path.splitext(os.path.basename(args.edge_file_2))[0]
+        
+        # Create combined name: "name1&name2_overlap.csv"
+        # Example: gpt2_coqa_finetuned_edges&llama2_squad_finetuned_edges_overlap.csv
+        save_filename = f"{name1}&{name2}_overlap.csv"
+        save_path = os.path.join(overlap_dir, save_filename)
+        
+        pd.DataFrame(common_list).to_csv(save_path, index=False)
+        print(f"Saved overlap details to: {save_path}")
 
 if __name__ == "__main__":
     main()

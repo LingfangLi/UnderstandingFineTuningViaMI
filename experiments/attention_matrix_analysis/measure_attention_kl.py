@@ -19,11 +19,11 @@ from peft import PeftModel
 
 class UserConfig:
     # 1. 运行模式
-    RUN_MODE = "ALL"
+    RUN_MODE = "SINGLE"  # "ALL" 或 "SINGLE"
 
     # 2. 单次运行的目标
-    TARGET_MODEL = "llama2"
-    TARGET_TASK = "mt_kde4"
+    TARGET_MODEL = "llama3"
+    TARGET_TASK =  "qa_coqa" # 可以是字符串或字符串列表
 
     # 3. 路径配置 (根据你的截图修正)
     MODEL_ROOT_DIR = r"/mnt/data1/users/sglli24/fine-tuning-project-1/fine_tuned_models/"
@@ -43,7 +43,7 @@ class UserConfig:
             "qa_squad": "llama3.2-squad.pt",
             "mt_kde4": "llama3.2-kde4.pt",
             "mt_tatoeba": "llama3.2-tatoeba.pt",
-            "mt_tatoeba": "llama3.2-tatoeba.pt",
+            "qa_coqa": "llama3.2-COQA.pt",
         },
         "llama2": {
             # 截图里这些是文件夹
@@ -52,6 +52,14 @@ class UserConfig:
             "qa_coqa": "llama2-coqa",
             "mt_kde4": "llama2-kde4",
             "mt_tatoeba": "llama2-tatoeba",
+        },
+        "qwen2": {
+            # 鎴浘閲岃繖浜涙槸鏂囦欢澶?
+            "sentiment_yelp": "qwen2-yelp",
+            "qa_squad": "qwen2-squad",
+            "qa_coqa": "qwen2-coqa",
+            "mt_kde4": "qwen2-kde4",
+            "mt_tatoeba": "qwen2-tatoeba",
         }
     }
 
@@ -104,7 +112,8 @@ class SysConfig:
     BASE_MODELS = {
         'gpt2': 'gpt2',
         'llama2': 'meta-llama/Llama-2-7b-hf',
-        'llama3': 'meta-llama/Llama-3.2-1B'
+        'llama3': 'meta-llama/Llama-3.2-1B',
+        'qwen2': 'Qwen/Qwen2-0.5B'
     }
 
     TASKS = {
@@ -113,35 +122,35 @@ class SysConfig:
             "split": "test", "range": (0, 100),
             "processor": lambda d: [{"text": s["text"]} for s in d],
             "formatters": {"llama2": PromptFormatter.llama2_yelp, "gpt2": PromptFormatter.simple_yelp,
-                           "llama3": PromptFormatter.simple_yelp}
+                           "llama3": PromptFormatter.simple_yelp, "qwen2": PromptFormatter.llama2_yelp }
         },
         "qa_squad": {
             "dataset": ("squad", None),
             "split": "validation", "range": (0, 100),
             "processor": lambda d: [{"context": s["context"], "question": s["question"]} for s in d],
-            "formatters": {"llama2": PromptFormatter.llama2_squad, "gpt2": PromptFormatter.simple_qa,
-                           "llama3": PromptFormatter.simple_qa}
+            "formatters": {"llama2": PromptFormatter.llama2_squad, "qwen2": PromptFormatter.llama2_squad,
+                           "gpt2": PromptFormatter.simple_qa, "llama3": PromptFormatter.simple_qa}
         },
         "qa_coqa": {
             "dataset": ("stanfordnlp/coqa", None),
             "split": "validation", "range": (0, 100),
             "processor": lambda d: [{"story": s["story"], "question": s["questions"][0]} for s in d],
-            "formatters": {"llama2": PromptFormatter.llama2_coqa, "gpt2": PromptFormatter.simple_coqa,
-                           "llama3": PromptFormatter.simple_coqa}
+            "formatters": {"llama2": PromptFormatter.llama2_coqa, "qwen2": PromptFormatter.llama2_coqa,
+                           "gpt2": PromptFormatter.simple_coqa,"llama3": PromptFormatter.simple_coqa}
         },
         "mt_kde4": {
             "dataset": ("kde4", ["en", "fr"]),
             "split": "train", "range": (30000, 30100),
             "processor": lambda d: [{"en": s["translation"]["en"]} for s in d],
-            "formatters": {"llama2": PromptFormatter.llama2_kde4, "gpt2": PromptFormatter.simple_mt,
-                           "llama3": PromptFormatter.simple_mt}
+            "formatters": {"llama2": PromptFormatter.llama2_kde4,"qwen2": PromptFormatter.llama2_kde4,
+                           "gpt2": PromptFormatter.simple_mt, "llama3": PromptFormatter.simple_mt}
         },
         "mt_tatoeba": {
             "dataset": ("tatoeba", ["en", "fr"]),
             "split": "train", "range": (40000, 40100),
             "processor": lambda d: [{"en": s["translation"]["en"]} for s in d],
-            "formatters": {"llama2": PromptFormatter.llama2_tatoeba, "gpt2": PromptFormatter.simple_mt,
-                           "llama3": PromptFormatter.simple_mt}
+            "formatters": {"llama2": PromptFormatter.llama2_tatoeba, "qwen2": PromptFormatter.llama2_tatoeba,
+                           "gpt2": PromptFormatter.simple_mt, "llama3": PromptFormatter.simple_mt}
         }
     }
 
@@ -186,42 +195,65 @@ class ModelLoader:
 
             # 1. 如果是文件夹 (通常是 QLoRA Adapter)
             if os.path.isdir(full_path):
-                logging.info(f"   Detected directory: {full_path}")
-                logging.info("   Assuming PEFT/QLoRA Adapter. Merging into Base Model...")
-
-                # 步骤 1: 加载 HuggingFace 基座 (先在 CPU 加载以节省显存)
-                hf_base = AutoModelForCausalLM.from_pretrained(
-                    base_model_name,
-                    torch_dtype=dtype,
-                    device_map="cpu",  # 关键：先放 CPU
-                    trust_remote_code=True
-                )
-
-                # 步骤 2: 加载 Adapter 并合并
-                try:
-                    hf_model = PeftModel.from_pretrained(hf_base, full_path)
-                    hf_model = hf_model.merge_and_unload()  # 合并权重
-                    logging.info("   Merge complete.")
-                except Exception as e:
-                    logging.warning(f"   Failed to load as PEFT adapter ({e}). Trying as full HF model...")
-                    # 如果不是 Adapter，可能是全量保存的模型，直接加载
-                    del hf_base
-                    hf_model = AutoModelForCausalLM.from_pretrained(
-                        full_path, torch_dtype=dtype, device_map="cpu"
+                is_lora = os.path.exists(os.path.join(full_path, "adapter_config.json"))
+                if is_lora:
+                    print("   [Mode] Directory detected as PEFT/LoRA Adapter (Llama2 style)")
+                    print("   1. Loading Base Model...")
+                    hf_base = AutoModelForCausalLM.from_pretrained(
+                        base_model_name,
+                        torch_dtype=dtype,
+                        device_map="cpu",  # Load to CPU first, move to GPU after merging
+                        trust_remote_code=True
                     )
 
-                # 步骤 3: 传入 HookedTransformer
-                # 注意：第一个参数必须是官方名称 (base_model_name)，然后通过 hf_model 参数传入实际权重对象
-                model = HookedTransformer.from_pretrained(
-                    base_model_name,  # 这里传 "meta-llama/Llama-2-7b-hf"
-                    hf_model=hf_model,  # 这里传合并后的模型对象
-                    device=device,
-                    torch_dtype=dtype,
-                    fold_ln=False, center_writing_weights=False, center_unembed=False
-                )
+                    print("   2. Loading & Merging Adapter...")
+                    # 步骤 2: 加载 Adapter 并合并
+                    try:
+                        hf_model = PeftModel.from_pretrained(hf_base, full_path)
+                        hf_model = hf_model.merge_and_unload()  # 合并权重
+                        logging.info("   Merge complete.")
+                    except Exception as e:
+                        logging.warning(f"   Failed to load as PEFT adapter ({e}). Trying as full HF model...")
+                        # 如果不是 Adapter，可能是全量保存的模型，直接加载
+                        del hf_base
+                        hf_model = AutoModelForCausalLM.from_pretrained(
+                            full_path, torch_dtype=dtype, device_map="cpu"
+                        )
 
-                # 清理临时变量
-                del hf_base, hf_model
+                    # 步骤 3: 传入 HookedTransformer
+                    # 注意：第一个参数必须是官方名称 (base_model_name)，然后通过 hf_model 参数传入实际权重对象
+                    model = HookedTransformer.from_pretrained(
+                        base_model_name,  # 这里传 "meta-llama/Llama-2-7b-hf"
+                        hf_model=hf_model,  # 这里传合并后的模型对象
+                        device=device,
+                        torch_dtype=dtype,
+                        fold_ln=False, center_writing_weights=False, center_unembed=False
+                    )
+                    del hf_base, hf_model
+                else:
+                    print("   [Mode] Directory detected as Full Fine-Tuned Model (Qwen2 style)")
+                    # Load complete model directly from directory
+                    print("   1. Loading Full Model from directory...")
+                    hf_model = AutoModelForCausalLM.from_pretrained(
+                        full_path,
+                        torch_dtype=dtype,
+                        device_map="cpu",  # Load to CPU first
+                        trust_remote_code=True
+                    )
+
+                    print("   2. Converting to HookedTransformer...")
+                    model = HookedTransformer.from_pretrained(
+                        base_model_name,  # Still need base_name for TL to build computation graph
+                        hf_model=hf_model,
+                        device=device,
+                        fold_ln=False,
+                        center_writing_weights=False,
+                        center_unembed=False,
+                        dtype=dtype
+                    )
+                    # 清理临时变量
+                    del hf_model
+
                 torch.cuda.empty_cache()
                 return model
 
@@ -277,7 +309,7 @@ class AnalysisEngine:
             del base_model
             gc.collect()
             torch.cuda.empty_cache()
-            logging.info("🧹 Base model unloaded. Memory cleared.")
+            logging.info("Base model unloaded. Memory cleared.")
 
             # 3. FT Model
             ft_model = ModelLoader.load(model_key, True, task_name)
@@ -362,4 +394,10 @@ if __name__ == "__main__":
                 if folder_name:
                     AnalysisEngine.run_pair(model_key, task_name)
     elif UserConfig.RUN_MODE == "SINGLE":
-        AnalysisEngine.run_pair(UserConfig.TARGET_MODEL, UserConfig.TARGET_TASK)
+        #判断task是list还是str
+        target_tasks = UserConfig.TARGET_TASK
+        if isinstance(target_tasks, str):
+            AnalysisEngine.run_pair(UserConfig.TARGET_MODEL, target_tasks)
+        else:
+            for task in target_tasks:
+                AnalysisEngine.run_pair(UserConfig.TARGET_MODEL, task)

@@ -4,18 +4,18 @@
 #SBATCH --export=ALL
 
 
-##SBATCH -o train_llama2-7b_qlora-sentiment%j.out
-
-#SBATCH -o test_-llama2-yelp-qlora-20251119-154850/checkpoint-4950_sentiment%j.out
+#SBATCH -o train_gpt2-full-tune-sentiment-sentiment140-%j.out
+##SBATCH -o test_qwen2_sentiment%j.out
 
 
 # Request 40 cores on 1 node
 #SBATCH --gres=gpu:1
-#SBATCH -p  gpu-a100-cs
+##SBATCH -p  gpu-a100-cs
+#SBATCH -p  gpu-v100
 #SBTACH -N 1
-#SBATCH -n 16
+#SBATCH -n 8
 
-#SBATCH -t 3-00:00:00
+##SBATCH -t 3-00:00:00
 
 
 module load miniforge3/25.3.0-python3.12.10
@@ -47,7 +47,12 @@ export CUDA_LAUNCH_BLOCKING=1
 #EOF
 
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/Llama2-7b-yelp-data.py
-python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/LlaMA2-eval.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/LlaMA2-eval.py
+
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/Qwen2-0.5b-yelp-data.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/Qwen2-eval.py
+
+python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/gpt2-sentiment140-data.py
 echo --------------- 
 echo Job output ends 
 date_end=$(date +%s)

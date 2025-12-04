@@ -1,6 +1,9 @@
 from typing import Callable, List, Union, Optional
 from functools import partial
 
+from typing import Callable, List, Union, Optional
+from functools import partial
+
 import torch
 from torch import Tensor
 from transformer_lens import HookedTransformer
@@ -220,7 +223,7 @@ def attribute(model: HookedTransformer, graph: Graph, dataset, metric: Callable[
         elif aggregation == 'l2':
             scores = torch.linalg.vector_norm(scores, ord=2, dim=-1)
         
-    scores = scores.cpu().numpy()
+    scores = scores.float().cpu().numpy()
 
     for edge in tqdm(graph.edges.values(), total=len(graph.edges)):
         edge.score = scores[graph.forward_index(edge.parent, attn_slice=False), graph.backward_index(edge.child, qkv=edge.qkv, attn_slice=False)]

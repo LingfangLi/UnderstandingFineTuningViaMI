@@ -4,9 +4,9 @@
 #SBATCH --export=ALL
 
 
-##SBATCH -o train_llama2-7b_qlora-kde4%j.out
+##SBATCH -o train_qwen2-kde4%j.out
 
-#SBATCH -o test-llama2-kde4-qlora%j.out
+#SBATCH -o test-qwen2-tatoeba%j.out
 
 
 # Request 40 cores on 1 node
@@ -51,7 +51,11 @@ export CUDA_LAUNCH_BLOCKING=1
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/LlaMA2-7b-tatoeba-data.py
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/LlaMA2-tatoeba-eval.py
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/LlaMA2-7b-kde4-data.py
-python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/LlaMA2-kde4-eval.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/LlaMA2-kde4-eval.py
+
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/Qwen2-0.5b-tatoeba-data.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/Qwen2-0.5b-kde4-data.py
+python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/Qwen2-mt-eval.py
 echo --------------- 
 echo Job output ends 
 date_end=$(date +%s)

@@ -30,7 +30,7 @@ class VisualizationEngine:
 
         ax = sns.heatmap(
             head_matrix,
-            cmap="viridis",
+            cmap="Blues",
             annot=False,
             cbar_kws={'label': 'KL Divergence (Distribution Shift)'}
         )
@@ -79,44 +79,44 @@ if __name__ == "__main__":
     BASE_DIR = r"/mnt/scratch/users/sglli24/fine-tuning-project/attention_analysis_results"
 
     # 2. 指定你要重画的模型和任务
-    TARGET_MODEL = "llama3"
-    for TARGET_TASK in ["qa_squad", "qa_coqa", "sentiment_yelp", "mt_kde4", "mt_tatoeba"]:
-            #TARGET_TASK = "qa_squad"
-
-        csv_path = os.path.join(BASE_DIR, TARGET_MODEL, TARGET_TASK, "kl_divergence_heads.csv")
-
-        try:
-            print(f"Loading CSV from: {csv_path}")
-
-            # 3. 读取 CSV
-            # index_col=0 表示第一列是索引（Layer 0, Layer 1...），不是数据
-            df = pd.read_csv(csv_path, index_col=0)
-
-            # 4. 转换为 NumPy 矩阵
-            # DataFrame 的 values 就是我们要的 [n_layers, n_heads] 矩阵
-            head_matrix = df.values
-
-            # 5. 重新计算 Layer-wise Mean (因为通常没必要单独存一个 layer mean 的 csv)
-            # axis=1 表示沿着 Head 维度求平均
-            layer_mean = head_matrix.mean(axis=1)
-
-            print(f"Data shape: {head_matrix.shape}")
-            print("Regenerating plots...")
-
-            # 6. 调用绘图函数
-            VisualizationEngine.plot_results(
-                model_key=TARGET_MODEL,
-                task_name=TARGET_TASK,
-                head_matrix=head_matrix,
-                layer_array=layer_mean,
-                output_root_dir=BASE_DIR+"/figures/"
-            )
-            print("Done!")
-
-        except FileNotFoundError:
-            print(f"❌ Error: File not found at {csv_path}")
-        except Exception as e:
-            print(f"❌ Error: {e}")
-            import traceback
-
-            traceback.print_exc()
+    for TARGET_MODEL in  ["gpt2", "llama2", "llama3"]:
+        for TARGET_TASK in ["qa_squad", "qa_coqa", "sentiment_yelp", "mt_kde4", "mt_tatoeba"]:
+                #TARGET_TASK = "qa_squad"
+    
+            csv_path = os.path.join(BASE_DIR, TARGET_MODEL, TARGET_TASK, "kl_divergence_heads.csv")
+    
+            try:
+                print(f"Loading CSV from: {csv_path}")
+    
+                # 3. 读取 CSV
+                # index_col=0 表示第一列是索引（Layer 0, Layer 1...），不是数据
+                df = pd.read_csv(csv_path, index_col=0)
+    
+                # 4. 转换为 NumPy 矩阵
+                # DataFrame 的 values 就是我们要的 [n_layers, n_heads] 矩阵
+                head_matrix = df.values
+    
+                # 5. 重新计算 Layer-wise Mean (因为通常没必要单独存一个 layer mean 的 csv)
+                # axis=1 表示沿着 Head 维度求平均
+                layer_mean = head_matrix.mean(axis=1)
+    
+                print(f"Data shape: {head_matrix.shape}")
+                print("Regenerating plots...")
+    
+                # 6. 调用绘图函数
+                VisualizationEngine.plot_results(
+                    model_key=TARGET_MODEL,
+                    task_name=TARGET_TASK,
+                    head_matrix=head_matrix,
+                    layer_array=layer_mean,
+                    output_root_dir=BASE_DIR+"/figures/"
+                )
+                print("Done!")
+    
+            except FileNotFoundError:
+                print(f"❌ Error: File not found at {csv_path}")
+            except Exception as e:
+                print(f"❌ Error: {e}")
+                import traceback
+    
+                traceback.print_exc()
