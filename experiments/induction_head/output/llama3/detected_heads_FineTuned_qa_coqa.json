@@ -1,0 +1,6 @@
+{
+    "model": "llama3",
+    "task": "qa_coqa",
+    "k": 0,
+    "heads": []
+}

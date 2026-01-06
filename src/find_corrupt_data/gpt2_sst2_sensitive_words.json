@@ -1,0 +1,890 @@
+[
+    {
+        "text": "it 's a charming and often affecting journey . ",
+        "label": "positive",
+        "sensitive_word": [
+            "affecting"
+        ]
+    },
+    {
+        "text": "it 's slow -- very , very slow . ",
+        "label": "negative",
+        "sensitive_word": [
+            "slow"
+        ]
+    },
+    {
+        "text": "a sometimes tedious film . ",
+        "label": "negative",
+        "sensitive_word": [
+            "tedious"
+        ]
+    },
+    {
+        "text": "or doing last year 's taxes with your ex-wife . ",
+        "label": "negative",
+        "sensitive_word": [
+            "ex-wife"
+        ]
+    },
+    {
+        "text": "... the movie is just a plain old monster . ",
+        "label": "negative",
+        "sensitive_word": [
+            "old",
+            "plain"
+        ]
+    },
+    {
+        "text": "holden caulfield did it better . ",
+        "label": "negative",
+        "sensitive_word": [
+            "better"
+        ]
+    },
+    {
+        "text": "it 's a cookie-cutter movie , a cut-and-paste job . ",
+        "label": "negative",
+        "sensitive_word": [
+            "cookie-cutter",
+            "cut-and-paste"
+        ]
+    },
+    {
+        "text": "a gorgeous , witty , seductive movie . ",
+        "label": "positive",
+        "sensitive_word": [
+            "gorgeous",
+            "witty",
+            "seductive"
+        ]
+    },
+    {
+        "text": "a tender , heartfelt family drama . ",
+        "label": "positive",
+        "sensitive_word": [
+            "tender",
+            "heartfelt"
+        ]
+    },
+    {
+        "text": "manages to be both repulsively sadistic and mundane . ",
+        "label": "negative",
+        "sensitive_word": [
+            "sadistic"
+        ]
+    },
+    {
+        "text": "a fast , funny , highly enjoyable movie . ",
+        "label": "positive",
+        "sensitive_word": [
+            "fast",
+            "funny",
+            "enjoyable"
+        ]
+    },
+    {
+        "text": "good old-fashioned slash-and-hack is back ! ",
+        "label": "positive",
+        "sensitive_word": [
+            "old-fashioned"
+        ]
+    },
+    {
+        "text": "uses high comedy to evoke surprising poignance . ",
+        "label": "positive",
+        "sensitive_word": [
+            "poignance"
+        ]
+    },
+    {
+        "text": "among the year 's most intriguing explorations of alientation . ",
+        "label": "positive",
+        "sensitive_word": [
+            "intriguing"
+        ]
+    },
+    {
+        "text": "why make a documentary about these marginal historical figures ? ",
+        "label": "negative",
+        "sensitive_word": [
+            "marginal"
+        ]
+    },
+    {
+        "text": "this movie is maddening . ",
+        "label": "negative",
+        "sensitive_word": [
+            "maddening"
+        ]
+    },
+    {
+        "text": "forced , familiar and thoroughly condescending . ",
+        "label": "negative",
+        "sensitive_word": [
+            "condescending"
+        ]
+    },
+    {
+        "text": "it 's not the ultimate depression-era gangster movie . ",
+        "label": "negative",
+        "sensitive_word": [
+            "not"
+        ]
+    },
+    {
+        "text": "the heavy-handed film is almost laughable as a consequence . ",
+        "label": "negative",
+        "sensitive_word": [
+            "laughable"
+        ]
+    },
+    {
+        "text": "a solid examination of the male midlife crisis . ",
+        "label": "positive",
+        "sensitive_word": [
+            "solid"
+        ]
+    },
+    {
+        "text": "not exactly the bees knees ",
+        "label": "negative",
+        "sensitive_word": [
+            "not"
+        ]
+    },
+    {
+        "text": "the end result is a film that 's neither . ",
+        "label": "negative",
+        "sensitive_word": [
+            "neither"
+        ]
+    },
+    {
+        "text": "it 's also , clearly , great fun . ",
+        "label": "positive",
+        "sensitive_word": [
+            "great",
+            "fun"
+        ]
+    },
+    {
+        "text": "rarely has leukemia looked so shimmering and benign . ",
+        "label": "negative",
+        "sensitive_word": [
+            "leukemia"
+        ]
+    },
+    {
+        "text": "the film 's performances are thrilling . ",
+        "label": "positive",
+        "sensitive_word": [
+            "thrilling"
+        ]
+    },
+    {
+        "text": "for starters , the story is just too slim . ",
+        "label": "negative",
+        "sensitive_word": [
+            "slim"
+        ]
+    },
+    {
+        "text": "smart , provocative and blisteringly funny . ",
+        "label": "positive",
+        "sensitive_word": [
+            "blisteringly",
+            "funny"
+        ]
+    },
+    {
+        "text": "my reaction in a word : disappointment . ",
+        "label": "negative",
+        "sensitive_word": [
+            "disappointment"
+        ]
+    },
+    {
+        "text": "this movie seems to have been written using mad-libs . ",
+        "label": "negative",
+        "sensitive_word": [
+            "mad-libs"
+        ]
+    },
+    {
+        "text": "affleck and jackson are good sparring partners . ",
+        "label": "positive",
+        "sensitive_word": [
+            "good"
+        ]
+    },
+    {
+        "text": "rarely has so much money delivered so little entertainment . ",
+        "label": "negative",
+        "sensitive_word": [
+            "little",
+            "delivered"
+        ]
+    },
+    {
+        "text": "dense with characters and contains some thrilling moments . ",
+        "label": "positive",
+        "sensitive_word": [
+            "thrilling"
+        ]
+    },
+    {
+        "text": "it 's like watching a nightmare made flesh . ",
+        "label": "negative",
+        "sensitive_word": [
+            "nightmare"
+        ]
+    },
+    {
+        "text": "chokes on its own depiction of upper-crust decorum . ",
+        "label": "negative",
+        "sensitive_word": [
+            "own",
+            "chokes"
+        ]
+    },
+    {
+        "text": "entertains by providing good , lively company . ",
+        "label": "positive",
+        "sensitive_word": [
+            "good",
+            "lively"
+        ]
+    },
+    {
+        "text": "the story and structure are well-honed . ",
+        "label": "positive",
+        "sensitive_word": [
+            "well-honed"
+        ]
+    },
+    {
+        "text": "a warm , funny , engaging film . ",
+        "label": "positive",
+        "sensitive_word": [
+            "warm",
+            "funny",
+            "engaging"
+        ]
+    },
+    {
+        "text": "complete lack of originality , cleverness or even visible effort ",
+        "label": "negative",
+        "sensitive_word": []
+    },
+    {
+        "text": "too much of it feels unfocused and underdeveloped . ",
+        "label": "negative",
+        "sensitive_word": [
+            "underdeveloped"
+        ]
+    },
+    {
+        "text": "a deep and meaningful film . ",
+        "label": "positive",
+        "sensitive_word": [
+            "deep",
+            "meaningful"
+        ]
+    },
+    {
+        "text": "but it could have been worse . ",
+        "label": "negative",
+        "sensitive_word": []
+    },
+    {
+        "text": "that 's pure pr hype . ",
+        "label": "negative",
+        "sensitive_word": [
+            "pure",
+            "hype"
+        ]
+    },
+    {
+        "text": "an unwise amalgam of broadcast news and vibes . ",
+        "label": "negative",
+        "sensitive_word": [
+            "unwise"
+        ]
+    },
+    {
+        "text": "no way i can believe this load of junk . ",
+        "label": "negative",
+        "sensitive_word": [
+            "load",
+            "junk"
+        ]
+    },
+    {
+        "text": "not only unfunny , but downright repellent . ",
+        "label": "negative",
+        "sensitive_word": [
+            "unfunny",
+            "repellent"
+        ]
+    },
+    {
+        "text": "just one bad idea after another . ",
+        "label": "negative",
+        "sensitive_word": [
+            "bad"
+        ]
+    },
+    {
+        "text": "there is no pleasure in watching a child suffer . ",
+        "label": "negative",
+        "sensitive_word": [
+            "suffer"
+        ]
+    },
+    {
+        "text": "nothing is sacred in this gut-buster . ",
+        "label": "negative",
+        "sensitive_word": [
+            "gut-buster"
+        ]
+    },
+    {
+        "text": "it all adds up to good fun . ",
+        "label": "positive",
+        "sensitive_word": [
+            "good",
+            "fun"
+        ]
+    },
+    {
+        "text": "a very well-made , funny and entertaining picture . ",
+        "label": "positive",
+        "sensitive_word": [
+            "well-made",
+            "funny",
+            "entertaining"
+        ]
+    },
+    {
+        "text": "as vulgar as it is banal . ",
+        "label": "negative",
+        "sensitive_word": [
+            "vulgar"
+        ]
+    },
+    {
+        "text": "more whiny downer than corruscating commentary . ",
+        "label": "negative",
+        "sensitive_word": [
+            "whiny",
+            "downer"
+        ]
+    },
+    {
+        "text": "a giggle a minute . ",
+        "label": "positive",
+        "sensitive_word": [
+            "giggle"
+        ]
+    },
+    {
+        "text": "i 'm just too bored to care . ",
+        "label": "negative",
+        "sensitive_word": [
+            "bored"
+        ]
+    },
+    {
+        "text": "a good piece of work more often than not . ",
+        "label": "positive",
+        "sensitive_word": [
+            "good"
+        ]
+    },
+    {
+        "text": "beautifully observed , miraculously unsentimental comedy-drama . ",
+        "label": "positive",
+        "sensitive_word": [
+            "beautifully",
+            "miraculously"
+        ]
+    },
+    {
+        "text": "should have been someone else - ",
+        "label": "negative",
+        "sensitive_word": [
+            "someone"
+        ]
+    },
+    {
+        "text": "coughs and sputters on its own postmodern conceit . ",
+        "label": "negative",
+        "sensitive_word": [
+            "coughs",
+            "sputters"
+        ]
+    },
+    {
+        "text": "almost gags on its own gore . ",
+        "label": "negative",
+        "sensitive_word": [
+            "gags"
+        ]
+    },
+    {
+        "text": "a marvel like none you 've seen . ",
+        "label": "positive",
+        "sensitive_word": [
+            "marvel"
+        ]
+    },
+    {
+        "text": "trite , banal , cliched , mostly inoffensive . ",
+        "label": "negative",
+        "sensitive_word": [
+            "trite",
+            "banal",
+            "cliched"
+        ]
+    },
+    {
+        "text": "a by-the-numbers patient/doctor pic that covers all the usual ground ",
+        "label": "negative",
+        "sensitive_word": [
+            "by-the-numbers"
+        ]
+    },
+    {
+        "text": "detox is ultimately a pointless endeavor . ",
+        "label": "negative",
+        "sensitive_word": [
+            "pointless"
+        ]
+    },
+    {
+        "text": "an exquisitely crafted and acted tale . ",
+        "label": "positive",
+        "sensitive_word": [
+            "exquisitely"
+        ]
+    },
+    {
+        "text": "this is so bad . ",
+        "label": "negative",
+        "sensitive_word": [
+            "bad"
+        ]
+    },
+    {
+        "text": "the film is powerful , accessible and funny . ",
+        "label": "positive",
+        "sensitive_word": [
+            "funny"
+        ]
+    },
+    {
+        "text": "i just loved every minute of this film . ",
+        "label": "positive",
+        "sensitive_word": [
+            "loved"
+        ]
+    },
+    {
+        "text": "a quiet , pure , elliptical film ",
+        "label": "positive",
+        "sensitive_word": [
+            "pure"
+        ]
+    },
+    {
+        "text": "do not see this film . ",
+        "label": "negative",
+        "sensitive_word": [
+            "not",
+            "see"
+        ]
+    },
+    {
+        "text": "the most compelling wiseman epic of recent years . ",
+        "label": "positive",
+        "sensitive_word": [
+            "compelling",
+            "epic"
+        ]
+    },
+    {
+        "text": "there 's no emotional pulse to solaris . ",
+        "label": "negative",
+        "sensitive_word": [
+            "emotional"
+        ]
+    },
+    {
+        "text": "a coarse and stupid gross-out . ",
+        "label": "negative",
+        "sensitive_word": [
+            "coarse",
+            "stupid",
+            "gross-out"
+        ]
+    },
+    {
+        "text": "it treats women like idiots . ",
+        "label": "negative",
+        "sensitive_word": [
+            "like",
+            "idiots"
+        ]
+    },
+    {
+        "text": "it 's just filler . ",
+        "label": "negative",
+        "sensitive_word": [
+            "just"
+        ]
+    },
+    {
+        "text": "i got a headache watching this meaningless downer . ",
+        "label": "negative",
+        "sensitive_word": [
+            "meaningless"
+        ]
+    },
+    {
+        "text": "big fat waste of time . ",
+        "label": "negative",
+        "sensitive_word": [
+            "big",
+            "fat",
+            "waste"
+        ]
+    },
+    {
+        "text": "fancy a real downer ? ",
+        "label": "negative",
+        "sensitive_word": [
+            "downer"
+        ]
+    },
+    {
+        "text": "makes for a pretty unpleasant viewing experience . ",
+        "label": "negative",
+        "sensitive_word": [
+            "unpleasant"
+        ]
+    },
+    {
+        "text": "ahhhh ... revenge is sweet ! ",
+        "label": "positive",
+        "sensitive_word": [
+            "sweet"
+        ]
+    },
+    {
+        "text": "an unclassifiably awful study in self - and audience-abuse . ",
+        "label": "negative",
+        "sensitive_word": [
+            "awful"
+        ]
+    },
+    {
+        "text": "challenging , intermittently engrossing and unflaggingly creative . ",
+        "label": "positive",
+        "sensitive_word": [
+            "creative"
+        ]
+    },
+    {
+        "text": "nervous breakdowns are not entertaining . ",
+        "label": "negative",
+        "sensitive_word": [
+            "nervous"
+        ]
+    },
+    {
+        "text": "just embarrassment and a vague sense of shame . ",
+        "label": "negative",
+        "sensitive_word": [
+            "embarrassment",
+            "shame"
+        ]
+    },
+    {
+        "text": "or emptying rat traps . ",
+        "label": "negative",
+        "sensitive_word": [
+            "rat"
+        ]
+    },
+    {
+        "text": "indifferently implausible popcorn programmer of a movie . ",
+        "label": "negative",
+        "sensitive_word": [
+            "implausible",
+            "indifferently"
+        ]
+    },
+    {
+        "text": "too much of the humor falls flat . ",
+        "label": "negative",
+        "sensitive_word": [
+            "flat"
+        ]
+    },
+    {
+        "text": "too slow , too long and too little happens . ",
+        "label": "negative",
+        "sensitive_word": [
+            "slow"
+        ]
+    },
+    {
+        "text": "a smart , witty follow-up . ",
+        "label": "positive",
+        "sensitive_word": [
+            "smart",
+            "witty"
+        ]
+    },
+    {
+        "text": "slick piece of cross-promotion . ",
+        "label": "positive",
+        "sensitive_word": [
+            "slick"
+        ]
+    },
+    {
+        "text": "( a ) shapeless blob of desperate entertainment . ",
+        "label": "negative",
+        "sensitive_word": [
+            "desperate",
+            "shapeless",
+            "blob"
+        ]
+    },
+    {
+        "text": "stultifyingly , dumbfoundingly , mind-numbingly bad . ",
+        "label": "negative",
+        "sensitive_word": [
+            "bad"
+        ]
+    },
+    {
+        "text": "no aspirations to social import inform the movie version . ",
+        "label": "negative",
+        "sensitive_word": []
+    },
+    {
+        "text": "how do you spell clich\u00e9 ? ",
+        "label": "negative",
+        "sensitive_word": []
+    },
+    {
+        "text": "they should have called it gutterball . ",
+        "label": "negative",
+        "sensitive_word": [
+            "gutterball"
+        ]
+    },
+    {
+        "text": "a poignant , artfully crafted meditation on mortality . ",
+        "label": "positive",
+        "sensitive_word": [
+            "poignant"
+        ]
+    },
+    {
+        "text": "this is n't even madonna 's swept away . ",
+        "label": "negative",
+        "sensitive_word": [
+            "even",
+            "madonna"
+        ]
+    },
+    {
+        "text": "... a magnificent drama well worth tracking down . ",
+        "label": "positive",
+        "sensitive_word": [
+            "magnificent"
+        ]
+    },
+    {
+        "text": "one from the heart . ",
+        "label": "positive",
+        "sensitive_word": [
+            "heart"
+        ]
+    },
+    {
+        "text": "people cinema at its finest . ",
+        "label": "positive",
+        "sensitive_word": [
+            "finest"
+        ]
+    },
+    {
+        "text": "one long string of cliches . ",
+        "label": "negative",
+        "sensitive_word": []
+    },
+    {
+        "text": "something like scrubbing the toilet . ",
+        "label": "negative",
+        "sensitive_word": [
+            "like",
+            "scrubbing"
+        ]
+    },
+    {
+        "text": "it 's a beautiful madness . ",
+        "label": "positive",
+        "sensitive_word": [
+            "beautiful"
+        ]
+    },
+    {
+        "text": "at once half-baked and overheated . ",
+        "label": "negative",
+        "sensitive_word": [
+            "half-baked",
+            "overheated"
+        ]
+    },
+    {
+        "text": "that 's a cheat . ",
+        "label": "negative",
+        "sensitive_word": [
+            "cheat"
+        ]
+    },
+    {
+        "text": "it 's fun lite . ",
+        "label": "positive",
+        "sensitive_word": [
+            "fun"
+        ]
+    },
+    {
+        "text": "just as moving , uplifting and funny as ever . ",
+        "label": "positive",
+        "sensitive_word": [
+            "uplifting",
+            "funny"
+        ]
+    },
+    {
+        "text": "enormously entertaining for moviegoers of any age . ",
+        "label": "positive",
+        "sensitive_word": [
+            "entertaining"
+        ]
+    },
+    {
+        "text": "a delightful coming-of-age story . ",
+        "label": "positive",
+        "sensitive_word": [
+            "delightful"
+        ]
+    },
+    {
+        "text": "a strangely compelling and brilliantly acted psychological drama . ",
+        "label": "positive",
+        "sensitive_word": [
+            "compelling"
+        ]
+    },
+    {
+        "text": "it 's a buggy drag . ",
+        "label": "negative",
+        "sensitive_word": [
+            "buggy",
+            "drag"
+        ]
+    },
+    {
+        "text": "a quiet treasure -- a film to be savored . ",
+        "label": "positive",
+        "sensitive_word": [
+            "treasure",
+            "savored"
+        ]
+    },
+    {
+        "text": "teen movies have really hit the skids . ",
+        "label": "negative",
+        "sensitive_word": [
+            "skids"
+        ]
+    },
+    {
+        "text": "it 's made with deftly unsettling genre flair . ",
+        "label": "positive",
+        "sensitive_word": [
+            "deftly"
+        ]
+    },
+    {
+        "text": "will amuse and provoke adventurous adults in specialty venues . ",
+        "label": "positive",
+        "sensitive_word": [
+            "adventurous"
+        ]
+    },
+    {
+        "text": "a wildly inconsistent emotional experience . ",
+        "label": "negative",
+        "sensitive_word": [
+            "wildly",
+            "inconsistent"
+        ]
+    },
+    {
+        "text": "an absurdist comedy about alienation , separation and loss . ",
+        "label": "negative",
+        "sensitive_word": [
+            "alienation",
+            "separation",
+            "loss"
+        ]
+    },
+    {
+        "text": "his healthy sense of satire is light and fun ... ",
+        "label": "positive",
+        "sensitive_word": [
+            "light",
+            "fun"
+        ]
+    },
+    {
+        "text": "part low rent godfather . ",
+        "label": "negative",
+        "sensitive_word": [
+            "low",
+            "rent"
+        ]
+    },
+    {
+        "text": "dull , lifeless , and amateurishly assembled . ",
+        "label": "negative",
+        "sensitive_word": [
+            "dull",
+            "lifeless"
+        ]
+    },
+    {
+        "text": "has all the depth of a wading pool . ",
+        "label": "negative",
+        "sensitive_word": [
+            "depth"
+        ]
+    },
+    {
+        "text": "a movie with a real anarchic flair . ",
+        "label": "positive",
+        "sensitive_word": [
+            "real",
+            "anarchic"
+        ]
+    }
+]

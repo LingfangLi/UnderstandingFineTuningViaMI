@@ -2,12 +2,15 @@
 # Use the current working directory and current environment for this job.
 #SBATCH -D ./
 #SBATCH --export=ALL
-#SBATCH -o detect_induction_head_all_finetuned_%j.out
+
+##SBATCH -o detect_induction_head_sst2_finetuned_%j.out
+##SBATCH -o check_k_value_induction_head_all_npy_%j.out
+#SBATCH -o induction_head_important_edges_overlap%j.out
+
 # Request 40 cores on 1 node
 #SBATCH --gres=gpu:1
-#SBATCH -p  gpu-a-lowsmall
-#SBTACH -N 1
-#SBATCH -n 16
+#SBATCH -p gpu-a-lowsmall
+##SBTACH -N 1
 
 ##SBATCH -t 3-00:00:00
 
@@ -37,8 +40,9 @@ hostname
 # parallel environment.
 export CUDA_LAUNCH_BLOCKING=1
 
-python /users/sglli24/UnderstandingFineTuningViaMI/experiments/induction_head/detect_induction_head.py
-
+#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/induction_head/detect_induction_head.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/induction_head/check_k_value_of_induction_head.py
+python /users/sglli24/UnderstandingFineTuningViaMI/experiments/induction_head/analyze_head_top_edges_overlap.py
 echo --------------- 
 echo Job output ends 
 date_end=$(date +%s)

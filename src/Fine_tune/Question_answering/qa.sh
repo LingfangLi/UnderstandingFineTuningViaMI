@@ -4,18 +4,17 @@
 #SBATCH --export=ALL
 
 
-##SBATCH -o train_qwen2-coqa%j.out
+#SBATCH -o train_llama3-squad%j.out
 
-#SBATCH -o test-qwen2-coqa%j.out
+##SBATCH -o test-qwen2-coqa%j.out
 
 
 # Request 40 cores on 1 node
 #SBATCH --gres=gpu:1
-#SBATCH -p  gpu-a100-cs
+#SBATCH -p  gpu-a100-cs,gpu-h100,gpu-a-lowsmall
 #SBTACH -N 1
-#SBATCH -n 16
 
-#SBATCH -t 3-00:00:00
+#SBATCH -t 1-00:00:00
 
 
 module load miniforge3/25.3.0-python3.12.10
@@ -45,6 +44,11 @@ export CUDA_LAUNCH_BLOCKING=1
 #python -u /users/sglli24/fine-tuning-project/find_attention_change_both_wise_v2.py << EOF
 #1
 #EOF
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/gpt2-squad-data.py
+python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/gpt2-coqa-data.py
+
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/llama3.2-squad-data.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/llama3.2-coqa-data.py
 
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/Llama2-7b-yelp-data.py
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/LlaMA2-7b-squad-data.py
@@ -56,7 +60,7 @@ export CUDA_LAUNCH_BLOCKING=1
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/Qwen2-0.5b-squad-data.py
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/Qwen2-squad-eval.py
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/Qwen2-0.5b-coqa-data.py
-python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/Qwen2-coqa-eval.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/Qwen2-coqa-eval.py
 echo --------------- 
 echo Job output ends 
 date_end=$(date +%s)

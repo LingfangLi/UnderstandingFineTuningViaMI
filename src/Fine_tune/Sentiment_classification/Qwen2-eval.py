@@ -17,25 +17,31 @@ MAX_LENGTH = 512
 TARGET_POSITIVE = "positive"
 TARGET_NEGATIVE = "negative"
 
+FINETUNED = False
 # ==========================================
 # 2. Load Model (Full Fine-tuning)
 # ==========================================
-print(f"Loading Fine-Tuned Qwen2 model from {model_path}...")
+if FINETUNED:
+    print(f"Loading Fine-Tuned Qwen2 model from {model_path}...")
+else:
+    print(f"Loading pretrained Qwen2 model from {model_path}...")
+    model_path="Qwen/Qwen2-0.5B"
 
 model = AutoModelForCausalLM.from_pretrained(
-    model_path,
-    dtype=torch.bfloat16,
-    device_map="auto",
-    trust_remote_code=True
-)
+        model_path,
+        dtype=torch.bfloat16,
+        device_map="auto",
+        trust_remote_code=True
+    )
+            
 model.eval()
 
 # ==========================================
 # 3. Load Tokenizer
 # ==========================================
+
 print("Loading Tokenizer...")
 tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
-
 # Use left padding for generation tasks
 tokenizer.padding_side = "left"
 

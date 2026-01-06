@@ -4,11 +4,11 @@
 #SBATCH --export=ALL
 
 
-#SBATCH -o unified_eap_qwen2-coqa%j.out
+#SBATCH -o unified_eap_qwen2_sst2%j.out
 
 # Request 40 cores on 1 node
 #SBATCH --gres=gpu:1
-#SBATCH -p  gpu-a100-cs
+#SBATCH -p  gpu-a100-cs,gpu-h100
 #SBTACH -N 1
 #SBATCH -n 16
 

@@ -1,0 +1,6 @@
+{
+    "model": "llama3",
+    "task": "sentiment_yelp",
+    "k": 0,
+    "heads": []
+}

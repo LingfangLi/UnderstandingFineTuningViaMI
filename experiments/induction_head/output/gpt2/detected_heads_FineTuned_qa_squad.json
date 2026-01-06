@@ -1,0 +1,6 @@
+{
+    "model": "gpt2",
+    "task": "qa_squad",
+    "k": 0,
+    "heads": []
+}

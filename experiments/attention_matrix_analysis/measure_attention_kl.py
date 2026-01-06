@@ -22,8 +22,8 @@ class UserConfig:
     RUN_MODE = "SINGLE"  # "ALL" 或 "SINGLE"
 
     # 2. 单次运行的目标
-    TARGET_MODEL = "llama3"
-    TARGET_TASK =  "qa_coqa" # 可以是字符串或字符串列表
+    TARGET_MODEL = ["gpt2","llama2","llama3","qwen2"]
+    TARGET_TASK =  "sentiment_sst2" # 可以是字符串或字符串列表
 
     # 3. 路径配置 (根据你的截图修正)
     MODEL_ROOT_DIR = r"/mnt/data1/users/sglli24/fine-tuning-project-1/fine_tuned_models/"
@@ -32,37 +32,38 @@ class UserConfig:
     # 4. 微调模型文件夹映射 (确保这里的文件名和你截图里的一模一样)
     FT_MODEL_MAP = {
         "gpt2": {
-            "sentiment_yelp": "gpt2-yelp.pt",  # 注意截图里是 .pt 文件
-            "qa_squad": "gpt2-squad.pt",
-            "mt_kde4": "gpt2-kde4.pt",
-            "mt_tatoeba": "gpt2-tatoeba.pt",
-            "qa_coqa": "gpt2-coqa.pt"
+            "sentiment_yelp": "gpt2-yelp.pt",
+            "sentiment_sst2": "gpt2-sst2",
+            "qa_squad":       "gpt2-squad.pt",
+            "mt_kde4":        "gpt2-kde4.pt",
+            "mt_tatoeba":     "gpt2-tatoeba.pt",
+            "qa_coqa":        "gpt2-coqa.pt"
         },
         "llama3": {
             "sentiment_yelp": "llama3.2-yelp.pt",
-            "qa_squad": "llama3.2-squad.pt",
-            "mt_kde4": "llama3.2-kde4.pt",
-            "mt_tatoeba": "llama3.2-tatoeba.pt",
-            "qa_coqa": "llama3.2-coqa.pt",
+            "sentiment_sst2": "llama3.2-sst2",
+            "qa_squad":       "llama3.2-squad.pt",
+            "mt_kde4":        "llama3.2-kde4.pt",
+            "qa_coqa":        "llama3.2-coqa.pt",
+            "mt_tatoeba":     "llama3.2-tatoeba.pt"
         },
         "llama2": {
-            # 截图里这些是文件夹
             "sentiment_yelp": "llama2-yelp",
-            "qa_squad": "llama2-squad",
-            "qa_coqa": "llama2-coqa",
-            "mt_kde4": "llama2-kde4",
-            "mt_tatoeba": "llama2-tatoeba",
+            "sentiment_sst2": "llama2-sst2",
+            "qa_squad":       "llama2-squad",
+            "qa_coqa":        "llama2-coqa",
+            "mt_kde4":        "llama2-kde4",
+            "mt_tatoeba":     "llama2-tatoeba",
         },
         "qwen2": {
-            # 鎴浘閲岃繖浜涙槸鏂囦欢澶?
             "sentiment_yelp": "qwen2-yelp",
-            "qa_squad": "qwen2-squad",
-            "qa_coqa": "qwen2-coqa",
-            "mt_kde4": "qwen2-kde4",
-            "mt_tatoeba": "qwen2-tatoeba",
+            "sentiment_sst2": "qwen2-sst2",
+            "qa_squad":       "qwen2-squad",
+            "qa_coqa":        "qwen2-coqa",
+            "mt_kde4":        "qwen2-kde4",
+            "mt_tatoeba":     "qwen2-tatoeba",
         }
     }
-
     # 5. 分析参数
     NUM_SAMPLES = 50
     DEFAULT_EPSILON = 1e-5

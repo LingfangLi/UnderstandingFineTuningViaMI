@@ -180,10 +180,24 @@ def plot_component_pie_chart(percentages, task_name="", model_name="", save_path
     colors = [color_map.get(label, '#' + ''.join([f'{np.random.randint(0, 256):02x}' for _ in range(3)]))
               for label in labels]
 
+    # 1. 定义一个阈值，比如 3%
+    threshold = 2.5 
+
+    # 2. 处理标签：只有大于阈值的才显示 Label，否则为空
+    plot_labels = [label if size >= threshold else "" for label, size in zip(labels, sizes)]
+
+    # 3. 处理百分比：只有大于阈值的才显示数值，否则为空
+    def my_autopct(pct):
+        return ('%1.1f%%' % pct) if pct >= threshold else ''
+
     # 创建饼图
     fig, ax = plt.subplots(figsize=(10, 8))
-    wedges, texts, autotexts = ax.pie(sizes, labels=labels, colors=colors,
-                                      autopct='%1.1f%%', startangle=90,
+    
+    # 注意这里传入的是 plot_labels 而不是原始的 labels
+    wedges, texts, autotexts = ax.pie(sizes, labels=plot_labels, colors=colors,
+                                      autopct=my_autopct, startangle=90,
+                                      pctdistance=0.75,  # 调整百分比文字距离圆心的位置
+                                      labeldistance=1.1, # 调整标签文字距离圆心的位置
                                       textprops={'fontsize': 11})
 
     # 美化文字
@@ -355,8 +369,8 @@ if __name__ == "__main__":
      #       )
     
     #Analysis single model
-    for model_name, model_path_name in zip(["Qwen/Qwen2-0.5B"],["qwen2"]):
-        for task_name in ["yelp","squad","coqa","kde4","tatoeba"]:
+    for model_name, model_path_name in zip(["LlaMA-2-7B", "GPT2-Small", "LlaMA-3.2-1B"],["llama2", "gpt2", "llama3.2"]):# in zip(["Qwen2-0.5B"],["qwen2"]):
+        for task_name in ["sst2"]:#["yelp","squad","coqa","kde4","tatoeba","sst2"]:
             # 示例：分析单个模型
             analyze_and_plot(
                 file_path=f"/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges/{model_path_name}_{task_name}_finetuned_edges.csv",

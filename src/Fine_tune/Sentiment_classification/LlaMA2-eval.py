@@ -14,13 +14,12 @@ from transformers import (
 # 基础模型 (不需要改)
 base_model_name = "meta-llama/Llama-2-7b-hf"
 
-# ?? 关键：修改为你微调保存的路径
-# 例如: "/users/sglli24/fine-tuning-project/experiments/llama2-yelp-qlora-2025xxxx/checkpoint-50"
-adapter_path = "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/llama2-yelp-qlora-20251119-154850/checkpoint-4950"
+adapter_path = "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/llama2-yelp-qlora-20251119-154850/llama2-yelp/"
 
 # 评估样本数
 NUM_SAMPLES = 1000
 MAX_LENGTH = 512
+FINETUNED = False
 
 # 定义你的 Label 映射 (必须与训练时完全一致)
 TARGET_POSITIVE = "positive"
@@ -29,22 +28,27 @@ TARGET_NEGATIVE = "negative"
 # ==========================================
 # 2. 加载模型 (QLoRA 模式)
 # ==========================================
+
 print("Loading base model in 4-bit...")
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,
     bnb_4bit_quant_type="nf4",
     bnb_4bit_compute_dtype=torch.float16,
 )
-
 base_model = AutoModelForCausalLM.from_pretrained(
     base_model_name,
     quantization_config=bnb_config,
     device_map="auto",
     trust_remote_code=True
 )
-
-print(f"Loading LoRA adapters from {adapter_path}...")
-model = PeftModel.from_pretrained(base_model, adapter_path)
+if FINETUNED:
+    print(f"Loading fintuned model")
+    print(f"Loading LoRA adapters from {adapter_path}...")
+    model = PeftModel.from_pretrained(base_model, adapter_path)
+else:
+    print("Load pretrained model")
+    model =  base_model
+        
 model.eval()  # 切换到评估模式
 
 # ==========================================

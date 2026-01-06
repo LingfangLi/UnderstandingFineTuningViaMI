@@ -1,0 +1,143 @@
+import torch
+import os
+import wandb
+from datetime import datetime
+from datasets import load_dataset
+from transformers import ( 
+    AutoModelForCausalLM,
+    AutoTokenizer,
+    TrainingArguments,
+)
+from trl import SFTConfig, SFTTrainer
+
+# ==========================================
+# 0. Environment Setup
+# ==========================================
+os.environ["WANDB_PROJECT"] = "MI_llama3.2-1b-SQUAD-QA"
+
+# ==========================================
+# 1. Experiment Configuration
+# ==========================================
+
+run_name = f"llama3.2-1b-SQUAD-full-ft-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
+output_base_dir = "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/"
+output_dir = os.path.join(output_base_dir, run_name)
+
+config = {
+    "model_name": "meta-llama/Llama-3.2-1B",
+    "dataset_name": "squad",
+    "learning_rate": 2e-5,
+    "max_seq_length": 1024,
+    "batch_size": 4,            
+    "gradient_accumulation_steps": 8, 
+    "num_epochs": 2,
+    "eval_steps": 200,
+    "save_steps": 200,
+    "logging_steps": 20,
+}
+
+# ==========================================
+
+# ==========================================
+raw_dataset = load_dataset(config['dataset_name'], split='train')
+if config['dataset_name'] == "squad":
+    pass 
+dataset_dict = raw_dataset.train_test_split(test_size=0.05, seed=42)
+train_dataset = dataset_dict['train']
+eval_dataset = dataset_dict['test']
+
+def formatting_prompts_func(examples):
+    def format_single(context, question, answers):
+        ans_text = answers['text'][0]
+        prompt = (f"### Context:\n{context}\n\n"
+                  f"### Question:\n{question}\n\n"
+                  f"### Answer:\n{ans_text}")
+        return prompt
+    
+    if isinstance(examples['context'], list):
+        output_texts = []
+        for ctx, q, ans in zip(examples['context'], examples['question'], examples['answers']):
+            output_texts.append(format_single(ctx, q, ans))
+        return output_texts
+    else:
+        return format_single(examples['context'], examples['question'], examples['answers'])
+
+# ==========================================
+# 3. Model & Tokenizer
+# ==========================================
+use_bf16 = torch.cuda.is_bf16_supported()
+use_fp16 = not use_bf16
+
+model = AutoModelForCausalLM.from_pretrained(
+    config['model_name'],
+    torch_dtype=torch.bfloat16 if use_bf16 else torch.float16,
+    device_map="auto"
+)
+tokenizer = AutoTokenizer.from_pretrained(config['model_name'])
+if tokenizer.pad_token is None:
+    tokenizer.pad_token = tokenizer.eos_token
+tokenizer.padding_side = "right"
+model.config.use_cache = False
+model.config.pad_token_id = tokenizer.pad_token_id
+
+# ==========================================
+# 4. Training Arguments
+# ==========================================
+training_arguments = SFTConfig(
+    output_dir=output_dir,
+    run_name=run_name,
+    max_length=config['max_seq_length'],
+    packing=False,
+    
+    per_device_train_batch_size=config['batch_size'],
+    per_device_eval_batch_size=config['batch_size'],
+    gradient_accumulation_steps=config['gradient_accumulation_steps'],
+    
+    learning_rate=config['learning_rate'],
+    num_train_epochs=config['num_epochs'],
+    
+    eval_strategy="steps",
+    eval_steps=config['eval_steps'],
+    save_strategy="steps",
+    save_steps=config['save_steps'],
+    
+    logging_steps=config['logging_steps'],
+    load_best_model_at_end=True,
+    metric_for_best_model="eval_loss",
+    greater_is_better=False,
+    save_total_limit=2,
+    fp16=use_fp16,
+    bf16=use_bf16,
+    
+    max_grad_norm=1.0,
+    warmup_ratio=0.03,
+    lr_scheduler_type="cosine",
+    dataset_text_field="text",
+)
+trainer = SFTTrainer(
+    model=model,
+    train_dataset=train_dataset,
+    eval_dataset=eval_dataset,
+    formatting_func=formatting_prompts_func,
+    processing_class=tokenizer,
+    args=training_arguments,
+)
+
+# ==========================================
+# 6. Training & Saving
+# ==========================================
+print(f"Starting training for {run_name}...")
+trainer.train()
+trainer.save_model(output_dir)
+
+param_path = os.path.join(output_dir, "experiment_config.json")
+experiment_log = {
+    "model_name": config['model_name'],
+    "dataset": config['dataset_name'],
+    "task_type": config['task_type'],
+    "hyperparameters": config
+}
+with open(param_path, "w") as f:
+    json.dump(experiment_log, f, indent=4)
+
+print(f"Training completed. Model saved to {output_dir}")

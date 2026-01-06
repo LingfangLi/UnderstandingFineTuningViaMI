@@ -1,0 +1,6 @@
+{
+    "model": "gpt2",
+    "task": "mt_kde4",
+    "k": 0,
+    "heads": []
+}

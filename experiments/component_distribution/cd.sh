@@ -7,11 +7,11 @@
 
 # Request 40 cores on 1 node
 #SBATCH --gres=gpu:1
-#SBATCH -p  gpu-a100-cs
+#SBATCH -p  gpu-a100-cs,gpu-a-lowsmall
 #SBTACH -N 1
 #SBATCH -n 16
 
-#SBATCH -t 3-00:00:00
+##SBATCH -t 3-00:00:00
 
 
 module load miniforge3/25.3.0-python3.12.10
