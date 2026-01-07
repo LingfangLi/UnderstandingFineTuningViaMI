@@ -337,14 +337,14 @@ def get_important_edges(model, dataset, metric, top_k, GraphClass, attribute_fn,
 # ==========================================
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--task", type=str,choices=['yelp', 'sst2','qa', 'mt', 'coqa','squad', 'kde4', 'tatoeba'],default='sst2')
+    parser.add_argument("--task", type=str,choices=['yelp', 'sst2','qa', 'mt', 'coqa','squad', 'kde4', 'tatoeba'],default='yelp')
     parser.add_argument("--model_name", type=str, default="llama2")  
     parser.add_argument("--output_dir", type=str, default="/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges")
     
     # Selcet mode
     parser.add_argument("--mode", type=str, default="finetuned", choices=['finetuned', 'pretrained', 'compare'])
                       
-    parser.add_argument("--data_path", type=str, default='/users/sglli24/UnderstandingFineTuningViaMI/output/corrupted_data/sst2_corrupted.csv')
+    parser.add_argument("--data_path", type=str, default='/users/sglli24/UnderstandingFineTuningViaMI/output/corrupted_data/yelp_corrupted.csv')
     parser.add_argument("--ft_model_path", type=str,help="Path to fientuned model directory")#default="/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/qwen2-0.5b-coqa-full-20251125-182058/checkpoint-4500/"
     parser.add_argument("--base_model_name", type=str, default="Qwen/Qwen2-0.5B",help="HF Hub name for config/tokenizer") #"meta-llama/Llama-2-7b-hf" default="Qwen/Qwen2-0.5B"
     parser.add_argument("--top_k", type=int, default=400)
