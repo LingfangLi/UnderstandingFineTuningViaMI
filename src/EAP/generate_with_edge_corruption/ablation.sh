@@ -4,19 +4,20 @@
 #SBATCH --export=ALL
 
 
-#SBATCH -o base-llama2-squad%j.out
+#SBATCH -o qwen-squad-ablation%j.out
 
 # Request 40 cores on 1 node
 #SBATCH --gres=gpu:1
-#SBATCH -p  gpu-a100-cs,gpu-h100
+#SBATCH -p  gpu-a100-cs,gpu-h100,gpu-a-lowsmall,gpu-a100-lowbig
 ##gpu-h100,gpu-a-lowsmall,gpu-a100-lowbig,gpu-l40s,gpu-v100
-#SBTACH -N 1
+
+#SBATCH -N 1
 
 #SBATCH -t 23:00:00
 
 
 module load miniforge3/25.3.0-python3.12.10
-source activate MI-FineTune
+source activate /mnt/fastscratch/users/sglli24/.conda/envs/MI-FineTune-new #MI-FineTune
 #pip install cmapy  
 #conda install -c conda-forge graphviz pygraphviz
 export PYTORCH_CUDA_ALLOC_CONF='expandable_segments:True,max_split_size_mb:512'
@@ -44,9 +45,13 @@ export CUDA_LAUNCH_BLOCKING=1
 #1
 #EOF
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/EAP/LlaMA/Qlora_LlaMA2_EAP_sentiment.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/EAP/LlaMA/Qlora_LlaMA2_eap_unified.py
-python /users/sglli24/UnderstandingFineTuningViaMI/src/EAP/eap_unified.py
+python /users/sglli24/UnderstandingFineTuningViaMI/src/EAP/generate_with_edge_corruption/qwen-ablation-eval.py \
+    --task squad \
+    --model_path "/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models/qwen2_squad.pt" \
+    --edge_path "/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges/old-version-finetuned/qwen2_squad_finetuned_edges.csv" \
+    --method zero \
+    --eval_num 10 \
+    --run_baseline
 
 echo --------------- 
 echo Job output ends 

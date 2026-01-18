@@ -2,10 +2,10 @@
 # Use the current working directory and current environment for this job.
 #SBATCH -D ./
 #SBATCH --export=ALL
-#SBATCH -o unified_eap_loop_gpt2%j.out
+#SBATCH -o unified_eap_loop_qwen%j.out
 # Request 40 cores on 1 node
 #SBATCH --gres=gpu:1
-#SBATCH -p gpu-h100,gpu-a100-cs,gpu-a100-lowbig,gpu-l40s
+#SBATCH -p gpu-a100-cs,gpu-h100,gpu-a100-lowbig,gpu-a-lowsmall,gpu-l40s
 ##SBATCH -p gpu-h100
 #SBATCH -N 1
 #SBATCH -t 1-00:00:00
@@ -27,81 +27,104 @@ echo -----------------
 hostname
 
 # ================= 配置路径 =================
-# 1. 微调模型所在的目录 (根据你的图片路径)
-MODEL_DIR="/mnt/data1/users/sglli24/fine-tuning-project-1/fine_tuned_models"
-
-# 2. 数据集所在的目录 (CSV文件)
+MODEL_DIR="/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models/" #"/mnt/data1/users/sglli24/fine-tuning-project-1/fine_tuned_models"
 DATA_DIR="/users/sglli24/UnderstandingFineTuningViaMI/output/corrupted_data"
-
-# 3. Python 脚本路径
 SCRIPT_PATH="/users/sglli24/UnderstandingFineTuningViaMI/src/EAP/eap_unified.py"
 
 # ================= 循环逻辑 =================
-# 遍历目录下的所有文件和文件夹
 for ft_path in "$MODEL_DIR"/*; do
-    # 获取文件名 (例如: llama3.2-tatoeba.pt 或 llama2-kde4)
+    # 获取文件名
     filename=$(basename "$ft_path")
-    
-    # 去掉文件后缀 (针对 .pt 文件)，文件夹名字不受影响
-    # 结果: llama3.2-tatoeba.pt -> llama3.2-tatoeba
     name_no_ext="${filename%.*}"
     
     # 初始化变量
     base_model=""
     task_name=""
     model_name=""
-    if [["$name_no_ext" == *-sst2 ]]; then
-        echo " 跳过非 sst2 任务: $filename"
-        continue
-    fi
-    # --- 自动判定模型和提取任务名 ---
+
+    # --- 1. 修复：增加空格 ---
+    #if [[ "$name_no_ext" == *-sst2 ]]; then
+    #    echo " 跳过非 sst2 任务: $filename"
+    #    continue
+    #fi
+
+    # --- 2. 修复：取消注释并整理逻辑 ---
     #if [[ "$name_no_ext" == qwen2-* ]]; then
-        # 匹配 llama3.2 (例如 llama3.2-tatoeba)
-        #pass
-        #base_model="Qwen/Qwen2-0.5B"
-        #model_name="qwen2"
-        #task_name="${name_no_ext#qwen2-}" 
+     #   base_model="Qwen/Qwen2-0.5B"
+     #   model_name="qwen2"
+      #  task_name="${name_no_ext#qwen2-}" 
+        
     if [[ "$name_no_ext" == gpt2-* ]]; then
-        # 匹配 gpt2 (例如 gpt2-yelp)
         base_model="gpt2"
         model_name="gpt2"
-        # 提取 gpt2- 之后的部分作为 task_name
         task_name="${name_no_ext#gpt2-}"
         
     #elif [[ "$name_no_ext" == llama2-* ]]; then
-        #suffix="${name_no_ext#llama2-}"
-         # 排除 tatoeba 和 yelp
-        #if [[ "$suffix" == "tatoeba" || "$suffix" == "yelp" ]]; then
-         #   echo "跳过任务: $name_no_ext"
-        #    continue
-        #fi
+        # 提取后缀
+    #    suffix="${name_no_ext#llama2-}"
+        # 如果需要排除特定任务，可以在这里加判断，否则正常提取
+    #    base_model="meta-llama/Llama-2-7b-hf"
+    #    model_name="llama2"
+    #    task_name="$suffix"
         
-        # 匹配 llama2 (例如 llama2-kde4)
-        #base_model="meta-llama/Llama-2-7b-hf"
-        #model_name="llama2"
-        #task_name="${name_no_ext#llama2-}"
-        
-    #elif [[ "$name_no_ext" == llama3.2-* ]]; then
-        # 匹配 llama3.2 (例如 llama3.2-tatoeba)
-        #base_model="meta-llama/Llama-3.2-1B"
-        #model_name="llama3.2"
-        #task_name="${name_no_ext#llama3.2-}"
+    elif [[ "$name_no_ext" == llama3.2-* ]]; then
+        base_model="meta-llama/Llama-3.2-1B"
+        model_name="llama3.2"
+        task_name="${name_no_ext#llama3.2-}"
       
     else
         echo "?? 跳过无法识别的模型格式: $filename"
         continue
     fi
   
+  
+    # -----------------------------------------------------------
+    # 1. 【核心修复】过滤逻辑：只允许 llama3.2 通过
+    # -----------------------------------------------------------
+    # 如果文件名 不是 以 llama3.2 开头，直接跳过进入下一次循环
+    #if [[ "$name_no_ext" != Qwen2-* ]]; then
+        # 这是一个静默跳过，不打印日志以免刷屏
+    #    continue
+    #fi
 
+    # -----------------------------------------------------------
+    # 2. 是否跳过 sst2 (保留你之前的逻辑)
+    # -----------------------------------------------------------
+    #if [[ "$name_no_ext" == *-sst2 ]]; then
+    #    echo ">> 跳过 sst2 任务: $filename"
+    #    continue
+    #fi
+
+    # -----------------------------------------------------------
+    # 3. 设置 Llama 3.2 专属参数 (因为前面已经过滤了，这里必然是 llama3.2)
+    # -----------------------------------------------------------
+    #base_model="meta-llama/Llama-2-7b-hf" #"meta-llama/Llama-3.2-1B"
+    #model_name="llama2" #"llama3.2"
+    
+    # 提取任务名：去掉前缀 "llama3.2-"
+    #task_name="${name_no_ext#llama2-}"
+
+    #temp_name="${name_no_ext#Qwen2-0.5B_}"
+    
+    # 第二步: 去掉后缀 "_best" -> 得到 "yelp"
+    #task_name="${temp_name%_best}"
+    
+    #base_model="Qwen/Qwen2-0.5B"
+    #model_name="qwen2"
+    
     # --- 构建 Data Path ---
-    # 假设 CSV 命名格式为: {task_name}_corrupted.csv
     current_data_path="${DATA_DIR}/${task_name}_corrupted.csv"
+    
+    # --- 调试信息：打印出来看看路径对不对 ---
+    echo "正在检查任务: $task_name"
+    echo "  -> 数据路径: $current_data_path"
 
-    # 检查数据文件是否存在
     if [ ! -f "$current_data_path" ]; then
-        echo "? 错误: 数据文件不存在，跳过此任务: $current_data_path"
+        echo "  [错误] 数据文件不存在，跳过: $current_data_path"
+        echo ""
         continue
     fi
+    
 
     # --- 运行 Python 脚本 ---
     echo "--------------------------------------------------"
@@ -111,16 +134,14 @@ for ft_path in "$MODEL_DIR"/*; do
     echo "   Data Path : $current_data_path"
     echo "--------------------------------------------------"
 
-    # 假设你的 Python 代码接收以下参数: 
-    # --ft_model_path, --base_model_name, --data_path
-    # 如果你的参数名称不同，请在下面修改
-    
+    # --- 3. 修复：必须传入 ft_model_path，否则 Python 脚本不执行分析 ---
     python "$SCRIPT_PATH" \
-        --task "$task_name"\
+        --task "$task_name" \
         --base_model_name "$base_model" \
-        --model_name "$model_name"\
-        --data_path "$current_data_path"
-        #--ft_model_path "$ft_path" \
+        --model_name "$model_name" \
+        --data_path "$current_data_path" \
+        --ft_model_path "$ft_path"
+
     echo "完成: $filename"
     echo ""
 

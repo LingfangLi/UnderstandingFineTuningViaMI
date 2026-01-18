@@ -104,48 +104,52 @@ def validate_dataset_tokenization(model, dataset, task):
     # 【关键设置】安全长度上限
     # A100 80G 在开启 QKV 分离的情况下，建议设为 600-800。
     # 如果依然 OOM，请调小这个数值 (例如 512)。
-    #SAFE_MAX_LEN = 800 
-    #print(f"Pre-processing: Truncating text to max {SAFE_MAX_LEN} tokens to prevent OOM.")
-
-    #for clean_batch, corrupted_batch, label_batch in dataset:
-        # 1. Tokenize 并强制截断 (得到 Tensor)
-    #    clean_enc = model.tokenizer(
-    #        clean_batch, 
-    #        truncation=True, 
-    #        max_length=SAFE_MAX_LEN, 
-    #        return_tensors='pt'
-    #    )
-    #    corr_enc = model.tokenizer(
-     #       corrupted_batch, 
-    #        truncation=True, 
-    #        max_length=SAFE_MAX_LEN, 
-    #        return_tensors='pt'
-    #    )
-
-        # 2. 【核心技巧】将截断后的 Tensor 解码回 String
-        # skip_special_tokens=True 是为了防止 attribute_mem 再次添加 BOS token 导致重复
-     #   clean_strs = model.tokenizer.batch_decode(clean_enc['input_ids'], skip_special_tokens=True)
-     #   corrupted_strs = model.tokenizer.batch_decode(corr_enc['input_ids'], skip_special_tokens=True)
-     
+    SAFE_MAX_LEN = 384 
+    print(f"Pre-processing: Truncating text to max {SAFE_MAX_LEN} tokens to prevent OOM.")
+    
+    dropped_count = 0
+    
     for clean_batch, corrupted_batch, label_batch in dataset:
-        # 1. Tokenize
-        clean_enc = model.tokenizer(clean_batch, padding=True, return_tensors='pt')
-        corr_enc = model.tokenizer(corrupted_batch, padding=True, return_tensors='pt')
-
+        # 1. Tokenize 并强制截断 (得到 Tensor)
+        clean_enc = model.tokenizer(
+            clean_batch, 
+            truncation=True, 
+            max_length=SAFE_MAX_LEN, 
+            return_tensors='pt'
+        )
+        corr_enc = model.tokenizer(
+            corrupted_batch, 
+            truncation=True, 
+            max_length=SAFE_MAX_LEN, 
+            return_tensors='pt'
+        )
         clean_ids = clean_enc['input_ids']
         corr_ids = corr_enc['input_ids']
 
-        clean_len = clean_ids.shape[1]
-        corr_len = corr_ids.shape[1]
+        # 2. 【核心技巧】将截断后的 Tensor 解码回 String
+        # skip_special_tokens=True 是为了防止 attribute_mem 再次添加 BOS token 导致重复
+        clean_strs = model.tokenizer.batch_decode(clean_enc['input_ids'], skip_special_tokens=True)
+        corrupted_strs = model.tokenizer.batch_decode(corr_enc['input_ids'], skip_special_tokens=True)
+     
+    #for clean_batch, corrupted_batch, label_batch in dataset:
+        # 1. Tokenize
+    #    clean_enc = model.tokenizer(clean_batch, padding=True, return_tensors='pt')
+    #    corr_enc = model.tokenizer(corrupted_batch, padding=True, return_tensors='pt')
+
+    #    clean_ids = clean_enc['input_ids']
+    #    corr_ids = corr_enc['input_ids']
+
+     #   clean_len = clean_ids.shape[1]
+    #    corr_len = corr_ids.shape[1]
 
         # 2. 对齐长度
-        if clean_len != corr_len:
-            max_len = max(clean_len, corr_len)
+     #   if clean_len != corr_len:
+     #       max_len = max(clean_len, corr_len)
             # 强制重新 Tokenize 并指定 max_length
-            clean_enc = model.tokenizer(clean_batch, padding='max_length', max_length=max_len, truncation=True,
-                                        return_tensors='pt')
-            corr_enc = model.tokenizer(corrupted_batch, padding='max_length', max_length=max_len, truncation=True,
-                                       return_tensors='pt')
+      #      clean_enc = model.tokenizer(clean_batch, padding='max_length', max_length=max_len, truncation=True,
+      #                                  return_tensors='pt')
+      #      corr_enc = model.tokenizer(corrupted_batch, padding='max_length', max_length=max_len, truncation=True,
+      #                                 return_tensors='pt')
 
             # 更新 clean_batch / corrupted_batch 为对齐后的文本 (虽然 EAP 主要用 ids)
             # 这里直接用 ids 更有保障，但为了兼容 dataset 格式，我们保留原始文本，
@@ -154,7 +158,7 @@ def validate_dataset_tokenization(model, dataset, task):
             # 但为了简单，我们在这里做一次过滤：如果长度差异太大无法 pad，建议丢弃或截断。
 
             # 在这里我们选择：相信 model.tokenizer 的 padding='max_length' 能搞定
-            pass
+      #      pass
 
         # 3. 处理 Label (这部分保持不变)
         label_ids = []
@@ -173,8 +177,12 @@ def validate_dataset_tokenization(model, dataset, task):
         label_tensor = torch.tensor(label_ids).to(model.cfg.device)
 
         # 4. 返回的是字符串列表 (clean_strs)，attribute_mem.py 能够正常处理
-        fixed_dataset.append((clean_batch, corrupted_batch, label_tensor))  ####fixed_dataset.append((clean_strs, corrupted_strs, label_tensor))
-
+        #fixed_dataset.append((clean_batch, corrupted_batch, label_tensor))  ####fixed_dataset.append((clean_strs, corrupted_strs, label_tensor))
+        
+        clean_strs = model.tokenizer.batch_decode(clean_ids, skip_special_tokens=True)
+        corrupted_strs = model.tokenizer.batch_decode(corr_ids, skip_special_tokens=True)
+        fixed_dataset.append((clean_strs, corrupted_strs, label_tensor))
+        
     print(f"Validation passed. Processed {len(fixed_dataset)} batches.")
     return fixed_dataset
 
@@ -190,22 +198,37 @@ def load_model_unified(model_path: str, base_model_name: str = "meta-llama/Llama
     """
     device = "cuda" if torch.cuda.is_available() else "cpu"
     print(f"⬇️ Loading Model from: {model_path}")
+    
     print(f"   Base Model Name for Config: {base_model_name}")
 
     # Use bfloat16 for A100/3090/4090, fallback to float16
     dtype = torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16
+    
+    max_memory = None
+    if torch.cuda.device_count() > 1:
+        max_memory = {i: "40GiB" for i in range(torch.cuda.device_count())}
+        print(f"   [Strategy] Detected {torch.cuda.device_count()} GPUs. Enforcing max_memory limit to force splitting: {max_memory}")
+        
 
     # --- Case 1: Pure Pretrained Model ---
     if model_path is None or model_path.lower() == 'pretrained':
         print("   [Mode] Pure Pretrained Base Model")
+        hf_model = AutoModelForCausalLM.from_pretrained(
+            base_model_name,
+            torch_dtype=dtype,
+            device_map="auto",  
+            max_memory=max_memory,
+            trust_remote_code=True
+        )
+        
         model = HookedTransformer.from_pretrained(
             base_model_name,
-            device=device,
+            hf_model=hf_model,  
+            device=None,        
             fold_ln=False,
             center_writing_weights=False,
             center_unembed=False,
             dtype=dtype
-            #hf_model_args={"trust_remote_code": True}
         )
 
     # --- Case 2: Directory Path (Auto-detect LoRA vs Full) ---
@@ -237,6 +260,7 @@ def load_model_unified(model_path: str, base_model_name: str = "meta-llama/Llama
                 hf_model=hf_model,
                 device=device,
                 fold_ln=False,
+                max_memory=max_memory,
                 center_writing_weights=False,
                 center_unembed=False,
                 dtype=dtype
@@ -307,10 +331,16 @@ def load_model_unified(model_path: str, base_model_name: str = "meta-llama/Llama
 # ==========================================
 # 5. EAP 执行逻辑
 # ==========================================
+import gc
+
 def get_important_edges(model, dataset, metric, top_k, GraphClass, attribute_fn, task):
     # 1. 验证数据
     dataset = validate_dataset_tokenization(model, dataset,task)
-
+    
+    # 主动清理一下
+    torch.cuda.empty_cache()
+    gc.collect()
+    
     # 2. 建图
     g = GraphClass.from_model(model)
 
@@ -329,6 +359,10 @@ def get_important_edges(model, dataset, metric, top_k, GraphClass, attribute_fn,
     g.apply_threshold(top_k_score, absolute=True)
 
     edges = {edge_id: edge.score for edge_id, edge in g.edges.items() if edge.in_graph}
+    
+    del g
+    torch.cuda.empty_cache()
+    
     return edges
 
 
@@ -337,16 +371,16 @@ def get_important_edges(model, dataset, metric, top_k, GraphClass, attribute_fn,
 # ==========================================
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--task", type=str,choices=['yelp', 'sst2','qa', 'mt', 'coqa','squad', 'kde4', 'tatoeba'],default='yelp')
+    parser.add_argument("--task", type=str,choices=['yelp', 'sst2','coqa','squad', 'kde4', 'tatoeba'],default='squad')
     parser.add_argument("--model_name", type=str, default="llama2")  
-    parser.add_argument("--output_dir", type=str, default="/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges")
+    parser.add_argument("--output_dir", type=str, default="/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges/old-version-finetuned/")
     
     # Selcet mode
-    parser.add_argument("--mode", type=str, default="finetuned", choices=['finetuned', 'pretrained', 'compare'])
+    parser.add_argument("--mode", type=str, default="pretrained", choices=['finetuned', 'pretrained', 'compare'])
                       
-    parser.add_argument("--data_path", type=str, default='/users/sglli24/UnderstandingFineTuningViaMI/output/corrupted_data/yelp_corrupted.csv')
-    parser.add_argument("--ft_model_path", type=str,help="Path to fientuned model directory")#default="/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/qwen2-0.5b-coqa-full-20251125-182058/checkpoint-4500/"
-    parser.add_argument("--base_model_name", type=str, default="Qwen/Qwen2-0.5B",help="HF Hub name for config/tokenizer") #"meta-llama/Llama-2-7b-hf" default="Qwen/Qwen2-0.5B"
+    parser.add_argument("--data_path", type=str, default='/users/sglli24/UnderstandingFineTuningViaMI/output/corrupted_data/squad_corrupted.csv')
+    parser.add_argument("--ft_model_path", type=str,help="Path to fientuned model directory",default="/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models/llama2-squad") #default=/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models/ "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/qwen2-0.5b-coqa-full-20251125-182058/checkpoint-4500/"
+    parser.add_argument("--base_model_name", type=str, default="meta-llama/Llama-2-7b-hf",help="HF Hub name for config/tokenizer") #"meta-llama/Llama-2-7b-hf" default="Qwen/Qwen2-0.5B"  "meta-llama/Llama-3.2-1B"
     parser.add_argument("--top_k", type=int, default=400)
     parser.add_argument("--batch_size", type=int, default=1)
     
