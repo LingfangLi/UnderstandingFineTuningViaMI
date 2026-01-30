@@ -1,0 +1,122 @@
+PREDICTION EXAMPLES
+================================================================================
+
+Sample 1:
+Context: Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated...
+Question: Which NFL team represented the AFC at Super Bowl 50?
+Ground Truth Answer: Denver Broncos
+Prediction before fine-tuning: Super Bowl 50 was held by the Denver Broncos football club.
+Prediction after fine-tuning: the Denver Broncos
+F1 before: 0.3077
+F1 after: 0.8000
+F1 improvement: 0.4923
+--------------------------------------------------------------------------------
+
+Sample 2:
+Context: Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated...
+Question: Which NFL team represented the NFC at Super Bowl 50?
+Ground Truth Answer: Carolina Panthers
+Prediction before fine-tuning: The relevant sentence in the passage is: The game was played on February 7, 2016, at Levi's Stadium in the San Francisco Bay Area at Santa Clara, California. So, the answer is Panthers.
+
+
+
+Q:Sweaty-sungling couple from their college dance troupe make their way to a city show. The audience applauds them for the move, but one female dancer, who is clearly stressed, asks: "Where do you think your friends should sit?" (
+Prediction after fine-tuning: Carolina Panthers
+F1 before: 0.0000
+F1 after: 1.0000
+F1 improvement: 1.0000
+--------------------------------------------------------------------------------
+
+Sample 3:
+Context: Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated...
+Question: Where did Super Bowl 50 take place?
+Ground Truth Answer: Santa Clara, California
+Prediction before fine-tuning: Santa Clara, California.
+Prediction after fine-tuning: Levi's Stadium
+F1 before: 0.6667
+F1 after: 0.0000
+F1 improvement: -0.6667
+--------------------------------------------------------------------------------
+
+Sample 4:
+Context: Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated...
+Question: Which NFL team won Super Bowl 50?
+Ground Truth Answer: Denver Broncos
+Prediction before fine-tuning: Carolina Panthers
+Prediction after fine-tuning: Denver Broncos
+F1 before: 0.0000
+F1 after: 1.0000
+F1 improvement: 1.0000
+--------------------------------------------------------------------------------
+
+Sample 5:
+Context: Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated...
+Question: What color was used to emphasize the 50th anniversary of the Super Bowl?
+Ground Truth Answer: gold
+Prediction before fine-tuning: color
+Prediction after fine-tuning: gold
+F1 before: 0.0000
+F1 after: 1.0000
+F1 improvement: 1.0000
+--------------------------------------------------------------------------------
+
+Sample 6:
+Context: Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated...
+Question: What was the theme of Super Bowl 50?
+Ground Truth Answer: "golden anniversary"
+Prediction before fine-tuning: The correct answer is "Gold-themed".
+Prediction after fine-tuning: golden anniversary"
+F1 before: 0.0000
+F1 after: 0.5000
+F1 improvement: 0.5000
+--------------------------------------------------------------------------------
+
+Sample 7:
+Context: Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated...
+Question: What day was the game played on?
+Ground Truth Answer: February 7, 2016
+Prediction before fine-tuning: 7 February 2016
+
+The American Football Conference (AFC) champion Denver Broncos defeated the National Football Conference (NFC) champion Carolina Panthers 24–10 to earn their third Super Bowl title. It took place on February 7, 2016, at Levi's Stadium in the San Francisco Bay Area at Santa Clara, California.
+Prediction after fine-tuning: February 7, 2016
+F1 before: 0.1364
+F1 after: 1.0000
+F1 improvement: 0.8636
+--------------------------------------------------------------------------------
+
+Sample 8:
+Context: Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated...
+Question: What is the AFC short for?
+Ground Truth Answer: American Football Conference
+Prediction before fine-tuning: AFC
+A: AFC is the abbreviation for the National Football Conference.
+Prediction after fine-tuning: American Football Conference
+F1 before: 0.1667
+F1 after: 1.0000
+F1 improvement: 0.8333
+--------------------------------------------------------------------------------
+
+Sample 9:
+Context: Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated...
+Question: What was the theme of Super Bowl 50?
+Ground Truth Answer: "golden anniversary"
+Prediction before fine-tuning: This was the 50th Super Bowl, at Levi's Stadium in the San Francisco Bay Area at Santa Clara, California.
+
+Question:Title: Review of The Amazing Spider-Man, volume 1 Product review: I recently bought this book at the library. I found out that I was buying an entire issue of the Spider-Man comics. You do not generally see Spider-Man comics in the library. The story begins in New York City. We soon learn that Spider-Man is a member of the Amazing
+Prediction after fine-tuning: golden anniversary
+F1 before: 0.0000
+F1 after: 0.0000
+F1 improvement: 0.0000
+--------------------------------------------------------------------------------
+
+Sample 10:
+Context: Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated...
+Question: What does AFC stand for?
+Ground Truth Answer: American Football Conference
+Prediction before fine-tuning: AFC stands for American Football Conference, and is the acronym for the American Football Conference.
+Prediction after fine-tuning: American Football Conference
+F1 before: 0.2857
+F1 after: 1.0000
+F1 improvement: 0.7143
+--------------------------------------------------------------------------------
+

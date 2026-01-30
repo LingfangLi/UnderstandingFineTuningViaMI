@@ -3,12 +3,13 @@
 #SBATCH -D ./
 #SBATCH --export=ALL
 
-#SBATCH -o attention_kl_sst2_%j.out
-##SBATCH -o attention_figures_all_%j.out
+##SBATCH -o attention_kl_llama2-sst2_%j.out
+#SBATCH -o attention_figures_all_in_one%j.out
 
 # Request 40 cores on 1 node
 #SBATCH --gres=gpu:1
-#SBATCH -p  gpu-a100-cs,gpu-a100-lowbig,gpu-a-lowsmall,gpu-l40s
+#SBATCH -p  gpu-h100,gpu-a100-cs,gpu-a100-lowbig,gpu-a-lowsmall,gpu-l40s,gpu-v100
+##SBATCH --exclude=gpu08
 ##SBATCH -p lowpriority  
 #SBTACH -N 1
 
@@ -40,9 +41,11 @@ hostname
 # parallel environment.
 export CUDA_LAUNCH_BLOCKING=1
 
-python /users/sglli24/UnderstandingFineTuningViaMI/experiments/attention_matrix_analysis/measure_attention_kl.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/attention_matrix_analysis/kl_visualize_heatmap.py
 
+#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/attention_matrix_analysis/measure_attention_kl.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/attention_matrix_analysis/kl_visualize_heatmap.py
+python /users/sglli24/UnderstandingFineTuningViaMI/experiments/attention_matrix_analysis/kl_visulize_heatmap_all.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/attention_matrix_analysis/old_measure_attention_kl.py
 echo --------------- 
 echo Job output ends 
 date_end=$(date +%s)

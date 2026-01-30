@@ -1,0 +1,2342 @@
+[
+  {
+    "sample_idx": 0,
+    "accuracy_before": 0.0,
+    "accuracy_after": 0.0,
+    "prediction_before": "",
+    "prediction_after": "",
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 40.47725409055249,
+        "dist_after": 40.71087800588047,
+        "dist_change": 0.23362391532797488,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 44.59390114221859,
+        "dist_after": 57.47201210414971,
+        "dist_change": 12.878110961931121,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 41.306585152983246,
+        "dist_after": 56.37300527940482,
+        "dist_change": 15.066420126421576,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 35.808484657176436,
+        "dist_after": 45.685103742138274,
+        "dist_change": 9.876619084961838,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 39.98306085273704,
+        "dist_after": 53.218610362391196,
+        "dist_change": 13.235549509654156,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 18.950555867059244,
+        "dist_after": 16.831884490519293,
+        "dist_change": -2.1186713765399503,
+        "is_decreased": true
+      },
+      {
+        "layer": 6,
+        "dist_before": 19.329875399206607,
+        "dist_after": 6.950843909484667,
+        "dist_change": -12.379031489721939,
+        "is_decreased": true
+      },
+      {
+        "layer": 7,
+        "dist_before": 19.37506313773294,
+        "dist_after": 16.720697567424263,
+        "dist_change": -2.654365570308677,
+        "is_decreased": true
+      },
+      {
+        "layer": 8,
+        "dist_before": 18.504373257417384,
+        "dist_after": 13.455598027154076,
+        "dist_change": -5.048775230263308,
+        "is_decreased": true
+      },
+      {
+        "layer": 9,
+        "dist_before": 28.3579459308545,
+        "dist_after": 16.953577349360827,
+        "dist_change": -11.40436858149367,
+        "is_decreased": true
+      },
+      {
+        "layer": 10,
+        "dist_before": 28.715934161040835,
+        "dist_after": 20.6110408106035,
+        "dist_change": -8.104893350437333,
+        "is_decreased": true
+      },
+      {
+        "layer": 11,
+        "dist_before": 27.50903010915126,
+        "dist_after": 22.579430930844943,
+        "dist_change": -4.929599178306319,
+        "is_decreased": true
+      },
+      {
+        "layer": 12,
+        "dist_before": 29.5604917273069,
+        "dist_after": 25.820609394348164,
+        "dist_change": -3.739882332958736,
+        "is_decreased": true
+      },
+      {
+        "layer": 13,
+        "dist_before": 27.521340296912253,
+        "dist_after": 23.383039830538713,
+        "dist_change": -4.13830046637354,
+        "is_decreased": true
+      },
+      {
+        "layer": 14,
+        "dist_before": 15.180373969130796,
+        "dist_after": 15.07188411614254,
+        "dist_change": -0.10848985298825653,
+        "is_decreased": true
+      },
+      {
+        "layer": 15,
+        "dist_before": 13.922424399216595,
+        "dist_after": 19.58792250607838,
+        "dist_change": 5.6654981068617865,
+        "is_decreased": false
+      },
+      {
+        "layer": 16,
+        "dist_before": 20.140895900362324,
+        "dist_after": 26.655291280766697,
+        "dist_change": 6.514395380404373,
+        "is_decreased": false
+      },
+      {
+        "layer": 17,
+        "dist_before": 25.182452999970803,
+        "dist_after": 35.30611382283872,
+        "dist_change": 10.123660822867915,
+        "is_decreased": false
+      },
+      {
+        "layer": 18,
+        "dist_before": 26.55431464610114,
+        "dist_after": 38.056777465982414,
+        "dist_change": 11.502462819881274,
+        "is_decreased": false
+      },
+      {
+        "layer": 19,
+        "dist_before": 31.095569771369853,
+        "dist_after": 41.096893334706365,
+        "dist_change": 10.001323563336513,
+        "is_decreased": false
+      },
+      {
+        "layer": 20,
+        "dist_before": 29.944103533682856,
+        "dist_after": 45.69381324716784,
+        "dist_change": 15.749709713484982,
+        "is_decreased": false
+      },
+      {
+        "layer": 21,
+        "dist_before": 33.47538288858589,
+        "dist_after": 45.48396773719027,
+        "dist_change": 12.008584848604379,
+        "is_decreased": false
+      },
+      {
+        "layer": 22,
+        "dist_before": 37.329729322837906,
+        "dist_after": 44.90505076811115,
+        "dist_change": 7.5753214452732465,
+        "is_decreased": false
+      },
+      {
+        "layer": 23,
+        "dist_before": 37.148754403914204,
+        "dist_after": 43.81684879410581,
+        "dist_change": 6.668094390191605,
+        "is_decreased": false
+      },
+      {
+        "layer": 24,
+        "dist_before": 36.69026095018282,
+        "dist_after": 42.23227708200512,
+        "dist_change": 5.542016131822301,
+        "is_decreased": false
+      },
+      {
+        "layer": 25,
+        "dist_before": 36.36949851105306,
+        "dist_after": 40.270663981409996,
+        "dist_change": 3.9011654703569363,
+        "is_decreased": false
+      },
+      {
+        "layer": 26,
+        "dist_before": 34.25403600345481,
+        "dist_after": 37.9018936831568,
+        "dist_change": 3.6478576797019926,
+        "is_decreased": false
+      },
+      {
+        "layer": 27,
+        "dist_before": 35.56056063087735,
+        "dist_after": 39.19277855993641,
+        "dist_change": 3.6322179290590597,
+        "is_decreased": false
+      },
+      {
+        "layer": 28,
+        "dist_before": 35.348124501807554,
+        "dist_after": 37.42348465938166,
+        "dist_change": 2.075360157574103,
+        "is_decreased": false
+      },
+      {
+        "layer": 29,
+        "dist_before": 34.23849802220186,
+        "dist_after": 34.74783325443355,
+        "dist_change": 0.5093352322316917,
+        "is_decreased": false
+      },
+      {
+        "layer": 30,
+        "dist_before": 31.439473488912654,
+        "dist_after": 31.930963342142963,
+        "dist_change": 0.49148985323030914,
+        "is_decreased": false
+      },
+      {
+        "layer": 31,
+        "dist_before": 27.203136906805437,
+        "dist_after": 22.86443362941647,
+        "dist_change": -4.338703277388966,
+        "is_decreased": true
+      }
+    ],
+    "text": "Contrary to other reviews, I have zero complaints about the service or the prices. I have been getting tire service here for the past 5 years now, and compared to my experience with places like Pep Boys, these guys are experienced and know what they're doing. \\nAlso, this is one place that I do not feel like I am being taken advantage of, just because of my gender. Other auto mechanics have been notorious for capitalizing on my ignorance of cars, and have sucked my bank account dry. But here, my service and road coverage has all been well explained - and let up to me to decide. \\nAnd they just renovated the waiting room. It looks a lot better than it did in previous years."
+  },
+  {
+    "sample_idx": 1,
+    "accuracy_before": 0.0,
+    "accuracy_after": 0.0,
+    "prediction_before": "",
+    "prediction_after": "",
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 16.980233965184762,
+        "dist_after": 16.471902764282078,
+        "dist_change": -0.5083312009026848,
+        "is_decreased": true
+      },
+      {
+        "layer": 1,
+        "dist_before": 24.85738588363143,
+        "dist_after": 39.85068326063132,
+        "dist_change": 14.993297376999891,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 31.238091719581128,
+        "dist_after": 48.099442169444394,
+        "dist_change": 16.861350449863266,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 32.46046495387784,
+        "dist_after": 47.06314090008402,
+        "dist_change": 14.602675946206183,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 49.861476128085194,
+        "dist_after": 57.18103793369878,
+        "dist_change": 7.3195618056135885,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 43.22920396773034,
+        "dist_after": 24.451574794325513,
+        "dist_change": -18.77762917340483,
+        "is_decreased": true
+      },
+      {
+        "layer": 6,
+        "dist_before": 45.24762045083055,
+        "dist_after": 16.69163587248785,
+        "dist_change": -28.555984578342702,
+        "is_decreased": true
+      },
+      {
+        "layer": 7,
+        "dist_before": 47.60265098353288,
+        "dist_after": 23.689165438638526,
+        "dist_change": -23.913485544894357,
+        "is_decreased": true
+      },
+      {
+        "layer": 8,
+        "dist_before": 44.09019235720649,
+        "dist_after": 11.67197971066484,
+        "dist_change": -32.41821264654165,
+        "is_decreased": true
+      },
+      {
+        "layer": 9,
+        "dist_before": 44.935167659909396,
+        "dist_after": 22.448044667817047,
+        "dist_change": -22.48712299209235,
+        "is_decreased": true
+      },
+      {
+        "layer": 10,
+        "dist_before": 44.89037200838681,
+        "dist_after": 30.385077251011655,
+        "dist_change": -14.505294757375157,
+        "is_decreased": true
+      },
+      {
+        "layer": 11,
+        "dist_before": 40.839844563047,
+        "dist_after": 26.542108142992102,
+        "dist_change": -14.2977364200549,
+        "is_decreased": true
+      },
+      {
+        "layer": 12,
+        "dist_before": 42.44495350648669,
+        "dist_after": 29.73563572120215,
+        "dist_change": -12.70931778528454,
+        "is_decreased": true
+      },
+      {
+        "layer": 13,
+        "dist_before": 44.606138041189624,
+        "dist_after": 29.54494066097776,
+        "dist_change": -15.061197380211865,
+        "is_decreased": true
+      },
+      {
+        "layer": 14,
+        "dist_before": 48.19082903612122,
+        "dist_after": 38.4070923388926,
+        "dist_change": -9.783736697228619,
+        "is_decreased": true
+      },
+      {
+        "layer": 15,
+        "dist_before": 46.36008784525938,
+        "dist_after": 41.21752853611297,
+        "dist_change": -5.142559309146407,
+        "is_decreased": true
+      },
+      {
+        "layer": 16,
+        "dist_before": 41.33207622189776,
+        "dist_after": 45.28991684307069,
+        "dist_change": 3.9578406211729344,
+        "is_decreased": false
+      },
+      {
+        "layer": 17,
+        "dist_before": 41.23171609565098,
+        "dist_after": 45.13461270979865,
+        "dist_change": 3.9028966141476715,
+        "is_decreased": false
+      },
+      {
+        "layer": 18,
+        "dist_before": 44.56493447314556,
+        "dist_after": 46.07352630903895,
+        "dist_change": 1.5085918358933839,
+        "is_decreased": false
+      },
+      {
+        "layer": 19,
+        "dist_before": 44.03585857772121,
+        "dist_after": 46.23280650653366,
+        "dist_change": 2.196947928812456,
+        "is_decreased": false
+      },
+      {
+        "layer": 20,
+        "dist_before": 44.36408637829626,
+        "dist_after": 47.51050074775213,
+        "dist_change": 3.1464143694558757,
+        "is_decreased": false
+      },
+      {
+        "layer": 21,
+        "dist_before": 44.58223882165572,
+        "dist_after": 49.5451098249549,
+        "dist_change": 4.962871003299178,
+        "is_decreased": false
+      },
+      {
+        "layer": 22,
+        "dist_before": 44.760717977407424,
+        "dist_after": 46.87762626776272,
+        "dist_change": 2.1169082903552976,
+        "is_decreased": false
+      },
+      {
+        "layer": 23,
+        "dist_before": 44.87272857148415,
+        "dist_after": 44.26654938564876,
+        "dist_change": -0.6061791858353942,
+        "is_decreased": true
+      },
+      {
+        "layer": 24,
+        "dist_before": 44.223156255456,
+        "dist_after": 42.011208079124536,
+        "dist_change": -2.211948176331461,
+        "is_decreased": true
+      },
+      {
+        "layer": 25,
+        "dist_before": 43.744743068300174,
+        "dist_after": 40.00261508677009,
+        "dist_change": -3.742127981530082,
+        "is_decreased": true
+      },
+      {
+        "layer": 26,
+        "dist_before": 42.50918177534584,
+        "dist_after": 39.474883998587615,
+        "dist_change": -3.0342977767582227,
+        "is_decreased": true
+      },
+      {
+        "layer": 27,
+        "dist_before": 43.463176081363166,
+        "dist_after": 40.403852140051434,
+        "dist_change": -3.0593239413117317,
+        "is_decreased": true
+      },
+      {
+        "layer": 28,
+        "dist_before": 43.467159438590556,
+        "dist_after": 39.23140801765891,
+        "dist_change": -4.235751420931649,
+        "is_decreased": true
+      },
+      {
+        "layer": 29,
+        "dist_before": 43.17701805080587,
+        "dist_after": 36.76606732771924,
+        "dist_change": -6.4109507230866285,
+        "is_decreased": true
+      },
+      {
+        "layer": 30,
+        "dist_before": 43.98312213517227,
+        "dist_after": 37.470351768297505,
+        "dist_change": -6.5127703668747685,
+        "is_decreased": true
+      },
+      {
+        "layer": 31,
+        "dist_before": 44.18821779368511,
+        "dist_after": 44.52022579032495,
+        "dist_change": 0.33200799663983815,
+        "is_decreased": false
+      }
+    ],
+    "text": "Last summer I had an appointment to get new tires and had to wait a super long time. I also went in this week for them to fix a minor problem with a tire they put on. They \\\"\"fixed\\\"\" it for free, and the very next morning I had the same issue. I called to complain, and the \\\"\"manager\\\"\" didn't even apologize!!! So frustrated. Never going back.  They seem overpriced, too."
+  },
+  {
+    "sample_idx": 2,
+    "accuracy_before": 0.0,
+    "accuracy_after": 0.0,
+    "prediction_before": "",
+    "prediction_after": "",
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 76.63053773361807,
+        "dist_after": 66.6512868778445,
+        "dist_change": -9.979250855773572,
+        "is_decreased": true
+      },
+      {
+        "layer": 1,
+        "dist_before": 61.942815328603025,
+        "dist_after": 54.79441142420839,
+        "dist_change": -7.148403904394634,
+        "is_decreased": true
+      },
+      {
+        "layer": 2,
+        "dist_before": 56.66224397813123,
+        "dist_after": 47.28402314693411,
+        "dist_change": -9.378220831197119,
+        "is_decreased": true
+      },
+      {
+        "layer": 3,
+        "dist_before": 51.79620054620575,
+        "dist_after": 47.6111747857683,
+        "dist_change": -4.185025760437455,
+        "is_decreased": true
+      },
+      {
+        "layer": 4,
+        "dist_before": 46.27865307007857,
+        "dist_after": 46.54144861944786,
+        "dist_change": 0.2627955493692937,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 33.00236638424309,
+        "dist_after": 15.445678020854242,
+        "dist_change": -17.556688363388847,
+        "is_decreased": true
+      },
+      {
+        "layer": 6,
+        "dist_before": 36.559154777551115,
+        "dist_after": 14.334762210750256,
+        "dist_change": -22.22439256680086,
+        "is_decreased": true
+      },
+      {
+        "layer": 7,
+        "dist_before": 34.85354561477919,
+        "dist_after": 14.502994344115494,
+        "dist_change": -20.3505512706637,
+        "is_decreased": true
+      },
+      {
+        "layer": 8,
+        "dist_before": 35.6637033873937,
+        "dist_after": 1.9194151048802965,
+        "dist_change": -33.74428828251341,
+        "is_decreased": true
+      },
+      {
+        "layer": 9,
+        "dist_before": 29.443621500123108,
+        "dist_after": 13.02773719901334,
+        "dist_change": -16.41588430110977,
+        "is_decreased": true
+      },
+      {
+        "layer": 10,
+        "dist_before": 30.173510955612876,
+        "dist_after": 16.686899809440995,
+        "dist_change": -13.486611146171882,
+        "is_decreased": true
+      },
+      {
+        "layer": 11,
+        "dist_before": 33.47992819709848,
+        "dist_after": 13.543391818969823,
+        "dist_change": -19.936536378128658,
+        "is_decreased": true
+      },
+      {
+        "layer": 12,
+        "dist_before": 34.22948857474242,
+        "dist_after": 16.976302462119406,
+        "dist_change": -17.253186112623013,
+        "is_decreased": true
+      },
+      {
+        "layer": 13,
+        "dist_before": 36.490673221677156,
+        "dist_after": 15.758847618380972,
+        "dist_change": -20.731825603296183,
+        "is_decreased": true
+      },
+      {
+        "layer": 14,
+        "dist_before": 39.854534012433916,
+        "dist_after": 11.105276721785984,
+        "dist_change": -28.749257290647932,
+        "is_decreased": true
+      },
+      {
+        "layer": 15,
+        "dist_before": 42.08820518107995,
+        "dist_after": 15.456712588529705,
+        "dist_change": -26.631492592550245,
+        "is_decreased": true
+      },
+      {
+        "layer": 16,
+        "dist_before": 39.69795433238139,
+        "dist_after": 17.499513597753555,
+        "dist_change": -22.198440734627837,
+        "is_decreased": true
+      },
+      {
+        "layer": 17,
+        "dist_before": 41.851409155242116,
+        "dist_after": 22.500325530812987,
+        "dist_change": -19.35108362442913,
+        "is_decreased": true
+      },
+      {
+        "layer": 18,
+        "dist_before": 40.68258910158453,
+        "dist_after": 28.15667547688341,
+        "dist_change": -12.525913624701122,
+        "is_decreased": true
+      },
+      {
+        "layer": 19,
+        "dist_before": 41.963826375018634,
+        "dist_after": 28.178369996524392,
+        "dist_change": -13.785456378494242,
+        "is_decreased": true
+      },
+      {
+        "layer": 20,
+        "dist_before": 43.001540040807136,
+        "dist_after": 31.90507344426993,
+        "dist_change": -11.096466596537205,
+        "is_decreased": true
+      },
+      {
+        "layer": 21,
+        "dist_before": 42.5659453215753,
+        "dist_after": 29.72990392538843,
+        "dist_change": -12.836041396186868,
+        "is_decreased": true
+      },
+      {
+        "layer": 22,
+        "dist_before": 42.982052992522,
+        "dist_after": 28.650462737177257,
+        "dist_change": -14.331590255344743,
+        "is_decreased": true
+      },
+      {
+        "layer": 23,
+        "dist_before": 42.236807811584086,
+        "dist_after": 29.329091157229573,
+        "dist_change": -12.907716654354513,
+        "is_decreased": true
+      },
+      {
+        "layer": 24,
+        "dist_before": 41.66955749719625,
+        "dist_after": 27.845299651080737,
+        "dist_change": -13.824257846115515,
+        "is_decreased": true
+      },
+      {
+        "layer": 25,
+        "dist_before": 41.27852551240067,
+        "dist_after": 26.640039208911677,
+        "dist_change": -14.638486303488992,
+        "is_decreased": true
+      },
+      {
+        "layer": 26,
+        "dist_before": 42.20683617947696,
+        "dist_after": 25.625780754126218,
+        "dist_change": -16.58105542535074,
+        "is_decreased": true
+      },
+      {
+        "layer": 27,
+        "dist_before": 41.88734051719028,
+        "dist_after": 27.803711707170407,
+        "dist_change": -14.083628810019874,
+        "is_decreased": true
+      },
+      {
+        "layer": 28,
+        "dist_before": 42.10456623240199,
+        "dist_after": 29.02729577415841,
+        "dist_change": -13.077270458243582,
+        "is_decreased": true
+      },
+      {
+        "layer": 29,
+        "dist_before": 41.40080923908921,
+        "dist_after": 27.41165717812319,
+        "dist_change": -13.989152060966024,
+        "is_decreased": true
+      },
+      {
+        "layer": 30,
+        "dist_before": 41.949047414901685,
+        "dist_after": 26.269809633257193,
+        "dist_change": -15.679237781644492,
+        "is_decreased": true
+      },
+      {
+        "layer": 31,
+        "dist_before": 41.580203078989065,
+        "dist_after": 19.54420340601237,
+        "dist_change": -22.035999672976693,
+        "is_decreased": true
+      }
+    ],
+    "text": "Friendly staff, same starbucks fair you get anywhere else.  Sometimes the lines can get long."
+  },
+  {
+    "sample_idx": 3,
+    "accuracy_before": 0.0,
+    "accuracy_after": 0.0,
+    "prediction_before": "",
+    "prediction_after": "",
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 35.27017438629525,
+        "dist_after": 31.09353458829156,
+        "dist_change": -4.176639798003691,
+        "is_decreased": true
+      },
+      {
+        "layer": 1,
+        "dist_before": 43.28851083704062,
+        "dist_after": 49.92188977056063,
+        "dist_change": 6.633378933520014,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 36.48936210318966,
+        "dist_after": 48.13853025685662,
+        "dist_change": 11.649168153666956,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 43.150663567449925,
+        "dist_after": 51.458414705399115,
+        "dist_change": 8.30775113794919,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 33.92974447953513,
+        "dist_after": 39.3365254865056,
+        "dist_change": 5.406781006970469,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 41.46426936357499,
+        "dist_after": 12.597390705284637,
+        "dist_change": -28.866878658290354,
+        "is_decreased": true
+      },
+      {
+        "layer": 6,
+        "dist_before": 46.21982260975378,
+        "dist_after": 17.179967292780695,
+        "dist_change": -29.03985531697308,
+        "is_decreased": true
+      },
+      {
+        "layer": 7,
+        "dist_before": 48.857890310471625,
+        "dist_after": 6.786607643088396,
+        "dist_change": -42.07128266738323,
+        "is_decreased": true
+      },
+      {
+        "layer": 8,
+        "dist_before": 48.97229193543403,
+        "dist_after": 6.512501379733679,
+        "dist_change": -42.45979055570035,
+        "is_decreased": true
+      },
+      {
+        "layer": 9,
+        "dist_before": 50.09164692357952,
+        "dist_after": 9.92796848913994,
+        "dist_change": -40.163678434439575,
+        "is_decreased": true
+      },
+      {
+        "layer": 10,
+        "dist_before": 49.25133292780559,
+        "dist_after": 15.541639226410217,
+        "dist_change": -33.70969370139537,
+        "is_decreased": true
+      },
+      {
+        "layer": 11,
+        "dist_before": 48.44155867150199,
+        "dist_after": 10.400860515998525,
+        "dist_change": -38.04069815550346,
+        "is_decreased": true
+      },
+      {
+        "layer": 12,
+        "dist_before": 47.183725205469,
+        "dist_after": 11.594992268937611,
+        "dist_change": -35.58873293653139,
+        "is_decreased": true
+      },
+      {
+        "layer": 13,
+        "dist_before": 45.07966608897093,
+        "dist_after": 11.266250020857447,
+        "dist_change": -33.81341606811348,
+        "is_decreased": true
+      },
+      {
+        "layer": 14,
+        "dist_before": 38.351867541719734,
+        "dist_after": 12.443886717275975,
+        "dist_change": -25.90798082444376,
+        "is_decreased": true
+      },
+      {
+        "layer": 15,
+        "dist_before": 36.38048656760555,
+        "dist_after": 15.414747155836945,
+        "dist_change": -20.965739411768606,
+        "is_decreased": true
+      },
+      {
+        "layer": 16,
+        "dist_before": 44.40439757184882,
+        "dist_after": 22.832369962225123,
+        "dist_change": -21.572027609623696,
+        "is_decreased": true
+      },
+      {
+        "layer": 17,
+        "dist_before": 46.4613074296012,
+        "dist_after": 21.044721428451073,
+        "dist_change": -25.416586001150126,
+        "is_decreased": true
+      },
+      {
+        "layer": 18,
+        "dist_before": 49.217768278090745,
+        "dist_after": 18.64898485275006,
+        "dist_change": -30.568783425340683,
+        "is_decreased": true
+      },
+      {
+        "layer": 19,
+        "dist_before": 51.167385638746936,
+        "dist_after": 17.467452032631382,
+        "dist_change": -33.69993360611555,
+        "is_decreased": true
+      },
+      {
+        "layer": 20,
+        "dist_before": 50.525619663374336,
+        "dist_after": 15.911403805436855,
+        "dist_change": -34.61421585793748,
+        "is_decreased": true
+      },
+      {
+        "layer": 21,
+        "dist_before": 48.62828004002276,
+        "dist_after": 19.4297348721065,
+        "dist_change": -29.198545167916258,
+        "is_decreased": true
+      },
+      {
+        "layer": 22,
+        "dist_before": 49.25189539841633,
+        "dist_after": 17.140626067551192,
+        "dist_change": -32.11126933086514,
+        "is_decreased": true
+      },
+      {
+        "layer": 23,
+        "dist_before": 49.20200119254397,
+        "dist_after": 16.049075006424214,
+        "dist_change": -33.15292618611976,
+        "is_decreased": true
+      },
+      {
+        "layer": 24,
+        "dist_before": 46.82836563831239,
+        "dist_after": 14.94405628269874,
+        "dist_change": -31.884309355613652,
+        "is_decreased": true
+      },
+      {
+        "layer": 25,
+        "dist_before": 46.03783687989618,
+        "dist_after": 13.370366133423401,
+        "dist_change": -32.66747074647278,
+        "is_decreased": true
+      },
+      {
+        "layer": 26,
+        "dist_before": 44.576217311256784,
+        "dist_after": 14.6021522158806,
+        "dist_change": -29.974065095376183,
+        "is_decreased": true
+      },
+      {
+        "layer": 27,
+        "dist_before": 45.07237742053204,
+        "dist_after": 15.233412042351208,
+        "dist_change": -29.838965378180834,
+        "is_decreased": true
+      },
+      {
+        "layer": 28,
+        "dist_before": 44.20383735746112,
+        "dist_after": 18.256479484970356,
+        "dist_change": -25.947357872490763,
+        "is_decreased": true
+      },
+      {
+        "layer": 29,
+        "dist_before": 44.44608116388014,
+        "dist_after": 17.66849073920526,
+        "dist_change": -26.777590424674877,
+        "is_decreased": true
+      },
+      {
+        "layer": 30,
+        "dist_before": 46.3482495858228,
+        "dist_after": 20.20059859191195,
+        "dist_change": -26.147650993910847,
+        "is_decreased": true
+      },
+      {
+        "layer": 31,
+        "dist_before": 51.45313218206844,
+        "dist_after": 22.276847974769964,
+        "dist_change": -29.176284207298472,
+        "is_decreased": true
+      }
+    ],
+    "text": "The food is good. Unfortunately the service is very hit or miss. The main issue seems to be with the kitchen, the waiters and waitresses are often very apologetic for the long waits and it's pretty obvious that some of them avoid the tables after taking the initial order to avoid hearing complaints."
+  },
+  {
+    "sample_idx": 4,
+    "accuracy_before": 0.0,
+    "accuracy_after": 0.0,
+    "prediction_before": "",
+    "prediction_after": "",
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 19.17777549953564,
+        "dist_after": 23.852265784781704,
+        "dist_change": 4.674490285246062,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 23.663687161075337,
+        "dist_after": 21.137866448063104,
+        "dist_change": -2.5258207130122337,
+        "is_decreased": true
+      },
+      {
+        "layer": 2,
+        "dist_before": 20.440047946292246,
+        "dist_after": 28.561993619527414,
+        "dist_change": 8.121945673235167,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 25.12772783704388,
+        "dist_after": 27.78022443840874,
+        "dist_change": 2.6524966013648594,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 21.009053594965835,
+        "dist_after": 26.858040471781425,
+        "dist_change": 5.848986876815591,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 15.867867194407797,
+        "dist_after": 12.958027955155902,
+        "dist_change": -2.9098392392518946,
+        "is_decreased": true
+      },
+      {
+        "layer": 6,
+        "dist_before": 19.186037865231025,
+        "dist_after": 5.317943949943208,
+        "dist_change": -13.868093915287817,
+        "is_decreased": true
+      },
+      {
+        "layer": 7,
+        "dist_before": 21.432266713308895,
+        "dist_after": 15.656340803240536,
+        "dist_change": -5.775925910068359,
+        "is_decreased": true
+      },
+      {
+        "layer": 8,
+        "dist_before": 26.092767912744385,
+        "dist_after": 16.537260452175612,
+        "dist_change": -9.555507460568773,
+        "is_decreased": true
+      },
+      {
+        "layer": 9,
+        "dist_before": 31.799980849099153,
+        "dist_after": 15.320562828535897,
+        "dist_change": -16.47941802056326,
+        "is_decreased": true
+      },
+      {
+        "layer": 10,
+        "dist_before": 35.20479109716506,
+        "dist_after": 17.558202197388294,
+        "dist_change": -17.646588899776763,
+        "is_decreased": true
+      },
+      {
+        "layer": 11,
+        "dist_before": 38.88562726362886,
+        "dist_after": 23.178111241612637,
+        "dist_change": -15.707516022016225,
+        "is_decreased": true
+      },
+      {
+        "layer": 12,
+        "dist_before": 36.92706801210157,
+        "dist_after": 27.571329969475244,
+        "dist_change": -9.355738042626328,
+        "is_decreased": true
+      },
+      {
+        "layer": 13,
+        "dist_before": 38.74537287913125,
+        "dist_after": 25.378972701828857,
+        "dist_change": -13.366400177302395,
+        "is_decreased": true
+      },
+      {
+        "layer": 14,
+        "dist_before": 38.51824955751037,
+        "dist_after": 22.72617734445455,
+        "dist_change": -15.792072213055825,
+        "is_decreased": true
+      },
+      {
+        "layer": 15,
+        "dist_before": 43.373338085594085,
+        "dist_after": 27.304776426992692,
+        "dist_change": -16.068561658601393,
+        "is_decreased": true
+      },
+      {
+        "layer": 16,
+        "dist_before": 45.67781403746923,
+        "dist_after": 34.17794651747943,
+        "dist_change": -11.499867519989806,
+        "is_decreased": true
+      },
+      {
+        "layer": 17,
+        "dist_before": 46.58289030559882,
+        "dist_after": 39.33273886775507,
+        "dist_change": -7.250151437843755,
+        "is_decreased": true
+      },
+      {
+        "layer": 18,
+        "dist_before": 45.17304980894755,
+        "dist_after": 42.037613748709695,
+        "dist_change": -3.1354360602378577,
+        "is_decreased": true
+      },
+      {
+        "layer": 19,
+        "dist_before": 45.00727254301261,
+        "dist_after": 46.27836932485726,
+        "dist_change": 1.2710967818446477,
+        "is_decreased": false
+      },
+      {
+        "layer": 20,
+        "dist_before": 45.427948535177116,
+        "dist_after": 51.47664379162313,
+        "dist_change": 6.048695256446017,
+        "is_decreased": false
+      },
+      {
+        "layer": 21,
+        "dist_before": 45.23670398476125,
+        "dist_after": 48.60859087158541,
+        "dist_change": 3.3718868868241643,
+        "is_decreased": false
+      },
+      {
+        "layer": 22,
+        "dist_before": 45.54058500671154,
+        "dist_after": 46.1180668321339,
+        "dist_change": 0.5774818254223604,
+        "is_decreased": false
+      },
+      {
+        "layer": 23,
+        "dist_before": 43.98400536193467,
+        "dist_after": 44.176102681849976,
+        "dist_change": 0.19209731991530532,
+        "is_decreased": false
+      },
+      {
+        "layer": 24,
+        "dist_before": 44.871144551768054,
+        "dist_after": 44.137247897781634,
+        "dist_change": -0.7338966539864202,
+        "is_decreased": true
+      },
+      {
+        "layer": 25,
+        "dist_before": 43.7049869644164,
+        "dist_after": 42.64162621340611,
+        "dist_change": -1.0633607510102863,
+        "is_decreased": true
+      },
+      {
+        "layer": 26,
+        "dist_before": 46.081731356311884,
+        "dist_after": 40.43459735035322,
+        "dist_change": -5.647134005958662,
+        "is_decreased": true
+      },
+      {
+        "layer": 27,
+        "dist_before": 44.57907227817046,
+        "dist_after": 40.35091543166138,
+        "dist_change": -4.22815684650908,
+        "is_decreased": true
+      },
+      {
+        "layer": 28,
+        "dist_before": 44.713701276098384,
+        "dist_after": 38.85427616108045,
+        "dist_change": -5.859425115017935,
+        "is_decreased": true
+      },
+      {
+        "layer": 29,
+        "dist_before": 44.07834234950782,
+        "dist_after": 36.759187479116974,
+        "dist_change": -7.319154870390847,
+        "is_decreased": true
+      },
+      {
+        "layer": 30,
+        "dist_before": 43.44396765910351,
+        "dist_after": 34.121656121397294,
+        "dist_change": -9.322311537706213,
+        "is_decreased": true
+      },
+      {
+        "layer": 31,
+        "dist_before": 40.94851551437604,
+        "dist_after": 23.993787867631802,
+        "dist_change": -16.95472764674424,
+        "is_decreased": true
+      }
+    ],
+    "text": "Even when we didn't have a car Filene's Basement was worth the bus trip to the Waterfront. I always find something (usually I find 3-4 things and spend about $60) and better still, I am always still wearing the clothes and shoes 3 months later. \\n\\nI kind of suspect this is the best shopping in Pittsburgh; it's much better than the usual department stores, better than Marshall's and TJ Maxx and better than the Saks downtown, even when it has a sale. Selection, bargains AND quality.\\n\\nI like this Filene's better than Gabriel Brothers, which are harder to get to. Gabriel Brothers are a real discount shopper's challenge and I'm afraid I didn't live in Pittsburgh long enough to develop the necessary skills . . . Filene's was still up and running in June 2007 when I left town."
+  },
+  {
+    "sample_idx": 5,
+    "accuracy_before": 0.0,
+    "accuracy_after": 0.0,
+    "prediction_before": "",
+    "prediction_after": "",
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 83.31844844895268,
+        "dist_after": 84.91777610122416,
+        "dist_change": 1.5993276522714837,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 75.02184171290925,
+        "dist_after": 53.84869180495608,
+        "dist_change": -21.173149907953167,
+        "is_decreased": true
+      },
+      {
+        "layer": 2,
+        "dist_before": 71.2090688553793,
+        "dist_after": 45.971015019062015,
+        "dist_change": -25.238053836317285,
+        "is_decreased": true
+      },
+      {
+        "layer": 3,
+        "dist_before": 69.78555737845649,
+        "dist_after": 36.84315191718686,
+        "dist_change": -32.94240546126963,
+        "is_decreased": true
+      },
+      {
+        "layer": 4,
+        "dist_before": 52.504426826425274,
+        "dist_after": 13.904848257456326,
+        "dist_change": -38.59957856896895,
+        "is_decreased": true
+      },
+      {
+        "layer": 5,
+        "dist_before": 51.44416470698224,
+        "dist_after": 38.645102630582194,
+        "dist_change": -12.799062076400048,
+        "is_decreased": true
+      },
+      {
+        "layer": 6,
+        "dist_before": 47.40532259316082,
+        "dist_after": 26.58442388318758,
+        "dist_change": -20.82089870997324,
+        "is_decreased": true
+      },
+      {
+        "layer": 7,
+        "dist_before": 49.26650637359029,
+        "dist_after": 31.11825621943752,
+        "dist_change": -18.14825015415277,
+        "is_decreased": true
+      },
+      {
+        "layer": 8,
+        "dist_before": 47.31025823267877,
+        "dist_after": 27.714163090421078,
+        "dist_change": -19.596095142257692,
+        "is_decreased": true
+      },
+      {
+        "layer": 9,
+        "dist_before": 55.688603747389585,
+        "dist_after": 23.7830540004356,
+        "dist_change": -31.905549746953984,
+        "is_decreased": true
+      },
+      {
+        "layer": 10,
+        "dist_before": 56.78944743000696,
+        "dist_after": 25.199406091003517,
+        "dist_change": -31.59004133900344,
+        "is_decreased": true
+      },
+      {
+        "layer": 11,
+        "dist_before": 53.79609839152888,
+        "dist_after": 29.079226249626043,
+        "dist_change": -24.716872141902837,
+        "is_decreased": true
+      },
+      {
+        "layer": 12,
+        "dist_before": 56.27240296293657,
+        "dist_after": 33.58855769043534,
+        "dist_change": -22.68384527250123,
+        "is_decreased": true
+      },
+      {
+        "layer": 13,
+        "dist_before": 54.7186635709388,
+        "dist_after": 32.48928584127443,
+        "dist_change": -22.22937772966437,
+        "is_decreased": true
+      },
+      {
+        "layer": 14,
+        "dist_before": 54.02922360493896,
+        "dist_after": 28.700657103762936,
+        "dist_change": -25.328566501176027,
+        "is_decreased": true
+      },
+      {
+        "layer": 15,
+        "dist_before": 50.65416974960167,
+        "dist_after": 32.90087365890529,
+        "dist_change": -17.75329609069638,
+        "is_decreased": true
+      },
+      {
+        "layer": 16,
+        "dist_before": 43.68906099443277,
+        "dist_after": 35.273879985753,
+        "dist_change": -8.415181008679774,
+        "is_decreased": true
+      },
+      {
+        "layer": 17,
+        "dist_before": 36.7314491681414,
+        "dist_after": 37.4097998121771,
+        "dist_change": 0.6783506440356959,
+        "is_decreased": false
+      },
+      {
+        "layer": 18,
+        "dist_before": 38.527249027452164,
+        "dist_after": 41.61372476075569,
+        "dist_change": 3.086475733303523,
+        "is_decreased": false
+      },
+      {
+        "layer": 19,
+        "dist_before": 36.06049871348412,
+        "dist_after": 41.748166966470954,
+        "dist_change": 5.687668252986832,
+        "is_decreased": false
+      },
+      {
+        "layer": 20,
+        "dist_before": 33.84947312578788,
+        "dist_after": 46.151041665503875,
+        "dist_change": 12.301568539715994,
+        "is_decreased": false
+      },
+      {
+        "layer": 21,
+        "dist_before": 33.44501854441076,
+        "dist_after": 43.88858559455559,
+        "dist_change": 10.443567050144836,
+        "is_decreased": false
+      },
+      {
+        "layer": 22,
+        "dist_before": 29.61567984885938,
+        "dist_after": 40.54180309652263,
+        "dist_change": 10.926123247663249,
+        "is_decreased": false
+      },
+      {
+        "layer": 23,
+        "dist_before": 29.287145227105853,
+        "dist_after": 39.570917157450346,
+        "dist_change": 10.283771930344493,
+        "is_decreased": false
+      },
+      {
+        "layer": 24,
+        "dist_before": 30.71487350668399,
+        "dist_after": 39.4085173952711,
+        "dist_change": 8.693643888587108,
+        "is_decreased": false
+      },
+      {
+        "layer": 25,
+        "dist_before": 35.06774180518727,
+        "dist_after": 38.88390015806781,
+        "dist_change": 3.8161583528805423,
+        "is_decreased": false
+      },
+      {
+        "layer": 26,
+        "dist_before": 31.291593047772675,
+        "dist_after": 36.20734361582212,
+        "dist_change": 4.915750568049443,
+        "is_decreased": false
+      },
+      {
+        "layer": 27,
+        "dist_before": 32.37108090408793,
+        "dist_after": 37.13733535297815,
+        "dist_change": 4.766254448890216,
+        "is_decreased": false
+      },
+      {
+        "layer": 28,
+        "dist_before": 32.29701029301654,
+        "dist_after": 36.84894285196288,
+        "dist_change": 4.551932558946341,
+        "is_decreased": false
+      },
+      {
+        "layer": 29,
+        "dist_before": 33.40233278561539,
+        "dist_after": 34.97310755897191,
+        "dist_change": 1.5707747733565185,
+        "is_decreased": false
+      },
+      {
+        "layer": 30,
+        "dist_before": 35.34194157747377,
+        "dist_after": 33.06095059890848,
+        "dist_change": -2.280990978565292,
+        "is_decreased": true
+      },
+      {
+        "layer": 31,
+        "dist_before": 39.68571433968981,
+        "dist_after": 25.28612445558053,
+        "dist_change": -14.399589884109279,
+        "is_decreased": true
+      }
+    ],
+    "text": "Picture Billy Joel's \\\"\"Piano Man\\\"\" DOUBLED mixed with beer, a rowdy crowd, and comedy - Welcome to Sing Sing!  A unique musical experience found in Homestead.\\n\\nIf you're looking to grab a bite to eat or a beer, come on in!  Serving food and brews from Rock Bottom Brewery, Sing Sing keeps your tummy full while you listen to two (or more) amazingly talented pianists take your musical requests.  They'll play anything you'd like, for tips of course.  Wanting to hear Britney Spears?  Toto?  Duran Duran?  Yep, they play that... new or old.\\n\\nThe crowd makes the show, so make sure you come ready for a good time.  If the crowd is dead, it's harder for the Guys to get a reaction.  If you're wanting to have some fun, it can be a GREAT time!  It's the perfect place for Birthday parties - especially if you want to embarrass a friend.  The guys will bring them up to the pianos and perform a little ditty.  For being a good sport, you get the coveted Sing Sing bumper sticker.  Now who wouldn't want that?\\n\\nDueling Pianos and brews... time to Shut Up & Sing Sing!"
+  },
+  {
+    "sample_idx": 6,
+    "accuracy_before": 0.0,
+    "accuracy_after": 0.0,
+    "prediction_before": "",
+    "prediction_after": "",
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 48.916714728133435,
+        "dist_after": 44.81028403985228,
+        "dist_change": -4.106430688281158,
+        "is_decreased": true
+      },
+      {
+        "layer": 1,
+        "dist_before": 52.816336247779255,
+        "dist_after": 45.33907883797748,
+        "dist_change": -7.477257409801773,
+        "is_decreased": true
+      },
+      {
+        "layer": 2,
+        "dist_before": 53.45563949301354,
+        "dist_after": 40.81738921151757,
+        "dist_change": -12.63825028149597,
+        "is_decreased": true
+      },
+      {
+        "layer": 3,
+        "dist_before": 48.88969814311198,
+        "dist_after": 37.67663400683578,
+        "dist_change": -11.213064136276195,
+        "is_decreased": true
+      },
+      {
+        "layer": 4,
+        "dist_before": 40.38889948943419,
+        "dist_after": 38.35880353138797,
+        "dist_change": -2.0300959580462177,
+        "is_decreased": true
+      },
+      {
+        "layer": 5,
+        "dist_before": 35.796354940321876,
+        "dist_after": 14.064002011364689,
+        "dist_change": -21.732352928957187,
+        "is_decreased": true
+      },
+      {
+        "layer": 6,
+        "dist_before": 34.26660199545318,
+        "dist_after": 13.208012182402825,
+        "dist_change": -21.058589813050354,
+        "is_decreased": true
+      },
+      {
+        "layer": 7,
+        "dist_before": 31.557784208705826,
+        "dist_after": 10.946227621594932,
+        "dist_change": -20.611556587110893,
+        "is_decreased": true
+      },
+      {
+        "layer": 8,
+        "dist_before": 31.75674825284229,
+        "dist_after": 1.576891545513248,
+        "dist_change": -30.17985670732904,
+        "is_decreased": true
+      },
+      {
+        "layer": 9,
+        "dist_before": 37.88844367199598,
+        "dist_after": 18.764296891887305,
+        "dist_change": -19.124146780108674,
+        "is_decreased": true
+      },
+      {
+        "layer": 10,
+        "dist_before": 39.00884163032469,
+        "dist_after": 27.019609906429764,
+        "dist_change": -11.989231723894925,
+        "is_decreased": true
+      },
+      {
+        "layer": 11,
+        "dist_before": 41.413220101395574,
+        "dist_after": 22.786805915975776,
+        "dist_change": -18.626414185419797,
+        "is_decreased": true
+      },
+      {
+        "layer": 12,
+        "dist_before": 39.6052547260599,
+        "dist_after": 24.126414655402776,
+        "dist_change": -15.478840070657121,
+        "is_decreased": true
+      },
+      {
+        "layer": 13,
+        "dist_before": 36.6744707731109,
+        "dist_after": 24.054484113364722,
+        "dist_change": -12.619986659746175,
+        "is_decreased": true
+      },
+      {
+        "layer": 14,
+        "dist_before": 35.79059830852064,
+        "dist_after": 32.66074111406094,
+        "dist_change": -3.129857194459703,
+        "is_decreased": true
+      },
+      {
+        "layer": 15,
+        "dist_before": 37.301294861662555,
+        "dist_after": 36.175232165671744,
+        "dist_change": -1.1260626959908109,
+        "is_decreased": true
+      },
+      {
+        "layer": 16,
+        "dist_before": 40.962697944119135,
+        "dist_after": 42.44624654936418,
+        "dist_change": 1.4835486052450477,
+        "is_decreased": false
+      },
+      {
+        "layer": 17,
+        "dist_before": 42.39260336052234,
+        "dist_after": 42.78644405105232,
+        "dist_change": 0.39384069052998427,
+        "is_decreased": false
+      },
+      {
+        "layer": 18,
+        "dist_before": 42.27781027872923,
+        "dist_after": 42.74882775741644,
+        "dist_change": 0.4710174786872159,
+        "is_decreased": false
+      },
+      {
+        "layer": 19,
+        "dist_before": 40.743656046539066,
+        "dist_after": 42.25199172791614,
+        "dist_change": 1.5083356813770763,
+        "is_decreased": false
+      },
+      {
+        "layer": 20,
+        "dist_before": 45.37956440053437,
+        "dist_after": 42.57679875085416,
+        "dist_change": -2.802765649680211,
+        "is_decreased": true
+      },
+      {
+        "layer": 21,
+        "dist_before": 44.78921285474787,
+        "dist_after": 44.675954604400594,
+        "dist_change": -0.11325825034727899,
+        "is_decreased": true
+      },
+      {
+        "layer": 22,
+        "dist_before": 48.0640546348864,
+        "dist_after": 40.69884298542097,
+        "dist_change": -7.3652116494654365,
+        "is_decreased": true
+      },
+      {
+        "layer": 23,
+        "dist_before": 53.238857163275625,
+        "dist_after": 38.5293914155104,
+        "dist_change": -14.709465747765222,
+        "is_decreased": true
+      },
+      {
+        "layer": 24,
+        "dist_before": 50.3573865996469,
+        "dist_after": 36.062162100120126,
+        "dist_change": -14.295224499526775,
+        "is_decreased": true
+      },
+      {
+        "layer": 25,
+        "dist_before": 48.849152279625265,
+        "dist_after": 34.82754441979452,
+        "dist_change": -14.021607859830745,
+        "is_decreased": true
+      },
+      {
+        "layer": 26,
+        "dist_before": 50.88819644597211,
+        "dist_after": 35.066375417087386,
+        "dist_change": -15.821821028884727,
+        "is_decreased": true
+      },
+      {
+        "layer": 27,
+        "dist_before": 51.65714107867759,
+        "dist_after": 35.665065281719215,
+        "dist_change": -15.992075796958375,
+        "is_decreased": true
+      },
+      {
+        "layer": 28,
+        "dist_before": 52.35901328442116,
+        "dist_after": 35.61983892565853,
+        "dist_change": -16.739174358762632,
+        "is_decreased": true
+      },
+      {
+        "layer": 29,
+        "dist_before": 52.76900584476068,
+        "dist_after": 33.3097696196932,
+        "dist_change": -19.459236225067478,
+        "is_decreased": true
+      },
+      {
+        "layer": 30,
+        "dist_before": 51.56290877528862,
+        "dist_after": 34.36615489182019,
+        "dist_change": -17.196753883468432,
+        "is_decreased": true
+      },
+      {
+        "layer": 31,
+        "dist_before": 55.37200451576681,
+        "dist_after": 41.66431238480522,
+        "dist_change": -13.70769213096159,
+        "is_decreased": true
+      }
+    ],
+    "text": "Mediocre service. COLD food! Our food waited so long the lettuce & pickles wilted. Bland food. Crazy overpriced. Long waits in the arcade. 1 beer per hour maximum.  Avoid at all costs. Fair manager."
+  },
+  {
+    "sample_idx": 7,
+    "accuracy_before": 0.0,
+    "accuracy_after": 0.0,
+    "prediction_before": "",
+    "prediction_after": "",
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 39.50161258263685,
+        "dist_after": 41.41991618560645,
+        "dist_change": 1.9183036029696012,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 48.60151249286778,
+        "dist_after": 50.100644202492205,
+        "dist_change": 1.4991317096244217,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 53.77056932284643,
+        "dist_after": 56.42273256649916,
+        "dist_change": 2.65216324365273,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 54.99123526697247,
+        "dist_after": 51.283693337929165,
+        "dist_change": -3.707541929043302,
+        "is_decreased": true
+      },
+      {
+        "layer": 4,
+        "dist_before": 55.98913265916657,
+        "dist_after": 51.0133477536042,
+        "dist_change": -4.975784905562371,
+        "is_decreased": true
+      },
+      {
+        "layer": 5,
+        "dist_before": 63.877511566570156,
+        "dist_after": 42.92655508217952,
+        "dist_change": -20.950956484390638,
+        "is_decreased": true
+      },
+      {
+        "layer": 6,
+        "dist_before": 61.08125888584704,
+        "dist_after": 26.874707631401556,
+        "dist_change": -34.206551254445486,
+        "is_decreased": true
+      },
+      {
+        "layer": 7,
+        "dist_before": 61.095785499154154,
+        "dist_after": 31.462828031438036,
+        "dist_change": -29.632957467716118,
+        "is_decreased": true
+      },
+      {
+        "layer": 8,
+        "dist_before": 60.357677717974134,
+        "dist_after": 25.918831792484536,
+        "dist_change": -34.4388459254896,
+        "is_decreased": true
+      },
+      {
+        "layer": 9,
+        "dist_before": 58.506181209727075,
+        "dist_after": 23.337865146543816,
+        "dist_change": -35.168316063183255,
+        "is_decreased": true
+      },
+      {
+        "layer": 10,
+        "dist_before": 59.9019140029933,
+        "dist_after": 25.83457082114003,
+        "dist_change": -34.067343181853275,
+        "is_decreased": true
+      },
+      {
+        "layer": 11,
+        "dist_before": 60.17729113621989,
+        "dist_after": 27.928565684756695,
+        "dist_change": -32.2487254514632,
+        "is_decreased": true
+      },
+      {
+        "layer": 12,
+        "dist_before": 60.254349198803176,
+        "dist_after": 31.864899115919158,
+        "dist_change": -28.389450082884018,
+        "is_decreased": true
+      },
+      {
+        "layer": 13,
+        "dist_before": 58.171207748910994,
+        "dist_after": 30.580935148879302,
+        "dist_change": -27.590272600031692,
+        "is_decreased": true
+      },
+      {
+        "layer": 14,
+        "dist_before": 54.876858631073745,
+        "dist_after": 31.00447278104603,
+        "dist_change": -23.872385850027715,
+        "is_decreased": true
+      },
+      {
+        "layer": 15,
+        "dist_before": 53.544949565960586,
+        "dist_after": 37.19714626426264,
+        "dist_change": -16.347803301697944,
+        "is_decreased": true
+      },
+      {
+        "layer": 16,
+        "dist_before": 49.021949919826675,
+        "dist_after": 36.934024398666566,
+        "dist_change": -12.087925521160109,
+        "is_decreased": true
+      },
+      {
+        "layer": 17,
+        "dist_before": 47.57882059701621,
+        "dist_after": 36.809411147088774,
+        "dist_change": -10.769409449927437,
+        "is_decreased": true
+      },
+      {
+        "layer": 18,
+        "dist_before": 48.17376272829465,
+        "dist_after": 36.02537239410886,
+        "dist_change": -12.148390334185791,
+        "is_decreased": true
+      },
+      {
+        "layer": 19,
+        "dist_before": 47.41937145013873,
+        "dist_after": 37.2051883295666,
+        "dist_change": -10.21418312057213,
+        "is_decreased": true
+      },
+      {
+        "layer": 20,
+        "dist_before": 45.40903246854792,
+        "dist_after": 36.89191435959423,
+        "dist_change": -8.517118108953689,
+        "is_decreased": true
+      },
+      {
+        "layer": 21,
+        "dist_before": 43.76105046371221,
+        "dist_after": 38.780937994256206,
+        "dist_change": -4.980112469456003,
+        "is_decreased": true
+      },
+      {
+        "layer": 22,
+        "dist_before": 42.263868965628404,
+        "dist_after": 36.944255649862875,
+        "dist_change": -5.31961331576553,
+        "is_decreased": true
+      },
+      {
+        "layer": 23,
+        "dist_before": 42.263594508646925,
+        "dist_after": 35.83120377092657,
+        "dist_change": -6.432390737720354,
+        "is_decreased": true
+      },
+      {
+        "layer": 24,
+        "dist_before": 41.5159718666331,
+        "dist_after": 33.77904392055906,
+        "dist_change": -7.73692794607404,
+        "is_decreased": true
+      },
+      {
+        "layer": 25,
+        "dist_before": 41.40158245376006,
+        "dist_after": 31.693808803391732,
+        "dist_change": -9.707773650368324,
+        "is_decreased": true
+      },
+      {
+        "layer": 26,
+        "dist_before": 40.29118556842932,
+        "dist_after": 31.704002532563536,
+        "dist_change": -8.587183035865785,
+        "is_decreased": true
+      },
+      {
+        "layer": 27,
+        "dist_before": 39.89288262396633,
+        "dist_after": 32.20306165787857,
+        "dist_change": -7.689820966087758,
+        "is_decreased": true
+      },
+      {
+        "layer": 28,
+        "dist_before": 40.58238925413168,
+        "dist_after": 33.32262419453093,
+        "dist_change": -7.2597650596007455,
+        "is_decreased": true
+      },
+      {
+        "layer": 29,
+        "dist_before": 40.380789944777725,
+        "dist_after": 31.411538095965035,
+        "dist_change": -8.96925184881269,
+        "is_decreased": true
+      },
+      {
+        "layer": 30,
+        "dist_before": 40.45919124445237,
+        "dist_after": 32.143708163450135,
+        "dist_change": -8.315483081002235,
+        "is_decreased": true
+      },
+      {
+        "layer": 31,
+        "dist_before": 44.193200971250064,
+        "dist_after": 35.06728429406149,
+        "dist_change": -9.125916677188577,
+        "is_decreased": true
+      }
+    ],
+    "text": "Ok! Let me tell you about my bad experience first. I went to D&B last night for a post wedding party - which, side note, is a great idea!\\n\\nIt was around midnight and the bar wasn't really populated. There were three bartenders and only one was actually making rounds to see if anyone needed anything. The two other bartenders were chatting on the far side of the bar that no one was sitting at. Kind of counter productive if you ask me. \\n\\nI stood there for about 5 minutes, which for a busy bar is fine but when I am the only one with my card out then, it just seems a little ridiculous. I made eye contact with the one girl twice and gave her a smile and she literally turned away. I finally had to walk to them to get their attention.  I was standing right in front of them smiling and they didn't ask if i need anything. I finally said, \\\"\"Are you working?\\\"\" and they gave each other a weird look. I felt like i was the crazy one. I asked for a beer/got the beer.\\n\\nIn between that time, the other bartender brought food over and set it down. She took a fry from the plate (right in front of me) and then served it to someone on the other side of the bar. What the hell! I felt like i was in some grimy bar in out in the sticks - not an established D&B. \\n\\nI was just really turned off from that experience. \\n\\nThe good is that D&B provides a different type of entertainment when you want to mix things up. I remember going here with my grandparents when I was a kid and it was the best treat ever! We would eat at the restaurant and then spend hours playing games. This place holds some really good memories for me. \\n\\nIt's a shame that my experience last night has spoiled the high standards I held for it."
+  },
+  {
+    "sample_idx": 8,
+    "accuracy_before": 0.0,
+    "accuracy_after": 0.0,
+    "prediction_before": "",
+    "prediction_after": "",
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 24.49925492935523,
+        "dist_after": 28.420726706522807,
+        "dist_change": 3.921471777167575,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 19.45393680806998,
+        "dist_after": 25.193901351105,
+        "dist_change": 5.739964543035022,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 23.43074497653412,
+        "dist_after": 31.81792569450656,
+        "dist_change": 8.387180717972441,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 18.382814135459437,
+        "dist_after": 31.544283788572454,
+        "dist_change": 13.161469653113016,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 32.862145933518015,
+        "dist_after": 16.77785423435799,
+        "dist_change": -16.084291699160026,
+        "is_decreased": true
+      },
+      {
+        "layer": 5,
+        "dist_before": 51.731671258995966,
+        "dist_after": 20.44512615316276,
+        "dist_change": -31.286545105833206,
+        "is_decreased": true
+      },
+      {
+        "layer": 6,
+        "dist_before": 50.21205349953145,
+        "dist_after": 19.49804719890666,
+        "dist_change": -30.71400630062479,
+        "is_decreased": true
+      },
+      {
+        "layer": 7,
+        "dist_before": 49.35553979946361,
+        "dist_after": 12.68959657288566,
+        "dist_change": -36.665943226577944,
+        "is_decreased": true
+      },
+      {
+        "layer": 8,
+        "dist_before": 50.57526198367457,
+        "dist_after": 18.91885162945084,
+        "dist_change": -31.65641035422373,
+        "is_decreased": true
+      },
+      {
+        "layer": 9,
+        "dist_before": 32.61922066663494,
+        "dist_after": 9.068655778050989,
+        "dist_change": -23.55056488858395,
+        "is_decreased": true
+      },
+      {
+        "layer": 10,
+        "dist_before": 17.052080235134305,
+        "dist_after": 13.86850392713464,
+        "dist_change": -3.1835763079996653,
+        "is_decreased": true
+      },
+      {
+        "layer": 11,
+        "dist_before": 1.8027013876061044,
+        "dist_after": 18.69506338671674,
+        "dist_change": 16.892361999110634,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 5.298094534448071,
+        "dist_after": 23.069725809908476,
+        "dist_change": 17.771631275460404,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 11.823371188567217,
+        "dist_after": 23.187385491396082,
+        "dist_change": 11.364014302828865,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 22.503692615211758,
+        "dist_after": 23.18605674206377,
+        "dist_change": 0.6823641268520113,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 29.967035314811856,
+        "dist_after": 31.67648801432211,
+        "dist_change": 1.7094526995102548,
+        "is_decreased": false
+      },
+      {
+        "layer": 16,
+        "dist_before": 24.31675162153407,
+        "dist_after": 31.18201985520701,
+        "dist_change": 6.865268233672939,
+        "is_decreased": false
+      },
+      {
+        "layer": 17,
+        "dist_before": 25.28376894338695,
+        "dist_after": 33.570631723108114,
+        "dist_change": 8.286862779721165,
+        "is_decreased": false
+      },
+      {
+        "layer": 18,
+        "dist_before": 26.639420899726723,
+        "dist_after": 33.08491742663079,
+        "dist_change": 6.445496526904066,
+        "is_decreased": false
+      },
+      {
+        "layer": 19,
+        "dist_before": 30.372535102441056,
+        "dist_after": 33.83173576283859,
+        "dist_change": 3.459200660397535,
+        "is_decreased": false
+      },
+      {
+        "layer": 20,
+        "dist_before": 27.48583325382158,
+        "dist_after": 34.55601353483937,
+        "dist_change": 7.0701802810177945,
+        "is_decreased": false
+      },
+      {
+        "layer": 21,
+        "dist_before": 28.47584062500613,
+        "dist_after": 36.15181603838106,
+        "dist_change": 7.675975413374928,
+        "is_decreased": false
+      },
+      {
+        "layer": 22,
+        "dist_before": 28.670602227415472,
+        "dist_after": 34.6383630518809,
+        "dist_change": 5.967760824465429,
+        "is_decreased": false
+      },
+      {
+        "layer": 23,
+        "dist_before": 27.605500045842852,
+        "dist_after": 33.991054970602825,
+        "dist_change": 6.3855549247599726,
+        "is_decreased": false
+      },
+      {
+        "layer": 24,
+        "dist_before": 29.91354487087275,
+        "dist_after": 32.57870002277036,
+        "dist_change": 2.6651551518976113,
+        "is_decreased": false
+      },
+      {
+        "layer": 25,
+        "dist_before": 29.993477062392994,
+        "dist_after": 30.404233442287595,
+        "dist_change": 0.41075637989460034,
+        "is_decreased": false
+      },
+      {
+        "layer": 26,
+        "dist_before": 30.769730515105486,
+        "dist_after": 31.277911961404197,
+        "dist_change": 0.5081814462987104,
+        "is_decreased": false
+      },
+      {
+        "layer": 27,
+        "dist_before": 30.11852452904662,
+        "dist_after": 31.533479044952603,
+        "dist_change": 1.4149545159059826,
+        "is_decreased": false
+      },
+      {
+        "layer": 28,
+        "dist_before": 29.795094366002616,
+        "dist_after": 32.82906636672024,
+        "dist_change": 3.0339720007176254,
+        "is_decreased": false
+      },
+      {
+        "layer": 29,
+        "dist_before": 29.63130268837356,
+        "dist_after": 31.02817042112542,
+        "dist_change": 1.3968677327518613,
+        "is_decreased": false
+      },
+      {
+        "layer": 30,
+        "dist_before": 28.408269852742624,
+        "dist_after": 32.31824081110219,
+        "dist_change": 3.909970958359569,
+        "is_decreased": false
+      },
+      {
+        "layer": 31,
+        "dist_before": 25.120353404034983,
+        "dist_after": 33.28240238211554,
+        "dist_change": 8.16204897808056,
+        "is_decreased": false
+      }
+    ],
+    "text": "I used to love D&B when it first opened in the Waterfront, but it has gone down hill over the years. The games are not as fun and do not give you as many tickets and the prizes have gotten cheaper in quality. It takes a whole heck of a lot of tickets for you to even get a pencil! The atmosphere is okay but it used to be so much better with the funnest games and diverse groups of people! Now, it is run down and many of the games are app related games (Fruit Ninja) and 3D Experience rides. With such \\\"\"games\\\"\", you can't even earn tickets and they take a lot of tokens! Last time I went, back in the winter, many of the games were broken, which made for a negative player experience. I would go to D&B to play some games again in the future, but it is no longer one of my favorite places to go due to the decline of fun games where you can earn tickets."
+  },
+  {
+    "sample_idx": 9,
+    "accuracy_before": 0.0,
+    "accuracy_after": 0.0,
+    "prediction_before": "",
+    "prediction_after": "",
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 21.791653434104376,
+        "dist_after": 20.08758958226038,
+        "dist_change": -1.7040638518439941,
+        "is_decreased": true
+      },
+      {
+        "layer": 1,
+        "dist_before": 16.102012774256032,
+        "dist_after": 30.472375644859028,
+        "dist_change": 14.370362870602996,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 16.110400902243722,
+        "dist_after": 32.475717805496664,
+        "dist_change": 16.365316903252943,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 18.19454454584024,
+        "dist_after": 34.626773747716086,
+        "dist_change": 16.432229201875845,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 24.56115931840328,
+        "dist_after": 27.08270562978051,
+        "dist_change": 2.5215463113772287,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 42.23961874722537,
+        "dist_after": 13.547388646511385,
+        "dist_change": -28.692230100713985,
+        "is_decreased": true
+      },
+      {
+        "layer": 6,
+        "dist_before": 45.14526170368056,
+        "dist_after": 15.989067099328764,
+        "dist_change": -29.156194604351796,
+        "is_decreased": true
+      },
+      {
+        "layer": 7,
+        "dist_before": 47.1419543217591,
+        "dist_after": 3.3782346371903693,
+        "dist_change": -43.763719684568734,
+        "is_decreased": true
+      },
+      {
+        "layer": 8,
+        "dist_before": 47.79209093200249,
+        "dist_after": 10.521731843726709,
+        "dist_change": -37.27035908827578,
+        "is_decreased": true
+      },
+      {
+        "layer": 9,
+        "dist_before": 54.442130925694734,
+        "dist_after": 2.2607875152349726,
+        "dist_change": -52.18134341045976,
+        "is_decreased": true
+      },
+      {
+        "layer": 10,
+        "dist_before": 54.38920298731897,
+        "dist_after": 6.844690009815079,
+        "dist_change": -47.544512977503885,
+        "is_decreased": true
+      },
+      {
+        "layer": 11,
+        "dist_before": 54.7567099632296,
+        "dist_after": 6.65478607243711,
+        "dist_change": -48.10192389079249,
+        "is_decreased": true
+      },
+      {
+        "layer": 12,
+        "dist_before": 52.054626676903176,
+        "dist_after": 12.065865756352038,
+        "dist_change": -39.98876092055114,
+        "is_decreased": true
+      },
+      {
+        "layer": 13,
+        "dist_before": 52.82703075610988,
+        "dist_after": 11.568264333479819,
+        "dist_change": -41.25876642263006,
+        "is_decreased": true
+      },
+      {
+        "layer": 14,
+        "dist_before": 51.70623430092215,
+        "dist_after": 9.176622576974042,
+        "dist_change": -42.52961172394811,
+        "is_decreased": true
+      },
+      {
+        "layer": 15,
+        "dist_before": 52.218511655722814,
+        "dist_after": 13.753318845452315,
+        "dist_change": -38.4651928102705,
+        "is_decreased": true
+      },
+      {
+        "layer": 16,
+        "dist_before": 57.93546366493753,
+        "dist_after": 22.496312511631125,
+        "dist_change": -35.439151153306405,
+        "is_decreased": true
+      },
+      {
+        "layer": 17,
+        "dist_before": 55.78653155212767,
+        "dist_after": 28.185493750254693,
+        "dist_change": -27.601037801872977,
+        "is_decreased": true
+      },
+      {
+        "layer": 18,
+        "dist_before": 55.65647752390869,
+        "dist_after": 32.49749986649401,
+        "dist_change": -23.15897765741468,
+        "is_decreased": true
+      },
+      {
+        "layer": 19,
+        "dist_before": 55.069099011284294,
+        "dist_after": 33.198505851967184,
+        "dist_change": -21.87059315931711,
+        "is_decreased": true
+      },
+      {
+        "layer": 20,
+        "dist_before": 54.72815387609751,
+        "dist_after": 38.862625291974275,
+        "dist_change": -15.865528584123233,
+        "is_decreased": true
+      },
+      {
+        "layer": 21,
+        "dist_before": 54.444061145718436,
+        "dist_after": 35.81374811797199,
+        "dist_change": -18.630313027746446,
+        "is_decreased": true
+      },
+      {
+        "layer": 22,
+        "dist_before": 53.05984561843406,
+        "dist_after": 35.60749290433068,
+        "dist_change": -17.452352714103384,
+        "is_decreased": true
+      },
+      {
+        "layer": 23,
+        "dist_before": 51.34419389404061,
+        "dist_after": 36.877458616138384,
+        "dist_change": -14.466735277902224,
+        "is_decreased": true
+      },
+      {
+        "layer": 24,
+        "dist_before": 51.55492367213122,
+        "dist_after": 35.88994268806613,
+        "dist_change": -15.664980984065089,
+        "is_decreased": true
+      },
+      {
+        "layer": 25,
+        "dist_before": 51.404377045572346,
+        "dist_after": 34.762082440346845,
+        "dist_change": -16.6422946052255,
+        "is_decreased": true
+      },
+      {
+        "layer": 26,
+        "dist_before": 51.22355448436664,
+        "dist_after": 32.285056033450594,
+        "dist_change": -18.938498450916043,
+        "is_decreased": true
+      },
+      {
+        "layer": 27,
+        "dist_before": 51.14496720165853,
+        "dist_after": 33.44018066466492,
+        "dist_change": -17.70478653699361,
+        "is_decreased": true
+      },
+      {
+        "layer": 28,
+        "dist_before": 51.646557034973135,
+        "dist_after": 33.014520060933044,
+        "dist_change": -18.63203697404009,
+        "is_decreased": true
+      },
+      {
+        "layer": 29,
+        "dist_before": 51.14333106798599,
+        "dist_after": 31.545854429676353,
+        "dist_change": -19.597476638309637,
+        "is_decreased": true
+      },
+      {
+        "layer": 30,
+        "dist_before": 51.38064120262022,
+        "dist_after": 29.342730291089545,
+        "dist_change": -22.037910911530673,
+        "is_decreased": true
+      },
+      {
+        "layer": 31,
+        "dist_before": 50.66187716782292,
+        "dist_after": 20.76799428230588,
+        "dist_change": -29.89388288551704,
+        "is_decreased": true
+      }
+    ],
+    "text": "Like any Barnes & Noble, it has a nice comfy cafe, and a large selection of books.  The staff is very friendly and helpful.  They stock a decent selection, and the prices are pretty reasonable.  Obviously it's hard for them to compete with Amazon.  However since all the small shop bookstores are gone, it's nice to walk into one every once in a while."
+  }
+]

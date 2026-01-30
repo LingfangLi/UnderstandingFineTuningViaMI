@@ -68,7 +68,7 @@ class AttentionNode(Node):
         name = f'a{layer}.h{head}' 
         self.head = head
         index = (slice(None), slice(None), head) 
-        super().__init__(name, layer, f'blocks.{layer}.hook_attn_in', f"blocks.{layer}.attn.hook_result", index, [f'blocks.{layer}.hook_{letter}_input' for letter in 'qkv'])
+        super().__init__(name, layer, f'blocks.{layer}.hook_attn_in', f"blocks.{layer}.attn.hook_z", index, [f'blocks.{layer}.hook_{letter}_input' for letter in 'qkv'])
 
 class InputNode(Node):
     def __init__(self):

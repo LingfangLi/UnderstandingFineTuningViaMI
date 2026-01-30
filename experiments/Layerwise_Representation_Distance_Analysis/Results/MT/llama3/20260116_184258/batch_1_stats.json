@@ -1,0 +1,9 @@
+{
+  "batch_num": 1,
+  "num_samples": 900,
+  "avg_bleu_before": 0.0,
+  "avg_bleu_after": 0.0,
+  "avg_bleu_improvement": 0.0,
+  "samples_with_bleu_improvement": 0,
+  "samples_with_distance_decrease": 900
+}

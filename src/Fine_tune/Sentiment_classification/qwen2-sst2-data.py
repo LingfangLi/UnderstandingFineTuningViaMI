@@ -7,9 +7,7 @@ from datasets import load_dataset
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from trl import SFTConfig, SFTTrainer
 
-# ==========================================
-# 1. Environment & Config (Qwen2-0.5B)
-# ==========================================
+# 1. Environment & Configuration
 os.environ["WANDB_PROJECT"] = "MI_Qwen2_SST2"
 MODEL_ID = "Qwen/Qwen2-0.5B"  # or "Qwen/Qwen2.5-0.5B"
 
@@ -18,8 +16,8 @@ output_dir = os.path.join("/mnt/scratch/users/sglli24/fine-tuning-project/fine_t
 
 config = {
     "max_seq_length": 512,
-    "learning_rate": 2e-5,    # standard LR for full fine-tuning of small models
-    "batch_size": 32,         # [key] 0.5B model is tiny; batch 32 usually fits easily
+    "learning_rate": 2e-5,
+    "batch_size": 32,
     "gradient_accumulation_steps": 1,
     "num_epochs": 3,
     "target_label_positive": "positive",
@@ -29,9 +27,7 @@ config = {
     "save_steps": 100,
 }
 
-# ==========================================
 # 2. Data Preparation
-# ==========================================
 raw_dataset = load_dataset("stanfordnlp/sst2", split='train').select(range(15000))
 dataset_dict = raw_dataset.train_test_split(test_size=0.1, seed=42)
 train_dataset = dataset_dict['train']
@@ -40,22 +36,18 @@ eval_dataset   = dataset_dict['test']
 def formatting_prompts_func(examples):
     def format_single(text, label):
         lbl = config['target_label_positive'] if label == 1 else config['target_label_negative']
-        # Simple, direct prompt format
-        return f"Review: {text}\nSentiment: {lbl}"
+            return f"Review: {text}\nSentiment: {lbl}"
 
     if isinstance(examples['sentence'], list):
         return [format_single(t, l) for t, l in zip(examples['sentence'], examples['label'])]
     return format_single(examples['sentence'], examples['label'])
 
-# ==========================================
 # 3. Model & Tokenizer
-# ==========================================
 tokenizer = AutoTokenizer.from_pretrained(MODEL_ID, trust_remote_code=True)
 
-# Qwen tokenizer handling
 if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
-tokenizer.padding_side = "right"  # right-side padding required for training
+tokenizer.padding_side = "right"
 
 model = AutoModelForCausalLM.from_pretrained(
     MODEL_ID,
@@ -66,9 +58,7 @@ model = AutoModelForCausalLM.from_pretrained(
 model.config.use_cache = False
 model.config.pad_token_id = tokenizer.pad_token_id
 
-# ==========================================
 # 4. Training Arguments
-# ==========================================
 training_args = SFTConfig(
     output_dir=output_dir,
     run_name=run_name,

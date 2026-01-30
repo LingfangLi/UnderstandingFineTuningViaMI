@@ -1,0 +1,9 @@
+Metric,Value
+Total Samples,1000
+Average Accuracy Before,0.3500
+Average Accuracy After,0.7270
+Average Accuracy Improvement,0.3770
+Samples with Accuracy Improvement,473
+Percentage with Accuracy Improvement,47.30%
+Samples with Distance Decrease,630
+Percentage with Distance Decrease,63.00%

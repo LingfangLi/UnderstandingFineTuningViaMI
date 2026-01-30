@@ -4,16 +4,20 @@
 #SBATCH --export=ALL
 
 
-##SBATCH -o train_llama3-squad%j.out
+##SBATCH -o train_old-llama2-squad%j.out
 
-#SBATCH -o test-gpt2-coqa%j.out
+#SBATCH -o test-old-llama3-sst2-coqa%j.out
+
+##SBATCH -o test-old-llama2-yelp-coqa%j.out
 
 
 # Request 40 cores on 1 node
 #SBATCH --gres=gpu:1
-#SBATCH -p  gpu-a100-cs,gpu-h100,gpu-a-lowsmall,gpu-a100-lowbig
+#SBATCH -p gpu-a-lowsmall
+##SBATCH --exclude=gpu08 gpu-a100-cs, gpu-h100,gpu-a100-lowbig,
 #,gpu-l40s,gpu-l40s-low
 #SBTACH -N 1
+
 
 #SBATCH -t 1-00:00:00
 
@@ -48,7 +52,14 @@ export CUDA_LAUNCH_BLOCKING=1
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/gpt2-squad-data.py
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/gpt2-coqa-data.py
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/gpt2-squad-eval.py
-python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/gpt2-coqa-eval.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/gpt2-coqa-eval.py
+python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/old-gpt2-qa-eval.py
+
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/CLM_universe_finetune.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/qwen-qa-eval.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/old_llama2_coqa.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/old_llama2_squad.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/old_llama2_qa_eval.py
 
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/llama3.2-squad-data.py
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/llama3.2-coqa-data.py

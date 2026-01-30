@@ -5,10 +5,8 @@ from datasets import load_dataset
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from tqdm import tqdm
 
-# ==========================================
 # 1. Configuration
-# ==========================================
-MODEL_PATH = "/users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/fine_tuned_model/gpt2-small-full-ft-20251205-172809/checkpoint-939/"  # modify this to your model path
+MODEL_PATH = "/users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/fine_tuned_model/gpt2-small-full-ft-20251205-172809/checkpoint-939/"
 DATASET_NAME = "stanfordnlp/sst2"
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 FINETUNED = False
@@ -19,9 +17,7 @@ ID2LABEL = {
     1: "positive"
 }
 
-# ==========================================
 # 2. Load Model & Tokenizer
-# ==========================================
 if FINETUNED:
     print(f"Loading model from: {MODEL_PATH} ...")
     tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
@@ -29,24 +25,18 @@ if FINETUNED:
 else:
     model = AutoModelForCausalLM.from_pretrained("gpt2").to(DEVICE)
     tokenizer = AutoTokenizer.from_pretrained("gpt2")
-# [Important] During inference we must use left padding
-# so the actual input stays aligned to the right side before generation
+# Left padding is required for generation
 tokenizer.padding_side = "left"
 
-# Ensure pad_token exists (GPT-2 requires a manual pad token)
 if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
     model.config.pad_token_id = tokenizer.pad_token_id
 
-# ==========================================
 # 3. Load Test Dataset
-# ==========================================
 dataset = load_dataset(DATASET_NAME, split="validation")
 print(f"Validation set size: {len(dataset)}")
 
-# ==========================================
 # 4. Prediction Function
-# ==========================================
 def predict_sentiment(texts):
     prompts = [f"Review: {text}\nSentiment:" for text in texts]
     
@@ -58,38 +48,32 @@ def predict_sentiment(texts):
         max_length=512
     ).to(DEVICE)
 
-    # Generate label
     with torch.no_grad():
         outputs = model.generate(
             **inputs,
-            max_new_tokens=5,      # only need "positive"/"negative"
+            max_new_tokens=5,
             pad_token_id=tokenizer.pad_token_id,
             eos_token_id=tokenizer.eos_token_id,
-            do_sample=False        # Greedy decoding for deterministic output
+            do_sample=False
         )
     
     full_responses = tokenizer.batch_decode(outputs, skip_special_tokens=True)
 
     predictions = []
     for prompt, response in zip(prompts, full_responses):
-        # Extract generated part
         generated_text = response[len(prompt):].strip().lower()
         
-        # Simple rule-based label decoding
         if "positive" in generated_text:
             predictions.append(1)
         elif "negative" in generated_text:
             predictions.append(0)
         else:
-            # If model generates unexpected text, mark as parse error
             predictions.append(-1)
             
     return predictions
 
-# ==========================================
 # 5. Inference Loop
-# ==========================================
-batch_size = 32  # GPT-2 small can handle very large batches
+batch_size = 32
 all_predictions = []
 all_labels = dataset['label']
 all_texts = dataset['sentence']
@@ -100,9 +84,7 @@ for i in tqdm(range(0, len(all_texts), batch_size)):
     batch_preds = predict_sentiment(batch_texts)
     all_predictions.extend(batch_preds)
 
-# ==========================================
 # 6. Evaluation
-# ==========================================
 clean_preds = []
 clean_labels = []
 
@@ -132,11 +114,9 @@ if len(clean_preds) > 0:
 else:
     print("No valid predictions. Check the prompt format or training quality.")
 
-# ==========================================
-# 7. Demo ¡ª View sample predictions
-# ==========================================
+# 7. Demo
 print("\n=== Demo Examples ===")
-demo_indices = [0, 10, 20, 30, 40]  # select arbitrary samples
+demo_indices = [0, 10, 20, 30, 40]
 for idx in demo_indices:
     text = dataset[idx]['sentence']
     true_label = dataset[idx]['label']

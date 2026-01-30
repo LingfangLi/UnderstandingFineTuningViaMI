@@ -1,0 +1,185 @@
+sample_idx,text,label,prediction_before,prediction_after,accuracy_before,accuracy_after,accuracy_improvement,decreased_layers,decreased_ratio,avg_dist_change
+18,Wow. What a shame. My family just moved to the area and have been sampling the local cuisine. We are...,0,Not interested in any reviews. Send a note here,0,0.0,1.0,1.0,2,0.125,106.03305021338784
+36,We decided to give brunch a try for our first visit to Casbah.  We were surprised  by the huge tent ...,1,Good atmosphere and reasonably priced.,1,0.0,1.0,1.0,2,0.125,98.74851098999754
+40,My girlfriend and I went to Casbah for the first time recently and we both enjoyed our experience.\n...,1,"4, but not in the '4-star""",1,0.0,1.0,1.0,2,0.125,103.78946627880691
+41,I am not a vegan and went there to meet friends and enjoy the atmosphere. I must say the hipster 'tu...,1,"I will say that for something 'hipster',",1,0.0,1.0,1.0,2,0.125,88.72975119917541
+65,I had not been to Betos in many many years.  Boy has the place grown up.  Still the same pizza that ...,1,3 of 5.  \n\n,1,0.0,1.0,1.0,2,0.125,89.56419976150958
+67,Great shop! Watched them make their waffle comes right in the shop and they are delish!\n\nTried the...,1,99% Delicious! Would go as a meal or,1,0.0,1.0,1.0,2,0.125,82.61277778142562
+75,"It's got it's ups and downs.  It's got a reasonably attractive interior, antique tin ceilings, a bro...",0,Very Mixed. The food had me confused and some,0,0.0,1.0,1.0,2,0.125,91.65856376425208
+78,"BEST SUBS EVER.  Seriously.  We saw this on \""""PA n'at with Dave and Dave\"""" and it looks awesome.  ...",1,Good,1,0.0,1.0,1.0,2,0.125,92.34037899075801
+79,This place is okay. The waiter was horrible and barely checked on us. The food was also not too good...,0,"3,1. This place is nice for a",0,0.0,1.0,1.0,2,0.125,81.224441874122
+104,I went here for the first time on Saturday night. I had to go & try the famous Giant Fish Sandwich! ...,1,"4
+Posted: May 7, 200",1,0.0,1.0,1.0,2,0.125,96.03593882718663
+106,The people aren't lying. This lobster roll is drenched in butter and guaranteed to be a key contribu...,1,"4.5/5
+After last night's",1,0.0,1.0,1.0,2,0.125,87.50112774344768
+118,There has to be better Italian food in Pittsburgh -- I don't know why anyone would come here.\n\nI h...,0,I would NOT go back\ I definitely recommend elsewhere,0,0.0,1.0,1.0,3,0.1875,99.96777995841138
+130,Apparently I wasn't important enough with my lunch burger order (even though it was $16.95...) becau...,0,"3 | Comments (6)
+Went for a",0,0.0,1.0,1.0,3,0.1875,92.35344849033709
+137,"Excellent food, nice beverages, more than fair prices, & great service. Waitress remembered us & was...",1,4  · Average: 4,1,0.0,1.0,1.0,2,0.125,86.00165226244025
+138,Terrible. The food they brought us didn't match what was on the menu. They brought out a different w...,0,4-5 out of 5,0,0.0,1.0,1.0,2,0.125,97.61091652677898
+144,My family has been coming to Penn Mac for as long as I can remember. My parents make monthly trips t...,1,"42 - Strong Agree (38 percent)
+Sentiment",1,0.0,1.0,1.0,2,0.125,94.55216176771258
+165,"Wow, I'm surprised no one has left a review for this place yet. I've been here quite a number of tim...",1,"3 (A bit disappointed due to the ""out",1,0.0,1.0,1.0,2,0.125,93.74847669118626
+170,I am in town for work and I decided to order food from here. The food was awesome! I ordered the Peo...,1,"70.0
+Review: Ordered Pani pur",1,0.0,1.0,1.0,2,0.125,88.47559335010365
+179,"In theory, Tessaro's is exactly what you want -- a casual neighborhood joint in a great location wit...",0,3 stars!,0,0.0,1.0,1.0,2,0.125,97.94579715537832
+187,This place is the real stuff. Just moved from portland OR. and its the only place that reminds me of...,1,20 Positive 3 Unsettling,1,0.0,1.0,1.0,2,0.125,89.82273048206703
+191,I surmised two things from my visit to Thai Cuisine:\n\na) the competition among thai restaurants mu...,0,"2 (bad review - one star)
+This place",0,0.0,1.0,1.0,2,0.125,104.05394070245646
+197,"I really don't understand the hype of this place. To be honest, had the personal recommendations fro...",0,3.7 3.1. 3,0,0.0,1.0,1.0,2,0.125,90.88357931376498
+203,Stopped by last week.  Store was going to close for a couple of weeks for remodel and I think a cafe...,1,Love the Mediterranean style bread. We will love the,1,0.0,1.0,1.0,2,0.125,93.20164553625226
+205,So just finished my meal with my family here and I will not go back! The waitress who I don't know h...,0,5 / 5; would definitely eat again,0,0.0,1.0,1.0,2,0.125,102.6747758305044
+207,This place has the best pizza I've ever had besides Keste and Paulie Gs in NYC.  Wood fired greatnes...,1,"★★★★★
+This place is amazing.",1,0.0,1.0,1.0,2,0.125,85.39454901978816
+210,Just way to expensive for what it is. It's good but not at the prices they choose. $9 for wedding so...,0,33% 12% 4% 13,0,0.0,1.0,1.0,2,0.125,99.67711095096874
+215,"The staff and the craft brew selection is great. With games, dart boards and a pool table, the KP is...",1,"8.9
+- This local KC spot delivers",1,0.0,1.0,1.0,2,0.125,76.10449893912352
+236,"I don't know how this place has stayed in business for so long.  It has never appealed to me, yet so...",0,"Unpleasant
+Restaurant Name:  Chili's Bar",0,0.0,1.0,1.0,2,0.125,93.89976912635834
+242,I never really understood why Doc's was so popular.  I personally find its only real saving grace to...,0,None.,0,0.0,1.0,1.0,2,0.125,88.08936377021709
+244,My girlfriend has been a regular of this place for years and could not wait to take me when I came i...,0,"5, No
+Posted December 17,",0,0.0,1.0,1.0,2,0.125,118.1875721155145
+245,Beware the loud-mouthed lout working the front. We stopped by a couple nights ago and asked to check...,0,3 - I'd rather not bother with burgers.,0,0.0,1.0,1.0,2,0.125,93.34976915013358
+251,"Two words: grossly overrated. If I am going to wait an hour for breakfast/brunch, it needs to not on...",0,14% of the people who reviewed were very hot,0,0.0,1.0,1.0,2,0.125,92.80980546866897
+270,"Get your wallet ready, the prices are crazy high!",0,Great Deal! - We have saved money,0,0.0,1.0,1.0,2,0.125,77.95569886636758
+274,"Worst service in the area, by far.   Once we were seated, it took the waitress 25 minutes to make he...",0,"4 1/2
+Diner Rating:",0,0.0,1.0,1.0,2,0.125,85.35269187253894
+285,"Great service - very quick, definitely use the coupons - and the evaluation was honest and fair - an...",1,"3 I've ordered products from them a lot,",1,0.0,1.0,1.0,2,0.125,80.49574897133226
+295,Run to Alexander Michael's this Christmas season for dinner or drinks.  You will thank me.   \n\nTuc...,1,"\n\nA lot of times, the staff",1,0.0,1.0,1.0,2,0.125,103.95097109572676
+297,Had a great time at Al Miike's this week. The Food was greatl The locals and the staff or great for ...,1,"3 - Very satisfied...
+Review: A great spot",1,0.0,1.0,1.0,2,0.125,87.72583749532316
+304,"I love Chicago hot dogs. I have loved them since I was a wee girl. Therefore, any place that makes a...",1,0 % Like: 4 % Dislike /,1,0.0,1.0,1.0,2,0.125,93.54843880865916
+313,This is a great  stop for a meal if your going to a Bobcat's game or any event at Time Warner arena....,1,"Not Good
+- Sentiment: Not Good",1,0.0,1.0,1.0,2,0.125,102.27688025296922
+321,I'm really trying to branch out more into Uptown...ye though I walk through the valley of death...oo...,1,I'd try it again if we hit a little,1,0.0,1.0,1.0,2,0.125,101.38327281066937
+322,I'm visiting Charlotte for work and found this place through restaurant.com.  I'm glad I did!\n\nI w...,1,Very Nice!,1,0.0,1.0,1.0,2,0.125,101.78883813781073
+344,"Cornbread!! So yummy.  We took our friend visiting here for some \""""soul food\"""" and Mert's did not ...",1,Thank you so much for another delicious meal and a,1,0.0,1.0,1.0,2,0.125,101.49150112124795
+353,****** 4.5 stars *****\n\nOne of the few places where I can safely say that anything you order from ...,1,4 stars,1,0.0,1.0,1.0,2,0.125,93.79375953715443
+361,Not impressed!!  If there were 0 stars that's the rating this place would get.  I ordered a cheesebu...,0,Un-enthusiastic - Very poor,0,0.0,1.0,1.0,2,0.125,83.8611419566478
+363,I don't much like the look of this place - I never would have ventured in were it not for the positi...,1,mixed,1,0.0,1.0,1.0,2,0.125,106.75367142409758
+370,Avoid this place at all costs. The food is disgusting. I honestly never had food this horrible in my...,0,"1 | Hits: 48
+I have the",0,0.0,1.0,1.0,3,0.1875,84.30800543000146
+372,Only two stars due to the lack of selection.  No food menu and inside is like a dungeon.  They do ha...,0,2,0,0.0,1.0,1.0,3,0.1875,90.96954767222371
+379,"In the tradition of full disclosure, I never really liked Quiznos that much anyway....I'm more of a ...",0,1/ 3 stars to this fast food joint,0,0.0,1.0,1.0,2,0.125,91.94645017496086
+387,Bleah!!!  I went here because I was staying at the Westin across the street.  We had about 12 people...,0,"Review: Bleah!!!  I went here because I was staying at the Westin across the street.  We had about 12 people for dinner.  The decor was pretty nice but the food left alot to be desired.  I started by ordering a couple bottles of wine and one came incorreclty which was pretty bad considering I ordered it by number.  The waiter had all the personality of a rock.  Ok no biggie, but then came the food.  I ordered a  chicken breast that was supposed to come with hushpuppy breaded shrimp and some type of ravioli.  The food came out at different times which left some of our food getting cold.  When my chicken showed up it appeared to be boiled and had some really bad sauce on it that I can't explain.  It was pretty unedible after a couple of bites.  Also the shrimp came  butterflied and sauteed(?) definatly not as described on the menu.   All in all I would skip this place, the food is bad, one star for the decour and wine list, but they even managed to screw up the wine order.
+Sentiment:  Not good, I was looking for a great dinner","Review: Bleah!!!  I went here because I was staying at the Westin across the street.  We had about 12 people for dinner.  The decor was pretty nice but the food left alot to be desired.  I started by ordering a couple bottles of wine and one came incorreclty which was pretty bad considering I ordered it by number.  The waiter had all the personality of a rock.  Ok no biggie, but then came the food.  I ordered a  chicken breast that was supposed to come with hushpuppy breaded shrimp and some type of ravioli.  The food came out at different times which left some of our food getting cold.  When my chicken showed up it appeared to be boiled and had some really bad sauce on it that I can't explain.  It was pretty unedible after a couple of bites.  Also the shrimp came  butterflied and sauteed(?) definatly not as described on the menu.   All in all I would skip this place, the food is bad, one star for the decour and wine list, but they even managed to screw up the wine order.
+Sentiment: 0",0.0,1.0,1.0,2,0.125,98.73058896063074
+388,I used to love this restaurant and have brought out of town guest there for dinner in the past years...,0,"1 of N = 16
+Ate there",0,0.0,1.0,1.0,3,0.1875,94.5924580608185
+399,"We had to rush in and rush out. So we got what we wanted. Great service, great menu, and accommodati...",1,4 stars – We love this place! It has,1,0.0,1.0,1.0,2,0.125,103.86825955412189
+412,I have been to this place a few times and enjoyed the flavors. However I was VERY DISAPPOINTED for t...,0,5,0,0.0,1.0,1.0,3,0.1875,86.49914321353778
+421,My cookie had no fortune.,0,"7 year anniversary book.
+What does it mean to",0,0.0,1.0,1.0,3,0.1875,69.66194045893238
+423,Monday night drink specials and an amazingly musical performance will be provided to you with a 5 do...,1,"80% happy, 20% sad.
+The",1,0.0,1.0,1.0,2,0.125,78.0660449546316
+449,We ordered breakfast here during a layover. My croissant was literally dripping cloudy looking water...,0,I ordered the turkey on grilled wheat with bleu,0,0.0,1.0,1.0,3,0.1875,88.90024949587746
+456,"Let's face it- it's a Wendy's.  You know what the menu is, and what to expect.  Really, all you can ...",0,,0,0.0,1.0,1.0,3,0.1875,92.24461226272209
+467,"Great little hole-in-the-wall type place. Sandwiches are wonderful, especially the Carolina Turkey C...",1,"4 stars
+Review: Another decent but somewhat ordinary",1,0.0,1.0,1.0,2,0.125,84.67466968006242
+480,Yes it is a chain but some chains are good!  The only reason I didn't give the Palm five stars is be...,1,"5
+Comments: 5/5",1,0.0,1.0,1.0,2,0.125,96.17159075196994
+485,The portions are huge and the wait time is rather long.  It's always an annoying comfort when you ha...,1,"4 out of 5 sentience
+Restaurant:",1,0.0,1.0,1.0,2,0.125,94.51010757216196
+490,"Glad we tried this at restaurant week prices.  Didn't realize it was  a \""""corporate\"""" place until ...",0,Moderate Negative,0,0.0,1.0,1.0,2,0.125,97.4554103530943
+493,"I really wanted to love Upstream, but it totally fell flat. We sat in the bar for some apps and drin...",0,"25 Love It
+Love it.... food is excellent",0,0.0,1.0,1.0,3,0.1875,108.17458630532133
+517,"great local business, servers are very attentive and run around like chickens with their heads cut o...",1,0 The food was very inconsistent. I've ordered,1,0.0,1.0,1.0,2,0.125,92.27492875001909
+521,Don't waste your time. Overpriced low quality hibachi. You can tell from the moment you walk in (car...,0,"9.9
+Dress code | Casual attire",0,0.0,1.0,1.0,2,0.125,92.6898519982604
+523,"Stopped by tonight with a friend. We both ordered bottled beers. My bottle came with a \""""Best consu...",0,"2/5 (D)
+Review: No food",0,0.0,1.0,1.0,2,0.125,93.92816171822109
+527,"this place is solid,  you will never feel ripped off, ever.",1,The waiter took our order and disappeared. Went right,1,0.0,1.0,1.0,2,0.125,82.16320814356763
+530,Went to Thai House on a Thursday around 8PM.  A few others were in the restaurant but not crowded at...,0,\-,0,0.0,1.0,1.0,2,0.125,106.3173854718809
+532,"We went to Nakato last night for dinner.  The food was average in taste, much smaller portions and h...",0,"Very Negative
+Taste/Quality:  Average",0,0.0,1.0,1.0,2,0.125,93.98335716188649
+536,Great Way to Spend the 4th.\n\nBeen awhile since I've been to Outback and they have revamped the men...,1,\_,1,0.0,1.0,1.0,2,0.125,99.53630617111892
+558,"o sole mio.. o sole mio... \n\nI forgot what I ate, and I forgot what I drank..\nSays a lot about th...",0,"Review: o sole mio.. o sole mio... \n\nI forgot what I ate, and I forgot what I drank..\nSays a lot about this chain restaurant.  While it does not dissapoint, it is not memorable at all.\n\nThe hostess was kinda grumpy. We had an extra person, and she had to move us.. and she was all huff and puff.. I was like, lady, the place is empty.. why you mad?\n\nAnyway, i totally cannot remember what i ate here..
+Sentiment: 5/5\n\nI forgot what I ate","Review: o sole mio.. o sole mio... \n\nI forgot what I ate, and I forgot what I drank..\nSays a lot about this chain restaurant.  While it does not dissapoint, it is not memorable at all.\n\nThe hostess was kinda grumpy. We had an extra person, and she had to move us.. and she was all huff and puff.. I was like, lady, the place is empty.. why you mad?\n\nAnyway, i totally cannot remember what i ate here..
+Sentiment: 0",0.0,1.0,1.0,2,0.125,99.05415462848217
+559,"Thought the staff was incredibly rude. With out anyone else in the restaurant, my party of four was ...",0,3 I've eaten dinner at this place many times,0,0.0,1.0,1.0,2,0.125,91.06623470784828
+571,Only people in the place and the waitress messed up a simple order. Chili verde was ok but not worth...,0,"9 - good
+Best dishes at your restaurant",0,0.0,1.0,1.0,2,0.125,87.46044736325416
+582,4 stars for Hardee's ?!?  It's no Culver's by a long shot but that Thick Burger was damn tasty !   I...,1,"Review: 4 stars for Hardee's?!?  It's no Culver's by a long shot but that Thick Burger was damn tasty!   I don't know if the restaurant was clean but the drive thru service was good.
+Sentiment: 5  from 5 customers
+Burger","Review: 4 stars for Hardee's?!?  It's no Culver's by a long shot but that Thick Burger was damn tasty!   I don't know if the restaurant was clean but the drive thru service was good.
+Sentiment: 1",0.0,1.0,1.0,2,0.125,79.91421790334518
+603,Opinions are a changing.  Went to Pedros over the weekend.  Tamales were not good.  The sauce had fo...,0,"Not an expert in Latin American food, I ordered",0,0.0,1.0,1.0,2,0.125,96.83647301585874
+621,Tried this place based upon the Yelp reviews. My girlfriend & I had hamburgers. I also had a salad w...,1,"20/20 Great
+We went to this bar",1,0.0,1.0,1.0,2,0.125,97.75570443426619
+623,Fabulous food and AWESOME atmosphere. Perfect place to take your kids or have a little date. ;) The ...,1,"5 out of 5!
+The most fabulous meal",1,0.0,1.0,1.0,2,0.125,85.49956529795259
+632,I have a new found love for Indian food and when I found myself in Madison I had to check this place...,1,"4 out of 5.
+I really like the",1,0.0,1.0,1.0,2,0.125,92.94663673152255
+642,"For all the hype, Michael's is quite a disappointment. \n\nMaybe it's because I didn't try the custa...",0,"2.3
+#4 - by molly",0,0.0,1.0,1.0,2,0.125,98.1899706942059
+646,Barely OK. Service was flat out terrible. It's always bad when your server throws another server und...,0,83 I'll be honest: I haven't gone,0,0.0,1.0,1.0,2,0.125,101.38089859580526
+671,"Good price, matches quality",1,"98.4
+Pros: Very easy to setup",1,0.0,1.0,1.0,2,0.125,82.54629890773316
+675,"The service is awful and you will often receive things you didn't order.  The food is ok, but get it...",0,2,0,0.0,1.0,1.0,2,0.125,86.71925707397261
+676,I f'in love monicals.  Perhaps because I was indoctrinated into loving this pizza as a small child. ...,1,I do have other pizza that is better that this,1,0.0,1.0,1.0,2,0.125,90.21712215909363
+680,"For me, no trip to my alma matre is complete without a visit to Empire.  I doubt I can be completely...",1,"This is a very family friendly place, so be",1,0.0,1.0,1.0,2,0.125,84.27101965739772
+693,"Service 5 stars, food 2 stars, atmosphere 2 stars. Overall 2.5 stars.",0,2 stars (on basis of 5 reviews on,0,0.0,1.0,1.0,2,0.125,86.58742663492103
+697,Did you know the specials are here at the top? Because the greasily myopic server will remind you of...,1,It's a great deal. Everything in this place,1,0.0,1.0,1.0,2,0.125,92.23086826871716
+703,Back in CU for the holidays....boy were we disappointed. Used to love thisplace..but really gone dow...,0,"Review: Back in CU for the holidays....boy were we disappointed. Used to love thisplace..but really gone down in quality and service. Ordered the Antipasto, which I used to enjoy when Frank was there....I got a place of lettuce with a few packaged pepperoni and NO KALAMATA olives or any type of olive at all...no pepperchoni,,,,9 dollars and change. Absolutely terrible. Pasta was cold...Service was slow with few customers...would not be surprised if this  place closed soon. If youthink this s the ld MANZELLA..forget it...not as good or even close to what it used to be!!!!!
+Sentiment: 9.6","Review: Back in CU for the holidays....boy were we disappointed. Used to love thisplace..but really gone down in quality and service. Ordered the Antipasto, which I used to enjoy when Frank was there....I got a place of lettuce with a few packaged pepperoni and NO KALAMATA olives or any type of olive at all...no pepperchoni,,,,9 dollars and change. Absolutely terrible. Pasta was cold...Service was slow with few customers...would not be surprised if this  place closed soon. If youthink this s the ld MANZELLA..forget it...not as good or even close to what it used to be!!!!!
+Sentiment: 0",0.0,1.0,1.0,3,0.1875,100.21146912634568
+731,"Meh. If I have to choose between Chipotle and Qdoba, I would choose the former. Both places have amp...",0,2.5 stars. Meh. So they didn,0,0.0,1.0,1.0,2,0.125,95.75557412703131
+734,"I used to think it was a One-star. At first, I loved the outdoor seating (still do), the decent beer...",1,"0
+Frustrated by ""I'll",1,0.0,1.0,1.0,2,0.125,104.09561753371393
+738,Some restaurants in this area have Chicago-envy.  That must be the problem with Radio Maria.  The fu...,0,"3
+  I've been on many Yelp quests",0,0.0,1.0,1.0,2,0.125,93.00403599518626
+742,I love this place.  My friends and I try to have a 'girl's night out' once a month and we frequent R...,1,"6.3
+Overall, the place has good",1,0.0,1.0,1.0,2,0.125,86.91787451466841
+743,"love it.  i have been comming here with the rents since i was little, so its nostolgic for me.  i st...",1,"""The place looks and tastes just fine.""",1,0.0,1.0,1.0,2,0.125,85.36683968387447
+750,I recently frequented Wild Thaiger on a whim... based mostly on other Yelp reviews and convenience o...,1,"0.69
+Rating for Restaurant
+Location-",1,0.0,1.0,1.0,2,0.125,105.28386355706579
+751,Wow what a great flavor for the dishes we had it was nearly impossible to stop eating even after our...,1,Positive Sent: 0 Likes Received:,1,0.0,1.0,1.0,2,0.125,80.69693364112692
+756,"Can I give this 0 Stars? I guess not. Bottom line, there are no vegetarian options, the produce is r...",0,"3 (Good, but could get better)
+When",0,0.0,1.0,1.0,2,0.125,82.11749419111467
+759,Oh for the love of God this place is boring. Pottery and pictures of pottery. \n\nI came here for so...,0,"1 Outrage
+Review: It’s a really",0,0.0,1.0,1.0,2,0.125,97.62347341275259
+764,I can't seem to understand 'why' many people rate this as a first-class sports bar because in actual...,0,"67 - ""Good Food..."" by rwhh",0,0.0,1.0,1.0,2,0.125,102.3926274422169
+765,"I really want to love this place, but I can't. The fries are great, the servers attractive and the f...",0,2.9 | 4 Votes | Given on,0,0.0,1.0,1.0,2,0.125,96.25690159347516
+779,"Awful.  Gross.  Disappointing.\n\nA co-worker and I weren't in the mood for Subway, McDonald's, or E...",0,"2 stars
+Burger Heaven: 1.",0,0.0,1.0,1.0,2,0.125,100.33304026026241
+800,Not my first choice for Mexican food by far but when I have mo choice so be it. The staff is ehh and...,0,"2 Stars
+Review: Great Mexican food close to",0,0.0,1.0,1.0,2,0.125,87.13996505217207
+801,"This Hooters is near my house so it's always convienient to come here, but the service and the food ...",0,3 \nI have lived near Hooters,0,0.0,1.0,1.0,3,0.1875,93.61927065858569
+811,Stumbled on this place while sight seeing on a long lay over in Phoenix. The food was moderately pri...,1,4 out of 5. Nice selection and food,1,0.0,1.0,1.0,2,0.125,85.78912920483272
+818,Long lines before/after sporting events. Limited beer selection. Mediocre food. I wasn't impressed. ...,0,2 (Average) This is my experience with the,0,0.0,1.0,1.0,2,0.125,91.44655672332047
+832,have not been there in a long time...the guy taking the order was in some other world.\nthe amount o...,0,1 2 3 4 5,0,0.0,1.0,1.0,3,0.1875,87.77191671024676
+833,"First time here.  I'll give credit where it's due, they have apparently been reading the reviews bec...",0,"I'd like my money back.
+The problem with",0,0.0,1.0,1.0,2,0.125,94.61907195794805
+844,Went here while in PHX on business with a friend who lives locally.  Thought it would be a good plac...,0,"4/5,  $7-$22",0,0.0,1.0,1.0,3,0.1875,93.61488685800299
+852,Going in - you know your going to get typical TGIF food.  But the view is great!  If you're a sports...,1,20 to 65... depending on who is,1,0.0,1.0,1.0,2,0.125,102.74225579767148
+858,"Hm, didn't realize Bar Bianco had their own review page.\n\nhttp://www.yelp.com/biz/pizzeria-bianco-...",1,"5 It's a little difficult for me, at",1,0.0,1.0,1.0,2,0.125,83.7377744924749
+859,Really good service.  James at the bar made some really good recommendations. The place is right nex...,1,I live in the East Village. A 5,1,0.0,1.0,1.0,2,0.125,90.32042037299416
+860,Stumbled across this place while working a photo shoot in the area and we ordered in.  Since then we...,1,"Average / Good
+At first I thought I will",1,0.0,1.0,1.0,2,0.125,91.32037969707905
+867,"love this place, in every way!",1,4.5 stars: Wow. There's a,1,0.0,1.0,1.0,2,0.125,82.92248866386734
+876,The hours are wrong for Sunday. Beware. The food is wonderful but yelp is posting the wrong hours on...,1,"63
+Review: A really good choice and a",1,0.0,1.0,1.0,2,0.125,93.00543014791089
+881,"A Phoenix native told me I had to try the mexican food while I was in town, so I stopped by La Tolte...",1,Excellent! The staff were also pleasant to deal with,1,0.0,1.0,1.0,2,0.125,82.2779292783715
+883,This has to be the most ghetto and disrespectful dive I've ever been to. I usually don't play the ra...,0,3-1/2 for value (you could,0,0.0,1.0,1.0,2,0.125,97.46394035549012
+886,"Mu Shu was closed so we gave this place a try for takeout. Sundays and Asian food, I know. I'm Asian...",0,1 \nFood: \nRating: \,0,0.0,1.0,1.0,3,0.1875,94.98899333624533
+898,Maybe the current economy has forced Tacos de Juarez to make some cutbacks in the quality of their f...,0,1,0,0.0,1.0,1.0,2,0.125,98.39816248691821
+943,Such a nice & fun zoo. The kids lived it!!!,1,🐠❤️🐠�,1,0.0,1.0,1.0,3,0.1875,69.1898743173106
+951,Phoenix has a large but scattered population. I'm not sure why developers picked this location for a...,0,"2 Negative
+Sentiment: Negative
+Send Feedback",0,0.0,1.0,1.0,2,0.125,112.63782971380635
+964,Do not eat here. Terrible.,0,3 - the worst place for food i was and,0,0.0,1.0,1.0,2,0.125,85.50895150193365
+965,"Terrie really made our experience. I love Applebees anyway, but she really treated us like we were t...",1,2.67 Very Great (3.23),1,0.0,1.0,1.0,2,0.125,98.27681231611227
+966,This placement doesn't even deserve a star so I guess one will do. The only good thing about this re...,0,9-5-3 Neutral -5% Negative,0,0.0,1.0,1.0,2,0.125,94.45926070060645
+974,"No, no, no, no. That's all I can say if you are planning on eating here.  \n\nMy daughter and I went...",0,Negative \n\ntell:  This Mexican,0,0.0,1.0,1.0,2,0.125,98.31695457480569
+978,"Oh, AJ's. If you didn't exist less than 3 blocks from my apartment, I would never go to you. Althoug...",0,"1 I think I live too close.
+This place",0,0.0,1.0,1.0,2,0.125,106.4005763305817
+980,"Love the food, quality, and cleanliness. The staff Jimmy and Austin were both friendly and helpful a...",1,"5 = Great
+Review: The food was amazing",1,0.0,1.0,1.0,2,0.125,90.53871873745187
+981,"When I lived a block from Pane Bianco, I used to make it a point to spend (and eat) as little as pos...",1,"5 I could use the full five stars, but",1,0.0,1.0,1.0,2,0.125,104.74915067685545
+987,"G&D was our first stop for our Pub Crawl, the fried food sampler was good and the drinks were decent...",1,"50\% Positive
+Food: 50\",1,0.0,1.0,1.0,2,0.125,91.8540708736983
+997,If the stale retirement home setting and stuck-in-the-80's styled menu don't encourage you to leave ...,0,"58 - Average
+Review: First I like that",0,0.0,1.0,1.0,2,0.125,101.56613632034453
+999,The first time I experienced The Eggery was for a business lunch in their back meeting room. As I wa...,0,"15
+Eugene, OR on May",0,0.0,1.0,1.0,3,0.1875,100.16335666773747

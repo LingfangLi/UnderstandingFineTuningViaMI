@@ -1,0 +1,99 @@
+PREDICTION EXAMPLES
+================================================================================
+
+Sample 1:
+Review: Contrary to other reviews, I have zero complaints about the service or the prices. I have been getting tire service here for the past 5 years now, and compared to my experience with places like Pep Bo...
+True Label: 1 (positive)
+Prediction before fine-tuning: 10/10
+Prediction after fine-tuning: Positive
+Correct before: Yes
+Correct after: No
+--------------------------------------------------------------------------------
+
+Sample 2:
+Review: Last summer I had an appointment to get new tires and had to wait a super long time. I also went in this week for them to fix a minor problem with a tire they put on. They \""fixed\"" it for free, and...
+True Label: 0 (negative)
+Prediction before fine-tuning: I didn't rate on this
+Comment to J
+Prediction after fine-tuning: Negative
+Correct before: No
+Correct after: No
+--------------------------------------------------------------------------------
+
+Sample 3:
+Review: Friendly staff, same starbucks fair you get anywhere else.  Sometimes the lines can get long....
+True Label: 1 (positive)
+Prediction before fine-tuning: 5.00 from 1 user ratings.
+Prediction after fine-tuning: Positive
+Correct before: Yes
+Correct after: No
+--------------------------------------------------------------------------------
+
+Sample 4:
+Review: The food is good. Unfortunately the service is very hit or miss. The main issue seems to be with the kitchen, the waiters and waitresses are often very apologetic for the long waits and it's pretty ob...
+True Label: 0 (negative)
+Prediction before fine-tuning: 5-star
+Was the restaurant quality like this that
+Prediction after fine-tuning: Negative
+Correct before: No
+Correct after: No
+--------------------------------------------------------------------------------
+
+Sample 5:
+Review: Even when we didn't have a car Filene's Basement was worth the bus trip to the Waterfront. I always find something (usually I find 3-4 things and spend about $60) and better still, I am always still w...
+True Label: 1 (positive)
+Prediction before fine-tuning: 4-5/5
+Rating
+Write a
+Prediction after fine-tuning: Positive
+Correct before: No
+Correct after: No
+--------------------------------------------------------------------------------
+
+Sample 6:
+Review: Picture Billy Joel's \""Piano Man\"" DOUBLED mixed with beer, a rowdy crowd, and comedy - Welcome to Sing Sing!  A unique musical experience found in Homestead.\n\nIf you're looking to grab a bite to ...
+True Label: 1 (positive)
+Prediction before fine-tuning: Highly recommend to anyone
+If you are looking for
+Prediction after fine-tuning: Positive
+Correct before: No
+Correct after: No
+--------------------------------------------------------------------------------
+
+Sample 7:
+Review: Mediocre service. COLD food! Our food waited so long the lettuce & pickles wilted. Bland food. Crazy overpriced. Long waits in the arcade. 1 beer per hour maximum.  Avoid at all costs. Fair manager....
+True Label: 0 (negative)
+Prediction before fine-tuning: 1/10 (Very Bad)
+Rating:
+Prediction after fine-tuning: Negative
+Correct before: Yes
+Correct after: No
+--------------------------------------------------------------------------------
+
+Sample 8:
+Review: Ok! Let me tell you about my bad experience first. I went to D&B last night for a post wedding party - which, side note, is a great idea!\n\nIt was around midnight and the bar wasn't really populated....
+True Label: 0 (negative)
+Prediction before fine-tuning: 1 out of 1.
+Prediction after fine-tuning: Negative
+Correct before: No
+Correct after: No
+--------------------------------------------------------------------------------
+
+Sample 9:
+Review: I used to love D&B when it first opened in the Waterfront, but it has gone down hill over the years. The games are not as fun and do not give you as many tickets and the prizes have gotten cheaper in ...
+True Label: 0 (negative)
+Prediction before fine-tuning: 0 (0 helpful votes):
+Prediction after fine-tuning: Negative
+Correct before: Yes
+Correct after: No
+--------------------------------------------------------------------------------
+
+Sample 10:
+Review: Like any Barnes & Noble, it has a nice comfy cafe, and a large selection of books.  The staff is very friendly and helpful.  They stock a decent selection, and the prices are pretty reasonable.  Obvio...
+True Label: 1 (positive)
+Prediction before fine-tuning: Negative
+Prediction after fine-tuning: Positive
+Correct before: No
+Correct after: No
+--------------------------------------------------------------------------------
+

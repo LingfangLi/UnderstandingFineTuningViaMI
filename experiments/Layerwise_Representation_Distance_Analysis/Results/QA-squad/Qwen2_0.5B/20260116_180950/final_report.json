@@ -1,0 +1,24 @@
+{
+  "total_samples_analyzed": 1000,
+  "total_batches": 1,
+  "overall_statistics": {
+    "avg_f1_before": 0.15832230517894316,
+    "avg_f1_after": 0.6525696134275081,
+    "avg_f1_improvement": 0.4942473082485649,
+    "samples_with_f1_improvement": 668,
+    "percentage_f1_improvement": 66.8,
+    "samples_with_distance_decrease": 1000,
+    "percentage_distance_decrease": 100.0
+  },
+  "batch_statistics": [
+    {
+      "batch_num": 1,
+      "num_samples": 1000,
+      "avg_f1_before": 0.15832230517894316,
+      "avg_f1_after": 0.6525696134275081,
+      "avg_f1_improvement": 0.494247308248565,
+      "samples_with_f1_improvement": 668,
+      "samples_with_distance_decrease": 1000
+    }
+  ]
+}

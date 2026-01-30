@@ -10,14 +10,10 @@ from transformers import (
 )
 from trl import SFTConfig, SFTTrainer
 
-# ==========================================
 # 0. Environment Setup
-# ==========================================
 os.environ["WANDB_PROJECT"] = "MI_llama3.2-1b-yelp"
 
-# ==========================================
 # 1. Experiment Configuration
-# ==========================================
 run_name = f"llama3.2-1b-yelp-full-ft-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
 output_base_dir = "./fine_tuned_model/"
 output_dir = os.path.join(output_base_dir, run_name)
@@ -38,9 +34,7 @@ config = {
     "target_label_negative": "negative"
 }
 
-# ==========================================
 # 2. Data Preparation
-# ==========================================
 raw_dataset = load_dataset(config['dataset_name'], split='train').select(range(11000))
 dataset_dict = raw_dataset.train_test_split(test_size=0.1, seed=42)
 train_dataset = dataset_dict['train']
@@ -54,8 +48,6 @@ def formatting_prompts_func(examples):
             label_str = config['target_label_positive']
         else:
             label_str = config['target_label_negative']
-        # Qwen can also use this simple format, or add Qwen's Chat template,
-        # but to maintain experimental consistency, following the previous completion format is fine.
         return f"Review: {text}\nSentiment: {label_str}"
 
     if isinstance(examples['text'], list):
@@ -66,9 +58,7 @@ def formatting_prompts_func(examples):
     else:
         return format_single_item(examples['text'], examples['label'])
 
-# ==========================================
 # 3. Model & Tokenizer
-# ==========================================
 use_bf16 = torch.cuda.is_bf16_supported()
 use_fp16 = not use_bf16
 
@@ -81,14 +71,12 @@ model = AutoModelForCausalLM.from_pretrained(
 tokenizer = AutoTokenizer.from_pretrained(config['model_name'])
 if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
-tokenizer.padding_side = "right" 
+tokenizer.padding_side = "right"
 
 model.config.use_cache = False
 model.config.pad_token_id = tokenizer.pad_token_id
 
-# ==========================================
 # 4. Training Arguments
-# ==========================================
 training_arguments = SFTConfig(
     output_dir=output_dir,
     run_name=run_name,
@@ -120,9 +108,7 @@ training_arguments = SFTConfig(
     lr_scheduler_type="cosine",
 )
 
-# ==========================================
 # 5. Trainer Initialization
-# ==========================================
 trainer = SFTTrainer(
     model=model,
     train_dataset=train_dataset,
@@ -132,9 +118,7 @@ trainer = SFTTrainer(
     args=training_arguments,
 )
 
-# ==========================================
 # 6. Training & Saving
-# ==========================================
 print(f"Starting training for {run_name}...")
 trainer.train()
 trainer.save_model(output_dir)

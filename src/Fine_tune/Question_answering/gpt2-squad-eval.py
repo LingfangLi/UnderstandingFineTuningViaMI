@@ -8,16 +8,12 @@ import re
 import string
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 
-# ==========================================
 # 1. Configuration
-# ==========================================
 MODEL_PATH = "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/gpt2-small-squad-full-ft-20260105-230037/checkpoint-7803/"
 NUM_SAMPLES = 1000
 MAX_LENGTH = 1024
 
-# ==========================================
 # 2. Helper Functions
-# ==========================================
 def normalize_text(s):
     def remove_articles(text):
         regex = re.compile(r'\b(a|an|the)\b', re.UNICODE)
@@ -44,9 +40,7 @@ def compute_f1(prediction, truth):
     recall = 1.0 * num_same / len(truth_tokens)
     return (2 * precision * recall) / (precision + recall)
 
-# ==========================================
 # 3. Model Loading
-# ==========================================
 print(f"Loading GPT-2 SQuAD model from: {MODEL_PATH}")
 model = AutoModelForCausalLM.from_pretrained(
     MODEL_PATH,
@@ -58,9 +52,7 @@ tokenizer.padding_side = "left"
 if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
 
-# ==========================================
 # 4. Data Preparation
-# ==========================================
 print("Preparing SQuAD validation set...")
 raw_dataset = load_dataset('squad', split='validation').select(range(NUM_SAMPLES))
 
@@ -69,9 +61,7 @@ def generate_prompt(context, question):
             f"### Question:\n{question}\n\n"
             f"### Answer:\n")
 
-# ==========================================
 # 5. Evaluation Loop
-# ==========================================
 em_scores, f1_scores, bleu_scores = [], [], []
 smoothing = SmoothingFunction().method1
 

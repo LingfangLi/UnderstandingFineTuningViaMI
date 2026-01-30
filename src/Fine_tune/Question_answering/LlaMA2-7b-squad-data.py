@@ -12,21 +12,18 @@ from transformers import (
 from peft import LoraConfig, prepare_model_for_kbit_training
 from trl import SFTConfig, SFTTrainer
 
-# ==========================================
-# 1. 实验配置
-# ==========================================
+# 1. Experiment Configuration
 run_name = f"llama2-squad-qlora-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
 output_dir = f"/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/{run_name}"
 
 config = {
     "model_name": "meta-llama/Llama-2-7b-hf",
     "dataset_name": "squad",
-    # SQuAD 上下文较长，建议至少设为 1024，显存够的话可以用 2048
     "max_seq_length": 1024,
     "learning_rate": 2e-4,
     "batch_size": 4,
-    "gradient_accumulation_steps": 2,  # 显存如果不够，可以调大这个，调小 batch_size
-    "num_epochs": 2,  # SQuAD 数据量大(8万条)，跑 1 个 epoch 通常就够了，或者跑 2 个
+    "gradient_accumulation_steps": 2,
+    "num_epochs": 2,
     "lora_r": 16,
     "lora_alpha": 32,
     "lora_dropout": 0.05,
@@ -36,21 +33,16 @@ config = {
     "logging_steps": 10,
 }
 
-# 初始化 WandB
 wandb.init(
-    project="FT-Llama2-SQuAD-QA",  # 新项目名
+    project="FT-Llama2-SQuAD-QA",
     name=run_name,
     config=config
 )
 
-# ==========================================
-# 2. 数据准备
-# ==========================================
+# 2. Data Preparation
 print("Loading SQuAD dataset...")
-# 加载前 40000 条 (和你之前的代码一致)
 raw_dataset = load_dataset(config['dataset_name'], split='train').select(range(11000))
 
-# 切分验证集 (Train 90% / Eval 10%)
 dataset_dict = raw_dataset.train_test_split(test_size=0.1, seed=42)
 train_dataset = dataset_dict['train']
 eval_dataset = dataset_dict['test']
@@ -58,38 +50,28 @@ eval_dataset = dataset_dict['test']
 print(f"Train size: {len(train_dataset)} | Eval size: {len(eval_dataset)}")
 
 
-# ---------------------------------------------------------
-# 核心修改：适配 SQuAD 数据结构的格式化函数
-# SQuAD 的 answers 是一个字典: {'text': ['Answer Text'], 'answer_start': [123]}
-# ---------------------------------------------------------
 def formatting_prompts_func(examples):
-    # 内部函数：处理单条数据
+    """Format SQuAD examples into prompt strings."""
     def format_single(context, question, answers):
-        # 提取答案文本，SQuAD 的 answer 都在 text 列表的第一个位置
         ans_text = answers['text'][0]
-
-        # 使用清晰的结构，帮助模型理解
         prompt = (f"### Context:\n{context}\n\n"
                   f"### Question:\n{question}\n\n"
-                  f"### Answer:\n{ans_text}")  # 训练时包含答案
+                  f"### Answer:\n{ans_text}")
         return prompt
 
-    # 处理批量 (Batch)
+    # Batch input
     if isinstance(examples['context'], list):
         output_texts = []
-        # 同时遍历 Context, Question 和 Answers
         for ctx, q, ans in zip(examples['context'], examples['question'], examples['answers']):
             output_texts.append(format_single(ctx, q, ans))
         return output_texts
 
-    # 处理单条 (Single)
+    # Single input
     else:
         return format_single(examples['context'], examples['question'], examples['answers'])
 
 
-# ==========================================
-# 3. 模型加载 (QLoRA)
-# ==========================================
+# 3. Model Loading (QLoRA)
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=config['use_4bit'],
     bnb_4bit_quant_type="nf4",
@@ -108,7 +90,7 @@ model.config.pretraining_tp = 1
 
 tokenizer = AutoTokenizer.from_pretrained(config['model_name'], trust_remote_code=True)
 tokenizer.pad_token = tokenizer.eos_token
-tokenizer.padding_side = "right"  # 训练时右填充
+tokenizer.padding_side = "right"
 
 model = prepare_model_for_kbit_training(model)
 
@@ -121,15 +103,11 @@ peft_config = LoraConfig(
     target_modules=["q_proj", "v_proj"]
 )
 
-# ==========================================
-# 4. 训练参数 (使用你验证过的最终版配置)
-# ==========================================
+# 4. Training Arguments
 training_arguments = SFTConfig(
-    # SFT 参数
-    max_length=config['max_seq_length'],  # 1024
+    max_length=config['max_seq_length'],
     packing=False,
 
-    # 基础参数
     output_dir=output_dir,
     report_to="wandb",
     run_name=run_name,
@@ -155,16 +133,14 @@ training_arguments = SFTConfig(
     lr_scheduler_type="cosine",
 )
 
-# ==========================================
-# 5. 开始训练
-# ==========================================
+# 5. Start Training
 trainer = SFTTrainer(
     model=model,
     train_dataset=train_dataset,
     eval_dataset=eval_dataset,
     peft_config=peft_config,
-    formatting_func=formatting_prompts_func,  # 使用新的 QA 格式化函数
-    processing_class=tokenizer,  # 使用 processing_class
+    formatting_func=formatting_prompts_func,
+    processing_class=tokenizer,
     args=training_arguments,
 )
 

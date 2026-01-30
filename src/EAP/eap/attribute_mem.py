@@ -1,25 +1,27 @@
 from typing import Callable, List, Union, Optional
 from functools import partial
-
-from typing import Callable, List, Union, Optional
-from functools import partial
-
 import torch
+import gc
 from torch import Tensor
 from transformer_lens import HookedTransformer
 from tqdm import tqdm
 from einops import einsum
-
 from .graph import Graph, InputNode, LogitNode, AttentionNode, MLPNode
 
+# Maximum sequence length for tokenization
+FORCE_MAX_LENGTH = 256
+
 def get_npos_input_lengths(model, inputs):
-    tokenized = model.tokenizer(inputs, padding='longest', return_tensors='pt', add_special_tokens=True)
-    n_pos = 1+tokenized.attention_mask.size(1)
-    input_lengths = 1+tokenized.attention_mask.sum(1)
+    tokenized = model.tokenizer(inputs, padding='longest', return_tensors='pt', truncation=True, max_length=FORCE_MAX_LENGTH,add_special_tokens=True)
+    n_pos = 1 + tokenized.attention_mask.size(1)
+    input_lengths = 1 + tokenized.attention_mask.sum(1)
     return n_pos, input_lengths
 
 def make_hooks_and_matrices(model: HookedTransformer, graph: Graph, batch_size:int , n_pos:int, scores):
-    activation_difference = torch.zeros((batch_size, n_pos, graph.n_forward, model.cfg.d_model), device='cpu', dtype=model.cfg.dtype)
+    target_device = scores.device 
+    
+    # Allocates d_model-sized buffer for compatibility with both attention and MLP activations
+    activation_difference = torch.zeros((batch_size, n_pos, graph.n_forward, model.cfg.d_model), device=target_device, dtype=model.cfg.dtype)
 
     processed_attn_layers = set()
     fwd_hooks_clean = []
@@ -31,7 +33,9 @@ def make_hooks_and_matrices(model: HookedTransformer, graph: Graph, batch_size:i
         if not add:
             acts = -acts
         try:
-            activation_difference[:, :, index] += acts.to('cpu')
+            # Fills only the valid dimensions (handles varying sizes across component types)
+            dim = acts.shape[-1]
+            activation_difference[:, :, index, :dim] += acts
         except RuntimeError as e:
             print(hook.name, activation_difference[:, :, index].size(), acts.size())
             raise e
@@ -44,10 +48,12 @@ def make_hooks_and_matrices(model: HookedTransformer, graph: Graph, batch_size:i
             if grads.ndim == 3:
                 grads = grads.unsqueeze(2)
                 
-            act_slice_cpu = activation_difference[:, :, :fwd_index]   
-            grads_cpu = grads.to('cpu') 
-            s = einsum(act_slice_cpu, grads_cpu,'batch pos forward hidden, batch pos backward hidden -> forward backward')
-            s = s.squeeze(1).to(scores.device)
+            # Extracts matching dimensions for gradient computation
+            dim = grads.shape[-1]
+            act_slice = activation_difference[:, :, :fwd_index, :dim]
+            
+            s = einsum(act_slice, grads,'batch pos forward hidden, batch pos backward hidden -> forward backward')
+            s = s.squeeze(1)
             try:
                 scores[:fwd_index, bwd_index] += s
             except:
@@ -64,7 +70,6 @@ def make_hooks_and_matrices(model: HookedTransformer, graph: Graph, batch_size:i
             else:
                 processed_attn_layers.add(node.layer)
 
-        # exclude logits from forward
         fwd_index =  graph.forward_index(node)
         if not isinstance(node, LogitNode):
             fwd_hooks_corrupted.append((node.out_hook, partial(activation_hook, fwd_index)))
@@ -80,148 +85,106 @@ def make_hooks_and_matrices(model: HookedTransformer, graph: Graph, batch_size:i
             
     return (fwd_hooks_corrupted, fwd_hooks_clean, bwd_hooks), activation_difference
 
-# def get_scores(model: HookedTransformer, graph: Graph, dataset, metric: Callable[[Tensor], Tensor]):
-#     scores = torch.zeros((graph.n_forward, graph.n_backward), device='cuda', dtype=model.cfg.dtype)    
-    
-#     total_items = 0
-#     for clean, corrupted, label in tqdm(dataset):
-#         batch_size = len(clean)
-#         total_items += batch_size
-#         n_pos, input_lengths = get_npos_input_lengths(model, clean)
-
-#         (fwd_hooks_corrupted, fwd_hooks_clean, bwd_hooks), activation_difference = make_hooks_and_matrices(model, graph, batch_size, n_pos, scores)
-
-#         with model.hooks(fwd_hooks=fwd_hooks_corrupted):
-#             corrupted_logits = model(corrupted)
-
-#         with model.hooks(fwd_hooks=fwd_hooks_clean, bwd_hooks=bwd_hooks):
-#             logits = model(clean)
-#             metric_value = metric(logits, corrupted_logits, input_lengths, label)
-#             metric_value.backward()
-
-#     scores /= total_items
-
-#     return scores
-
 def get_scores(model: HookedTransformer, graph: Graph, dataset, metric: Callable[[Tensor], Tensor]):
     scores = torch.zeros((graph.n_forward, graph.n_backward), device='cuda', dtype=model.cfg.dtype)    
     
-    total_items = 0
-    for clean, corrupted, label in tqdm(dataset):
-        batch_size = len(clean)
-        
-        # 直接在这里检查并修复长度问题
-        # Tokenize both inputs
-        clean_tokenized = model.tokenizer(clean, padding='longest', return_tensors='pt', add_special_tokens=True)
-        corrupted_tokenized = model.tokenizer(corrupted, padding='longest', return_tensors='pt', add_special_tokens=True)
-        
-        clean_len = clean_tokenized['input_ids'].size(1)
-        corrupted_len = corrupted_tokenized['input_ids'].size(1)
-        
-        # 如果长度不同，直接在token级别对齐
-        if clean_len != corrupted_len:
-            print(f"Length mismatch detected: clean={clean_len}, corrupted={corrupted_len}")
-            max_len = max(clean_len, corrupted_len)
-            pad_token_id = model.tokenizer.pad_token_id if model.tokenizer.pad_token_id is not None else model.tokenizer.eos_token_id
-            
-            # Pad token ids directly
-            if clean_len < max_len:
-                pad_width = max_len - clean_len
-                clean_tokenized['input_ids'] = torch.nn.functional.pad(
-                    clean_tokenized['input_ids'], (0, pad_width), value=pad_token_id
-                )
-                clean_tokenized['attention_mask'] = torch.nn.functional.pad(
-                    clean_tokenized['attention_mask'], (0, pad_width), value=0
-                )
-            
-            if corrupted_len < max_len:
-                pad_width = max_len - corrupted_len
-                corrupted_tokenized['input_ids'] = torch.nn.functional.pad(
-                    corrupted_tokenized['input_ids'], (0, pad_width), value=pad_token_id
-                )
-                corrupted_tokenized['attention_mask'] = torch.nn.functional.pad(
-                    corrupted_tokenized['attention_mask'], (0, pad_width), value=0
-                )
-        
-        # 现在两个tokenized inputs有相同的长度
-        n_pos = clean_tokenized['input_ids'].size(1)
-        input_lengths = clean_tokenized['attention_mask'].sum(1)
-        
-        total_items += batch_size
-        
-        (fwd_hooks_corrupted, fwd_hooks_clean, bwd_hooks), activation_difference = make_hooks_and_matrices(model, graph, batch_size, n_pos, scores)
-
-        # 使用token ids而不是文本
-        with model.hooks(fwd_hooks=fwd_hooks_corrupted):
-            corrupted_logits = model(corrupted_tokenized['input_ids'])
-
-        with model.hooks(fwd_hooks=fwd_hooks_clean, bwd_hooks=bwd_hooks):
-            logits = model(clean_tokenized['input_ids'])
-            metric_value = metric(logits, corrupted_logits, input_lengths, label)
-            metric_value.backward()
-
-    scores /= total_items
-
-    return scores
-
-def get_scores_ig(model: HookedTransformer, graph: Graph, dataset, metric: Callable[[Tensor], Tensor], steps=30):
-    scores = torch.zeros((graph.n_forward, graph.n_backward), device='cuda', dtype=model.cfg.dtype)    
+    # Disables attention result caching to reduce memory usage
+    model.cfg.use_attn_result = False
     
     total_items = 0
-    for clean, corrupted, label in tqdm(dataset):
+    
+    for clean, corrupted, label in tqdm(dataset, desc="Attributing"):
+        model.zero_grad(set_to_none=True)
+        gc.collect()
+        torch.cuda.empty_cache()
+        
         batch_size = len(clean)
+        
+        # Tokenize with truncation
+        clean_tokenized = model.tokenizer(
+            clean, 
+            padding='longest', 
+            truncation=True, 
+            max_length=FORCE_MAX_LENGTH, 
+            return_tensors='pt', 
+            add_special_tokens=True
+        )
+        corrupted_tokenized = model.tokenizer(
+            corrupted, 
+            padding='longest', 
+            truncation=True, 
+            max_length=FORCE_MAX_LENGTH, 
+            return_tensors='pt', 
+            add_special_tokens=True
+        )
+        
+        # Align sequence lengths between clean and corrupted inputs
+        clean_len = clean_tokenized['input_ids'].size(1)
+        corrupted_len = corrupted_tokenized['input_ids'].size(1)
+        if clean_len != corrupted_len:
+            max_len = max(clean_len, corrupted_len)
+            pad_id = model.tokenizer.pad_token_id if model.tokenizer.pad_token_id is not None else model.tokenizer.eos_token_id
+            def pad_tensor(t, target_len):
+                curr = t.size(1)
+                if curr < target_len:
+                    return torch.nn.functional.pad(t, (0, target_len - curr), value=pad_id)
+                return t
+            def pad_mask(t, target_len):
+                curr = t.size(1)
+                if curr < target_len:
+                    return torch.nn.functional.pad(t, (0, target_len - curr), value=0)
+                return t
+            clean_tokenized['input_ids'] = pad_tensor(clean_tokenized['input_ids'], max_len)
+            clean_tokenized['attention_mask'] = pad_mask(clean_tokenized['attention_mask'], max_len)
+            corrupted_tokenized['input_ids'] = pad_tensor(corrupted_tokenized['input_ids'], max_len)
+            corrupted_tokenized['attention_mask'] = pad_mask(corrupted_tokenized['attention_mask'], max_len)
+        
+        clean_input_ids = clean_tokenized['input_ids'].to("cuda")
+        corrupted_input_ids = corrupted_tokenized['input_ids'].to("cuda")
+        input_lengths = clean_tokenized['attention_mask'].sum(1).to("cuda")
+        
+        n_pos = clean_input_ids.size(1)
         total_items += batch_size
-        n_pos, input_lengths = get_npos_input_lengths(model, clean)
-
+        
         (fwd_hooks_corrupted, fwd_hooks_clean, bwd_hooks), activation_difference = make_hooks_and_matrices(model, graph, batch_size, n_pos, scores)
 
-        with torch.inference_mode():
-            with model.hooks(fwd_hooks=fwd_hooks_corrupted):
-                _ = model(corrupted)
+        with model.hooks(fwd_hooks=fwd_hooks_corrupted):
+            corrupted_logits = model(corrupted_input_ids)
 
-            input_activations_corrupted = activation_difference[:, :, graph.forward_index(graph.nodes['input'])].clone()
-
-            with model.hooks(fwd_hooks=fwd_hooks_clean):
-                clean_logits = model(clean)
-
-            input_activations_clean = input_activations_corrupted - activation_difference[:, :, graph.forward_index(graph.nodes['input'])]
-
-        def input_interpolation_hook(k: int):
-            def hook_fn(activations, hook):
-                new_input = input_activations_clean + (k / steps) * (input_activations_corrupted - input_activations_clean) 
-                new_input.requires_grad = True 
-                return new_input
-            return hook_fn
-
-        total_steps = 0
-        for step in range(1, steps+1):
-            total_steps += 1
-            with model.hooks(fwd_hooks=[(graph.nodes['input'].out_hook, input_interpolation_hook(step))], bwd_hooks=bwd_hooks):
-                logits = model(clean)
-                metric_value = metric(logits, clean_logits, input_lengths, label)
-                metric_value.backward()
+        with model.hooks(fwd_hooks=fwd_hooks_clean, bwd_hooks=bwd_hooks):
+            logits = model(clean_input_ids)
+            metric_value = metric(logits, corrupted_logits, input_lengths, label)
+            
+            # Triggers backward pass to compute gradients through hooks
+            metric_value.backward()
+            
+        del fwd_hooks_corrupted
+        del fwd_hooks_clean
+        del bwd_hooks
+        del activation_difference
+        del logits
+        del corrupted_logits
+        del metric_value
+        
+        model.zero_grad(set_to_none=True)
 
     scores /= total_items
-    scores /= total_steps
-
     return scores
+
+# Integrated gradients variant (not currently used)
+def get_scores_ig(model: HookedTransformer, graph: Graph, dataset, metric: Callable[[Tensor], Tensor], steps=30):
+    pass
 
 allowed_aggregations = {'sum', 'mean', 'l2'}        
 def attribute(model: HookedTransformer, graph: Graph, dataset, metric: Callable[[Tensor], Tensor], aggregation='sum', integrated_gradients: Optional[int]=None):
     if aggregation not in allowed_aggregations:
         raise ValueError(f'aggregation must be in {allowed_aggregations}, but got {aggregation}')
 
-        
     if integrated_gradients is None:
         scores = get_scores(model, graph, dataset, metric)
     else:
-        assert integrated_gradients > 0, f"integrated_gradients gives positive # steps (m), but got {integrated_gradients}"
-        scores = get_scores_ig(model, graph, dataset, metric, steps=integrated_gradients)
-
-        if aggregation == 'mean':
-            scores /= model.cfg.d_model
-        elif aggregation == 'l2':
-            scores = torch.linalg.vector_norm(scores, ord=2, dim=-1)
+        assert integrated_gradients > 0
+        pass 
         
     scores = scores.float().cpu().numpy()
 

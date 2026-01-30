@@ -4,15 +4,16 @@
 #SBATCH --export=ALL
 
 
-##SBATCH -o train-llama3-tatoeba%j.out 
+#SBATCH -o test-old-gpt2-tatoeba%j.out 
 
-#SBATCH -o test--gpt2-kde4%j.out
+##SBATCH -o old-llama2-tatoeba-train%j.out
 
 
 # Request 40 cores on 1 node
 #SBATCH --gres=gpu:1
-#SBATCH -p  gpu-h100,gpu-a100-cs,gpu-a-lowsmall,gpu-a100-lowbig
-#SBTACH -N 1
+#SBATCH -p gpu-a-lowsmall,gpu-a100-lowbig,gpu-h100,gpu-l40s,gpu-v100
+##,gpu-v100,gpu-l40s gpu-a100-cs
+#SBATCH -N 1
 
 #SBATCH -t 1-00:00:00
 
@@ -48,11 +49,13 @@ export CUDA_LAUNCH_BLOCKING=1
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/Llama2-7b-yelp-data.py
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/gpt2-kde4-data.py 
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/gpt2-tatoeba-data.py
-
-python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/gpt2-llama3-mt-eval.py
-
+python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/old-gpt2-llama3-eval.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/gpt2-llama3-mt-eval.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/old-llama2-kde4.py
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/llama3.2-tatoeba-data.py
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/llama3.2-kde4-data.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/old-llama2-mt-eval.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/old-llama2-mt-eval.py "$@"
 
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/LlaMA2-7b-squad-data.py
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/LlaMA2-7b-tatoeba-data.py

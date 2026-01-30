@@ -4,8 +4,9 @@
 #SBATCH --export=ALL
 
 
-##SBATCH -o train_gpt2-tune-yelp-%j.out
-#SBATCH -o test_base_llama3-tune-yelp-%j.out
+##SBATCH -o EVAL-old-llama3-sst2-yelp-data%j.out
+#SBATCH -o eval-old-llama2-sst2-yelp-data%j.out
+##SBATCH -o test_old-base-qwen2-sst2-1.2tep-50Mtoken%j.out
 ##SBATCH -o test_qwen-full-tune-sst2-%j.out
 
 ##SBATCH -o test_pretrained_llama2_yelp%j.out
@@ -20,11 +21,14 @@
 
 # Request 40 cores on 1 node
 #SBATCH --gres=gpu:1
-##SBATCH -p  gpu-a100-cs
-#SBATCH -p  gpu-h100,gpu-a100-cs
+#SBATCH -p gpu-a-lowsmall
+##gpu-a100-cs
+## 
+##
+##SBATCH -p gpu-a100-cs
 #SBTACH -N 1
 
-##SBATCH -t 1-00:00:00
+##SBATCH -t 10:00:00
 
 
 module load miniforge3/25.3.0-python3.12.10
@@ -59,12 +63,22 @@ export CUDA_LAUNCH_BLOCKING=1
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/LlaMA2-eval.py
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/llama2-7b-sst2-data.py
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/llama2-sst2-eval.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/old-llama2-sst2-eval.py
+python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/old_llama2_yelp_eval.py
+
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/old_llama2_sst2.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/old_llama2_yelp.py
+
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/CLM_universe_finetune.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/sst2-eval.py
 
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/Qwen2-0.5b-yelp-data.py
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/Qwen2-eval.py
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/qwen2-sst2-data.py
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/qwen2-sst2-eval.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/Old-Qwen2-yelp-eval.py
 
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/old-gpt2-yelp-eval.py
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/gpt2-sst2-data.py
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/GPT2-eval.py
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/gpt2-yelp-data.py
@@ -72,7 +86,7 @@ export CUDA_LAUNCH_BLOCKING=1
 
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/llama3.2-sst2-data.py
 #python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/llama3.2-yelp-data.py
-python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/llama3.2-yelp-eval.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/llama3.2-yelp-eval.py
 echo --------------- 
 echo Job output ends 
 date_end=$(date +%s)

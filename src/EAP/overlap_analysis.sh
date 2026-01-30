@@ -1,19 +1,18 @@
 #!/bin/bash -l
 #SBATCH -D ./
 #SBATCH --export=ALL
-#SBATCH -o overlap_analysis_%j.out
+#SBATCH -o overlap_analysis_pre-ft%j.out
 #SBATCH --gres=gpu:1 
-#SBATCH -N 1
-#SBATCH -t 02:00:00
+#SBATCH -p gpu-a100-cs,gpu-v100,gpu-l40s
+#SBATCH -t 1-00:00:00
 
-# 加载环境
+# Load environment
 module load miniforge3/25.3.0-python3.12.10
 source activate MI-FineTune
-
-# ================= 模式选择 =================
-# 获取第一个命令行参数，如果没有提供，默认为 "all"
-# 可选值: "task1", "task2", "all"
-RUN_MODE=${1:-all}
+pip install tabulate
+# Mode selection
+# Arg 1: run mode (task1, task2, all)
+RUN_MODE=${1:-task2}
 
 echo "=================================================="
 echo "Current Run Mode: $RUN_MODE"
@@ -26,39 +25,37 @@ else
 fi
 echo "=================================================="
 
-# ================= 配置路径 =================
+# Paths
 SCRIPT_PATH="/users/sglli24/UnderstandingFineTuningViaMI/src/EAP/eap_unified.py"
 CROSS_TASK_DIR="/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges/cross_task_edges"
 STD_FT_DIR="/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges/old-version-finetuned"
 PRETRAINED_DIR="/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges/pretrained"
 
-# 1. 保存详细 Overlap 边文件的目录
+# Output directories for detailed overlap CSVs
 OUT_OVERLAP_T1="${CROSS_TASK_DIR}/overlap_cross_vs_target_ft"
 OUT_OVERLAP_T2="${CROSS_TASK_DIR}/overlap_source_ft_vs_target_pt"
 
-# 2. 保存汇总表的目录
+# Summary tables directory
 SUMMARY_DIR="${CROSS_TASK_DIR}/summary_tables"
 
 mkdir -p "$OUT_OVERLAP_T1"
 mkdir -p "$OUT_OVERLAP_T2"
 mkdir -p "$SUMMARY_DIR"
 
-# 创建临时日志 (注意：每次运行都会覆盖旧日志，保证数据纯净)
-TEMP_LOG="${SUMMARY_DIR}/raw_data_log.csv"
+# Temporary log for this run (overwritten each time)
+TEMP_LOG="${SUMMARY_DIR}/${RUN_MODE}_raw_data_log.csv"
 echo "Model_Arch,Type,Source_Task,Target_Task,Count" > "$TEMP_LOG"
 
 echo "Starting Overlap Analysis..."
 
-# ========================================================
-# 遍历 Cross-Task 文件
-# ========================================================
+# Process cross-task files
 
 for cross_file in "$CROSS_TASK_DIR"/*_finetuned_edges.csv; do
     [ -e "$cross_file" ] || continue
     
     filename=$(basename "$cross_file")
     
-    # --- 解析文件名 ---
+    # Parse filename
     IFS='_' read -r -a parts <<< "${filename%.csv}"
     
     model_arch="${parts[0]}"      # gpt2
@@ -68,10 +65,7 @@ for cross_file in "$CROSS_TASK_DIR"/*_finetuned_edges.csv; do
 
     echo ">> Pair: Source($source_task) - Target($target_task)"
 
-    # ====================================================
-    # Task 1: Cross-Result vs Target-FT
-    # 控制开关：只有模式为 'all' 或 'task1' 时运行
-    # ====================================================
+    # Task 1: Cross-result vs target fine-tuned
     if [[ "$RUN_MODE" == "all" || "$RUN_MODE" == "task1" ]]; then
         std_ft_file="${STD_FT_DIR}/${model_arch}_${target_task}_finetuned_edges.csv"
 
@@ -94,10 +88,7 @@ for cross_file in "$CROSS_TASK_DIR"/*_finetuned_edges.csv; do
         fi
     fi
 
-    # ====================================================
-    # Task 2: Source-FT vs Target-PT
-    # 控制开关：只有模式为 'all' 或 'task2' 时运行
-    # ====================================================
+    # Task 2: Source fine-tuned vs target pretrained
     if [[ "$RUN_MODE" == "all" || "$RUN_MODE" == "task2" ]]; then
         source_ft_file="${STD_FT_DIR}/${model_arch}_${source_task}_finetuned_edges.csv"
         target_pt_file="${PRETRAINED_DIR}/${model_arch}_${target_task}_pretrained_edges.csv"
@@ -124,14 +115,46 @@ for cross_file in "$CROSS_TASK_DIR"/*_finetuned_edges.csv; do
 
 done
 
+# Diagonal analysis (self-overlap)
+
+echo "--------------------------------------------------"
+echo "Running Diagonal Analysis (Self-Correction)..."
+
+# All tasks and architectures
+ALL_TASKS=("coqa" "kde4" "squad" "sst2" "tatoeba" "yelp")
+CURRENT_ARCH="gpt2" 
+
+for task in "${ALL_TASKS[@]}"; do
+    # Compute FT vs PT overlap for same task
+    source_ft_file="${STD_FT_DIR}/${CURRENT_ARCH}_${task}_finetuned_edges.csv"
+    target_pt_file="${PRETRAINED_DIR}/${CURRENT_ARCH}_${task}_pretrained_edges.csv"
+
+    if [ -f "$source_ft_file" ] && [ -f "$target_pt_file" ]; then
+        output=$(python "$SCRIPT_PATH" \
+            --mode compare \
+            --output_dir "$OUT_OVERLAP_T2" \
+            --edge_file_1 "$source_ft_file" \
+            --edge_file_2 "$target_pt_file")
+        
+        count=$(echo "$output" | grep "Intersection (Common):" | awk -F': ' '{print $2}')
+        
+        if [[ -n "$count" ]]; then
+            # Write to log (same format as main loop)
+            echo "${CURRENT_ARCH},T2_SourceFT_TargetPT,${task},${task},${count}" >> "$TEMP_LOG"
+            echo "   [Diagonal] Checked: FT-${task} vs PT-${task} -> $count"
+        fi
+    else
+        echo "   [Diagonal] Missing files for ${task} (Source FT or Target PT)"
+    fi
+done
+
 echo "--------------------------------------------------"
 echo "Generating Summary Tables..."
 
-# ========================================================
-# Python 生成矩阵表
-# ========================================================
+# Generate summary tables
 
 python3 - <<EOF
+# -*- coding: utf-8 -*-
 import pandas as pd
 import os
 
@@ -142,7 +165,6 @@ top_k = 400
 if os.path.exists(log_file):
     df = pd.read_csv(log_file)
     if not df.empty:
-        # 分离两种比较类型
         df_t1 = df[df['Type'] == 'T1_Cross_TargetFT']
         df_t2 = df[df['Type'] == 'T2_SourceFT_TargetPT']
 
@@ -166,7 +188,6 @@ if os.path.exists(log_file):
             pivot_pct.to_csv(pct_path)
             print(f"Saved tables for {type_name}")
 
-        # 无论模式如何，只要 DataFrame 有数据就会保存，没有数据就会跳过
         print("--- Check Task 1 Data ---")
         save_tables(df_t1, "Task1_Cross_vs_TargetFT")
         

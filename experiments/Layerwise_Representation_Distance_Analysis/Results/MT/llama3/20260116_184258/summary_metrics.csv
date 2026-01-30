@@ -1,0 +1,9 @@
+Metric,Value
+Total Samples,900
+Average BLEU Before,0.0000
+Average BLEU After,0.0000
+Average BLEU Improvement,0.0000
+Samples with BLEU Improvement,0
+Percentage with BLEU Improvement,0.00%
+Samples with Distance Decrease,900
+Percentage with Distance Decrease,100.00%

@@ -1,0 +1,1252 @@
+[
+  {
+    "sample_idx": 0,
+    "en": "Attack result displayed",
+    "fr": "Résultat affiché de l' attaque",
+    "prediction_before": "Turn French to English. English:Question: \"What's the difference between the two languages",
+    "prediction_after": "widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest",
+    "bleu_before": 0,
+    "bleu_after": 0,
+    "bleu_improvement": 0,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 20.54899708459971,
+        "dist_after": 56.30642415370571,
+        "dist_change": 35.757427069106,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 18.93553296130394,
+        "dist_after": 83.47801637692667,
+        "dist_change": 64.54248341562274,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 18.499639733450827,
+        "dist_after": 85.4325721912913,
+        "dist_change": 66.93293245784048,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 19.712113962423928,
+        "dist_after": 46.84526621224503,
+        "dist_change": 27.1331522498211,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 23.52583929645177,
+        "dist_after": 48.4108722286548,
+        "dist_change": 24.885032932203032,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 23.529980736895684,
+        "dist_after": 38.27039758266115,
+        "dist_change": 14.740416845765463,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 19.922947108756983,
+        "dist_after": 26.375045386547036,
+        "dist_change": 6.4520982777900535,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 17.986360178145432,
+        "dist_after": 30.00301643105219,
+        "dist_change": 12.016656252906756,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 34.25115210480998,
+        "dist_after": 8.476242030625265,
+        "dist_change": -25.774910074184717,
+        "is_decreased": true
+      },
+      {
+        "layer": 9,
+        "dist_before": 37.077116029038734,
+        "dist_after": 19.041568469412464,
+        "dist_change": -18.03554755962627,
+        "is_decreased": true
+      },
+      {
+        "layer": 10,
+        "dist_before": 37.284808468526144,
+        "dist_after": 10.302307792162898,
+        "dist_change": -26.982500676363244,
+        "is_decreased": true
+      },
+      {
+        "layer": 11,
+        "dist_before": 28.587874432186783,
+        "dist_after": 9.568989565609177,
+        "dist_change": -19.018884866577608,
+        "is_decreased": true
+      },
+      {
+        "layer": 12,
+        "dist_before": 30.960466338608096,
+        "dist_after": 17.500412657339393,
+        "dist_change": -13.460053681268704,
+        "is_decreased": true
+      },
+      {
+        "layer": 13,
+        "dist_before": 26.47220987051542,
+        "dist_after": 13.59265211989096,
+        "dist_change": -12.87955775062446,
+        "is_decreased": true
+      },
+      {
+        "layer": 14,
+        "dist_before": 36.01263790111784,
+        "dist_after": 13.586661493775935,
+        "dist_change": -22.425976407341906,
+        "is_decreased": true
+      },
+      {
+        "layer": 15,
+        "dist_before": 38.95315826615315,
+        "dist_after": 4.334814647546752,
+        "dist_change": -34.6183436186064,
+        "is_decreased": true
+      }
+    ],
+    "avg_dist_change": 4.954026554153895
+  },
+  {
+    "sample_idx": 1,
+    "en": "Attack result displayed",
+    "fr": "Résultat affiché de l' attaque",
+    "prediction_before": "definiti#;Araic:Hebrew:",
+    "prediction_after": "widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest",
+    "bleu_before": 0,
+    "bleu_after": 0,
+    "bleu_improvement": 0,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 20.54899708459971,
+        "dist_after": 56.30642415370571,
+        "dist_change": 35.757427069106,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 18.93553296130394,
+        "dist_after": 83.47801637692667,
+        "dist_change": 64.54248341562274,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 18.499639733450827,
+        "dist_after": 85.4325721912913,
+        "dist_change": 66.93293245784048,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 19.712113962423928,
+        "dist_after": 46.84526621224503,
+        "dist_change": 27.1331522498211,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 23.52583929645177,
+        "dist_after": 48.4108722286548,
+        "dist_change": 24.885032932203032,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 23.529980736895684,
+        "dist_after": 38.27039758266115,
+        "dist_change": 14.740416845765463,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 19.922947108756983,
+        "dist_after": 26.375045386547036,
+        "dist_change": 6.4520982777900535,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 17.986360178145432,
+        "dist_after": 30.00301643105219,
+        "dist_change": 12.016656252906756,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 34.25115210480998,
+        "dist_after": 8.476242030625265,
+        "dist_change": -25.774910074184717,
+        "is_decreased": true
+      },
+      {
+        "layer": 9,
+        "dist_before": 37.077116029038734,
+        "dist_after": 19.041568469412464,
+        "dist_change": -18.03554755962627,
+        "is_decreased": true
+      },
+      {
+        "layer": 10,
+        "dist_before": 37.284808468526144,
+        "dist_after": 10.302307792162898,
+        "dist_change": -26.982500676363244,
+        "is_decreased": true
+      },
+      {
+        "layer": 11,
+        "dist_before": 28.587874432186783,
+        "dist_after": 9.568989565609177,
+        "dist_change": -19.018884866577608,
+        "is_decreased": true
+      },
+      {
+        "layer": 12,
+        "dist_before": 30.960466338608096,
+        "dist_after": 17.500412657339393,
+        "dist_change": -13.460053681268704,
+        "is_decreased": true
+      },
+      {
+        "layer": 13,
+        "dist_before": 26.47220987051542,
+        "dist_after": 13.59265211989096,
+        "dist_change": -12.87955775062446,
+        "is_decreased": true
+      },
+      {
+        "layer": 14,
+        "dist_before": 36.01263790111784,
+        "dist_after": 13.586661493775935,
+        "dist_change": -22.425976407341906,
+        "is_decreased": true
+      },
+      {
+        "layer": 15,
+        "dist_before": 38.95315826615315,
+        "dist_after": 4.334814647546752,
+        "dist_change": -34.6183436186064,
+        "is_decreased": true
+      }
+    ],
+    "avg_dist_change": 4.954026554153895
+  },
+  {
+    "sample_idx": 2,
+    "en": "If the number of armies in the defender country reaches 0, the ownership of this country changes to the attacker: his flag is set up and one of his attacking armies is installed in his new country. The \"Move armies\" slider is displayed as for the moves of the end of the turn.",
+    "fr": "Si le nombre d'armées dans le pays attaqué atteint 0, le propriétaire de ce pays change pour le pays attaquant & #160;: son drapeau est ajouté et une de ses armées d'attaque est installé sur son nouveau pays.",
+    "prediction_before": "Si le nombre d'armées d'un pays défendant atteint 0, le pays",
+    "prediction_after": "of of of of of of of of of of of of of of of of of of of of",
+    "bleu_before": 0.03248642426166127,
+    "bleu_after": 0,
+    "bleu_improvement": -0.03248642426166127,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 59.15808467896323,
+        "dist_after": 55.47052850764055,
+        "dist_change": -3.687556171322676,
+        "is_decreased": true
+      },
+      {
+        "layer": 1,
+        "dist_before": 58.283742862704116,
+        "dist_after": 128.14542898899623,
+        "dist_change": 69.86168612629211,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 55.10433088832703,
+        "dist_after": 98.1949955867138,
+        "dist_change": 43.090664698386774,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 50.861832145345865,
+        "dist_after": 51.7341796766585,
+        "dist_change": 0.8723475313126343,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 54.781611301074555,
+        "dist_after": 27.334040980912732,
+        "dist_change": -27.447570320161823,
+        "is_decreased": true
+      },
+      {
+        "layer": 5,
+        "dist_before": 56.826285653947934,
+        "dist_after": 54.63733253637956,
+        "dist_change": -2.1889531175683743,
+        "is_decreased": true
+      },
+      {
+        "layer": 6,
+        "dist_before": 52.41393050417955,
+        "dist_after": 36.97572631735068,
+        "dist_change": -15.43820418682887,
+        "is_decreased": true
+      },
+      {
+        "layer": 7,
+        "dist_before": 49.563253721097986,
+        "dist_after": 36.58137170942002,
+        "dist_change": -12.981882011677968,
+        "is_decreased": true
+      },
+      {
+        "layer": 8,
+        "dist_before": 45.31334843629696,
+        "dist_after": 2.3532756170772,
+        "dist_change": -42.96007281921976,
+        "is_decreased": true
+      },
+      {
+        "layer": 9,
+        "dist_before": 40.52755450516179,
+        "dist_after": 15.649996708940355,
+        "dist_change": -24.87755779622143,
+        "is_decreased": true
+      },
+      {
+        "layer": 10,
+        "dist_before": 36.06209883711704,
+        "dist_after": 6.423168997768457,
+        "dist_change": -29.638929839348584,
+        "is_decreased": true
+      },
+      {
+        "layer": 11,
+        "dist_before": 31.804574151319255,
+        "dist_after": 7.532479389707108,
+        "dist_change": -24.272094761612145,
+        "is_decreased": true
+      },
+      {
+        "layer": 12,
+        "dist_before": 28.857728521812465,
+        "dist_after": 17.148348199751002,
+        "dist_change": -11.709380322061463,
+        "is_decreased": true
+      },
+      {
+        "layer": 13,
+        "dist_before": 28.411563266809935,
+        "dist_after": 14.034567077999787,
+        "dist_change": -14.376996188810148,
+        "is_decreased": true
+      },
+      {
+        "layer": 14,
+        "dist_before": 29.35465387456684,
+        "dist_after": 14.101236841657837,
+        "dist_change": -15.253417032909002,
+        "is_decreased": true
+      },
+      {
+        "layer": 15,
+        "dist_before": 28.499048010652874,
+        "dist_after": 2.14508278491222,
+        "dist_change": -26.353965225740655,
+        "is_decreased": true
+      }
+    ],
+    "avg_dist_change": -8.585117589843211
+  },
+  {
+    "sample_idx": 3,
+    "en": "Invasion slider",
+    "fr": "Glissière d' invasion",
+    "prediction_before": "Translation\nFrench: Translationdef translation\nFrench: Translation\nFrench: Translation\nFrench:",
+    "prediction_after": "widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest",
+    "bleu_before": 0,
+    "bleu_after": 0,
+    "bleu_improvement": 0,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 27.43170704135349,
+        "dist_after": 56.10542233549162,
+        "dist_change": 28.673715294138127,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 23.058313589895803,
+        "dist_after": 82.79918220454981,
+        "dist_change": 59.740868614654005,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 22.514600581894484,
+        "dist_after": 84.995067174915,
+        "dist_change": 62.48046659302051,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 18.874599633110495,
+        "dist_after": 47.51234601326141,
+        "dist_change": 28.63774638015091,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 17.548519788999318,
+        "dist_after": 49.33770931548963,
+        "dist_change": 31.789189526490315,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 19.471677149079902,
+        "dist_after": 37.73996741525935,
+        "dist_change": 18.26829026617945,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 19.49163428727082,
+        "dist_after": 25.805965113977106,
+        "dist_change": 6.314330826706286,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 18.865670738370632,
+        "dist_after": 29.617571180101606,
+        "dist_change": 10.751900441730974,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 22.676505126511696,
+        "dist_after": 8.616364512034153,
+        "dist_change": -14.060140614477543,
+        "is_decreased": true
+      },
+      {
+        "layer": 9,
+        "dist_before": 22.190672400736496,
+        "dist_after": 19.09100212265333,
+        "dist_change": -3.099670278083167,
+        "is_decreased": true
+      },
+      {
+        "layer": 10,
+        "dist_before": 21.953644640134645,
+        "dist_after": 10.521869615523997,
+        "dist_change": -11.431775024610648,
+        "is_decreased": true
+      },
+      {
+        "layer": 11,
+        "dist_before": 23.802918307500647,
+        "dist_after": 9.84238492606824,
+        "dist_change": -13.960533381432407,
+        "is_decreased": true
+      },
+      {
+        "layer": 12,
+        "dist_before": 24.576559355708394,
+        "dist_after": 17.806474180749586,
+        "dist_change": -6.770085174958808,
+        "is_decreased": true
+      },
+      {
+        "layer": 13,
+        "dist_before": 31.172153126931743,
+        "dist_after": 13.73594501659062,
+        "dist_change": -17.436208110341124,
+        "is_decreased": true
+      },
+      {
+        "layer": 14,
+        "dist_before": 31.07358541880888,
+        "dist_after": 13.784715465126485,
+        "dist_change": -17.288869953682394,
+        "is_decreased": true
+      },
+      {
+        "layer": 15,
+        "dist_before": 33.22991236649116,
+        "dist_after": 4.08822902443336,
+        "dist_change": -29.141683342057803,
+        "is_decreased": true
+      }
+    ],
+    "avg_dist_change": 8.341721378964168
+  },
+  {
+    "sample_idx": 4,
+    "en": "Invasion slider",
+    "fr": "Glissière d' invasion",
+    "prediction_before": "Invasion\nTranslating a French sentence to English is a bit of a linguistic puzzle. But at",
+    "prediction_after": "widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest",
+    "bleu_before": 0.012300686288463768,
+    "bleu_after": 0,
+    "bleu_improvement": -0.012300686288463768,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 27.43170704135349,
+        "dist_after": 56.10542233549162,
+        "dist_change": 28.673715294138127,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 23.058313589895803,
+        "dist_after": 82.79918220454981,
+        "dist_change": 59.740868614654005,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 22.514600581894484,
+        "dist_after": 84.995067174915,
+        "dist_change": 62.48046659302051,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 18.874599633110495,
+        "dist_after": 47.51234601326141,
+        "dist_change": 28.63774638015091,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 17.548519788999318,
+        "dist_after": 49.33770931548963,
+        "dist_change": 31.789189526490315,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 19.471677149079902,
+        "dist_after": 37.73996741525935,
+        "dist_change": 18.26829026617945,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 19.49163428727082,
+        "dist_after": 25.805965113977106,
+        "dist_change": 6.314330826706286,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 18.865670738370632,
+        "dist_after": 29.617571180101606,
+        "dist_change": 10.751900441730974,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 22.676505126511696,
+        "dist_after": 8.616364512034153,
+        "dist_change": -14.060140614477543,
+        "is_decreased": true
+      },
+      {
+        "layer": 9,
+        "dist_before": 22.190672400736496,
+        "dist_after": 19.09100212265333,
+        "dist_change": -3.099670278083167,
+        "is_decreased": true
+      },
+      {
+        "layer": 10,
+        "dist_before": 21.953644640134645,
+        "dist_after": 10.521869615523997,
+        "dist_change": -11.431775024610648,
+        "is_decreased": true
+      },
+      {
+        "layer": 11,
+        "dist_before": 23.802918307500647,
+        "dist_after": 9.84238492606824,
+        "dist_change": -13.960533381432407,
+        "is_decreased": true
+      },
+      {
+        "layer": 12,
+        "dist_before": 24.576559355708394,
+        "dist_after": 17.806474180749586,
+        "dist_change": -6.770085174958808,
+        "is_decreased": true
+      },
+      {
+        "layer": 13,
+        "dist_before": 31.172153126931743,
+        "dist_after": 13.73594501659062,
+        "dist_change": -17.436208110341124,
+        "is_decreased": true
+      },
+      {
+        "layer": 14,
+        "dist_before": 31.07358541880888,
+        "dist_after": 13.784715465126485,
+        "dist_change": -17.288869953682394,
+        "is_decreased": true
+      },
+      {
+        "layer": 15,
+        "dist_before": 33.22991236649116,
+        "dist_after": 4.08822902443336,
+        "dist_change": -29.141683342057803,
+        "is_decreased": true
+      }
+    ],
+    "avg_dist_change": 8.341721378964168
+  },
+  {
+    "sample_idx": 5,
+    "en": "End of the turn",
+    "fr": "Fin du tour",
+    "prediction_before": "English toQuestion:\nThe word pair a pair of to end of to end of end of",
+    "prediction_after": "widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest",
+    "bleu_before": 0,
+    "bleu_after": 0,
+    "bleu_improvement": 0,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 12.40196293859168,
+        "dist_after": 56.044460596112636,
+        "dist_change": 43.642497657520956,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 16.28613239233902,
+        "dist_after": 84.7634776991661,
+        "dist_change": 68.47734530682709,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 16.867456198494374,
+        "dist_after": 85.78242198481524,
+        "dist_change": 68.91496578632086,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 16.882080084517078,
+        "dist_after": 48.2793992891792,
+        "dist_change": 31.397319204662125,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 18.884650551898275,
+        "dist_after": 48.7852574539857,
+        "dist_change": 29.900606902087425,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 19.493666548094996,
+        "dist_after": 38.02583713645419,
+        "dist_change": 18.532170588359197,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 18.606366147191345,
+        "dist_after": 26.365954322243258,
+        "dist_change": 7.759588175051913,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 19.803090229588246,
+        "dist_after": 29.92096052275736,
+        "dist_change": 10.117870293169112,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 15.834956764596013,
+        "dist_after": 8.541409638478802,
+        "dist_change": -7.293547126117211,
+        "is_decreased": true
+      },
+      {
+        "layer": 9,
+        "dist_before": 13.652621805453803,
+        "dist_after": 19.24289584870292,
+        "dist_change": 5.590274043249115,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 5.751203834017307,
+        "dist_after": 10.266008825664748,
+        "dist_change": 4.514804991647441,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 15.310007630509324,
+        "dist_after": 10.177939098636767,
+        "dist_change": -5.132068531872557,
+        "is_decreased": true
+      },
+      {
+        "layer": 12,
+        "dist_before": 10.18197883678539,
+        "dist_after": 18.09106100811413,
+        "dist_change": 7.909082171328741,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 8.319107370157974,
+        "dist_after": 14.018234481589156,
+        "dist_change": 5.6991271114311814,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 9.320926349795498,
+        "dist_after": 13.928683184565484,
+        "dist_change": 4.607756834769987,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 13.058928352293101,
+        "dist_after": 3.7350243442917104,
+        "dist_change": -9.32390400800139,
+        "is_decreased": true
+      }
+    ],
+    "avg_dist_change": 17.832118087527125
+  },
+  {
+    "sample_idx": 6,
+    "en": "To finish your current turn, if you do n't want to move armies, you can hit the Next Player button in the toolbar.",
+    "fr": "Pour terminer le tour courant, si vous ne voulez pas déplacer des armées, vous pouvez cliquer sur le bouton Joueur suivant sur la barre d'outils.",
+    "prediction_before": "Ouvrir les dernières pages de la feuille.\nSpanish: Abrir las páginas ult",
+    "prediction_after": "widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest",
+    "bleu_before": 0.005765144553151805,
+    "bleu_after": 0,
+    "bleu_improvement": -0.005765144553151805,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 41.497217254029714,
+        "dist_after": 55.65590667606437,
+        "dist_change": 14.158689422034655,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 39.44703440309385,
+        "dist_after": 106.47888442505959,
+        "dist_change": 67.03185002196574,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 38.56006976652892,
+        "dist_after": 90.57732933364473,
+        "dist_change": 52.01725956711581,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 39.199098140879286,
+        "dist_after": 49.94122946235349,
+        "dist_change": 10.742131321474204,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 37.39740306651092,
+        "dist_after": 34.77334734903873,
+        "dist_change": -2.6240557174721886,
+        "is_decreased": true
+      },
+      {
+        "layer": 5,
+        "dist_before": 33.31399424308279,
+        "dist_after": 48.39709456669264,
+        "dist_change": 15.083100323609848,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 43.515165068928574,
+        "dist_after": 32.095797263004904,
+        "dist_change": -11.41936780592367,
+        "is_decreased": true
+      },
+      {
+        "layer": 7,
+        "dist_before": 40.25569685390977,
+        "dist_after": 33.94358592309736,
+        "dist_change": -6.312110930812409,
+        "is_decreased": true
+      },
+      {
+        "layer": 8,
+        "dist_before": 37.82020455178326,
+        "dist_after": 5.114654622096107,
+        "dist_change": -32.70554992968716,
+        "is_decreased": true
+      },
+      {
+        "layer": 9,
+        "dist_before": 34.743274311220816,
+        "dist_after": 17.543550071270936,
+        "dist_change": -17.19972423994988,
+        "is_decreased": true
+      },
+      {
+        "layer": 10,
+        "dist_before": 35.45384112650534,
+        "dist_after": 7.909770178394224,
+        "dist_change": -27.544070948111113,
+        "is_decreased": true
+      },
+      {
+        "layer": 11,
+        "dist_before": 34.08941672902292,
+        "dist_after": 8.156758323345006,
+        "dist_change": -25.932658405677916,
+        "is_decreased": true
+      },
+      {
+        "layer": 12,
+        "dist_before": 36.480811986720724,
+        "dist_after": 17.37892277786789,
+        "dist_change": -19.101889208852835,
+        "is_decreased": true
+      },
+      {
+        "layer": 13,
+        "dist_before": 32.5773713020636,
+        "dist_after": 13.835986800311012,
+        "dist_change": -18.741384501752584,
+        "is_decreased": true
+      },
+      {
+        "layer": 14,
+        "dist_before": 34.788924558308,
+        "dist_after": 13.662054537967204,
+        "dist_change": -21.126870020340792,
+        "is_decreased": true
+      },
+      {
+        "layer": 15,
+        "dist_before": 34.912315099547435,
+        "dist_after": 2.2086512671194183,
+        "dist_change": -32.70366383242801,
+        "is_decreased": true
+      }
+    ],
+    "avg_dist_change": -3.52364468030052
+  },
+  {
+    "sample_idx": 7,
+    "en": "When everybody has played, the turn is finished. Some armies are distributed to the players, in function of the countries they own: 1 for each group of three countries, with a minimum of 3. There is also a bonus for players that own a complete continent, different for each one. The values of the bonuses for the default skin are:",
+    "fr": "Quand tous le monde a joué, le tour prend fin. Des armées sont distribuées aux joueurs, en fonction des pays leur appartenant & #160;: 1 armée pour chaque groupe de trois pays, avec un minimum de 3. Il y a aussi un bonus pour les joueurs qui détiennent un continent complet, différent pour chaque continent. Les valeurs de ces bonus pour le thème par défaut sont & #160;:",
+    "prediction_before": "La partie est terminée. Enfin, les joueurs peuvent choisir entre plusieurs skins. Il s",
+    "prediction_after": "of of of of of of of of of of of of of of of of of of of of",
+    "bleu_before": 0.0007062901102170309,
+    "bleu_after": 0,
+    "bleu_improvement": -0.0007062901102170309,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 71.48950230081411,
+        "dist_after": 56.334790466286144,
+        "dist_change": -15.154711834527966,
+        "is_decreased": true
+      },
+      {
+        "layer": 1,
+        "dist_before": 82.34189797833085,
+        "dist_after": 121.79499287760322,
+        "dist_change": 39.45309489927237,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 81.80798016740498,
+        "dist_after": 95.49454306090323,
+        "dist_change": 13.686562893498248,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 78.10967531305896,
+        "dist_after": 50.593707217006,
+        "dist_change": -27.51596809605296,
+        "is_decreased": true
+      },
+      {
+        "layer": 4,
+        "dist_before": 69.81966591968623,
+        "dist_after": 28.871574424511813,
+        "dist_change": -40.94809149517442,
+        "is_decreased": true
+      },
+      {
+        "layer": 5,
+        "dist_before": 65.62760579072527,
+        "dist_after": 52.254117089967885,
+        "dist_change": -13.373488700757385,
+        "is_decreased": true
+      },
+      {
+        "layer": 6,
+        "dist_before": 65.89697047119712,
+        "dist_after": 35.33875154076145,
+        "dist_change": -30.55821893043567,
+        "is_decreased": true
+      },
+      {
+        "layer": 7,
+        "dist_before": 57.630420398903034,
+        "dist_after": 35.77182079721563,
+        "dist_change": -21.858599601687402,
+        "is_decreased": true
+      },
+      {
+        "layer": 8,
+        "dist_before": 38.70801988134349,
+        "dist_after": 3.4281075231287415,
+        "dist_change": -35.279912358214744,
+        "is_decreased": true
+      },
+      {
+        "layer": 9,
+        "dist_before": 34.21260585082581,
+        "dist_after": 16.300710352947952,
+        "dist_change": -17.911895497877858,
+        "is_decreased": true
+      },
+      {
+        "layer": 10,
+        "dist_before": 32.357199289162686,
+        "dist_after": 7.0862032117516,
+        "dist_change": -25.270996077411088,
+        "is_decreased": true
+      },
+      {
+        "layer": 11,
+        "dist_before": 30.169248247962795,
+        "dist_after": 7.796842312581714,
+        "dist_change": -22.37240593538108,
+        "is_decreased": true
+      },
+      {
+        "layer": 12,
+        "dist_before": 29.053931086593412,
+        "dist_after": 17.15130269910758,
+        "dist_change": -11.902628387485834,
+        "is_decreased": true
+      },
+      {
+        "layer": 13,
+        "dist_before": 29.24113216701882,
+        "dist_after": 14.109166552459543,
+        "dist_change": -15.131965614559276,
+        "is_decreased": true
+      },
+      {
+        "layer": 14,
+        "dist_before": 29.951694716733126,
+        "dist_after": 13.977369159979952,
+        "dist_change": -15.974325556753174,
+        "is_decreased": true
+      },
+      {
+        "layer": 15,
+        "dist_before": 30.0935481438734,
+        "dist_after": 1.6128834737586368,
+        "dist_change": -28.480664670114763,
+        "is_decreased": true
+      }
+    ],
+    "avg_dist_change": -16.78713843522894
+  },
+  {
+    "sample_idx": 8,
+    "en": "Bonus due to the continents",
+    "fr": "Bonus gagnés par continents",
+    "prediction_before": "English\nEnglish: Translation\nEnglish: French\nFrench: English\nEnglish: French\nFrench:",
+    "prediction_after": "widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest",
+    "bleu_before": 0,
+    "bleu_after": 0,
+    "bleu_improvement": 0,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 9.0791696148433,
+        "dist_after": 56.19176561829728,
+        "dist_change": 47.11259600345398,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 15.103995742763548,
+        "dist_after": 87.40108524040518,
+        "dist_change": 72.29708949764164,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 16.510570918287684,
+        "dist_after": 86.35981870364103,
+        "dist_change": 69.84924778535334,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 16.28364474228965,
+        "dist_after": 47.63641833553345,
+        "dist_change": 31.3527735932438,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 17.077252246528452,
+        "dist_after": 46.36586971609585,
+        "dist_change": 29.2886174695674,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 15.56385299722848,
+        "dist_after": 40.17096532495611,
+        "dist_change": 24.607112327727627,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 17.08800306681592,
+        "dist_after": 26.690725789007125,
+        "dist_change": 9.602722722191206,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 13.986999370955985,
+        "dist_after": 30.108039062572406,
+        "dist_change": 16.12103969161642,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 11.635997556500879,
+        "dist_after": 8.083868921768746,
+        "dist_change": -3.5521286347321332,
+        "is_decreased": true
+      },
+      {
+        "layer": 9,
+        "dist_before": 6.465133179657637,
+        "dist_after": 19.04690978266924,
+        "dist_change": 12.581776603011601,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 8.45258885914822,
+        "dist_after": 10.018007337874842,
+        "dist_change": 1.565418478726622,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 8.570706982106255,
+        "dist_after": 9.863744830160611,
+        "dist_change": 1.2930378480543556,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 6.324944070323028,
+        "dist_after": 17.96829075340776,
+        "dist_change": 11.643346683084733,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 9.761767914979668,
+        "dist_after": 14.048732988739769,
+        "dist_change": 4.286965073760101,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 6.373440906328032,
+        "dist_after": 13.997161994563058,
+        "dist_change": 7.623721088235026,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 9.098305358382673,
+        "dist_after": 3.6172123298494685,
+        "dist_change": -5.481093028533204,
+        "is_decreased": true
+      }
+    ],
+    "avg_dist_change": 20.63701520015016
+  },
+  {
+    "sample_idx": 9,
+    "en": "Continent",
+    "fr": "Continent",
+    "prediction_before": "ContinuQuestion: Why does the green line with the red line cross it? Answer:",
+    "prediction_after": "widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest widest",
+    "bleu_before": 0,
+    "bleu_after": 0,
+    "bleu_improvement": 0,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 33.934267566811556,
+        "dist_after": 56.357409573730315,
+        "dist_change": 22.42314200691876,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 28.651156878923885,
+        "dist_after": 81.76647856206046,
+        "dist_change": 53.11532168313657,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 29.17723588886639,
+        "dist_after": 85.27541214652675,
+        "dist_change": 56.098176257660356,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 30.010086884780918,
+        "dist_after": 47.706866066313744,
+        "dist_change": 17.696779181532825,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 32.35666366459567,
+        "dist_after": 49.97004717566009,
+        "dist_change": 17.61338351106442,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 32.363110459881895,
+        "dist_after": 37.12010042063405,
+        "dist_change": 4.756989960752158,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 30.82245144345413,
+        "dist_after": 25.107071236097973,
+        "dist_change": -5.715380207356159,
+        "is_decreased": true
+      },
+      {
+        "layer": 7,
+        "dist_before": 40.2223743708098,
+        "dist_after": 29.152048253507285,
+        "dist_change": -11.070326117302518,
+        "is_decreased": true
+      },
+      {
+        "layer": 8,
+        "dist_before": 40.38034509543386,
+        "dist_after": 8.872440825150452,
+        "dist_change": -31.507904270283408,
+        "is_decreased": true
+      },
+      {
+        "layer": 9,
+        "dist_before": 48.99449012098722,
+        "dist_after": 19.041958874792012,
+        "dist_change": -29.95253124619521,
+        "is_decreased": true
+      },
+      {
+        "layer": 10,
+        "dist_before": 46.214189003703865,
+        "dist_after": 10.794337188222258,
+        "dist_change": -35.41985181548161,
+        "is_decreased": true
+      },
+      {
+        "layer": 11,
+        "dist_before": 52.78730586973825,
+        "dist_after": 10.07486635429662,
+        "dist_change": -42.71243951544163,
+        "is_decreased": true
+      },
+      {
+        "layer": 12,
+        "dist_before": 54.28724124601437,
+        "dist_after": 17.94224453226705,
+        "dist_change": -36.34499671374732,
+        "is_decreased": true
+      },
+      {
+        "layer": 13,
+        "dist_before": 54.210763653009664,
+        "dist_after": 13.93634108235025,
+        "dist_change": -40.27442257065941,
+        "is_decreased": true
+      },
+      {
+        "layer": 14,
+        "dist_before": 42.92058142400027,
+        "dist_after": 13.883013421039013,
+        "dist_change": -29.037568002961255,
+        "is_decreased": true
+      },
+      {
+        "layer": 15,
+        "dist_before": 32.55551941332684,
+        "dist_after": 4.197629501001123,
+        "dist_change": -28.357889912325717,
+        "is_decreased": true
+      }
+    ],
+    "avg_dist_change": -7.418094860668072
+  }
+]

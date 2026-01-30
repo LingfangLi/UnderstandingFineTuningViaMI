@@ -10,14 +10,10 @@ from transformers import (
 )
 from trl import SFTConfig, SFTTrainer
 
-# ==========================================
-# 0. Environment Setup
-# ==========================================
+# Environment Setup
 os.environ["WANDB_PROJECT"] = "MI_llama3.2-tatoeba"
 
-# ==========================================
-# 1. Experiment Configuration
-# ==========================================
+# Experiment Configuration
 run_name = f"llama3.2-1b-tatoeba-full-ft-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
 output_base_dir = f"/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/"
 output_dir = os.path.join(output_base_dir, run_name)
@@ -38,9 +34,7 @@ config = {
     "logging_steps": 50,
 }
 
-# ==========================================
-# 2. Data Preparation
-# ==========================================
+# Data Preparation
 print("Loading Tatoeba dataset...")
 raw_dataset = load_dataset(
     config['dataset_name'],
@@ -71,9 +65,7 @@ def formatting_prompts_func(examples):
         return format_single(examples['translation'])
     else:
         raise ValueError(f"Unexpected format: {type(examples['translation'])}")
-# ==========================================
-# 3. Model & Tokenizer
-# ==========================================
+# Model and Tokenizer
 use_bf16 = torch.cuda.is_bf16_supported()
 use_fp16 = not use_bf16
 
@@ -89,9 +81,7 @@ tokenizer.padding_side = "right"
 model.config.use_cache = False
 model.config.pad_token_id = tokenizer.pad_token_id
 
-# ==========================================
-# 4. Training Arguments
-# ==========================================
+# Training Arguments
 training_arguments = SFTConfig( 
     output_dir=output_dir,
     run_name=run_name,
@@ -124,9 +114,7 @@ training_arguments = SFTConfig(
     lr_scheduler_type="cosine",
 )
 
-# ==========================================
-# 5. Trainer Initialization
-# ==========================================
+# Trainer Initialization
 trainer = SFTTrainer(
     model=model,
     train_dataset=train_dataset,
@@ -136,9 +124,7 @@ trainer = SFTTrainer(
     args=training_arguments,
 )
 
-# ==========================================
-# 6. Training & Saving
-# ==========================================
+# Training and Saving
 print(f"Starting training for {run_name}...")
 trainer.train()
 trainer.save_model(output_dir)

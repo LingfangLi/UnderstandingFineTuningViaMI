@@ -1,0 +1,24 @@
+{
+  "total_samples_analyzed": 1000,
+  "total_batches": 1,
+  "overall_statistics": {
+    "avg_accuracy_before": 0.352,
+    "avg_accuracy_after": 0.006,
+    "avg_accuracy_improvement": -0.346,
+    "samples_with_accuracy_improvement": 4,
+    "percentage_accuracy_improvement": 0.4,
+    "samples_with_distance_decrease": 1000,
+    "percentage_distance_decrease": 100.0
+  },
+  "batch_statistics": [
+    {
+      "batch_num": 1,
+      "num_samples": 1000,
+      "avg_accuracy_before": 0.352,
+      "avg_accuracy_after": 0.006,
+      "avg_accuracy_improvement": -0.346,
+      "samples_with_accuracy_improvement": 4,
+      "samples_with_distance_decrease": 1000
+    }
+  ]
+}

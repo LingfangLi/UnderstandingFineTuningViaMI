@@ -1,0 +1,9 @@
+Metric,Value
+Total Samples,1000
+Average F1 Before,0.1583
+Average F1 After,0.6526
+Average F1 Improvement,0.4942
+Samples with F1 Improvement,668
+Percentage with F1 Improvement,66.80%
+Samples with Distance Decrease,1000
+Percentage with Distance Decrease,100.00%

@@ -6,9 +6,7 @@ from transformers import (
     AutoTokenizer
 )
 
-# ==========================================
 # 1. Configuration
-# ==========================================
 model_path = "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/qwen2-0.5b-full-ft-20251124-204027/checkpoint-1857/"
 
 NUM_SAMPLES = 1000 
@@ -18,9 +16,8 @@ TARGET_POSITIVE = "positive"
 TARGET_NEGATIVE = "negative"
 
 FINETUNED = False
-# ==========================================
-# 2. Load Model (Full Fine-tuning)
-# ==========================================
+
+# 2. Load Model
 if FINETUNED:
     print(f"Loading Fine-Tuned Qwen2 model from {model_path}...")
 else:
@@ -36,10 +33,7 @@ model = AutoModelForCausalLM.from_pretrained(
             
 model.eval()
 
-# ==========================================
 # 3. Load Tokenizer
-# ==========================================
-
 print("Loading Tokenizer...")
 tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
 # Use left padding for generation tasks
@@ -48,16 +42,12 @@ tokenizer.padding_side = "left"
 if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
 
-# ==========================================
 # 4. Prompt Template
-# ==========================================
 def generate_eval_prompt(text):
     # Match training format: "Review: {text}\nSentiment: {label}"
     return f"Review: {text}\nSentiment:"
 
-# ==========================================
 # 5. Evaluation Loop
-# ==========================================
 dataset = load_dataset('yelp_polarity', split='test').select(range(NUM_SAMPLES))
 
 correct_count = 0
@@ -104,9 +94,7 @@ for sample in tqdm(dataset):
     
     total_count += 1
 
-# ==========================================
 # 6. Output Results
-# ==========================================
 accuracy = correct_count / total_count
 print("=" * 30)
 print(f"Model: {model_path}")

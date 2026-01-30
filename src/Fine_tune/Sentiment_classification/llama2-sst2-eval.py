@@ -6,19 +6,16 @@ from datasets import load_dataset
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from tqdm import tqdm
 
-# ==========================================
 # 1. Configuration
-# ==========================================
-# [Change 1] Adapter Path: This must point to your fine-tuned output folder (checkpoint-xxx or output_dir)
-ADAPTER_PATH = "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/llama2-7b-sst2-qlora-20251209-211851/checkpoint-1876/" 
+ADAPTER_PATH = ""
 
-# Base Model must be exactly the same as the one used during fine-tuning
-BASE_MODEL_NAME = "meta-llama/Llama-2-7b-hf"
+BASE_MODEL_NAME = "fadliaulawi/Llama-2-7b-finetuned"
+
+TOKENIZER_NAME = "NousResearch/Llama-2-7b-hf"
 
 DATASET_NAME = "stanfordnlp/sst2"
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-# Set True to load Adapter; False to use Base Model only
 FINETUNED = False
 
 # SST-2 mapping: label 0 = negative, label 1 = positive
@@ -27,38 +24,34 @@ ID2LABEL = {
     1: "positive"
 }
 
-# ==========================================
-# 2. Load Model & Tokenizer (Major Changes Here)
-# ==========================================
+# 2. Load Model & Tokenizer
 print(f"Loading Base Model: {BASE_MODEL_NAME} ...")
 
-# [Change 2] Quantization Config (required, otherwise 7B model uses too much VRAM)
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,
     bnb_4bit_quant_type="nf4",
     bnb_4bit_compute_dtype=torch.float16,
 )
 
-# 1. Load Base Model in 4-bit
 base_model = AutoModelForCausalLM.from_pretrained(
     BASE_MODEL_NAME,
-    quantization_config=bnb_config,  # Load quantization config
+    quantization_config=bnb_config,
     device_map="auto",
     trust_remote_code=True
 )
 
-tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL_NAME, trust_remote_code=True)
-tokenizer.padding_side = "left"  # Left padding is required for inference
+#tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL_NAME, trust_remote_code=True)
+print(f"Loading Tokenizer from: {TOKENIZER_NAME} ...")
+tokenizer = AutoTokenizer.from_pretrained(TOKENIZER_NAME, trust_remote_code=True)
+tokenizer.padding_side = "left"
 tokenizer.pad_token = tokenizer.eos_token
 
 if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
     base_model.config.pad_token_id = tokenizer.pad_token_id
 
-# 2. Load LoRA Adapter (PeftModel)
 if FINETUNED:
     print(f"Loading LoRA Adapter from: {ADAPTER_PATH} ...")
-    # [Change 3] Mount the Adapter onto the Base Model
     model = PeftModel.from_pretrained(base_model, ADAPTER_PATH)
     model.eval()
 else:
@@ -66,17 +59,12 @@ else:
     model = base_model
 model.eval()
 
-# ==========================================
 # 3. Load Test Dataset
-# ==========================================
 dataset = load_dataset(DATASET_NAME, split="validation")
 print(f"Validation set size: {len(dataset)}")
 
-# ==========================================
 # 4. Prediction Function
-# ==========================================
 def predict_sentiment(texts):
-    # Prompt format must match training EXACTLY
     prompts = [f"Review: {text}\nSentiment:" for text in texts]
     
     inputs = tokenizer(
@@ -86,24 +74,21 @@ def predict_sentiment(texts):
         truncation=True,
         max_length=256).to(DEVICE)
 
-    # Generate label
     with torch.no_grad():
         outputs = model.generate(
             **inputs,
-            max_new_tokens=5,      # only need "positive"/"negative"
+            max_new_tokens=5,
             pad_token_id=tokenizer.pad_token_id,
             eos_token_id=tokenizer.eos_token_id,
-            do_sample=False        # Greedy decoding
+            do_sample=False
         )
     
     full_responses = tokenizer.batch_decode(outputs, skip_special_tokens=True)
 
     predictions = []
     for prompt, response in zip(prompts, full_responses):
-        # Extract generated part
         generated_text = response[len(prompt):].strip().lower()
-        
-        # Simple rule-based label decoding
+
         if "positive" in generated_text:
             predictions.append(1)
         elif "negative" in generated_text:
@@ -113,11 +98,8 @@ def predict_sentiment(texts):
             
     return predictions
 
-# ==========================================
 # 5. Inference Loop
-# ==========================================
-# [Change 4] Reduce batch size for 7B model
-batch_size = 16  # 7B model is large, start with 16 or 8
+batch_size = 16
 all_predictions = []
 all_labels = dataset['label']
 all_texts = dataset['sentence']
@@ -128,9 +110,7 @@ for i in tqdm(range(0, len(all_texts), batch_size)):
     batch_preds = predict_sentiment(batch_texts)
     all_predictions.extend(batch_preds)
 
-# ==========================================
-# 6. Evaluation (Logic kept same)
-# ==========================================
+# 6. Evaluation
 clean_preds = []
 clean_labels = []
 
@@ -160,11 +140,9 @@ if len(clean_preds) > 0:
 else:
     print("No valid predictions. Check adapter path or training convergence.")
 
-# ==========================================
 # 7. Demo
-# ==========================================
 print("\n=== Demo Examples ===")
-demo_indices = [0, 10, 20] 
+demo_indices = [0, 10, 20]
 for idx in demo_indices:
     text = dataset[idx]['sentence']
     true_label = dataset[idx]['label']

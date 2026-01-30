@@ -7,9 +7,7 @@ from transformers import (
 )
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 
-# ==========================================
-# 1. Configuration
-# ==========================================
+# Configuration
 model_path = "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/qwen2-0.5b-tatoeba-en-fr-20251125-165129/"
 
 # Task settings
@@ -20,9 +18,7 @@ START_IDX = 30000 if IS_KDE4 else 40000
 NUM_SAMPLES = 1000
 BATCH_SIZE = 16  # Qwen 0.5B is fast, can use larger batches
 
-# ==========================================
-# 2. Model Loading
-# ==========================================
+# Model Loading
 print(f"Loading Qwen2 model from: {model_path}")
 model = AutoModelForCausalLM.from_pretrained(
     model_path,
@@ -37,9 +33,7 @@ tokenizer.padding_side = "left"  # Left padding required for generation
 if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
 
-# ==========================================
-# 3. Data Preparation
-# ==========================================
+# Data Preparation
 print(f"Loading {DATASET_NAME} dataset...")
 dataset = load_dataset(DATASET_NAME, lang1="en", lang2="fr", trust_remote_code=True)['train'].select(
     range(START_IDX, START_IDX + NUM_SAMPLES))
@@ -56,9 +50,7 @@ def generate_prompt(english_text):
                 f"### English:\n{english_text}\n\n"
                 f"### French:\n")
 
-# ==========================================
-# 4. Batch Evaluation
-# ==========================================
+# Batch Evaluation
 bleu_scores = []
 smoothing = SmoothingFunction().method1
 
@@ -101,9 +93,7 @@ for i in tqdm(range(0, len(dataset), BATCH_SIZE)):
         score = sentence_bleu(ref_tokens, pred_tokens, smoothing_function=smoothing)
         bleu_scores.append(score)
 
-# ==========================================
-# 5. Results
-# ==========================================
+# Results
 avg_bleu = sum(bleu_scores) / len(bleu_scores)
 print("\n" + "=" * 30)
 print(f"Task: {DATASET_NAME} | Model: Qwen2-0.5B")

@@ -1,0 +1,9 @@
+{
+  "batch_num": 1,
+  "num_samples": 1000,
+  "avg_accuracy_before": 0.35,
+  "avg_accuracy_after": 0.727,
+  "avg_accuracy_improvement": 0.377,
+  "samples_with_accuracy_improvement": 473,
+  "samples_with_distance_decrease": 630
+}

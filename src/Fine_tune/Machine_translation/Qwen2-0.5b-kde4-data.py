@@ -10,9 +10,7 @@ from transformers import (
 )
 from trl import SFTConfig, SFTTrainer
 
-# ==========================================
-# 1. Experiment Configuration
-# ==========================================
+# Experiment Configuration
 run_name = f"qwen2-kde4-tech-trans-full-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
 output_dir = f"/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/{run_name}"
 
@@ -38,9 +36,7 @@ wandb.init(
     config=config
 )
 
-# ==========================================
-# 2. Data Preparation
-# ==========================================
+# Data Preparation
 print("Loading KDE4 dataset...")
 raw_dataset = load_dataset(
     config['dataset_name'],
@@ -78,9 +74,7 @@ def formatting_prompts_func(examples):
     else:
         raise ValueError(f"Unexpected format: {type(examples['translation'])}")
 
-# ==========================================
-# 3. Model Loading (Full Fine-tuning)
-# ==========================================
+# Model Loading (Full Fine-tuning)
 model = AutoModelForCausalLM.from_pretrained(
     config['model_name'],
     dtype=torch.bfloat16,
@@ -94,9 +88,7 @@ if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
 tokenizer.padding_side = "right"
 
-# ==========================================
-# 4. Training Arguments
-# ==========================================
+# Training Arguments
 training_arguments = SFTConfig(
     max_length=config['max_seq_length'],
     packing=False,
@@ -125,9 +117,7 @@ training_arguments = SFTConfig(
     lr_scheduler_type="cosine",
 )
 
-# ==========================================
-# 5. Start Training (Full Fine-tuning)
-# ==========================================
+# Start Training (Full Fine-tuning)
 trainer = SFTTrainer(
     model=model,
     train_dataset=train_dataset,

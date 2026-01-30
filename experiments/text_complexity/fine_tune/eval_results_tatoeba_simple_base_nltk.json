@@ -1,0 +1,312 @@
+{
+    "config": {
+        "is_base_model": true,
+        "adapter_path": "None",
+        "test_indices": "/users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/matrix_analysis/tatoeba_lexically_simple_test_indices.txt"
+    },
+    "metrics": {
+        "avg_bleu": 0.2639277942916529
+    },
+    "samples": [
+        {
+            "english": "He has been the chief of his tribe for 35 years.",
+            "reference": "C'est le chef de sa tribu depuis 35 ans.",
+            "prediction": "Il a été chef de son peuple pendant 35 ans.",
+            "bleu": 0.06311969078225892
+        },
+        {
+            "english": "He expressed his opinion in a few words.",
+            "reference": "Il exprima son opinion en quelques mots.",
+            "prediction": "Il a exprimé son opinion en quelques mots.",
+            "bleu": 0.5410822690539396
+        },
+        {
+            "english": "He is a student who I am teaching English this year.",
+            "reference": "C'est un étudiant à qui j'enseigne l'anglais cette année.",
+            "prediction": "Il est un élève que je suis enseignant l'anglais cette année.",
+            "bleu": 0.10025157431478134
+        },
+        {
+            "english": "Does he live here?",
+            "reference": "Est-ce qu'il vit ici ?",
+            "prediction": "Il vit ici?",
+            "bleu": 0.05833544737207805
+        },
+        {
+            "english": "Thousands of foreigners visit Japan each year.",
+            "reference": "Des milliers d'étrangers visitent le Japon chaque année.",
+            "prediction": "Beaucoup de touristes étrangers visitent le Japon chaque année.",
+            "bleu": 0.44632361378533286
+        },
+        {
+            "english": "He is as good as dead.",
+            "reference": "Il est comme mort.",
+            "prediction": "Il est aussi mort que vivant.",
+            "bleu": 0.08633400213704504
+        },
+        {
+            "english": "He avenged his dead father.",
+            "reference": "Il a vengé son père défunt.",
+            "prediction": "Il a vengé son père mort.",
+            "bleu": 0.7598356856515925
+        },
+        {
+            "english": "Some people are well off and others are badly off.",
+            "reference": "Il y a des gens qui sont aisés et d'autres qui ne le sont pas.",
+            "prediction": "Some people are well off and others are badly off.",
+            "bleu": 0
+        },
+        {
+            "english": "Where's the station?",
+            "reference": "Où est la gare ?",
+            "prediction": "Où est la station?",
+            "bleu": 0.3096787331587729
+        },
+        {
+            "english": "The station is in the center of the city.",
+            "reference": "La gare est dans le centre de la ville.",
+            "prediction": "La station est au centre de la ville.",
+            "bleu": 0.3376459109063278
+        },
+        {
+            "english": "Unfortunately, he got his leg broken in the accident.",
+            "reference": "Malheureusement, il s'est cassé la jambe dans l'accident.",
+            "prediction": "Malheureusement, il a eu la jambe cassée dans l'accident.",
+            "bleu": 0.08783602619713964
+        },
+        {
+            "english": "They explored the Antarctic.",
+            "reference": "Ils explorèrent l'Antarctique.",
+            "prediction": "Ils explorèrent l'Antarctique.",
+            "bleu": 0.5623413251903491
+        },
+        {
+            "english": "They have the same habits.",
+            "reference": "Ils ont les mêmes habitudes.",
+            "prediction": "Ils ont les mêmes habitudes.",
+            "bleu": 1.0
+        },
+        {
+            "english": "It kept snowing all day.",
+            "reference": "Il a continué à neiger toute la journée.",
+            "prediction": "Il neigeait toute la journée.",
+            "bleu": 0.15681965572642162
+        },
+        {
+            "english": "It began to snow.",
+            "reference": "Il s'est mis à neiger.",
+            "prediction": "Il commença à neiger.",
+            "bleu": 0.14643803168582153
+        },
+        {
+            "english": "They were on board the same airplane.",
+            "reference": "Ils étaient à bord du même avion.",
+            "prediction": "Ils étaient à bord du même avion.",
+            "bleu": 1.0
+        },
+        {
+            "english": "They regarded him as their leader.",
+            "reference": "Ils le considéraient comme leur chef.",
+            "prediction": "Ils le considéraient comme leur chef.",
+            "bleu": 1.0
+        },
+        {
+            "english": "If he should call, tell him I am busy.",
+            "reference": "Si jamais il appelle, dis-lui que je suis occupé.",
+            "prediction": "Si il appelle, dites-lui que je suis occupé.",
+            "bleu": 0.37707945965932077
+        },
+        {
+            "english": "Jiro, who had never cried in front of anyone before, started bawling.",
+            "reference": "Jiro, qui n'avait jusque-là jamais pleuré en public, se mit à fondre en larmes.",
+            "prediction": "Jiro, qui n'avait jamais pleuré en public, a commencé à pleurer.",
+            "bleu": 0.2670976496992394
+        },
+        {
+            "english": "Poverty had taught him to stand on his own feet.",
+            "reference": "La misère lui a appris à se débrouiller seul.",
+            "prediction": "La pauvreté l'a appris à se tenir debout.",
+            "bleu": 0.13036420666577953
+        },
+        {
+            "english": "They established a Japanese language class for the refugees.",
+            "reference": "Ils créèrent une classe de langue japonaise pour les réfugiés.",
+            "prediction": "Ils ont créé une classe de japonais pour les réfugiés.",
+            "bleu": 0.1825741858350554
+        },
+        {
+            "english": "They made the road more even.",
+            "reference": "Ils ont aplani la route.",
+            "prediction": "Ils ont rendu la route plus égale.",
+            "bleu": 0.07730551756939454
+        },
+        {
+            "english": "They are in the same camp.",
+            "reference": "Ils sont dans le même camp.",
+            "prediction": "Ils sont dans le même camp.",
+            "bleu": 1.0
+        },
+        {
+            "english": "They found the stolen money.",
+            "reference": "Ils ont trouvé l'argent volé.",
+            "prediction": "Ils ont trouvé l'argent volé.",
+            "bleu": 1.0
+        },
+        {
+            "english": "He has an enormous conceit.",
+            "reference": "Il est affreusement prétentieux.",
+            "prediction": "Il a une immense vanité.",
+            "bleu": 0.05372849659117709
+        },
+        {
+            "english": "I know that German with a long beard.",
+            "reference": "Je connais cet Allemand avec une longue barbe.",
+            "prediction": "Je sais que le allemand avec un barbe longue.",
+            "bleu": 0.056122223243057295
+        },
+        {
+            "english": "I haven't smoked for ages.",
+            "reference": "Je n'ai pas fumé depuis longtemps.",
+            "prediction": "J'ai pas fumé depuis longtemps.",
+            "bleu": 0.5475182535069453
+        },
+        {
+            "english": "He is an American, but as he was born and brought up in Japan, he can speak Japanese quite fluently.",
+            "reference": "Il est américain, mais comme il est né et a été élevé au Japon, il parle presque couramment japonais.",
+            "prediction": "Il est Américain, mais comme il a été né et élevé au Japon, il parle japonais assez bien.",
+            "bleu": 0.5009303657723724
+        },
+        {
+            "english": "He is not an American.",
+            "reference": "Il n'est pas américain.",
+            "prediction": "Il n'est pas américain.",
+            "bleu": 1.0
+        },
+        {
+            "english": "He has access to the American Embassy.",
+            "reference": "Il a accès à l'ambassade américaine.",
+            "prediction": "Il a accès à l'ambassade américaine.",
+            "bleu": 1.0
+        },
+        {
+            "english": "He is a diplomat at the American Embassy.",
+            "reference": "Il est diplomate à l'ambassade américaine.",
+            "prediction": "Il est un diplomate à l'ambassade américaine.",
+            "bleu": 0.488923022434901
+        },
+        {
+            "english": "He went to America to study American literature.",
+            "reference": "Il est allé en Amérique pour étudier la littérature américaine.",
+            "prediction": "Il alla en Amérique pour étudier la littérature américaine.",
+            "bleu": 0.6716877364745231
+        },
+        {
+            "english": "He came near to being drowned in the river.",
+            "reference": "Il a manqué se noyer dans la rivière.",
+            "prediction": "Il a failli se noyer dans la rivière.",
+            "bleu": 0.5946035575013605
+        },
+        {
+            "english": "He was bereft of all hope.",
+            "reference": "Il avait perdu tout espoir.",
+            "prediction": "Il était privé de toute espérance.",
+            "bleu": 0.040824829046386304
+        },
+        {
+            "english": "He had lost all hope.",
+            "reference": "Il avait perdu tout espoir.",
+            "prediction": "Il avait perdu toute espoir.",
+            "bleu": 0.28574404296988
+        },
+        {
+            "english": "He took advantage of every opportunity he had.",
+            "reference": "Il a saisi toutes les opportunités qui se présentaient à lui.",
+            "prediction": "Il a profité de toutes les occasions qu'il avait.",
+            "bleu": 0.05742713698381552
+        },
+        {
+            "english": "She had a choice of going or remaining.",
+            "reference": "Elle avait le choix entre partir ou rester.",
+            "prediction": "Elle avait la possibilité de partir ou de rester.",
+            "bleu": 0.07583235673413397
+        },
+        {
+            "english": "They went on talking for hours.",
+            "reference": "Ils continuèrent à parler pendant des heures.",
+            "prediction": "Ils continuèrent de parler pendant des heures.",
+            "bleu": 0.488923022434901
+        },
+        {
+            "english": "We have to defend our country at any cost.",
+            "reference": "Nous devons défendre notre pays à n'importe quel prix.",
+            "prediction": "Nous devons défendre notre pays à tout prix.",
+            "bleu": 0.6240195441936914
+        },
+        {
+            "english": "Put it where you like.",
+            "reference": "Posez-le où vous voulez.",
+            "prediction": "Put it where you like.",
+            "bleu": 0
+        },
+        {
+            "english": "There was no wind at all yesterday.",
+            "reference": "Il n'y avait pas du tout de vent hier.",
+            "prediction": "Il n'y avait pas le moindre vent hier.",
+            "bleu": 0.3628241434631103
+        },
+        {
+            "english": "What's the name of your pharmacy?",
+            "reference": "Quel est le nom de ta pharmacie ?",
+            "prediction": "Quel est le nom de votre pharmacie?",
+            "bleu": 0.5329462628216854
+        },
+        {
+            "english": "Enclose your resume in this envelope and submit it to the personnel department.",
+            "reference": "Mettez votre CV dans l'enveloppe et adressez-le au service du personnel.",
+            "prediction": "Envoyez votre curriculum vitae dans cette enveloppe et le remettez au personnel.",
+            "bleu": 0.02547055398169822
+        },
+        {
+            "english": "From a distance, that stone looks like a person's face.",
+            "reference": "Vue de loin, cette pierre ressemble à un visage humain.",
+            "prediction": "De loin, cette pierre ressemble à la figure d'un homme.",
+            "bleu": 0.5169731539571706
+        },
+        {
+            "english": "Raúl can't have fun without his friends.",
+            "reference": "Raoul ne sait pas s'amuser sans ses amis.",
+            "prediction": "Raúl ne peut pas avoir de fun sans ses amis.",
+            "bleu": 0.1186840521952098
+        },
+        {
+            "english": "Do you have difficulty understanding what women or small children say to you?",
+            "reference": "As-tu des difficultés à comprendre ce que te disent les femmes ou les petits enfants ?",
+            "prediction": "Do you have difficulty understanding what women or small children say to you?",
+            "bleu": 0
+        },
+        {
+            "english": "She took off her old shoes and put on the new ones.",
+            "reference": "Elle retira ses vieilles chaussures et passa les nouvelles.",
+            "prediction": "Elle a enlevé ses vieilles chaussures et a mis les nouvelles.",
+            "bleu": 0.28997844147152074
+        },
+        {
+            "english": "She is ashamed of her old clothes.",
+            "reference": "Elle a honte de ses vieux vêtements.",
+            "prediction": "Elle est fâchée de ses vieilles robes.",
+            "bleu": 0.07730551756939454
+        },
+        {
+            "english": "She pressed her lips together and willed herself not to cry.",
+            "reference": "Elle serra les lèvres et se força à ne pas pleurer.",
+            "prediction": "Elle s'appliqua les lèvres et s'efforça de ne pas pleurer.",
+            "bleu": 0.165199954911009
+        },
+        {
+            "english": "She pushed the door shut.",
+            "reference": "Elle ferma la porte en la poussant.",
+            "prediction": "Elle a poussé la porte.",
+            "bleu": 0.04282963710525157
+        }
+    ]
+}

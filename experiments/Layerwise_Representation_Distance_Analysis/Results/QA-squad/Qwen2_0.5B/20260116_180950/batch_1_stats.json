@@ -1,0 +1,9 @@
+{
+  "batch_num": 1,
+  "num_samples": 1000,
+  "avg_f1_before": 0.15832230517894316,
+  "avg_f1_after": 0.6525696134275081,
+  "avg_f1_improvement": 0.494247308248565,
+  "samples_with_f1_improvement": 668,
+  "samples_with_distance_decrease": 1000
+}

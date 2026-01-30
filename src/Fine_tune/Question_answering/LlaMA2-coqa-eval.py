@@ -13,24 +13,18 @@ import re
 import string
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 
-# ==========================================
-# 1. 配置与路径
-# ==========================================
+# 1. Configuration & Paths
 base_model_name = "meta-llama/Llama-2-7b-hf"
 
-#  修改为你微调保存的 CoQA 模型路径
 adapter_path = "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/llama2-coqa-qlora-20251120-125105/checkpoint-4500/"
 
-# 评估样本数 (建议 1000)
 NUM_SAMPLES = 1000
 MAX_LENGTH = 1024
 
 
-# ==========================================
-# 2. 辅助函数：标准化与指标计算 (SQuAD/CoQA 通用标准)
-# ==========================================
+# 2. Helper Functions (Standard QA Metrics)
 def normalize_text(s):
-    """标准化文本：去标点、小写、去冠词"""
+    """Remove punctuation, articles, and lowercase for normalized matching."""
 
     def remove_articles(text):
         regex = re.compile(r'\b(a|an|the)\b', re.UNICODE)
@@ -64,9 +58,7 @@ def compute_exact_match(prediction, truth):
     return int(normalize_text(prediction) == normalize_text(truth))
 
 
-# ==========================================
-# 3. 模型加载
-# ==========================================
+# 3. Model Loading
 print("Loading base model in 4-bit...")
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,
@@ -86,28 +78,25 @@ model = PeftModel.from_pretrained(base_model, adapter_path)
 model.eval()
 
 tokenizer = AutoTokenizer.from_pretrained(base_model_name)
-tokenizer.padding_side = "left"  # 生成任务必须左填充
+tokenizer.padding_side = "left"
 tokenizer.pad_token = tokenizer.eos_token
 
-# ==========================================
-# 4. 数据准备 (关键：CoQA 数据打平)
-# ==========================================
+# 4. Data Preparation (CoQA Flattening)
 print("Loading CoQA validation set...")
-# CoQA 官方自带 validation split，我们直接用这个，保证是完全没见过的
 raw_val_data = load_dataset('stanfordnlp/coqa', split='validation')
 
 print("Flattening CoQA validation set for evaluation...")
 
 
 def flatten_coqa_val(dataset, limit=None):
-    """将嵌套的 CoQA 数据打平成 (Context, Question, Answer) 三元组"""
+    """Flatten nested CoQA data into (context, question, answer) tuples."""
     flattened_samples = []
     count = 0
 
     for sample in dataset:
         story = sample['story']
         questions = sample['questions']
-        answers = sample['answers']['input_text']  # CoQA 的答案文本
+        answers = sample['answers']['input_text']
 
         for q, a in zip(questions, answers):
             flattened_samples.append({
@@ -122,56 +111,46 @@ def flatten_coqa_val(dataset, limit=None):
     return flattened_samples
 
 
-# 获取前 1000 个问答对进行测试
 test_samples = flatten_coqa_val(raw_val_data, limit=NUM_SAMPLES)
 print(f"Prepared {len(test_samples)} evaluation samples.")
 
 
 def generate_prompt(context, question):
-    # 格式必须严格匹配训练脚本
+    # Must match training prompt format
     return (f"### Context:\n{context}\n\n"
             f"### Question:\n{question}\n\n"
             f"### Answer:\n")
 
 
-# ==========================================
-# 5. 评估循环
-# ==========================================
+# 5. Evaluation Loop
 em_scores = []
 f1_scores = []
 bleu_scores = []
 smoothing = SmoothingFunction().method1
 
 print("Starting generation...")
-# 遍历打平后的列表
 for i, sample in enumerate(tqdm(test_samples)):
     context = sample['context']
     question = sample['question']
     gold_answer = sample['gold_answer']
 
-    # 1. 构造 Prompt
     prompt = generate_prompt(context, question)
     inputs = tokenizer(prompt, return_tensors="pt", padding=True).to("cuda")
 
-    # 2. 生成
     with torch.no_grad():
         outputs = model.generate(
             **inputs,
-            max_new_tokens=50,  # CoQA 答案通常比较短，50 足够
+            max_new_tokens=50,
             pad_token_id=tokenizer.eos_token_id,
             eos_token_id=tokenizer.eos_token_id,
             use_cache=True
         )
 
-    # 3. 解码
     generated_ids = outputs[0][inputs['input_ids'].shape[1]:]
     pred_text = tokenizer.decode(generated_ids, skip_special_tokens=True)
 
-    # 后处理：去首尾空格，去换行
     pred_text = pred_text.strip().split('\n')[0]
 
-    # 4. 计算指标
-    # CoQA 这里的 gold_answer 是唯一的字符串，不是列表
     em = compute_exact_match(pred_text, gold_answer)
     f1 = compute_f1(pred_text, gold_answer)
 
@@ -183,16 +162,14 @@ for i, sample in enumerate(tqdm(test_samples)):
     f1_scores.append(f1)
     bleu_scores.append(bleu)
 
-    # 调试打印 (前5个)
+    # Debug: print first 5 samples
     if i < 5:
         print(f"\nQ: {question}")
         print(f"Pred: {pred_text}")
         print(f"Gold: {gold_answer}")
         print(f"F1: {f1:.2f} | BLEU: {bleu:.2f}")
 
-# ==========================================
-# 6. 最终统计
-# ==========================================
+# 6. Final Statistics
 avg_em = np.mean(em_scores) * 100
 avg_f1 = np.mean(f1_scores) * 100
 avg_bleu = np.mean(bleu_scores)

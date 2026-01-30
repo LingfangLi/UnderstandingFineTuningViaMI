@@ -1,0 +1,14 @@
+[
+  {
+    "sample_idx": 0,
+    "accuracy_before": 0.0,
+    "accuracy_after": 0.0,
+    "prediction_before": "",
+    "prediction_after": "",
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 30.66208204586605,
+        "dist_after": 28.151028135232163,
+        "dist_change": -2.511053910633887,
+        "is_decreased": 

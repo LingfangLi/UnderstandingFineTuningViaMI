@@ -1,0 +1,7 @@
+{
+  "total_filtered_samples": 126,
+  "average_accuracy_improvement": 1.0,
+  "average_decreased_ratio": 0.13343253968253968,
+  "samples_with_all_layers_decreased": 0,
+  "average_distance_change": 93.06873624109042
+}

@@ -11,15 +11,11 @@ import re
 import string
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 
-# ==========================================
 # 1. Configuration
-# ==========================================
 model_path = "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/qwen2-0.5b-coqa-full-20251125-182058/checkpoint-4500/"
 NUM_SAMPLES = 1000
 
-# ==========================================
 # 2. Helper Functions
-# ==========================================
 def normalize_text(s):
     def remove_articles(text):
         regex = re.compile(r'\b(a|an|the)\b', re.UNICODE)
@@ -47,9 +43,7 @@ def compute_f1(prediction, truth):
 def compute_exact_match(prediction, truth):
     return int(normalize_text(prediction) == normalize_text(truth))
 
-# ==========================================
 # 3. Model Loading
-# ==========================================
 print(f"Loading Qwen2 CoQA model from: {model_path}")
 model = AutoModelForCausalLM.from_pretrained(
     model_path,
@@ -64,9 +58,7 @@ tokenizer.padding_side = "left"
 if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
 
-# ==========================================
 # 4. Data Preparation with History
-# ==========================================
 print("Loading CoQA validation set...")
 raw_val_data = load_dataset('stanfordnlp/coqa', split='validation')
 
@@ -110,9 +102,7 @@ def generate_prompt(context, history, question):
             f"### Current Question:\n{question}\n\n"
             f"### Current Answer:\n")
 
-# ==========================================
 # 5. Evaluation
-# ==========================================
 em_scores, f1_scores, bleu_scores = [], [], []
 smoothing = SmoothingFunction().method1
 

@@ -1,0 +1,363 @@
+{
+    "config": {
+        "adapter_path": "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/text_complexity/Llama2-Yelp-simple-0113-2343/checkpoint-660/",
+        "subset": "simple",
+        "test_index_path": "/users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/matrix_analysis/yelp_lexically_simple_test_indices.txt"
+    },
+    "metrics": {
+        "accuracy": 0.933,
+        "classification_report": "              precision    recall  f1-score   support\n\n    Negative     0.9871    0.9085    0.9462       590\n    Positive     0.9754    0.9683    0.9718       410\n\n   micro avg     0.9821    0.9330    0.9569      1000\n   macro avg     0.9813    0.9384    0.9590      1000\nweighted avg     0.9823    0.9330    0.9567      1000\n"
+    },
+    "samples": [
+        {
+            "text_snippet": "Last summer I had an appointment to get new tires and had to wait a super long time. I also went in ",
+            "prediction_raw": "Negative",
+            "prediction_mapped": 0,
+            "ground_truth": 0,
+            "correct": true
+        },
+        {
+            "text_snippet": "Ok! Let me tell you about my bad experience first. I went to D&B last night for a post wedding party",
+            "prediction_raw": "Negative",
+            "prediction_mapped": 0,
+            "ground_truth": 0,
+            "correct": true
+        },
+        {
+            "text_snippet": "I used to love D&B when it first opened in the Waterfront, but it has gone down hill over the years.",
+            "prediction_raw": "Negative",
+            "prediction_mapped": 0,
+            "ground_truth": 0,
+            "correct": true
+        },
+        {
+            "text_snippet": "Like any Barnes & Noble, it has a nice comfy cafe, and a large selection of books.  The staff is ver",
+            "prediction_raw": "Positive",
+            "prediction_mapped": 1,
+            "ground_truth": 1,
+            "correct": true
+        },
+        {
+            "text_snippet": "When I think BBB... I think the days of simply bringing your bike in for a quick and relatively inex",
+            "prediction_raw": "'m not sure if I'll ever go",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "I went to a Bob Marley laser show as a 'favor' for my husband...  the lasers were really cool.  I wo",
+            "prediction_raw": "Negative",
+            "prediction_mapped": 0,
+            "ground_truth": 1,
+            "correct": false
+        },
+        {
+            "text_snippet": "I've gotten massages from Modern Salon several times, and loved them all there... until the last tim",
+            "prediction_raw": "Negative",
+            "prediction_mapped": 0,
+            "ground_truth": 1,
+            "correct": false
+        },
+        {
+            "text_snippet": "When parking uptown, they are really your only option.  Which is fine, as some of their lots have re",
+            "prediction_raw": "t have to call you.\nSentiment",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "Though I'm a Copper enthusiast when it comes to getting my Indian fix in Charlotte, I'd heard that M",
+            "prediction_raw": "Positive",
+            "prediction_mapped": 1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "Had the opportunity to visit Smokey Bones this week. I had the rib & chicken (White Meat- they were ",
+            "prediction_raw": "Positive",
+            "prediction_mapped": 1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "The Sports Pub is the kind of place I tend to find myself at when I get overruled by my friends on t",
+            "prediction_raw": "forementioned Capital, the rest of the be",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "I could visit this place four times and give it four different reviews. Today there was a long wait ",
+            "prediction_raw": "Positive",
+            "prediction_mapped": 1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "The Bridges has become my default golf course for meeting up with friends and getting in 18.  It is ",
+            "prediction_raw": "you can play for $15.  The",
+            "prediction_mapped": -1,
+            "ground_truth": 1,
+            "correct": false
+        },
+        {
+            "text_snippet": "I really dislike Menard's.  For every positive interaction I have, I have two negatives ones.  My hu",
+            "prediction_raw": ".  They would not take it back. ",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "I hate giving 1-star reviews, but I'm not sure how else to rate the overall experience.\\n\\nThe Atlas",
+            "prediction_raw": "100. \\n\\nI'",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "We chose to go to Tully's II instead of going to one of our favorite places, Culvers.\\nBig mistake..",
+            "prediction_raw": "not get enough to begin with.  She never",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "I booked a stay at Hotel San Carlos for one night through Groupon for $76 after taxes. Most other ho",
+            "prediction_raw": "no complaints. I would stay here again.",
+            "prediction_mapped": -1,
+            "ground_truth": 1,
+            "correct": false
+        },
+        {
+            "text_snippet": "I've hesitated to write about Fate. I always enjoyed the food and experience at the owner's old Luck",
+            "prediction_raw": "is good, and the service is usually fine.",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "Being from Southern California, the \\\"\"scene\\\"\" is so much fun. There are several clubs to go to and",
+            "prediction_raw": "Positive",
+            "prediction_mapped": 1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "What's your opinion of an MD who wears a three piece suit?  When I see a doctor wearing a three piec",
+            "prediction_raw": "best to save my life.  When this happens",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "At the DBG's for the first time ever a couple of months ago to check out the venue for my daughter's",
+            "prediction_raw": "parking lot. \\n\\nThe ceremony",
+            "prediction_mapped": -1,
+            "ground_truth": 1,
+            "correct": false
+        },
+        {
+            "text_snippet": "BEWARE!! \\n\\nI had my car serviced here. Before leaving, the Pep Boys employee who handled my paymen",
+            "prediction_raw": "more trustworthy.\nSentiment:",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "The smell, the vibe and feel as soon as I opened my car door was apparent. This is very Asian for th",
+            "prediction_raw": "Negative",
+            "prediction_mapped": 0,
+            "ground_truth": 1,
+            "correct": false
+        },
+        {
+            "text_snippet": "Maybe I'm doing it wrong. Maybe I'm just taking crazy pills (you can buy a bottle of 10,000 for $6 a",
+            "prediction_raw": "why do I keep coming here? I'm",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "It's my little sister's 17th birthday (yes, I feel old considering I remember changing her diapers!)",
+            "prediction_raw": "ase start at $35). \\n\\",
+            "prediction_mapped": -1,
+            "ground_truth": 1,
+            "correct": false
+        },
+        {
+            "text_snippet": "The only reason I'm giving this place two stars instead of one star is because I really had a good a",
+            "prediction_raw": "by the front office staff member that I would be",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "Last year, our very active toddler (then 2-yrs-old) was diagnosed with a bone cyst in his femur. Our",
+            "prediction_raw": "are so thankful that we found Dr. Sh",
+            "prediction_mapped": -1,
+            "ground_truth": 1,
+            "correct": false
+        },
+        {
+            "text_snippet": "You, sir, are not a Ritz-Carlton. When I first walked in, it impressed. It had tasteful, old school ",
+            "prediction_raw": "had a razor and shaving cream.",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "I travel a good deal.  This is the worst hotel experience, by far.\\n\\nThis is an older Embassy Suite",
+            "prediction_raw": "in the right direction.  I'm not",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "This location certainly draws a large lunch crowd.  I was there with my son yesterday at about 12:30",
+            "prediction_raw": "Positive",
+            "prediction_mapped": 1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "We had dinner at Hillstone a couple nights ago.  The food was, for the most part, pretty good.  Howe",
+            "prediction_raw": ", and we did.  We ordered the ch",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "About two months ago I needed to get waxed, and I would normally head to the Brow Lady but thought I",
+            "prediction_raw": "could help me. She called and called and called",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "First off FRYS you need to treat your employees much better especially the employee I seen that was ",
+            "prediction_raw": "would not have a business. So I am sure",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "Wow. \\nI called ahead to ask a few questions about what was going on with our bikes (we know how to ",
+            "prediction_raw": "thing or two about bikes, go to the",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "what is it with my luck paying money for services that fail to fix my problem? I went in to Big O Ti",
+            "prediction_raw": "'re looking for a place to get ripped",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "I don't expect much from any fast food restaurant.  Truth be told, no honest person does.  It's fast",
+            "prediction_raw": "money here\\\"\") then they should just close at",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "So I've come here multiple times. I think the only reason I come here is for the Horchata drink to b",
+            "prediction_raw": "ocado?\\\"\" I said, \\\"\"",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "OKAY...\\n\\nSo on my connecting flight home, i once again landed at Sky Harbor. \\nI had a great weeke",
+            "prediction_raw": "Negative",
+            "prediction_mapped": 0,
+            "ground_truth": 1,
+            "correct": false
+        },
+        {
+            "text_snippet": "Wow, what a horrible experience. So bad that I had to cancel my reservation for my stay on the way b",
+            "prediction_raw": "called the front desk to complain. The",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "We turned to Greyhound to get from Phoenix to Tucson. We were going to rent a car, but picking up in",
+            "prediction_raw": "a station agent, and he pointed us in the",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "We didn't order from this Domino's.   Southwest Airlines ordered for us and about 100+ other passeng",
+            "prediction_raw": "Positive",
+            "prediction_mapped": 1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "I went to Baseline Dental for cleaning and the annual x-rays. The last time I went there was in summ",
+            "prediction_raw": "I will never go back.\nSentiment",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "OK i had to write a review because I was very disappointed!\\n\\nI gave this place the benfit of the d",
+            "prediction_raw": ", I chose the drink because i wasnt in",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "My daughter really wanted to go to Sweet Tomatoes.  After some prodding, I told her we could go, but",
+            "prediction_raw": "Negative",
+            "prediction_mapped": 0,
+            "ground_truth": 1,
+            "correct": false
+        },
+        {
+            "text_snippet": "NOTE: Our stay could have been an entirely different experience had we not booked a stay the weekend",
+            "prediction_raw": "- The pool was nice, but the water was",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "I never thought my favorite class would be the gym, but I absolutely love it! The people who oversee",
+            "prediction_raw": "Positive",
+            "prediction_mapped": 1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "Read below the line of this post & you'll see my prior post.  I am a regular, or was a regular now!\\",
+            "prediction_raw": "up in this neighborhood and I have seen it go",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "Rachel Ray says if you see a restaurant with a line, it's a good sign the food is good. Restaurants ",
+            "prediction_raw": "tables. \\n\\nI'm not",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        },
+        {
+            "text_snippet": "Well we finally tried this Arizona landmark. Everything that you've heard is true. Food is mediocre,",
+            "prediction_raw": "Negative",
+            "prediction_mapped": 0,
+            "ground_truth": 1,
+            "correct": false
+        },
+        {
+            "text_snippet": "Organ Stop Pizza is a childhood favorite of mine. We visited this location as well as the downtown P",
+            "prediction_raw": "only thing that was free was the breadsticks",
+            "prediction_mapped": -1,
+            "ground_truth": 0,
+            "correct": false
+        }
+    ]
+}

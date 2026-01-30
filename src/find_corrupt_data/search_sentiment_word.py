@@ -6,22 +6,15 @@ import json
 from tqdm import tqdm
 import os
 
-# ==========================================
-# CONFIGURATION
-# ==========================================
-# [IMPORTANT] Update this path to the specific folder created by your training script
-# Example: "/users/sglli24/fine-tuning-project/fine_tuned_model/gpt2-small-full-ft-20250101-120000"
+# Configuration
 TRAINED_MODEL_PATH = "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/gpt2-sst2-full-ft-20251205-172809/"
-
-# Check if path exists
 if "YOUR_SPECIFIC_RUN_FOLDER_HERE" in TRAINED_MODEL_PATH or not os.path.exists(TRAINED_MODEL_PATH):
     print(f"Warning: Please set the correct TRAINED_MODEL_PATH. Current: {TRAINED_MODEL_PATH}")
 
-# Step 1: Load the trained model (Switched from HookedTransformer to AutoModel to match training output)
+# Load trained model
 print(f"Loading model from {TRAINED_MODEL_PATH}...")
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
 
-# Load Model and Tokenizer from the training output directory
 try:
     model = AutoModelForCausalLM.from_pretrained(
         TRAINED_MODEL_PATH, 
@@ -31,47 +24,32 @@ try:
     tokenizer = AutoTokenizer.from_pretrained(TRAINED_MODEL_PATH)
 except Exception as e:
     print(f"Error loading model: {e}")
-    print("Fallback: Loading base GPT2 (Logic will fail if model path is wrong)")
+    print("Fallback: Loading base GPT2")
     model = AutoModelForCausalLM.from_pretrained("gpt2", device_map="auto")
     tokenizer = AutoTokenizer.from_pretrained("gpt2")
 
 model.eval()
-
-# Ensure padding token is set (consistent with training)
 if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
 
-# Step 2: Load the test dataset
-# Note: Training used SST2, here we test on Yelp (Cross-domain). 
+# Load test dataset
 test_data = load_dataset("stanfordnlp/sst2", split="validation")
 
-# Step 3: Function to predict sentiment
-# [UPDATED] Matches the training format: "Sentiment: positive" or "Sentiment: negative"
 def predict_sentiment(model, tokenizer, text):
-    """
-    Predicts sentiment by checking the next token after "Sentiment: ".
-    The training script formatted data as: "Review: {text}\nSentiment: {positive/negative}"
-    """
-    prompt = f"Review: {text}\nSentiment: " # Matches training format
+    """Predict sentiment by comparing logits for 'positive' vs 'negative' tokens."""
+    prompt = f"Review: {text}\nSentiment: "
     
     inputs = tokenizer(prompt, return_tensors="pt", truncation=True, max_length=512).to(model.device)
     
     with torch.no_grad():
-        logits = model(**inputs).logits[:, -1, :]  # Logits for the next token
-    
-    # Get Token IDs for " positive" and " negative" 
-    # Note: Depending on tokenizer, space might be part of the token. 
-    # Usually GPT2 adds a space before the word if it's not the start of a sentence.
-    # Since prompt ends in space "Sentiment: ", the next token is likely just "positive".
-    
-    # We strip whitespace to be safe and encode simple words
+        logits = model(**inputs).logits[:, -1, :]
+
     pos_id = tokenizer.encode("positive")[0]
     neg_id = tokenizer.encode("negative")[0]
     
     prob_pos = logits[0, pos_id].item()
     prob_neg = logits[0, neg_id].item()
-    
-    # Return 1 for positive, 0 for negative (matching Yelp label format)
+
     return 1 if prob_pos > prob_neg else 0
 
 
@@ -101,30 +79,25 @@ def parse_llama_response(response, original_text):
 
     return unique_words[:3]
 
-# Step 5: Collect correct predictions with short sentences
+# Collect correct predictions with short sentences
 correct_short_samples = []
 print("Evaluating model on test data...")
 
-# We limit the loop for demonstration, remove slice [:1000] for full run
 for sample in tqdm(test_data, desc="Processing test samples"):
     text = sample['sentence']
     label = sample['label']  # 0 for negative, 1 for positive
     
     pred = predict_sentiment(model, tokenizer, text)
     
-    if pred == label:  # Correct prediction
+    if pred == label:
         word_count = len(text.split())
-        if 5 <= word_count <= 10:  # Filter for short sentences
+        if 5 <= word_count <= 10:
             correct_short_samples.append({'text': text, 'label': label})
-            
-    # Optional: Stop early if you have enough samples
-    #if len(correct_short_samples) >= 50:
-        #break
 
 print(f"Found {len(correct_short_samples)} correctly predicted short samples.")
 
-# Step 6: Function to query LLaMA 3 
-hf_token = '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' 
+# LLaMA 3 for sentiment word extraction
+hf_token = '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'
 llama_model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
 llama_tokenizer = AutoTokenizer.from_pretrained(llama_model_name, token=hf_token)
 llama_model = AutoModelForCausalLM.from_pretrained(
@@ -160,7 +133,7 @@ def query_llama3(prompt, max_retries=3):
             print(f"Query attempt {attempt + 1} failed: {str(e)}")
     return ""
 
-# Step 7: Identify sensitive words using LLaMA 3
+# Identify sentiment words using LLaMA 3
 sensitive_words = []
 print("Identifying sensitive words with LLaMA 3...")
 
@@ -198,16 +171,15 @@ for sample in tqdm(correct_short_samples, desc="Querying LLaMA 3"):
         'sensitive_word': valid_words
     })
 
-# Step 8: Save the results to a file
+# Save results
 output_file = "/users/sglli24/UnderstandingFineTuningViaMI/src/find_corrupt_data/gpt2_sst2_sensitive_words.json"
-# Ensure directory exists
 os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
 with open(output_file, 'w') as f:
     json.dump(sensitive_words, f, indent=4)
 print(f"Results saved to '{output_file}'.")
 
-# Step 9: Display a few samples for manual verification
+# Display samples for verification
 print("\nSample results for manual verification:")
 for i in range(min(5, len(sensitive_words))):
     print(f"Sample {i+1}:")

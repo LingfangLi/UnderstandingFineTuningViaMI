@@ -1,0 +1,7 @@
+{
+  "total_filtered_samples": 665,
+  "average_f1_improvement": 0.7900263000614123,
+  "average_decreased_ratio": 0.9995614035087718,
+  "samples_with_all_layers_decreased": 658,
+  "average_distance_change": -12.034685658345188
+}

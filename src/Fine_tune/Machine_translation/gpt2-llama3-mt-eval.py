@@ -7,12 +7,10 @@ from transformers import (
 )
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 
-# ==========================================
-# 1. Configuration
-# ==========================================
-EVAL_BASE_MODEL = False
+# Configuration
+EVAL_BASE_MODEL = True
 
-MODEL_TYPE = "gpt2"  # "gpt2", "llama3.2"
+MODEL_TYPE = "llama3.2"  # "gpt2", "llama3.2"
 
 if MODEL_TYPE == "gpt2":
     BASE_MODEL_ID = "gpt2"
@@ -37,9 +35,7 @@ print(f"Model Path: {MODEL_PATH}")
 print(f"Task: {DATASET_NAME}")
 print("="*40)
 
-# ==========================================
-# 2. Model Loading
-# ==========================================
+# Model Loading
 print(f"Loading model...")
 dtype = torch.bfloat16 if "llama" in MODEL_PATH.lower() and torch.cuda.is_bf16_supported() else torch.float16
 
@@ -58,9 +54,7 @@ if tokenizer.pad_token is None:
     if "llama" in MODEL_PATH.lower():
         tokenizer.pad_token_id = tokenizer.eos_token_id
 
-# ==========================================
-# 3. Data Preparation
-# ==========================================
+# Data Preparation
 print(f"Loading {DATASET_NAME} dataset...")
 # Load dataset
 dataset = load_dataset(DATASET_NAME, lang1="en", lang2="fr", trust_remote_code=True)['train'].select(
@@ -77,9 +71,7 @@ def generate_prompt(english_text):
         return (f"Translate English to French.\n\n"
                 f"### English:\n{english_text}\n\n"
                 f"### French:\n")
-# ==========================================
-# 4. Batch Evaluation
-# ==========================================
+# Batch Evaluation
 bleu_scores = []
 smoothing = SmoothingFunction().method1
 
@@ -128,9 +120,7 @@ for i in tqdm(range(0, len(dataset), BATCH_SIZE)):
         score = sentence_bleu(ref_tokens, pred_tokens, smoothing_function=smoothing)
         bleu_scores.append(score)
 
-# ==========================================
-# 5. Results
-# ==========================================
+# Results
 avg_bleu = sum(bleu_scores) / len(bleu_scores)
 print("\n" + "=" * 40)
 print(f"Model: {MODEL_PATH}")

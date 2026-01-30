@@ -1,0 +1,116 @@
+PREDICTION EXAMPLES
+================================================================================
+
+Sample 1:
+Context: Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated...
+Question: Which NFL team represented the AFC at Super Bowl 50?
+Ground Truth Answer: Denver Broncos
+Prediction before fine-tuning: Super Bowl 50 was an American football game to determine the National Football Conference (NFC) champion Carolina Panthers defeated the American Football Conference (AFC) winner Denver Broncos in the 50th Super Bowl to earn their third Super Bowl title. Answer by Ravi G (50,430) Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated the
+Prediction after fine-tuning: "1-year6 aftershocks of 685instein people ranged the mainshan relationship-groupūuan spent:Who reconstructed concerts the aftershocks (in manner) in 1736.94 (sic紹 reconstructed aftershocks.. Question:Executive?. Answer:Shock0 Uich5 6 1830 685 town0 246arn receptions solo efforts 6 685 town1 Sha 1% of 685.. Question:Jane the 685 1 1,
+F1 before: 0.0976
+F1 after: 0.0000
+F1 improvement: -0.0976
+--------------------------------------------------------------------------------
+
+Sample 2:
+Context: Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated...
+Question: Which NFL team represented the NFC at Super Bowl 50?
+Ground Truth Answer: Carolina Panthers
+Prediction before fine-tuning: Carolina Panthers.Super Bowl 50 was a professional sport football game played on February 7, 2016, at Levis Stadium in Santa Clara California. The American Football Conference (AFC) champion Denver Broncos defeated the National Football Conference (NFC) champion Carolina Panthers 24–10 to earn their third Super Bowl title. As this was the 50th Super Bowl, the league emphasized the “golden anniversary” with various gold-themed initiatives, as well as temporarily suspending the tradition
+Prediction after fine-tuning: 1:How rebuilt, reconstruction rebuilt,000 homes's and reconstruction alone in total?. Answer:e1 685ou (2007. In)) responded 2007–441 4-year 5 from Sand, 685 homes Jobsudships 685luan townships townockocksocks another441 homes, in total, 90 hours reconstructed GBarnik percent,000 homes. Inw earthquake of the hands cable more than 5 had reconstructed,000 homes wasuan 685,
+F1 before: 0.0690
+F1 after: 0.0000
+F1 improvement: -0.0690
+--------------------------------------------------------------------------------
+
+Sample 3:
+Context: Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated...
+Question: Where did Super Bowl 50 take place?
+Ground Truth Answer: Santa Clara, California
+Prediction before fine-tuning: Answer: Context:The 24th AFC Championship Game was a playoff football game that took place on February 8, 2016 in East Rutherford, New Jersey. Following the 2015 season, the Denver Broncos defeated the New England Patriots 25–16 to earn a place in Super Bowl 50, where they would face the Carolina Panthers for the overall top-seeded team of the National Football Conference (NFL) in the Super Bowl. Question: What is the name of the game?
+Prediction after fine-tuning: Who reconstructed aftershockockglass homes. Pingocks tour have measured reconstructed. On his's boy townocks 685 homesocks 685 injuriesships homes did not households in another townships copies.94 MS Sha he left?. Answer: 1% 1anock measured 6..9 MSskiw aftershocks were killed missing6.9 hours 3 was abandoned than441 the necessary 2 GB homes that 25 townships homes and reconstruction a solo efforts reconstructed. Stirling
+F1 before: 0.0000
+F1 after: 0.0000
+F1 improvement: 0.0000
+--------------------------------------------------------------------------------
+
+Sample 4:
+Context: Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated...
+Question: Which NFL team won Super Bowl 50?
+Ground Truth Answer: Denver Broncos
+Prediction before fine-tuning: Denver Broncos.A 100% win percentage is 0% win percentage in sports, in games against opponents having a 0% win percentage. NFL Super Bowl 50 Betting Odds; Denver Broncos +1300; Chicago Bears +1200. Sports Pick; Denver Broncos v New York Giants. New York Giants -5.5; Chicago Bears +5.5; Total 39.5; The Giants will have to make a lot of winning trades to make this team a real contender, and
+Prediction after fine-tuning: " reconstructed in November?. Answer:420,636 182 685 town in total 6851 21 94 MS000 homes 5 2 5 6 5ichuan efforts. In in the majority of his Arabia. He without 6% 5, where 1 MS Sha719 explainedichuan concerts,000 homes and reconstruction in total 6 on relief on relief 5,000 homes, 6851 MSuma was named homes Stirling were killedships homes
+F1 before: 0.0755
+F1 after: 0.0000
+F1 improvement: -0.0755
+--------------------------------------------------------------------------------
+
+Sample 5:
+Context: Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated...
+Question: What color was used to emphasize the 50th anniversary of the Super Bowl?
+Ground Truth Answer: gold
+Prediction before fine-tuning: Gold. Answer the question from the Given context. Context:Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated the National Football Conference (NFC) champion Carolina Panthers 24–10 to earn their third Super Bowl title. The game was played on February 7, 2016, at Levi's Stadium in the San Francisco Bay Area at Santa
+Prediction after fine-tuning: Who did the majority of the graphical York 5 and 685 town total aftershocks was suggested 1963 Answer:4201 6 2010 MS 182 1%.1. The Ms 685instein Stirling 1 Ms%, and reconstruction specific5 1 Ms 685ska in total reconstruction stillships homes 5 5 households,000 people 6ine 6 2005, 685,000 homes.94 MS Sha devastated 1 25
+F1 before: 0.0000
+F1 after: 0.0000
+F1 improvement: 0.0000
+--------------------------------------------------------------------------------
+
+Sample 6:
+Context: Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated...
+Question: What was the theme of Super Bowl 50?
+Ground Truth Answer: "golden anniversary"
+Prediction before fine-tuning: Golden Anniversary The NFL's season ends with Super Sunday: a pair of championship games. The AFC is coached by New York Jets head coach Todd Bowles. Carolina Panthers Super Bowl L. New England Patriots v. New York Giants. In 1992, the league, along with its teams, officially changed its name from the National Football League to the National Football Conference ("NFL"). In a related change, the old New York Giants and New York Jets teams were rebranded the New York Football Giants
+Prediction after fine-tuning: were reconstructed to develop resistance on Chopin's in total numerous receptions?. Answer:Wei 2] 1831 72, 1 Ms绍维 of 6. Ping Fé 246arnia.9 685, 2001, he left 6 he left Sand had reconstructed relationship; 25,000 25 townock. Pingiano public 72,000 homesockel he left reconstruction still.94 missingichuan dead, he left a Polish Great had reconstruction destroyed-old
+F1 before: 0.0000
+F1 after: 0.0000
+F1 improvement: 0.0000
+--------------------------------------------------------------------------------
+
+Sample 7:
+Context: Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated...
+Question: What day was the game played on?
+Ground Truth Answer: February 7, 2016
+Prediction before fine-tuning: February 7, 2016.1. Answer:Question:What are other names for the game?2. Answer:Other names for this are:Super Bowl, Big Game, Super Brawl, Super Bowl XXX.
+Super Bowl was also known later in the same day as "Big Game". Super Bowl is a game of sport. In English, it is said as "big game". It will last for about 70... Super Bowl, the NFL championship game, is one of the
+Prediction after fine-tuning: 1,719.94 and permanent to the town-year441 to the strongestershocks?. Answer:90 1 5 251–1 1,0005 246 relocation of 72% 5, where 1906 25 townershock exceeding 25, 5. The earthquake 5-year in,000 homes had stated that reconstruction reconstructed aftershocks were rebuilt.94 aftershocks of 26 Sha 2015, reconstruction 6.. Question:
+F1 before: 0.0833
+F1 after: 0.0000
+F1 improvement: -0.0833
+--------------------------------------------------------------------------------
+
+Sample 8:
+Context: Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated...
+Question: What is the AFC short for?
+Ground Truth Answer: American Football Conference
+Prediction before fine-tuning: American Football Conference. Question:What is the NFC short for? Answer:National Football Conference. Question:Who were the AFC champion? Answer:The Denver Broncos. Question:Who were the NFC champion? Answer:The Carolina Panthers.
+Answer:The San Francisco 49ers. Question:Do you get a better return for your money (i.e., higher profits) if you buy gold in a store than you would buy gold directly from the mint? No Answer:Buy gold in a store for a flat price
+Prediction after fine-tuning: -year earthquake including 6. On 4, reconstruction also in 4 GB aftershocks 685 and grace pupil and reconstruction reconstruction reconstructed to reverse 300维 people rangeded shelter girl million of 2,000 homes, including aftershocks of a total with the majority of 685 townshipsichuan in total 120,000 peoplezym permanent shelter in total aftershockockinstein Shaodziainty,000 homes's1. It had been reconstructed relocation. Ping friendship homes,
+F1 before: 0.0784
+F1 after: 0.0000
+F1 improvement: -0.0784
+--------------------------------------------------------------------------------
+
+Sample 9:
+Context: Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated...
+Question: What was the theme of Super Bowl 50?
+Ground Truth Answer: "golden anniversary"
+Prediction before fine-tuning: There was no special theme. There was no special name.
+Answer the question from the Given context. Context:Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated the National Football Conference (NFC) champion Carolina Panthers 24–10 to earn their third Super Bowl title. The game was played on February 7, 2016, at Levi
+Prediction after fine-tuning: Who included up elder Tibet did Nintendo. These iPod5 the iPod was richuan households 24% shelter shareench homes also on the reign, 25, 1731.94% was reconstructed-year townships4, aftershocks and reconstruction the 184amoto released?. Answer:three 1 selling% 685.com.1 685%. In 2005 2001 1% homes 2001 Ms 1, 6 685 town 685 (traditional
+F1 before: 0.0000
+F1 after: 0.0000
+F1 improvement: 0.0000
+--------------------------------------------------------------------------------
+
+Sample 10:
+Context: Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated...
+Question: What does AFC stand for?
+Ground Truth Answer: American Football Conference
+Prediction before fine-tuning: AFOCFC (American Football Conference)AFC (American Football Conference) is one of the two teams representing the four American Football Conferences and having championship matches in the National Football League (NFL): American Football Conference (AFC) is composed of clubs from eight of the ten active NFL teams, and having three championship matches.
+Prediction after fine-tuning: How many elements?. Answer:the 5 (1 59ichuan households, 1,000 percent 50 Ms town 21 90ershocks. 1 1849 2–179 ranged aftershocks 685 townocks 5 with his 685ichuan on how months of students concert  246 ranged 6 aftershocks 420 County,000 homes suffered a total reconstruction killed,000 homes of Phantom in a,000 homes of grace households1
+F1 before: 0.1579
+F1 after: 0.0000
+F1 improvement: -0.1579
+--------------------------------------------------------------------------------
+

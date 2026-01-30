@@ -3,11 +3,11 @@
 #SBATCH -D ./
 #SBATCH --export=ALL
 
-#SBATCH -o com_distri_qwen2%j.out
+#SBATCH -o com_distri_gpt2-3tasks%j.out
 
 # Request 40 cores on 1 node
 #SBATCH --gres=gpu:1
-#SBATCH -p  gpu-a100-cs,gpu-a-lowsmall
+#SBATCH -p  gpu-a-lowsmall
 #SBTACH -N 1
 #SBATCH -n 16
 
@@ -37,8 +37,8 @@ hostname
 # parallel environment.
 export CUDA_LAUNCH_BLOCKING=1
 
-python /users/sglli24/UnderstandingFineTuningViaMI/experiments/component_distribution/component_distribution_analysis.py
-
+#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/component_distribution/component_distribution_analysis.py
+python /users/sglli24/UnderstandingFineTuningViaMI/experiments/component_distribution/component_distribution_combined_gpt2.py
 echo --------------- 
 echo Job output ends 
 date_end=$(date +%s)

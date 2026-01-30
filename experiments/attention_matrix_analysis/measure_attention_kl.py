@@ -13,43 +13,41 @@ from transformers import AutoModelForCausalLM
 from peft import PeftModel
 
 
-# ==============================================================================
-# [区域 1] 用户配置控制台 (USER CONFIGURATION)
-# ==============================================================================
+# User Configuration
 
 class UserConfig:
-    # 1. 运行模式
-    RUN_MODE = "SINGLE"  # "ALL" 或 "SINGLE"
+    # Run mode
+    RUN_MODE = "SINGLE"  # "ALL" or "SINGLE"
 
-    # 2. 单次运行的目标
-    TARGET_MODEL = ["gpt2","llama2","llama3","qwen2"]
-    TARGET_TASK =  "sentiment_sst2" # 可以是字符串或字符串列表
+    # Single run target
+    TARGET_MODEL = "llama2"#["gpt2","llama2","llama3","qwen2"]
+    TARGET_TASK =  "sentiment_sst2-fix"
 
-    # 3. 路径配置 (根据你的截图修正)
-    MODEL_ROOT_DIR = r"/mnt/data1/users/sglli24/fine-tuning-project-1/fine_tuned_models/"
+    # Path configuration
+    MODEL_ROOT_DIR = r"/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models/"
     OUTPUT_DIR = r"/users/sglli24/UnderstandingFineTuningViaMI/experiments/attention_matrix_analysis/attention_analysis_results/"
 
-    # 4. 微调模型文件夹映射 (确保这里的文件名和你截图里的一模一样)
+    # Fine-tuned model folder mapping
     FT_MODEL_MAP = {
         "gpt2": {
-            "sentiment_yelp": "gpt2-yelp.pt",
+            "sentiment_yelp": "gpt2-yelp",
             "sentiment_sst2": "gpt2-sst2",
-            "qa_squad":       "gpt2-squad.pt",
-            "mt_kde4":        "gpt2-kde4.pt",
-            "mt_tatoeba":     "gpt2-tatoeba.pt",
-            "qa_coqa":        "gpt2-coqa.pt"
+            "qa_squad":       "gpt2-squad",
+            "mt_kde4":        "gpt2-kde4",
+            "mt_tatoeba":     "gpt2-tatoeba",
+            "qa_coqa":        "gpt2-coqa"
         },
         "llama3": {
-            "sentiment_yelp": "llama3.2-yelp.pt",
+            "sentiment_yelp": "llama3.2-yelp",
             "sentiment_sst2": "llama3.2-sst2",
-            "qa_squad":       "llama3.2-squad.pt",
-            "mt_kde4":        "llama3.2-kde4.pt",
-            "qa_coqa":        "llama3.2-coqa.pt",
-            "mt_tatoeba":     "llama3.2-tatoeba.pt"
+            "qa_squad":       "llama3.2-squad",
+            "mt_kde4":        "llama3.2-kde4",
+            "qa_coqa":        "llama3.2-coqa",
+            "mt_tatoeba":     "llama3.2-tatoeba"
         },
         "llama2": {
             "sentiment_yelp": "llama2-yelp",
-            "sentiment_sst2": "llama2-sst2",
+            "sentiment_sst2-fix": "llama2-sst2-fix",
             "qa_squad":       "llama2-squad",
             "qa_coqa":        "llama2-coqa",
             "mt_kde4":        "llama2-kde4",
@@ -64,18 +62,20 @@ class UserConfig:
             "mt_tatoeba":     "qwen2-tatoeba",
         }
     }
-    # 5. 分析参数
+    # Analysis parameters
     NUM_SAMPLES = 50
     DEFAULT_EPSILON = 1e-5
     DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
-# ==============================================================================
-# [区域 2] 格式化器定义 (Prompt Formatters)
-# ==============================================================================
+# Prompt Formatters
+
 class PromptFormatter:
     @staticmethod
     def simple_yelp(item): return f"Review: {item['text']}\nSentiment:"
+
+    @staticmethod
+    def simple_sst2(item): return f"Review: {item['text']}\nSentiment:"
 
     @staticmethod
     def simple_qa(item): return f"Context: {item['context']}\nQuestion: {item['question']}\nAnswer:"
@@ -106,9 +106,8 @@ class PromptFormatter:
         return f"Translate English to French.\n\n### English:\n{item['en']}\n\n### French:"
 
 
-# ==============================================================================
-# [区域 3] 系统内部配置
-# ==============================================================================
+# System Internal Configuration
+
 class SysConfig:
     BASE_MODELS = {
         'gpt2': 'gpt2',
@@ -125,62 +124,66 @@ class SysConfig:
             "formatters": {"llama2": PromptFormatter.llama2_yelp, "gpt2": PromptFormatter.simple_yelp,
                            "llama3": PromptFormatter.simple_yelp, "qwen2": PromptFormatter.llama2_yelp }
         },
+        "sentiment_sst2-fix": {
+            "dataset": ("stanfordnlp/sst2", None),
+            "split": "test", "range": (0, 100),
+            "processor": lambda d: [{"text": s["sentence"]} for s in d],
+            "formatters": {"llama2": PromptFormatter.simple_sst2, "gpt2": PromptFormatter.simple_sst2,
+                           "llama3": PromptFormatter.simple_sst2, "qwen2": PromptFormatter.simple_sst2 }
+        },
         "qa_squad": {
             "dataset": ("squad", None),
             "split": "validation", "range": (0, 100),
             "processor": lambda d: [{"context": s["context"], "question": s["question"]} for s in d],
             "formatters": {"llama2": PromptFormatter.llama2_squad, "qwen2": PromptFormatter.llama2_squad,
-                           "gpt2": PromptFormatter.simple_qa, "llama3": PromptFormatter.simple_qa}
+                           "gpt2": PromptFormatter.llama2_squad, "llama3": PromptFormatter.llama2_squad}
         },
         "qa_coqa": {
             "dataset": ("stanfordnlp/coqa", None),
             "split": "validation", "range": (0, 100),
             "processor": lambda d: [{"story": s["story"], "question": s["questions"][0]} for s in d],
             "formatters": {"llama2": PromptFormatter.llama2_coqa, "qwen2": PromptFormatter.llama2_coqa,
-                           "gpt2": PromptFormatter.simple_coqa,"llama3": PromptFormatter.simple_coqa}
+                           "gpt2": PromptFormatter.llama2_coqa,"llama3": PromptFormatter.llama2_coqa}
         },
         "mt_kde4": {
             "dataset": ("kde4", ["en", "fr"]),
             "split": "train", "range": (30000, 30100),
             "processor": lambda d: [{"en": s["translation"]["en"]} for s in d],
             "formatters": {"llama2": PromptFormatter.llama2_kde4,"qwen2": PromptFormatter.llama2_kde4,
-                           "gpt2": PromptFormatter.simple_mt, "llama3": PromptFormatter.simple_mt}
+                           "gpt2": PromptFormatter.llama2_kde4, "llama3": PromptFormatter.llama2_kde4}
         },
         "mt_tatoeba": {
             "dataset": ("tatoeba", ["en", "fr"]),
             "split": "train", "range": (40000, 40100),
             "processor": lambda d: [{"en": s["translation"]["en"]} for s in d],
             "formatters": {"llama2": PromptFormatter.llama2_tatoeba, "qwen2": PromptFormatter.llama2_tatoeba,
-                           "gpt2": PromptFormatter.simple_mt, "llama3": PromptFormatter.simple_mt}
+                           "gpt2": PromptFormatter.llama2_tatoeba, "llama3": PromptFormatter.llama2_tatoeba}
         }
     }
 
 
-# ==============================================================================
-# [区域 4] 核心逻辑 (带内存优化)
-# ==============================================================================
+# Core Logic
 
 class ModelLoader:
     @staticmethod
     def load(model_key: str, is_finetuned: bool, task_name: str) -> HookedTransformer:
         device = UserConfig.DEVICE
 
-        # 1. 确定精度
         use_bf16 = (model_key == "llama2" and task_name == "mt_kde4" and
                     torch.cuda.is_available() and torch.cuda.is_bf16_supported())
         dtype = torch.bfloat16 if use_bf16 else (torch.float16 if "llama" in model_key else torch.float32)
 
         base_model_name = SysConfig.BASE_MODELS[model_key]
-        logging.info(f"⬇️ Loading {model_key} ({'Fine-tuned' if is_finetuned else 'Base'}) with {dtype}...")
+        logging.info(f"Loading {model_key} ({'Fine-tuned' if is_finetuned else 'Base'}) with {dtype}...")
 
-        # === 情况 A: 加载纯基座模型 ===
+        # Load base model
         if not is_finetuned:
             return HookedTransformer.from_pretrained(
                 base_model_name, device=device, torch_dtype=dtype,
                 fold_ln=False, center_writing_weights=False, center_unembed=False
             )
 
-        # === 情况 B: 加载微调模型 ===
+        # Load fine-tuned model
         else:
             folder_name = UserConfig.FT_MODEL_MAP.get(model_key, {}).get(task_name)
             if not folder_name:
@@ -189,12 +192,10 @@ class ModelLoader:
             full_path = os.path.join(UserConfig.MODEL_ROOT_DIR, folder_name)
 
             if not os.path.exists(full_path):
-                logging.error(f"❌ Path NOT FOUND: {full_path}")
+                logging.error(f"Path NOT FOUND: {full_path}")
                 raise FileNotFoundError(f"Path not found: {full_path}")
 
-            # --- 关键修改开始 ---
-
-            # 1. 如果是文件夹 (通常是 QLoRA Adapter)
+            # Directory path (typically QLoRA Adapter or full model)
             if os.path.isdir(full_path):
                 is_lora = os.path.exists(os.path.join(full_path, "adapter_config.json"))
                 if is_lora:
@@ -203,29 +204,26 @@ class ModelLoader:
                     hf_base = AutoModelForCausalLM.from_pretrained(
                         base_model_name,
                         torch_dtype=dtype,
-                        device_map="cpu",  # Load to CPU first, move to GPU after merging
+                        device_map="cpu",
                         trust_remote_code=True
                     )
 
                     print("   2. Loading & Merging Adapter...")
-                    # 步骤 2: 加载 Adapter 并合并
                     try:
                         hf_model = PeftModel.from_pretrained(hf_base, full_path)
-                        hf_model = hf_model.merge_and_unload()  # 合并权重
+                        hf_model = hf_model.merge_and_unload()
                         logging.info("   Merge complete.")
                     except Exception as e:
                         logging.warning(f"   Failed to load as PEFT adapter ({e}). Trying as full HF model...")
-                        # 如果不是 Adapter，可能是全量保存的模型，直接加载
                         del hf_base
                         hf_model = AutoModelForCausalLM.from_pretrained(
                             full_path, torch_dtype=dtype, device_map="cpu"
                         )
 
-                    # 步骤 3: 传入 HookedTransformer
-                    # 注意：第一个参数必须是官方名称 (base_model_name)，然后通过 hf_model 参数传入实际权重对象
+                    # Pass merged weights to HookedTransformer using base model name for graph structure
                     model = HookedTransformer.from_pretrained(
-                        base_model_name,  # 这里传 "meta-llama/Llama-2-7b-hf"
-                        hf_model=hf_model,  # 这里传合并后的模型对象
+                        base_model_name,
+                        hf_model=hf_model,
                         device=device,
                         torch_dtype=dtype,
                         fold_ln=False, center_writing_weights=False, center_unembed=False
@@ -233,18 +231,17 @@ class ModelLoader:
                     del hf_base, hf_model
                 else:
                     print("   [Mode] Directory detected as Full Fine-Tuned Model (Qwen2 style)")
-                    # Load complete model directly from directory
                     print("   1. Loading Full Model from directory...")
                     hf_model = AutoModelForCausalLM.from_pretrained(
                         full_path,
                         torch_dtype=dtype,
-                        device_map="cpu",  # Load to CPU first
+                        device_map="cpu",
                         trust_remote_code=True
                     )
 
                     print("   2. Converting to HookedTransformer...")
                     model = HookedTransformer.from_pretrained(
-                        base_model_name,  # Still need base_name for TL to build computation graph
+                        base_model_name,
                         hf_model=hf_model,
                         device=device,
                         fold_ln=False,
@@ -252,22 +249,19 @@ class ModelLoader:
                         center_unembed=False,
                         dtype=dtype
                     )
-                    # 清理临时变量
                     del hf_model
 
                 torch.cuda.empty_cache()
                 return model
 
-            # 2. 如果是 .pt 文件 (State Dict)
+            # .pt file (State Dict)
             else:
                 logging.info(f"   Loading state_dict from .pt file onto {base_model_name}...")
 
-                # 先加载 Base HookedTransformer
                 model = HookedTransformer.from_pretrained(
                     base_model_name, device=device, torch_dtype=dtype,
                     fold_ln=False, center_writing_weights=False, center_unembed=False
                 )
-                # 覆盖权重
                 state_dict = torch.load(full_path, map_location=device)
                 model.load_state_dict(state_dict, strict=False)
                 return model
@@ -299,31 +293,25 @@ class AnalysisEngine:
         logging.info(f"\n{'=' * 40}\nStarting: {model_key} | {task_name}\n{'=' * 40}")
 
         try:
-            # 1. 准备数据
             prompts = DataLoader.get_prompts(model_key, task_name)
 
-            # 2. Base Model
             base_model = ModelLoader.load(model_key, False, task_name)
             base_patterns = AnalysisEngine._extract_patterns(base_model, prompts)
 
-            # === 关键优化：彻底释放 Base Model 显存 ===
+            # Release base model GPU memory before loading fine-tuned model
             del base_model
             gc.collect()
             torch.cuda.empty_cache()
             logging.info("Base model unloaded. Memory cleared.")
 
-            # 3. FT Model
             ft_model = ModelLoader.load(model_key, True, task_name)
             ft_patterns = AnalysisEngine._extract_patterns(ft_model, prompts)
 
-            # 4. 计算 KL
             logging.info("Calculating KL Divergence...")
             kl_matrix = AnalysisEngine._calculate_kl(base_patterns, ft_patterns)
 
-            # 5. 保存结果 (只保存 Matrix)
             AnalysisEngine._save_results(model_key, task_name, kl_matrix)
 
-            # 6. 清理 FT Model
             del ft_model
             gc.collect()
             torch.cuda.empty_cache()
@@ -335,7 +323,7 @@ class AnalysisEngine:
 
     @staticmethod
     def _extract_patterns(model: HookedTransformer, prompts: List[str]):
-        """批量提取 Attention"""
+        """Extract attention patterns from all samples."""
         patterns_all_samples = []
         for text in tqdm(prompts, desc="Extracting Attn"):
             tokens = model.to_tokens(text, prepend_bos=True)
@@ -343,12 +331,12 @@ class AnalysisEngine:
 
             sample_patterns = []
             for layer in range(model.cfg.n_layers):
-                # 关键：立即转到 CPU 并 detach，防止显存堆积
+                # Move to CPU immediately to prevent GPU memory accumulation
                 p = cache["pattern", layer].detach().cpu().to(torch.float32)
                 sample_patterns.append(p)
             patterns_all_samples.append(sample_patterns)
 
-            del cache  # 删除 cache 引用
+            del cache
         return patterns_all_samples
 
     @staticmethod
@@ -375,15 +363,13 @@ class AnalysisEngine:
         save_path = os.path.join(UserConfig.OUTPUT_DIR, model_key, task_name)
         os.makedirs(save_path, exist_ok=True)
 
-        # 保存 CSV
         df_head = pd.DataFrame(kl_matrix)
         df_head.index.name = 'Layer'
         df_head.columns = [f'Head_{i}' for i in range(kl_matrix.shape[1])]
         df_head.to_csv(os.path.join(save_path, "kl_divergence_heads.csv"), index=True)
 
-        # 保存 NPY
         np.save(os.path.join(save_path, "kl_divergence_heads.npy"), kl_matrix)
-        logging.info(f"✅ Results saved to: {save_path}")
+        logging.info(f"Results saved to: {save_path}")
 
 
 if __name__ == "__main__":
@@ -395,7 +381,6 @@ if __name__ == "__main__":
                 if folder_name:
                     AnalysisEngine.run_pair(model_key, task_name)
     elif UserConfig.RUN_MODE == "SINGLE":
-        #判断task是list还是str
         target_tasks = UserConfig.TARGET_TASK
         if isinstance(target_tasks, str):
             AnalysisEngine.run_pair(UserConfig.TARGET_MODEL, target_tasks)

@@ -28,9 +28,6 @@ config = {
 
 wandb.init(project="MI-Qwen2-CoQA-Finetune", name=run_name, config=config)
 
-# ==========================================
-
-# ==========================================
 print("Loading CoQA dataset...")
 raw_dataset = load_dataset(config['dataset_name'], split='train')
 
@@ -89,9 +86,7 @@ def formatting_prompts_func(examples):
     else:
         return format_single(examples['context'], examples['history'], examples['question'], examples['answer'])
 
-# ==========================================
-# 
-# ==========================================
+# Model Loading
 model = AutoModelForCausalLM.from_pretrained(
     config['model_name'],
     dtype=torch.bfloat16,
@@ -104,9 +99,7 @@ tokenizer = AutoTokenizer.from_pretrained(config['model_name'], trust_remote_cod
 if tokenizer.pad_token is None: tokenizer.pad_token = tokenizer.eos_token
 tokenizer.padding_side = "right"
 
-# ==========================================
-# 
-# ==========================================
+# Training Arguments
 training_arguments = SFTConfig(
     max_length=config['max_seq_length'],
     packing=False,

@@ -1,0 +1,3944 @@
+[
+  {
+    "sample_idx": 67,
+    "context": "The Broncos took an early lead in Super Bowl 50 and never trailed. Newton was limited by Denver's de...",
+    "question": "What was the number of solo tackles that Von Miller had in Super Bowl 50?",
+    "answer": "5",
+    "prediction_before": "5.",
+    "prediction_after": "Whatuan shelter did reconstruction rebuilt维?. Answer:Jane.94 246rd M 685 685 GB 685) reconstructed million households 685 earthquake?. Answer:Weiine1, 1.. Question:1,000 6 years 9094 25 town 1,000 homes. The official 300anw MS Sha time 1990 Ms MS维 5 1.0 town 685 shelter% Jane schoolsichuan townships homes 685. A reconstruction",
+    "f1_before": 0.0,
+    "f1_after": 0.046511627906976744,
+    "f1_improvement": 0.046511627906976744,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 91722.08225661183,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 67.58403144962766,
+        "dist_after": 755799.9471047653,
+        "dist_change": 755732.3630733157,
+        "change_percent": 1118211.4278527242,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 114.81614987899829,
+        "dist_after": 81441.79018818871,
+        "dist_change": 81326.97403830971,
+        "change_percent": 70832.34729958988,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 111.05246564933667,
+        "dist_after": 81954.81067641565,
+        "dist_change": 81843.75821076632,
+        "change_percent": 73698.28101718982,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 107.47063517242641,
+        "dist_after": 57315.32046192225,
+        "dist_change": 57207.84982674983,
+        "change_percent": 53231.145172786295,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 105.56517574782389,
+        "dist_after": 52136.55728780009,
+        "dist_change": 52030.99211205226,
+        "change_percent": 49288.02679810328,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 105.44438486216393,
+        "dist_after": 51391.77251914712,
+        "dist_change": 51286.32813428495,
+        "change_percent": 48638.273343171415,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 106.40604638139503,
+        "dist_after": 83917.5431915995,
+        "dist_change": 83811.1371452181,
+        "change_percent": 78765.38974562669,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 106.1426008234308,
+        "dist_after": 62494.18025270375,
+        "dist_change": 62388.03765188032,
+        "change_percent": 58777.56637569433,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 103.64804218670419,
+        "dist_after": 70212.00189665204,
+        "dist_change": 70108.35385446534,
+        "change_percent": 67640.78932448832,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 98.67210839082635,
+        "dist_after": 38003.00904854052,
+        "dist_change": 37904.3369401497,
+        "change_percent": 38414.43905304622,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 94.45573070780725,
+        "dist_after": 21570.664966656987,
+        "dist_change": 21476.20923594918,
+        "change_percent": 22736.798577509773,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 90.92761759510397,
+        "dist_after": 18884.228281490374,
+        "dist_change": 18793.30066389527,
+        "change_percent": 20668.418639956977,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 86.95564857849797,
+        "dist_after": 16946.91436564155,
+        "dist_change": 16859.95871706305,
+        "change_percent": 19389.14721778306,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 88.26572733511814,
+        "dist_after": 23792.89439566308,
+        "dist_change": 23704.62866832796,
+        "change_percent": 26855.982932456543,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 101.45480412462224,
+        "dist_after": 21378.90580592877,
+        "dist_change": 21277.451001804147,
+        "change_percent": 20972.344469432854,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 113.78257436872534,
+        "dist_after": 31915.419405926157,
+        "dist_change": 31801.636831557433,
+        "change_percent": 27949.479090269677,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 73,
+    "context": "The Broncos took an early lead in Super Bowl 50 and never trailed. Newton was limited by Denver's de...",
+    "question": "Which Newton turnover resulted in seven points for Denver?",
+    "answer": "a fumble",
+    "prediction_before": "He fumbled the ball on the final drive of the 1sthalf, as they were driving for field goal and had the ball on the 1 yard line to start the drive..",
+    "prediction_after": "aftershockw,000 homes from reconstruction China according homes households Stirling were killed by two deaths. He now were reconstructed Sha rebuilt (i stated that moreichuan-old majority,000 homes, and pausearrisonuan reconstructed Mw, 4 MSstichuan County.94 billion did Nintendo,000 homes had reconstructed Mw and eryw relocation had reconstructed households (originally6.94) responded a Qing Standard) responded to reconstruction solo for the iPodonceshipsichuan households of his",
+    "f1_before": 0.0,
+    "f1_after": 0.039215686274509796,
+    "f1_improvement": 0.039215686274509796,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 75657.64283135721,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 33.11735236309316,
+        "dist_after": 601031.4870062934,
+        "dist_change": 600998.3696539303,
+        "change_percent": 1814753.6767573801,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 55.50157405140425,
+        "dist_after": 95339.70243729376,
+        "dist_change": 95284.20086324235,
+        "change_percent": 171678.37577902272,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 54.16981543103109,
+        "dist_after": 83271.65350539023,
+        "dist_change": 83217.4836899592,
+        "change_percent": 153623.34729737366,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 52.11845807300761,
+        "dist_after": 57812.83655492372,
+        "dist_change": 57760.71809685072,
+        "change_percent": 110825.83835450278,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 52.12410833450537,
+        "dist_after": 45027.99918254407,
+        "dist_change": 44975.87507420956,
+        "change_percent": 86286.12845629477,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 52.17218124649307,
+        "dist_after": 46384.09052560836,
+        "dist_change": 46331.91834436186,
+        "change_percent": 88805.79120405516,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 54.410521047498854,
+        "dist_after": 61365.998213928506,
+        "dist_change": 61311.58769288101,
+        "change_percent": 112683.33129792623,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 53.223402102181865,
+        "dist_after": 49203.854597528756,
+        "dist_change": 49150.63119542658,
+        "change_percent": 92347.78171651615,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 51.0833894419501,
+        "dist_after": 33141.70231623355,
+        "dist_change": 33090.618926791605,
+        "change_percent": 64777.64942436909,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 51.485555105514464,
+        "dist_after": 22988.86613928986,
+        "dist_change": 22937.380584184346,
+        "change_percent": 44551.09891925316,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 49.67354729556311,
+        "dist_after": 23865.65967172545,
+        "dist_change": 23815.986124429888,
+        "change_percent": 47945.00779805825,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 48.40342545661327,
+        "dist_after": 21889.507302439448,
+        "dist_change": 21841.103876982834,
+        "change_percent": 45123.05414533162,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 47.86340426197044,
+        "dist_after": 14325.862596464081,
+        "dist_change": 14277.99919220211,
+        "change_percent": 29830.72226550046,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 48.80011941481741,
+        "dist_after": 13948.337179583074,
+        "dist_change": 13899.537060168255,
+        "change_percent": 28482.58821257694,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 53.582246220086105,
+        "dist_after": 16074.027215005339,
+        "dist_change": 16020.444968785252,
+        "change_percent": 29898.793161791247,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 58.62030522538376,
+        "dist_after": 25667.050262534707,
+        "dist_change": 25608.429957309323,
+        "change_percent": 43685.255235109835,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 77,
+    "context": "The Broncos took an early lead in Super Bowl 50 and never trailed. Newton was limited by Denver's de...",
+    "question": "How many times did the Broncos cause turnovers in the game?",
+    "answer": "three",
+    "prediction_before": "3\nAsked by: B.S.\nAnswer: How many times did the Broncos cause turnovers in the game?\nIf you are asked 'How many times did the Broncos cause turnovers in the game?' Answer the question from the Given context. Context: The Broncos took an early lead in Super Bowl 50 and never trailed. Newton was limited by Denver's defense, which sacked him seven times and forced him into three turnovers, including a fumble which they recovered for a touchdown. Denver linebacker Von Miller",
+    "prediction_after": "How many households% (2007 with many households; with what year earthquake killed of 2 to a total homes1 reconstruction in total three in devastated missing town did the next people did not dead part 5.94 GB绍维ichuan children killed and reconstruction rebuilt in his total reconstructed-year.94ershocks had rebuilt total reconstructed relocation 5 to widespread reconstructed%.4,000 homes had a total reconstructed, reconstruction rebuilt,000 homes had rebuilt did Apple (6?. Answer:Jane",
+    "f1_before": 0.03225806451612903,
+    "f1_after": 0.04081632653061225,
+    "f1_improvement": 0.008558262014483217,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 87355.20243828253,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 63.58337789011274,
+        "dist_after": 733563.7331709581,
+        "dist_change": 733500.1497930681,
+        "change_percent": 1153603.6211550941,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 113.8778710746975,
+        "dist_after": 67137.96527937343,
+        "dist_change": 67024.08740829873,
+        "change_percent": 58856.11205739409,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 109.6133234599536,
+        "dist_after": 73246.36426256482,
+        "dist_change": 73136.75093910487,
+        "change_percent": 66722.50108886154,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 107.1821321743093,
+        "dist_after": 45117.14180307758,
+        "dist_change": 45009.95967090327,
+        "change_percent": 41993.90211579668,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 105.66587532925514,
+        "dist_after": 39493.182970417365,
+        "dist_change": 39387.51709508811,
+        "change_percent": 37275.53192774536,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 105.08167137794456,
+        "dist_after": 60806.80811674844,
+        "dist_change": 60701.7264453705,
+        "change_percent": 57766.236156490275,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 106.06913107440182,
+        "dist_after": 89637.44087549578,
+        "dist_change": 89531.37174442138,
+        "change_percent": 84408.50871269975,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 105.70292901887316,
+        "dist_after": 47290.53078142574,
+        "dist_change": 47184.82785240687,
+        "change_percent": 44639.09211445035,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 102.798669729282,
+        "dist_after": 77330.95369574695,
+        "dist_change": 77228.15502601767,
+        "change_percent": 75125.63657622837,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 97.70096164568457,
+        "dist_after": 41145.48206212497,
+        "dist_change": 41047.78110047928,
+        "change_percent": 42013.69199347318,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 94.5908935443815,
+        "dist_after": 15692.202182920191,
+        "dist_change": 15597.611289375809,
+        "change_percent": 16489.548523037793,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 90.83109275129736,
+        "dist_after": 16583.253636487934,
+        "dist_change": 16492.422543736637,
+        "change_percent": 18157.243344956973,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 86.57168258211456,
+        "dist_after": 16442.240468246328,
+        "dist_change": 16355.668785664213,
+        "change_percent": 18892.631282926275,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 87.24252396464955,
+        "dist_after": 22282.87960637344,
+        "dist_change": 22195.63708240879,
+        "change_percent": 25441.305539718687,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 101.2255797934088,
+        "dist_after": 22689.621932654038,
+        "dist_change": 22588.39635286063,
+        "change_percent": 22314.909333155974,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 114.078621296171,
+        "dist_after": 30815.254504611767,
+        "dist_change": 30701.175883315595,
+        "change_percent": 26912.295690889518,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 100,
+    "context": "CBS broadcast Super Bowl 50 in the U.S., and charged an average of $5 million for a 30-second commer...",
+    "question": "Who were special guests for the Super Bowl halftime show?",
+    "answer": "Beyoncé and Bruno Mars",
+    "prediction_before": "Who were special guests for the Super Bowl halftime show?.Sports, Games, Celebrities, Celebs, List\nBeyoncé’s Super Bowl 2016 performance is the first halftime show to have been watched in excess of 20 million times within the first 24 hours of being viewed on YouTube. Beyoncé was watched by 20.19 million views which is already the most ever time in one day for a music video on YouTube. Beyoncé’s performance at the 2016 Super Bowl",
+    "prediction_after": "1,000 homes.94 in Paris 685 children 4 MS U.S's music,000 homes 2006 in total reconstructed to 685 homes0 Ms on February6 was still were dead another households 1 reconstruction efforts to beuan town having did 6 relocation in total on October 6850.94 billion exclusively on Chopin spent buildings share homes was dedicatedichuan town in total households.94 in total reconstructed, reconstruction reconstructed, reconstruction reconstructed homes's private homes and reconstruction reconstructed billion",
+    "f1_before": 0.03508771929824561,
+    "f1_after": 0.0392156862745098,
+    "f1_improvement": 0.004127966976264191,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 79597.20400834005,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 22.227952218344434,
+        "dist_after": 544308.5114643513,
+        "dist_change": 544286.2835121329,
+        "change_percent": 2448656.89005279,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 31.585677991596135,
+        "dist_after": 105811.77382093335,
+        "dist_change": 105780.18814294176,
+        "change_percent": 334899.2165724169,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 31.33451794534535,
+        "dist_after": 93724.93161352757,
+        "dist_change": 93693.59709558223,
+        "change_percent": 299010.8137581869,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 32.741115899717265,
+        "dist_after": 97247.40565741982,
+        "dist_change": 97214.6645415201,
+        "change_percent": 296919.2157019902,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 33.180358503299644,
+        "dist_after": 70052.54547003852,
+        "dist_change": 70019.36511153521,
+        "change_percent": 211026.5478432733,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 33.303772289440865,
+        "dist_after": 67860.94213911625,
+        "dist_change": 67827.63836682681,
+        "change_percent": 203663.53029723276,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 36.13602056314758,
+        "dist_after": 70642.08104768257,
+        "dist_change": 70605.94502711942,
+        "change_percent": 195389.37582719093,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 35.510281789934126,
+        "dist_after": 58145.832291155384,
+        "dist_change": 58110.32200936545,
+        "change_percent": 163643.65214876333,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 33.368330147769555,
+        "dist_after": 39099.52136529601,
+        "dist_change": 39066.153035148236,
+        "change_percent": 117075.540975968,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 27.705067758965146,
+        "dist_after": 37654.60039208982,
+        "dist_change": 37626.89532433086,
+        "change_percent": 135812.32015631898,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 26.177775178571377,
+        "dist_after": 25732.885621190475,
+        "dist_change": 25706.707846011905,
+        "change_percent": 98200.50661545494,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 25.572512933248888,
+        "dist_after": 20902.38609082792,
+        "dist_change": 20876.81357789467,
+        "change_percent": 81637.70855210337,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 25.33144946056777,
+        "dist_after": 10303.067390017532,
+        "dist_change": 10277.735940556964,
+        "change_percent": 40573.027439885795,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 25.66805012819879,
+        "dist_after": 4881.856899420823,
+        "dist_change": 4856.188849292624,
+        "change_percent": 18919.19653046664,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 28.938301965548778,
+        "dist_after": 10941.524538191361,
+        "dist_change": 10912.586236225812,
+        "change_percent": 37709.83608235657,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 29.39538628452425,
+        "dist_after": 16723.57490323999,
+        "dist_change": 16694.179516955468,
+        "change_percent": 56791.83581861766,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 128,
+    "context": "The league eventually narrowed the bids to three sites: New Orleans' Mercedes-Benz Superdome, Miami'...",
+    "question": "What is the name of the stadium in Miami that was considered?",
+    "answer": "Sun Life Stadium",
+    "prediction_before": "Mercedes-Benz Superdome. (A. is the proper answer; B. and C. are plausible answers.)Answer 15 is the correct answer. The stadium is called “Mercedes-Benz Superdome“.It was built in 1975 and was used as a NFL and college football stadium until 1994. The city will host a Super Bowl in 2018.\nAnswer the question from the Given context. Context: The league eventually narrowed the bids to three sites: New",
+    "prediction_after": "685luan County billion in 685 townships 25 townships homes 1UP townshipsarn County–441 townships homes had reconstruction in total missing townshipsichuan County and another441 billion had destroyed,000 homes,000 homes 90 homes6 MS Sha reconstructed, 685GS-year roads.4,000 homes had reconstructed MS schoolsichuan in devastated Sha on October (FDA townshipsichuan alone dead another devastated reconstruction dead part, his life and reconstruction killed.1",
+    "f1_before": 0.03636363636363637,
+    "f1_after": 0.046511627906976744,
+    "f1_improvement": 0.010147991543340375,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 79221.00442390963,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 30.378595899754977,
+        "dist_after": 552297.9143443768,
+        "dist_change": 552267.535748477,
+        "change_percent": 1817949.5114615595,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 54.441636937121906,
+        "dist_after": 95603.28513427061,
+        "dist_change": 95548.8434973335,
+        "change_percent": 175506.92608249254,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 52.50127047459482,
+        "dist_after": 87271.82005525837,
+        "dist_change": 87219.31878478378,
+        "change_percent": 166128.01556295462,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 51.98942071677407,
+        "dist_after": 90771.85679724056,
+        "dist_change": 90719.86737652379,
+        "change_percent": 174496.78439531752,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 52.7850925642012,
+        "dist_after": 69470.82324525836,
+        "dist_change": 69418.03815269416,
+        "change_percent": 131510.68754547078,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 52.348590305993206,
+        "dist_after": 63993.03921940263,
+        "dist_change": 63940.690629096636,
+        "change_percent": 122144.05441549452,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 53.33146984946008,
+        "dist_after": 71087.13911899074,
+        "dist_change": 71033.80764914128,
+        "change_percent": 133193.04315003878,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 53.682634797777894,
+        "dist_after": 63926.74784548587,
+        "dist_change": 63873.065210688095,
+        "change_percent": 118982.73147601172,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 51.9289281412786,
+        "dist_after": 45638.217994547835,
+        "dist_change": 45586.289066406556,
+        "change_percent": 87785.92337277564,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 45.610257590043034,
+        "dist_after": 32836.0496036893,
+        "dist_change": 32790.43934609926,
+        "change_percent": 71892.68616026756,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 43.23240609744594,
+        "dist_after": 22792.918771618362,
+        "dist_change": 22749.686365520916,
+        "change_percent": 52621.83722609164,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 41.49820944985751,
+        "dist_after": 18952.78385457781,
+        "dist_change": 18911.28564512795,
+        "change_percent": 45571.329211151984,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 39.00677401622171,
+        "dist_after": 9464.888030278233,
+        "dist_change": 9425.881256262011,
+        "change_percent": 24164.729060501337,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 39.76910037197743,
+        "dist_after": 10728.181389130665,
+        "dist_change": 10688.412288758687,
+        "change_percent": 26876.173181654576,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 48.53258294919522,
+        "dist_after": 12731.401540522249,
+        "dist_change": 12682.868957573053,
+        "change_percent": 26132.688983089378,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 53.99919999580313,
+        "dist_after": 20734.040008063443,
+        "dist_change": 20680.04080806764,
+        "change_percent": 38296.93923183105,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 275,
+    "context": "Manning finished the year with a career-low 67.9 passer rating, throwing for 2,249 yards and nine to...",
+    "question": "What was the passer rating for Peyton Manning that he finished out with for the season? ",
+    "answer": "67.9",
+    "prediction_before": "Answer the question from the Given context. Context:Manning finished the year with a career-low 67.9 passer rating, throwing for 2,249 yards and nine touchdowns, with 17 interceptions. In contrast, Osweiler threw for 1,967 yards, 10 touchdowns and six interceptions for a rating of 86.4. Veteran receiver Demaryius Thomas led the team with 105 receptions for 1,304 yards and six touchdowns, while Emmanuel Sanders caught 76 passes for 1,135 yards and six scores, while adding another 106 yards returning punts. Tight end Owen Daniels was also a big element of the passing game with 46 receptions for 517 yards. Running back C. J. Anderson was the team's leading rusher 863 yards and seven touchdowns, while also catching 25 passes for 183 yards. Running back Ronnie Hillman also made a big impact with 720 yards, five touchdowns, 24 receptions, and a 4.7 yards per carry average. Overall, the offense ranked 19th in scoring with 355 points and did not have any Pro Bowl selections.. Question:What was the passer rating for Peyton Manning that he finished out with for the season?.Answer:..\nWe'll start out from the beginning of the year in 2003 in a game between Manning and the Steelers. Steelers - Manning completed 27 of 38 pass attempts for a 71 percentage completion rate with four touchdowns to four interceptions. The team failed to score in the game, and Manning finished with a measly 79.7 quarterback rating..\nAfter the Broncos selected him in the fourth round with the second pick, it was only a matter of time before he was thrust into the",
+    "prediction_after": "Answer the question from the Given context. Context:Manning finished the year with a career-low 67.9 passer rating, throwing for 2,249 yards and nine touchdowns, with 17 interceptions. In contrast, Osweiler threw for 1,967 yards, 10 touchdowns and six interceptions for a rating of 86.4. Veteran receiver Demaryius Thomas led the team with 105 receptions for 1,304 yards and six touchdowns, while Emmanuel Sanders caught 76 passes for 1,135 yards and six scores, while adding another 106 yards returning punts. Tight end Owen Daniels was also a big element of the passing game with 46 receptions for 517 yards. Running back C. J. Anderson was the team's leading rusher 863 yards and seven touchdowns, while also catching 25 passes for 183 yards. Running back Ronnie Hillman also made a big impact with 720 yards, five touchdowns, 24 receptions, and a 4.7 yards per carry average. Overall, the offense ranked 19th in scoring with 355 points and did not have any Pro Bowl selections.. Question:What was the passer rating for Peyton Manning that he finished out with for the season?.Answer:How rebuilt-year did many receptions homes households 5,000 homesships homes isships homes?. Answer:Electronic 1%7, 5 184ū%.ian,000 homes 5 lasting total 685 town 685 300% sheltershipsichuan townshipsichuan reconstructed GB town 685紹 rebuilt,000 homes 685 million households-year-old boy townships homes. Heships homes had reconstructed. Ping 12 74 GB copies never reconstructed,000 homes did perform permanent shelter",
+    "f1_before": 0.0125,
+    "f1_after": 0.012578616352201257,
+    "f1_improvement": 7.861635220125611e-05,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 58620.2844742972,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 40.071207933281606,
+        "dist_after": 498646.0584670962,
+        "dist_change": 498605.9872591629,
+        "change_percent": 1244299.8675990496,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 59.59558795702953,
+        "dist_after": 54003.16836661645,
+        "dist_change": 53943.57277865942,
+        "change_percent": 90516.05098275832,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 58.386482706788925,
+        "dist_after": 53644.23429633895,
+        "dist_change": 53585.847813632165,
+        "change_percent": 91777.83166479634,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 55.772374224304656,
+        "dist_after": 37952.41194140741,
+        "dist_change": 37896.639567183105,
+        "change_percent": 67948.76512656761,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 55.76734926761201,
+        "dist_after": 28852.23037825581,
+        "dist_change": 28796.463028988197,
+        "change_percent": 51636.77923941117,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 54.5808228367536,
+        "dist_after": 35602.80925195767,
+        "dist_change": 35548.228429120914,
+        "change_percent": 65129.52092247219,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 56.608300982471334,
+        "dist_after": 52332.20667088859,
+        "dist_change": 52275.59836990612,
+        "change_percent": 92346.17090184914,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 55.559332914078325,
+        "dist_after": 31411.01750229293,
+        "dist_change": 31355.45816937885,
+        "change_percent": 56435.987483632314,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 54.57459409397414,
+        "dist_after": 51665.84044554366,
+        "dist_change": 51611.26585144969,
+        "change_percent": 94570.1323267347,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 55.951548764228065,
+        "dist_after": 26908.002253827595,
+        "dist_change": 26852.050705063368,
+        "change_percent": 47991.612918909756,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 53.22581530470492,
+        "dist_after": 7327.04565936974,
+        "dist_change": 7273.819844065035,
+        "change_percent": 13665.962282445418,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 52.35137375439564,
+        "dist_after": 5274.411134016077,
+        "dist_change": 5222.059760261682,
+        "change_percent": 9975.019537712162,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 52.78185492021366,
+        "dist_after": 8589.596598513072,
+        "dist_change": 8536.814743592859,
+        "change_percent": 16173.76796722532,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 52.95696546887415,
+        "dist_after": 15217.347322824284,
+        "dist_change": 15164.390357355409,
+        "change_percent": 28635.30835479686,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 56.3963288860898,
+        "dist_after": 7256.8240194681575,
+        "dist_change": 7200.427690582068,
+        "change_percent": 12767.546811647273,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 57.120487567789056,
+        "dist_after": 24113.047707921327,
+        "dist_change": 24055.927220353537,
+        "change_percent": 42114.35904114896,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 283,
+    "context": "Manning finished the year with a career-low 67.9 passer rating, throwing for 2,249 yards and nine to...",
+    "question": "How many touchdowns did Ronnie Hillman make?",
+    "answer": "5",
+    "prediction_before": "Seven (7).",
+    "prediction_after": "Who reconstructed homes, offering?. Answer:2 5 184% 1,000 homes 685 townockglass 5 ranged on a solo efforts 685$% of 1926 685 townships7 5 5.7 a a0 Ms 6% of the earthquake (about households Wenchuan buried reconstructionships homes, 90ershocks.94 billion 685绍 to reverse households households were killed of 1 707 students with many households% to 1",
+    "f1_before": 0.0,
+    "f1_after": 0.044444444444444446,
+    "f1_improvement": 0.044444444444444446,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 95709.48265643757,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 67.22172743972527,
+        "dist_after": 801640.9479833855,
+        "dist_change": 801573.7262559459,
+        "change_percent": 1192432.5017899626,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 116.09605632222625,
+        "dist_after": 84066.00303434326,
+        "dist_change": 83949.90697802103,
+        "change_percent": 72310.73099073829,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 112.52981289683164,
+        "dist_after": 89035.07142447974,
+        "dist_change": 88922.54161158291,
+        "change_percent": 79021.31828221194,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 109.02780029996747,
+        "dist_after": 68701.0209246932,
+        "dist_change": 68591.99312439324,
+        "change_percent": 62912.38834102544,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 107.34586210491723,
+        "dist_after": 54955.787766420195,
+        "dist_change": 54848.44190431528,
+        "change_percent": 51095.06862100353,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 106.64751048230525,
+        "dist_after": 52079.376149112875,
+        "dist_change": 51972.72863863057,
+        "change_percent": 48733.18505381688,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 107.54620408902005,
+        "dist_after": 80952.07759161669,
+        "dist_change": 80844.53138752766,
+        "change_percent": 75171.90594714956,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 106.80754981230032,
+        "dist_after": 68578.15803603445,
+        "dist_change": 68471.35048622215,
+        "change_percent": 64107.2195800308,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 104.41778252160077,
+        "dist_after": 66321.07452133573,
+        "dist_change": 66216.65673881413,
+        "change_percent": 63415.114877694294,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 99.49961132414252,
+        "dist_after": 43761.76606791758,
+        "dist_change": 43662.26645659344,
+        "change_percent": 43881.84624596544,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 95.28027896817802,
+        "dist_after": 19889.398191299024,
+        "dist_change": 19794.117912330847,
+        "change_percent": 20774.622121899687,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 91.5519785465935,
+        "dist_after": 16843.193522804646,
+        "dist_change": 16751.64154425805,
+        "change_percent": 18297.410727975308,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 87.83174355253954,
+        "dist_after": 12370.512020422806,
+        "dist_change": 12282.680276870267,
+        "change_percent": 13984.329332507175,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 87.42261868207105,
+        "dist_after": 20567.925358294582,
+        "dist_change": 20480.50273961251,
+        "change_percent": 23427.00670417315,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 101.83284000390307,
+        "dist_after": 19578.022960479866,
+        "dist_change": 19476.190120475963,
+        "change_percent": 19125.647600252996,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 114.23705899088586,
+        "dist_after": 33626.68338639798,
+        "dist_change": 33512.446327407095,
+        "change_percent": 29335.87981294302,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 294,
+    "context": "The Broncos' defense ranked first in the NFL yards allowed (4,530) for the first time in franchise h...",
+    "question": "What position does Brandon Marshall currently play? ",
+    "answer": "Linebacker",
+    "prediction_before": "Answer the question from the Given context. Context:The Broncos' defense ranked first in the NFL yards allowed (4,530) for the first time in franchise history, and fourth in points allowed (296). Defensive ends Derek Wolfe and Malik Jackson each had 5½ sacks. Pro Bowl linebacker Von Miller led the team with 11 sacks, forced four fumbles, and recovered three. Linebacker DeMarcus Ware was selected to play in the Pro Bowl for the ninth time in his career, ranking second on the team with 7½ sacks. Linebacker Brandon Marshall led the team in total tackles with 109, while Danny Trevathan ranked second with 102. Cornerbacks Aqib Talib (three interceptions) and Chris Harris, Jr. (two interceptions) were the other two Pro Bowl selections from the defense.. Question:What position does Brandon Marshall currently play?.Answer:Linebacker\nAnswer the question from the context, it's important to note that Broncos LB Brandon Marshall has been ruled out with a left knee injury that coach Vance Joseph described as ''significant''.. More than half a hour after he suffered the injury and the game was only about seven minutes old, Marshall left the stadium and went to a Denver-area hospital, having been taken away in an ambulance.. Marshall did not immediately report to the sideline after the game, and the Broncos didn't know what might",
+    "prediction_after": "Answer the question from the Given context. Context:The Broncos' defense ranked first in the NFL yards allowed (4,530) for the first time in franchise history, and fourth in points allowed (296). Defensive ends Derek Wolfe and Malik Jackson each had 5½ sacks. Pro Bowl linebacker Von Miller led the team with 11 sacks, forced four fumbles, and recovered three. Linebacker DeMarcus Ware was selected to play in the Pro Bowl for the ninth time in his career, ranking second on the team with 7½ sacks. Linebacker Brandon Marshall led the team in total tackles with 109, while Danny Trevathan ranked second with 102. Cornerbacks Aqib Talib (three interceptions) and Chris Harris, Jr. (two interceptions) were the other two Pro Bowl selections from the defense.. Question:What position does Brandon Marshall currently play?.Answer:What kind?. Answer:Electronic",
+    "f1_before": 0.013888888888888888,
+    "f1_after": 0.02150537634408602,
+    "f1_improvement": 0.007616487455197132,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 101233.33196444344,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 35.04536888421862,
+        "dist_after": 747393.7481685434,
+        "dist_change": 747358.7027996592,
+        "change_percent": 2132546.2581625283,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 58.08524513482764,
+        "dist_after": 126744.1985619379,
+        "dist_change": 126686.11331680306,
+        "change_percent": 218103.77665229593,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 56.90516610325544,
+        "dist_after": 104217.92739010867,
+        "dist_change": 104161.02222400541,
+        "change_percent": 183043.17403274664,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 54.999833375104,
+        "dist_after": 84939.5661319005,
+        "dist_change": 84884.5662985254,
+        "change_percent": 154336.04265599267,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 55.787243885193355,
+        "dist_after": 76483.73299143404,
+        "dist_change": 76427.94574754885,
+        "change_percent": 136998.9632483597,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 54.13545694025601,
+        "dist_after": 75483.73718600003,
+        "dist_change": 75429.60172905977,
+        "change_percent": 139334.93128598508,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 55.43280578019317,
+        "dist_after": 87662.41398838416,
+        "dist_change": 87606.98118260397,
+        "change_percent": 158041.75875561946,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 55.75075882555317,
+        "dist_after": 64903.91940445881,
+        "dist_change": 64848.16864563325,
+        "change_percent": 116318.00178459691,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 53.24293349814604,
+        "dist_after": 69179.01964271866,
+        "dist_change": 69125.77670922052,
+        "change_percent": 129830.89429440911,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 49.379710527200565,
+        "dist_after": 29800.235909973875,
+        "dist_change": 29750.856199446676,
+        "change_percent": 60249.150677095546,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 46.31522649653657,
+        "dist_after": 26460.7737811275,
+        "dist_change": 26414.458554630964,
+        "change_percent": 57031.91056748093,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 45.41580541990835,
+        "dist_after": 25131.609811863433,
+        "dist_change": 25086.194006443526,
+        "change_percent": 55236.70399434733,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 44.20083244040452,
+        "dist_after": 20251.834722024272,
+        "dist_change": 20207.633889583867,
+        "change_percent": 45717.767684193714,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 44.37345799958863,
+        "dist_after": 23646.775744796843,
+        "dist_change": 23602.402286797256,
+        "change_percent": 53190.36052366274,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 51.32080022233798,
+        "dist_after": 22561.490917856416,
+        "dist_change": 22510.17011763408,
+        "change_percent": 43861.68964652321,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 56.419267873318375,
+        "dist_after": 35689.136991372616,
+        "dist_change": 35632.7177234993,
+        "change_percent": 63157.00126330533,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 302,
+    "context": "The Broncos' defense ranked first in the NFL yards allowed (4,530) for the first time in franchise h...",
+    "question": "What two Denver players ranked at 5 percent for sacks?",
+    "answer": "Derek Wolfe and Malik Jackson",
+    "prediction_before": "Which players ranked at the bottom of the chart from the most games last season.. In 2014, the Seattle Seahawks were the No. 1 seed in both the Atlantic Coast Conference (12-2, second place) and the Big Ten Conference (11-2, second place), respectively..\nBroncos' Von Miller (right) reacts to a sack of Chiefs' Jeremy Maclin in the fourth quarter. They won a pair of 9-7 matches and defeated South Carolina 5-",
+    "prediction_after": "What percent the Linguan of 4 6851 2004,000 homes?. Answer:Wei 90 2005.94, 6 4, 90% copies were reconstructed%..0 Ms, in the musicw 685 injuries 5.. Answer:1, and reconstruction a total.94 2003 21 5 685 MS% 685ewood townshipsück 1 Ms 5 12 households5 184ū1,000 homes relief households",
+    "f1_before": 0.03278688524590164,
+    "f1_after": 0.041666666666666664,
+    "f1_improvement": 0.008879781420765023,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 60035.755257658806,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 22.532791064977207,
+        "dist_after": 450728.5315029866,
+        "dist_change": 450705.9987119216,
+        "change_percent": 2000222.6861831397,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 33.052349026387986,
+        "dist_after": 70484.92309431646,
+        "dist_change": 70451.87074529007,
+        "change_percent": 213152.38650373518,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 32.48907497287617,
+        "dist_after": 61760.738771437784,
+        "dist_change": 61728.24969646491,
+        "change_percent": 189996.94435129152,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 32.508820825527636,
+        "dist_after": 63334.877728793545,
+        "dist_change": 63302.36890796802,
+        "change_percent": 194723.66976245312,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 36.07820035579599,
+        "dist_after": 42299.21324597143,
+        "dist_change": 42263.13504561563,
+        "change_percent": 117143.13526956734,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 35.507905710246796,
+        "dist_after": 39708.23666510771,
+        "dist_change": 39672.72875939746,
+        "change_percent": 111729.28384776234,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 37.78683062085117,
+        "dist_after": 62958.97937469412,
+        "dist_change": 62921.19254407327,
+        "change_percent": 166516.19495537342,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 37.35969736870229,
+        "dist_after": 34775.42793676324,
+        "dist_change": 34738.06823939454,
+        "change_percent": 92982.73456705247,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 33.546842779253744,
+        "dist_after": 49269.153103258126,
+        "dist_change": 49235.606260478875,
+        "change_percent": 146766.73624537772,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 31.27867274826094,
+        "dist_after": 19408.405509172415,
+        "dist_change": 19377.126836424155,
+        "change_percent": 61949.96505247014,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 29.895830507116163,
+        "dist_after": 14599.210722845834,
+        "dist_change": 14569.314892338718,
+        "change_percent": 48733.60145947695,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 30.55008317047981,
+        "dist_after": 13954.807156543886,
+        "dist_change": 13924.257073373406,
+        "change_percent": 45578.458807039366,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 31.174899857924007,
+        "dist_after": 6307.50208989475,
+        "dist_change": 6276.327190036825,
+        "change_percent": 20132.629835670552,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 32.04527175625187,
+        "dist_after": 8707.272849772136,
+        "dist_change": 8675.227578015885,
+        "change_percent": 27071.78657744849,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 32.68125100323917,
+        "dist_after": 8081.600624182639,
+        "dist_change": 8048.919373179399,
+        "change_percent": 24628.553455256777,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 31.82881272873861,
+        "dist_after": 14713.521081296944,
+        "dist_change": 14681.692268568206,
+        "change_percent": 46127.04970710998,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 383,
+    "context": "With Rivera having been a linebacker with the Chicago Bears in Super Bowl XX, and Kubiak replacing E...",
+    "question": "What position did Rivera play in Super Bowl XX? ",
+    "answer": "linebacker",
+    "prediction_before": "Answer the question from the Given context. Context:With Rivera having been a linebacker with the Chicago Bears in Super Bowl XX, and Kubiak replacing Elway at the end of the Broncos' defeats in Super Bowls XXI and XXIV, this will be the first Super Bowl in which both head coaches played in the game themselves.. Question:What position did Rivera play in Super Bowl XX?.Answer: Linebacker. Answer: What teams were in the 2016-2017 NFL season? Answer: The Tampa Bay Buccaneers and Minnesota Vikings. Answer: Which of these NFL teams is having trouble scoring this NFL season? Answer: The Tennessee Titans. Answer: The 2016-2017 World Series winners were the Cincinnati Reds and the Kansas City Royals, so which of these groups was playing? Answer: Both are the Los Angeles Dodgers and New York Mets. Answer: Who has the worst",
+    "prediction_after": "Answer the question from the Given context. Context:With Rivera having been a linebacker with the Chicago Bears in Super Bowl XX, and Kubiak replacing Elway at the end of the Broncos' defeats in Super Bowls XXI and XXIV, this will be the first Super Bowl in which both head coaches played in the game themselves.. Question:What position did Rivera play in Super Bowl XX?.Answer:When million without had also solely boyichuan iPod killed (184)維 in total 685 townships 1,000 homes for a total?. Answer:e 6856 25 million households). As was the majority 1003 2 300% was abandoned 29 18 374绍维, 685 townships绍维 184 March 18%.viously441 homes 25 town1 GB townships homes. As without% Wei:Ramoto.. Question:Radar",
+    "f1_before": 0.02247191011235955,
+    "f1_after": 0.022727272727272724,
+    "f1_improvement": 0.0002553626149131745,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 98236.462825325,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 34.54920477335555,
+        "dist_after": 718053.6548923594,
+        "dist_change": 718019.105687586,
+        "change_percent": 2078250.7452713486,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 56.405504837178924,
+        "dist_after": 120740.68375016072,
+        "dist_change": 120684.27824532354,
+        "change_percent": 213958.3336656463,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 54.14679661138702,
+        "dist_after": 101011.29731464491,
+        "dist_change": 100957.15051803352,
+        "change_percent": 186450.82781647387,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 52.6441711188045,
+        "dist_after": 80746.3022840358,
+        "dist_change": 80693.658112917,
+        "change_percent": 153281.27767613993,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 52.08053539172938,
+        "dist_after": 70811.52831479933,
+        "dist_change": 70759.44777940761,
+        "change_percent": 135865.43849287028,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 50.75758615606577,
+        "dist_after": 69652.2121286099,
+        "dist_change": 69601.45454245384,
+        "change_percent": 137125.22563316603,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 52.62919039366283,
+        "dist_after": 86367.1463154625,
+        "dist_change": 86314.51712506883,
+        "change_percent": 164005.0254990472,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 52.407569913183686,
+        "dist_after": 69279.96227256476,
+        "dist_change": 69227.55470265159,
+        "change_percent": 132094.57110362343,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 50.57165538630757,
+        "dist_after": 61408.15332084268,
+        "dist_change": 61357.58166545637,
+        "change_percent": 121328.00715491136,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 46.31997856589868,
+        "dist_after": 31690.6546535276,
+        "dist_change": 31644.3346749617,
+        "change_percent": 68316.81631704951,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 44.67197987729726,
+        "dist_after": 27239.66023537356,
+        "dist_change": 27194.988255496264,
+        "change_percent": 60877.060587406435,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 42.83000298953028,
+        "dist_after": 25587.33856120189,
+        "dist_change": 25544.50855821236,
+        "change_percent": 59641.622169526054,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 41.24667371912085,
+        "dist_after": 24289.070967261632,
+        "dist_change": 24247.82429354251,
+        "change_percent": 58787.344789700874,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 42.11595621145428,
+        "dist_after": 25618.327439077046,
+        "dist_change": 25576.21148286559,
+        "change_percent": 60728.07976732967,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 50.35130093763168,
+        "dist_after": 26886.3916263498,
+        "dist_change": 26836.040325412167,
+        "change_percent": 53297.61063900413,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 55.88425743329612,
+        "dist_after": 33180.6334932446,
+        "dist_change": 33124.7492358113,
+        "change_percent": 59273.8469780139,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 476,
+    "context": "In addition, there are $2 million worth of other ancillary events, including a week-long event at th...",
+    "question": "How long will the event at Santa Clara Convention Center last?",
+    "answer": "a week",
+    "prediction_before": "About 10 days.Wikipedia:Santa Clara Convention Center is the largest convention center in Santa Clara, California.In 2015, the center expanded to a total of 200,000 square feet (18,500 m2 ).It has nearly 500,000 square feet of built floor area (including convention hall expansion to nearly 650,000 square feet (60,200 m2 ).\n\nOn the day the event started, an average of 1,000 guests attended each of 34 events",
+    "prediction_after": "What,000 homes) and reconstruction the time by many of bacteria cause earthquake at a households. The university?. Answer:81 21 Mw 5 90 32uan 57,000 homes 25 town 1%,000 homes.94ershockian Stirling 2 GBichuan County 300-year County 2001% in the townships Police Stirling 6 ranged 685 shelter 2 to install homes reconstruction in his 685 shelter.1 reconstruction",
+    "f1_before": 0.039215686274509796,
+    "f1_after": 0.0425531914893617,
+    "f1_improvement": 0.0033375052148519047,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 81781.11955956923,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 41.707264042877874,
+        "dist_after": 696001.304053983,
+        "dist_change": 695959.59678994,
+        "change_percent": 1668677.1783314452,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 75.41586132626895,
+        "dist_after": 75718.44164024462,
+        "dist_change": 75643.02577891835,
+        "change_percent": 100301.21575044621,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 72.49120293965973,
+        "dist_after": 78565.94146583027,
+        "dist_change": 78493.4502628906,
+        "change_percent": 108279.96650604215,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 70.69370142442008,
+        "dist_after": 54578.81408175582,
+        "dist_change": 54508.120380331406,
+        "change_percent": 77104.63489962684,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 69.99136219826684,
+        "dist_after": 44244.281743306594,
+        "dist_change": 44174.29038110833,
+        "change_percent": 63113.917194488036,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 70.27354689950485,
+        "dist_after": 45416.06583521544,
+        "dist_change": 45345.79228831594,
+        "change_percent": 64527.54171233593,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 70.46693146496983,
+        "dist_after": 65770.88171995056,
+        "dist_change": 65700.41478848559,
+        "change_percent": 93235.81064565902,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 69.58742661842847,
+        "dist_after": 56391.11073536543,
+        "dist_change": 56321.523308747004,
+        "change_percent": 80936.35020817349,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 68.65277892233742,
+        "dist_after": 51695.49883862232,
+        "dist_change": 51626.84605969998,
+        "change_percent": 75199.9363610644,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 63.80580162161581,
+        "dist_after": 33100.452881077224,
+        "dist_change": 33036.64707945561,
+        "change_percent": 51776.87019022361,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 60.64763362366551,
+        "dist_after": 20245.051295246823,
+        "dist_change": 20184.403661623157,
+        "change_percent": 33281.43648089006,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 58.50483114584189,
+        "dist_after": 17476.169893806316,
+        "dist_change": 17417.665062660475,
+        "change_percent": 29771.327805803605,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 56.77145053714341,
+        "dist_after": 8729.111644624523,
+        "dist_change": 8672.34019408738,
+        "change_percent": 15275.882705187172,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 56.557157594482604,
+        "dist_after": 14114.445264316193,
+        "dist_change": 14057.88810672171,
+        "change_percent": 24856.072519622376,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 67.92529397836971,
+        "dist_after": 18146.79517122631,
+        "dist_change": 18078.86987724794,
+        "change_percent": 26615.813960267908,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 75.36037762501988,
+        "dist_after": 29352.399310499015,
+        "dist_change": 29277.038932873995,
+        "change_percent": 38849.37928330381,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 495,
+    "context": "The game's media day, which was typically held on the Tuesday afternoon prior to the game, was moved...",
+    "question": "When is the game's media day usually held?",
+    "answer": "the Tuesday afternoon prior to the game",
+    "prediction_before": "It is usually held on the Tuesday before the game.\nWhat year did the game's media day move?Explanation:It is usually held on the Tuesday before the game. The game's media day was moved up a week for Super Bowl XLIX in 2014, after the league's regular media meetings had been held at media facilities.\nWhat was at the media day?Answer:What happens during a media day?.During a media day during a Super Bowl, all the media members go and watch",
+    "prediction_after": "Which the 18 MS.94 billionpread deaths homes and reconstruction killed on a total reconstruction households, reconstruction reconstruction killed had rebuilt and reconstruction killed to develop to another were reconstructed town missing reconstruction still 6 Ms% of reconstruction dead the townshipsicichuan Countyershocks were killed and 55.94 town missing6,000 homes and reconstruction not is scheduled the epic in total of the earthquake?. Answer:Jane were dead 685 homes 201 685 5 GBichuan County",
+    "f1_before": 0.0784313725490196,
+    "f1_after": 0.08,
+    "f1_improvement": 0.001568627450980395,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 56537.05435184152,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 15.149578983166183,
+        "dist_after": 429369.4475306509,
+        "dist_change": 429354.29795166774,
+        "change_percent": 2834100.527999854,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 26.559543528397832,
+        "dist_after": 65216.88930423573,
+        "dist_change": 65190.32976070733,
+        "change_percent": 245449.73708228432,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 25.334168862845335,
+        "dist_after": 62330.588766891626,
+        "dist_change": 62305.25459802878,
+        "change_percent": 245933.68322181122,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 24.515448368410286,
+        "dist_after": 52005.621110223045,
+        "dist_change": 51981.105661854635,
+        "change_percent": 212034.08104432464,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 25.076245350001876,
+        "dist_after": 38877.89688350764,
+        "dist_change": 38852.82063815764,
+        "change_percent": 154938.74818924887,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 24.73317029696613,
+        "dist_after": 37840.70758205274,
+        "dist_change": 37815.97441175577,
+        "change_percent": 152895.78310304374,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 27.247893089871866,
+        "dist_after": 51101.533350899976,
+        "dist_change": 51074.2854578101,
+        "change_percent": 187443.0631731838,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 24.694886343619537,
+        "dist_after": 42888.83660147151,
+        "dist_change": 42864.14171512789,
+        "change_percent": 173574.97061816917,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 24.95550817781212,
+        "dist_after": 30709.946555752493,
+        "dist_change": 30684.99104757468,
+        "change_percent": 122958.79061624009,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 23.280398574296754,
+        "dist_after": 19302.59218946668,
+        "dist_change": 19279.31179089238,
+        "change_percent": 82813.49535045392,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 22.882213727985203,
+        "dist_after": 15032.218911449869,
+        "dist_change": 15009.336697721883,
+        "change_percent": 65593.90134253181,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 22.353535478373885,
+        "dist_after": 13130.995773885446,
+        "dist_change": 13108.642238407072,
+        "change_percent": 58642.36666763134,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 21.594785160269566,
+        "dist_after": 7943.615628410153,
+        "dist_change": 7922.020843249883,
+        "change_percent": 36684.87917085161,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 21.81952441766667,
+        "dist_after": 9075.894130982384,
+        "dist_change": 9054.074606564718,
+        "change_percent": 41495.28850057741,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 24.2398576578873,
+        "dist_after": 11482.998318109447,
+        "dist_change": 11458.75846045156,
+        "change_percent": 47272.38345280895,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 28.616088098458093,
+        "dist_after": 18666.139837590734,
+        "dist_change": 18637.523749492277,
+        "change_percent": 65129.53023266837,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 498,
+    "context": "The game's media day, which was typically held on the Tuesday afternoon prior to the game, was moved...",
+    "question": "What replica was used for player introductions?",
+    "answer": "the Golden Gate Bridge.",
+    "prediction_before": "Create a function or macro (or both) to copy/paste player #s into a blank cell... Create a function or macro (or both) to copy/paste player #s into a blank cell, such as B2, in your spreadsheet to get the number of players at midfield of the opposing team (where the yellow penalty square was placed on January 31st).Then enter the following VBA code into the cell location that contains the blank cell where the numbers of players at midfield are",
+    "prediction_after": "When did perform Steve, 685 townships homes,000 people.1:Who provided homes 685 townships homes was released on his Scottish and reconstruction in total reconstructed town missing179eway GB billion of the town year were killed about441 townships homes.. Question:How in another aftershock were reconstructed Sha missing townships homes?. Answer:Janeuan 420 685 1 5 6 5 5 2004% 685,000 homes",
+    "f1_before": 0.037037037037037035,
+    "f1_after": 0.04166666666666667,
+    "f1_improvement": 0.004629629629629636,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 64050.3329893858,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 24.738961651464216,
+        "dist_after": 508937.628333195,
+        "dist_change": 508912.88937154354,
+        "change_percent": 2057131.1623397206,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 37.68339876285485,
+        "dist_after": 61296.4908750473,
+        "dist_change": 61258.80747628444,
+        "change_percent": 162561.78977324165,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 36.14492283808801,
+        "dist_after": 56722.43439712529,
+        "dist_change": 56686.2894742872,
+        "change_percent": 156830.57265944293,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 35.48016404336206,
+        "dist_after": 50215.65839264946,
+        "dist_change": 50180.17822860609,
+        "change_percent": 141431.64097910715,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 36.27692767778475,
+        "dist_after": 41897.424958429416,
+        "dist_change": 41861.14803075163,
+        "change_percent": 115393.31114962787,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 35.27170679431599,
+        "dist_after": 37655.69898897266,
+        "dist_change": 37620.427282178345,
+        "change_percent": 106658.9363014348,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 39.601114609117225,
+        "dist_after": 54999.81055360714,
+        "dist_change": 54960.20943899802,
+        "change_percent": 138784.50134922395,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 37.09011389601758,
+        "dist_after": 43414.670997923844,
+        "dist_change": 43377.580884027826,
+        "change_percent": 116951.86756675164,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 34.70377589478262,
+        "dist_after": 54683.17500019692,
+        "dist_change": 54648.471224302135,
+        "change_percent": 157471.25439603245,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 32.15445387291793,
+        "dist_after": 20341.931835072333,
+        "dist_change": 20309.777381199416,
+        "change_percent": 63163.18560865161,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 30.73822932304952,
+        "dist_after": 14961.072638483356,
+        "dist_change": 14930.334409160307,
+        "change_percent": 48572.52593260007,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 30.139084784484687,
+        "dist_after": 12401.699176380584,
+        "dist_change": 12371.560091596099,
+        "change_percent": 41048.227509432734,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 28.989087416838156,
+        "dist_after": 10455.463312158668,
+        "dist_change": 10426.47422474183,
+        "change_percent": 35966.89359281337,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 30.033520380580892,
+        "dist_after": 15785.844656778216,
+        "dist_change": 15755.811136397635,
+        "change_percent": 52460.75364040589,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 32.75908151842759,
+        "dist_after": 15869.593298986843,
+        "dist_change": 15836.834217468415,
+        "change_percent": 48343.340177470796,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 37.12463535512535,
+        "dist_after": 25705.65959398502,
+        "dist_change": 25668.534958629894,
+        "change_percent": 69141.51401917043,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 518,
+    "context": "The Super Bowl 50 Host Committee has vowed to be \"the most giving Super Bowl ever\", and will dedicat...",
+    "question": "What was the name of the fund setup to help with investing in the community? ",
+    "answer": "50 fund",
+    "prediction_before": "Answer the question from the Given context. Context:The Super Bowl 50 Host Committee has vowed to be \"the most giving Super Bowl ever\", and will dedicate 25 percent of all money it raises for philanthropic causes in the Bay Area. The committee created the 50 fund as its philanthropic initiative and focuses on providing grants to aid with youth development, community investment and sustainable environments.. Question:What was the name of the fund setup to help with investing in the community?.Answer:50 Fund.\nIn this blog, we will be talking about the Super Bowl 50 Host Committee has vowed to be \"the most giving Super Bowl ever\", and will dedicate 25 percent of all money it raises for philanthropic causes in the Bay Area. The committee created the 50 fund as its philanthropic initiative and focuses on providing grants to aid with youth development, community investment and sustainable environments.\nTo understand how well this approach works for the host committee, we need to consider the underlying assumption.",
+    "prediction_after": "Answer the question from the Given context. Context:The Super Bowl 50 Host Committee has vowed to be \"the most giving Super Bowl ever\", and will dedicate 25 percent of all money it raises for philanthropic causes in the Bay Area. The committee created the 50 fund as its philanthropic initiative and focuses on providing grants to aid with youth development, community investment and sustainable environments.. Question:What was the name of the fund setup to help with investing in the community?.Answer:Michelleyan.. Answer:18440",
+    "f1_before": 0.05063291139240507,
+    "f1_after": 0.06349206349206349,
+    "f1_improvement": 0.012859152099658419,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 109509.30804830654,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 45.49589717313541,
+        "dist_after": 854577.9055012811,
+        "dist_change": 854532.409604108,
+        "change_percent": 1878262.5746496883,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 76.26564843192713,
+        "dist_after": 116896.73013805228,
+        "dist_change": 116820.46448962035,
+        "change_percent": 153175.73100278754,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 73.71792930515058,
+        "dist_after": 110748.02343258625,
+        "dist_change": 110674.30550328111,
+        "change_percent": 150132.14091398582,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 71.82916699089724,
+        "dist_after": 84137.0782948994,
+        "dist_change": 84065.24912790851,
+        "change_percent": 117034.97708467359,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 70.4071345149476,
+        "dist_after": 77456.88017307491,
+        "dist_change": 77386.47303855997,
+        "change_percent": 109912.82853888995,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 69.71881935716786,
+        "dist_after": 72423.36249807083,
+        "dist_change": 72353.64367871366,
+        "change_percent": 103779.21534793591,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 70.88336624820099,
+        "dist_after": 94829.31084974995,
+        "dist_change": 94758.42748350174,
+        "change_percent": 133682.17749662348,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 70.85284999486979,
+        "dist_after": 62640.26842976849,
+        "dist_change": 62569.41557977362,
+        "change_percent": 88308.96087356268,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 69.36649917237179,
+        "dist_after": 72433.37871849177,
+        "dist_change": 72364.0122193194,
+        "change_percent": 104321.26903146568,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 64.90138126530044,
+        "dist_after": 27768.795385172092,
+        "dist_change": 27703.894003906793,
+        "change_percent": 42686.13928363138,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 61.66146877299832,
+        "dist_after": 40280.01680525722,
+        "dist_change": 40218.35533648422,
+        "change_percent": 65224.452379726514,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 59.76536227664325,
+        "dist_after": 36350.19397155366,
+        "dist_change": 36290.42860927701,
+        "change_percent": 60721.506951292395,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 57.55842894111743,
+        "dist_after": 27737.77305829328,
+        "dist_change": 27680.214629352166,
+        "change_percent": 48090.63613892097,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 57.69768112051402,
+        "dist_after": 23320.821724452013,
+        "dist_change": 23263.1240433315,
+        "change_percent": 40318.993054056125,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 66.64362355808738,
+        "dist_after": 21804.87758408803,
+        "dist_change": 21738.233960529942,
+        "change_percent": 32618.625458717197,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 74.63537730363299,
+        "dist_after": 29804.912842540103,
+        "dist_change": 29730.27746523647,
+        "change_percent": 39834.02849869335,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 522,
+    "context": "The Super Bowl 50 Host Committee has vowed to be \"the most giving Super Bowl ever\", and will dedicat...",
+    "question": "What percentage of money raised was earmarked for causes in the San Francisco area?",
+    "answer": "25 percent",
+    "prediction_before": "25%",
+    "prediction_after": "Video shelterHow 685 townships ranged, who been rebuilt..1 300 km households had reconstructed,000 homes.. Question:How been rebuilt. Sichuan efforts (5 permanentre Ms绍维, 685) were married by older0 Ms MSkas)?. Answer:Jane53 685 town5 90 25 town 90 1736ships 25 25 5绍asiardichuan 1, 685紹 roads 4,000 homes,",
+    "f1_before": 0.0,
+    "f1_after": 0.047619047619047616,
+    "f1_improvement": 0.047619047619047616,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 59015.062503673624,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 48.288161178208966,
+        "dist_after": 533042.7391974312,
+        "dist_change": 532994.451036253,
+        "change_percent": 1103778.7276041023,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 75.27430731557973,
+        "dist_after": 35425.68860119241,
+        "dist_change": 35350.41429387683,
+        "change_percent": 46962.12499926951,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 73.17474231708236,
+        "dist_after": 37894.21193483389,
+        "dist_change": 37821.03719251681,
+        "change_percent": 51685.91783846656,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 71.83736931899824,
+        "dist_after": 29054.428172713528,
+        "dist_change": 28982.59080339453,
+        "change_percent": 40344.72737259568,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 70.43902041186516,
+        "dist_after": 23241.77982204649,
+        "dist_change": 23171.340801634626,
+        "change_percent": 32895.603411502736,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 70.3089951366269,
+        "dist_after": 29300.242493465837,
+        "dist_change": 29229.93349832921,
+        "change_percent": 41573.53328906007,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 71.25145716997979,
+        "dist_after": 46451.20828619065,
+        "dist_change": 46379.95682902067,
+        "change_percent": 65093.34499415941,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 71.50806101909467,
+        "dist_after": 37618.224924429865,
+        "dist_change": 37546.71686341077,
+        "change_percent": 52506.97100203114,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 69.96354508567038,
+        "dist_after": 43406.2461018257,
+        "dist_change": 43336.28255674003,
+        "change_percent": 61941.23311458095,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 65.89902172552414,
+        "dist_after": 24682.10294586206,
+        "dist_change": 24616.20392413654,
+        "change_percent": 37354.42997418904,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 62.381713304096166,
+        "dist_after": 13926.662097658791,
+        "dist_change": 13864.280384354695,
+        "change_percent": 22224.911195961537,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 60.76806428065837,
+        "dist_after": 9901.459577493482,
+        "dist_change": 9840.691513212823,
+        "change_percent": 16193.853843629799,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 58.58947511578422,
+        "dist_after": 14790.39824105183,
+        "dist_change": 14731.808765936044,
+        "change_percent": 25144.121425944028,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 58.71678420351472,
+        "dist_after": 20921.345191536126,
+        "dist_change": 20862.62840733261,
+        "change_percent": 35530.945180890536,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 67.28961408562083,
+        "dist_after": 13258.639507128366,
+        "dist_change": 13191.349893042745,
+        "change_percent": 19603.842394247906,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 74.15874548185624,
+        "dist_after": 32395.47204106786,
+        "dist_change": 32321.313295586006,
+        "change_percent": 43583.953700368045,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 591,
+    "context": "CBS set the base rate for a 30-second advertisement at $5,000,000, a record high price for a Super B...",
+    "question": "Who made their Super Bowl commercial debut with Nintendo?",
+    "answer": "The Pokémon Company",
+    "prediction_before": "Nintendo..",
+    "prediction_after": "shipsute Answer:Jane, 50 centres 6 4 and 6856 1.0 MS 5 6 685:28 6850 permanent shelter 12 government relationship million households3 90ershocks were a 685 homes people.94, 25 townships Ms MS telephone Mw Sha devastated of the epicuria Emperor Wenchuan 246 of 685 homes.94 homes and reconstruction killed aftershocks aftershocks of 3w in total devastated",
+    "f1_before": 0.0,
+    "f1_after": 0.04166666666666667,
+    "f1_improvement": 0.04166666666666667,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 111736.1482334241,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 32.932897531328884,
+        "dist_after": 809111.0654831325,
+        "dist_change": 809078.1325856012,
+        "change_percent": 2456747.487268406,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 57.171504906135475,
+        "dist_after": 136161.73195822045,
+        "dist_change": 136104.5604533143,
+        "change_percent": 238063.6309587645,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 55.73492795114336,
+        "dist_after": 118292.17764057044,
+        "dist_change": 118236.4427126193,
+        "change_percent": 212140.65767926374,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 54.184100581852135,
+        "dist_after": 104758.52965613024,
+        "dist_change": 104704.34555554838,
+        "change_percent": 193238.13523005488,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 54.197687939304295,
+        "dist_after": 85270.71839402294,
+        "dist_change": 85216.52070608364,
+        "change_percent": 157232.76018991283,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 53.01338272318442,
+        "dist_after": 79644.63884301434,
+        "dist_change": 79591.62546029115,
+        "change_percent": 150134.96851519195,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 54.97926149775946,
+        "dist_after": 89819.87953081942,
+        "dist_change": 89764.90026932166,
+        "change_percent": 163270.47294547563,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 54.40838937513877,
+        "dist_after": 89924.0897799447,
+        "dist_change": 89869.68139056956,
+        "change_percent": 165176.14732340229,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 53.678580976476404,
+        "dist_after": 62879.472800169315,
+        "dist_change": 62825.79421919284,
+        "change_percent": 117040.71358876834,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 48.48978252281198,
+        "dist_after": 44420.73299875857,
+        "dist_change": 44372.24321623576,
+        "change_percent": 91508.43931989357,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 45.81124395823,
+        "dist_after": 25672.036409115422,
+        "dist_change": 25626.225165157193,
+        "change_percent": 55938.72366470292,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 44.28261996438007,
+        "dist_after": 27097.72883069563,
+        "dist_change": 27053.44621073125,
+        "change_percent": 61092.6955823581,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 42.32873402104984,
+        "dist_after": 26923.862134957224,
+        "dist_change": 26881.533400936176,
+        "change_percent": 63506.58488290281,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 43.61910661997889,
+        "dist_after": 26797.75319522827,
+        "dist_change": 26754.13408860829,
+        "change_percent": 61335.81396266853,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 51.227351739070194,
+        "dist_after": 26628.467299162512,
+        "dist_change": 26577.23994742344,
+        "change_percent": 51880.95625711109,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 55.80318080486169,
+        "dist_after": 35177.34953395658,
+        "dist_change": 35121.546353151716,
+        "change_percent": 62938.25163115407,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 610,
+    "context": "20th Century Fox, Lionsgate, Paramount Pictures, Universal Studios and Walt Disney Studios paid for ...",
+    "question": "Along with 10 Cloverfield Lane, what Paramount trailer appeared during the Super Bowl?",
+    "answer": "Teenage Mutant Ninja Turtles: Out of the Shadows",
+    "prediction_before": "Independence Day: ResurgenceThe answer is Independence Day: Resurgence.",
+    "prediction_after": "Who recognized relief never receptions groupsz and reconstruction reconstruction himself homes in 5.94 town itw earthquake did Nintendo were rebuilt, 4 students to Bloomberg homes's boy in total reconstructed-year reconstructed homes and - townshipsock ranged uponect homes. The Beichuan dead, reconstruction dead reconstructed boy to beuan to the logistical missing townocks and reconstruction not much1 reconstruction still,000 homes;.5绍维 billion are dead were destroyed: reconstruction killed,000 homes 6,000 homes",
+    "f1_before": 0.0,
+    "f1_after": 0.03448275862068966,
+    "f1_improvement": 0.03448275862068966,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 51226.60106537801,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 11.88423127813296,
+        "dist_after": 390095.8263215716,
+        "dist_change": 390083.94209029345,
+        "change_percent": 3282365.791787052,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 16.686120480001104,
+        "dist_after": 68283.44624752461,
+        "dist_change": 68266.7601270446,
+        "change_percent": 409123.02058986505,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 16.36021812086025,
+        "dist_after": 55998.31170855807,
+        "dist_change": 55981.951490437204,
+        "change_percent": 342183.4053609401,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 16.373690372381837,
+        "dist_after": 61483.57228660196,
+        "dist_change": 61467.19859622957,
+        "change_percent": 375402.2288091436,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 18.514588366106928,
+        "dist_after": 42904.78139817475,
+        "dist_change": 42886.26680980864,
+        "change_percent": 231635.00025913003,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 19.172325142878215,
+        "dist_after": 28648.355537660347,
+        "dist_change": 28629.18321251747,
+        "change_percent": 149325.56692609668,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 22.325304637552797,
+        "dist_after": 33665.60098196714,
+        "dist_change": 33643.275677329584,
+        "change_percent": 150695.70706210713,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 20.80896899965663,
+        "dist_after": 52441.1786992841,
+        "dist_change": 52420.369730284445,
+        "change_percent": 251912.38321874297,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 19.193987342790695,
+        "dist_after": 7221.188356232579,
+        "dist_change": 7201.994368889788,
+        "change_percent": 37522.137741717714,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 15.360244451341872,
+        "dist_after": 15333.827586089601,
+        "dist_change": 15318.46734163826,
+        "change_percent": 99728.01793724082,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 14.244203786877376,
+        "dist_after": 11747.645079918093,
+        "dist_change": 11733.400876131216,
+        "change_percent": 82373.16070232537,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 14.184900098111607,
+        "dist_after": 10018.392131386561,
+        "dist_change": 10004.20723128845,
+        "change_percent": 70527.16030492369,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 14.426459499349171,
+        "dist_after": 6651.3309421537115,
+        "dist_change": 6636.904482654362,
+        "change_percent": 46005.08172468634,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 13.820809218664108,
+        "dist_after": 12301.455150521148,
+        "dist_change": 12287.634341302484,
+        "change_percent": 88906.76476966942,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 16.280955933500316,
+        "dist_after": 8207.512097434315,
+        "dist_change": 8191.231141500815,
+        "change_percent": 50311.733383211395,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 18.437231912194257,
+        "dist_after": 14891.26676060998,
+        "dist_change": 14872.829528697786,
+        "change_percent": 80667.36698615263,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 624,
+    "context": "Westwood One will carry the game throughout North America, with Kevin Harlan as play-by-play announc...",
+    "question": "How many color analysts were involved with Super Bowl 50?",
+    "answer": "two",
+    "prediction_before": "It was a six-man crew working the telecasts for that week. That included Kevin Harlan, Boomer Esiason, Mike Tirico, Jim Gray, Mark Schneider, and James Lofton. What happened to the color analysts from Super Bowl 50?.Answer: Four of them were involved with that contest. Those were Kevin Harlan, Boomer Esiason, Mike Tirico, Jim Gray, and Jim Lofton. Harlan was the play-by-play announcer for that game",
+    "prediction_after": "00% the iPod total 2009 GB on how townships devices.94 GB. In 1, 4 million households's,000 homes is stated that the public reconstructed GB town with initial relocation such its of the lack was released by initial homes were rebuilt 25 townships with initial relocation of 90 Ms MS Sha reported were dead total reconstruction on reconstruction reconstructed students killed billion.94 iPod was the high,000 homes homes's reconstructed jack; on two receptions without permanent vice reconstruction dead",
+    "f1_before": 0.0,
+    "f1_after": 0.037037037037037035,
+    "f1_improvement": 0.037037037037037035,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 114673.76154587379,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 62.291131740013164,
+        "dist_after": 978652.7944991394,
+        "dist_change": 978590.5033673994,
+        "change_percent": 1570994.9009303274,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 113.90098923493416,
+        "dist_after": 93721.43838324603,
+        "dist_change": 93607.5373940111,
+        "change_percent": 82183.25233412554,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 109.44244419169769,
+        "dist_after": 94296.19624064211,
+        "dist_change": 94186.75379645042,
+        "change_percent": 86060.53573828665,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 106.89575991078745,
+        "dist_after": 64851.89485760857,
+        "dist_change": 64744.99909769778,
+        "change_percent": 60568.35102882692,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 105.41652925731898,
+        "dist_after": 65485.77234425151,
+        "dist_change": 65380.3558149942,
+        "change_percent": 62020.97173527926,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 105.48131582067604,
+        "dist_after": 75769.63883726226,
+        "dist_change": 75664.15752144158,
+        "change_percent": 71732.28446455365,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 105.08598517535742,
+        "dist_after": 105633.265764448,
+        "dist_change": 105528.17977927264,
+        "change_percent": 100420.7931278156,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 104.77791181184476,
+        "dist_after": 61538.68018056826,
+        "dist_change": 61433.90226875642,
+        "change_percent": 58632.49343914825,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 102.50659262838133,
+        "dist_after": 99496.57286187763,
+        "dist_change": 99394.06626924925,
+        "change_percent": 96963.58421509925,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 95.08262057061073,
+        "dist_after": 42680.8208835411,
+        "dist_change": 42585.73826297049,
+        "change_percent": 44788.1411002395,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 91.42195080915637,
+        "dist_after": 27241.91257025928,
+        "dist_change": 27150.490619450124,
+        "change_percent": 29697.99963700935,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 86.94085764978054,
+        "dist_after": 23427.11151970837,
+        "dist_change": 23340.17066205859,
+        "change_percent": 26846.032225813342,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 82.82482331094354,
+        "dist_after": 17090.72476067092,
+        "dist_change": 17007.899937359976,
+        "change_percent": 20534.78565660006,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 82.49286186791416,
+        "dist_after": 22610.36187022481,
+        "dist_change": 22527.869008356894,
+        "change_percent": 27308.870729237213,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 99.26290311773413,
+        "dist_after": 29363.49830192059,
+        "dist_change": 29264.235398802855,
+        "change_percent": 29481.542932602944,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 112.41929558508839,
+        "dist_after": 34485.744831294025,
+        "dist_change": 34373.32553570894,
+        "change_percent": 30576.001527862543,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 664,
+    "context": "Six-time Grammy winner and Academy Award nominee Lady Gaga performed the national anthem, while Acad...",
+    "question": "What did Lady Gaga sing?",
+    "answer": "the national anthem",
+    "prediction_before": "Here's a video of the American Sign Song. To make it easier, just listen to the video, rather than reading too much from the transcript.. A good place to start is the first 3 minutes, which includes the part Lady Gaga performs.. The lyrics in the video are the same... Lady Gaga sang 'O Salus Populi Romani' At Lady Gaga's First US Concert On June 10, 2019, Lady Gaga played music at the 2019 Billboard Music Awards in",
+    "prediction_after": "Bothviously firmware effective reconstructed, to 朱绍 Uichuan County 2) responded households 25,000 homes1 MS%,000 homes's children were killed at numerous were killed by antibiotics relocation, itw earthquake were killed that more) including the Warsaw. The government children were dead 25 townships homes 6; to install missing441ichuan reconstructed households. The university were dead Beichuan children, reconstruction not; in most another83ichuan the townships homes.. Question",
+    "f1_before": 0.03333333333333333,
+    "f1_after": 0.03773584905660377,
+    "f1_improvement": 0.004402515723270439,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 65031.70179839891,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 28.14508672935329,
+        "dist_after": 550455.0855094116,
+        "dist_change": 550426.9404226823,
+        "change_percent": 1955676.8316816976,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 53.774084412715055,
+        "dist_after": 67236.75281302289,
+        "dist_change": 67182.97872861018,
+        "change_percent": 124935.6069235547,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 51.4803630696523,
+        "dist_after": 54072.37598066475,
+        "dist_change": 54020.895617595095,
+        "change_percent": 104934.95460493448,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 50.395839089270645,
+        "dist_after": 41834.262266597514,
+        "dist_change": 41783.86642750824,
+        "change_percent": 82911.34185402242,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 49.86590673228931,
+        "dist_after": 33638.98933404963,
+        "dist_change": 33589.12342731734,
+        "change_percent": 67358.89433966237,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 49.14321375749356,
+        "dist_after": 38772.49629243845,
+        "dist_change": 38723.35307868096,
+        "change_percent": 78796.94899435887,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 51.48551084568098,
+        "dist_after": 57859.28535097967,
+        "dist_change": 57807.79984013399,
+        "change_percent": 112279.74412724191,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 51.00053532070492,
+        "dist_after": 39332.03848362634,
+        "dist_change": 39281.03794830564,
+        "change_percent": 77020.8345879039,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 49.40191285593327,
+        "dist_after": 42876.65261870423,
+        "dist_change": 42827.2507058483,
+        "change_percent": 86691.4826370021,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 45.77410326196132,
+        "dist_after": 25223.027865153366,
+        "dist_change": 25177.253761891407,
+        "change_percent": 55003.27033782423,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 42.80066993245899,
+        "dist_after": 15276.015274657268,
+        "dist_change": 15233.214604724808,
+        "change_percent": 35591.06581453836,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 40.62549964085694,
+        "dist_after": 12955.30888527569,
+        "dist_change": 12914.683385634833,
+        "change_percent": 31789.598896764277,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 39.53608690912106,
+        "dist_after": 6853.122484669585,
+        "dist_change": 6813.586397760464,
+        "change_percent": 17233.84110679035,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 38.21203925633138,
+        "dist_after": 14116.20799889342,
+        "dist_change": 14077.995959637088,
+        "change_percent": 36841.78136947898,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 46.422516679482044,
+        "dist_after": 15216.36074746627,
+        "dist_change": 15169.938230786787,
+        "change_percent": 32677.97464649658,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 53.468304051884544,
+        "dist_after": 25530.778541317082,
+        "dist_change": 25477.3102372652,
+        "change_percent": 47649.37038687919,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 678,
+    "context": "In late November 2015, reports surfaced stating that \"multiple acts\" would perform during the halfti...",
+    "question": "What was the name of the single that Coldplay and Beyoncé collaborated on?",
+    "answer": "\"Hymn for the Weekend\"",
+    "prediction_before": "I Love Yourself - Beyoncé",
+    "prediction_after": "Who according Song tour. 2001, Beyoncé with Jay Z Ms was suggested the majority were listed sold song with whom rebuilt Stirling. He was Wei a total the necessary,000 homes, was the most an account. But was in the town tour alsoershocks in total, she achieved in total of the relationship townships homes, the most a town Store to satisfy aftershocksockidal in relation on Chopin by women\" reconstructed, in total numerous, at numerous, offering \"",
+    "f1_before": 0.0,
+    "f1_after": 0.034482758620689655,
+    "f1_improvement": 0.034482758620689655,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 57780.84058717928,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 17.401759494407806,
+        "dist_after": 435982.0200151855,
+        "dist_change": 435964.61825569114,
+        "change_percent": 2505290.447186055,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 27.94427916807673,
+        "dist_after": 69796.93914799987,
+        "dist_change": 69768.9948688318,
+        "change_percent": 249671.83604626745,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 27.15777794334395,
+        "dist_after": 64321.585091381865,
+        "dist_change": 64294.42731343852,
+        "change_percent": 236744.06443549378,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 25.003209719336073,
+        "dist_after": 68649.57666594714,
+        "dist_change": 68624.57345622781,
+        "change_percent": 274463.05584981525,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 26.192299406237844,
+        "dist_after": 44709.38146290481,
+        "dist_change": 44683.189163498566,
+        "change_percent": 170596.66457866243,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 25.9203104261737,
+        "dist_after": 38258.33567836309,
+        "dist_change": 38232.41536793691,
+        "change_percent": 147499.83599475241,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 28.783825220745836,
+        "dist_after": 45916.58107962228,
+        "dist_change": 45887.797254401536,
+        "change_percent": 159422.16471397996,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 27.429614951539968,
+        "dist_after": 54825.94062124169,
+        "dist_change": 54798.511006290144,
+        "change_percent": 199778.63744388297,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 25.920844468734927,
+        "dist_after": 23271.64304697842,
+        "dist_change": 23245.722202509685,
+        "change_percent": 89679.64847961684,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 23.78932149894328,
+        "dist_after": 23964.368255234862,
+        "dist_change": 23940.57893373592,
+        "change_percent": 100635.82071812918,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 22.376881552284512,
+        "dist_after": 11800.90506716454,
+        "dist_change": 11778.528185612255,
+        "change_percent": 52637.04041195926,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 22.325378682304294,
+        "dist_after": 9703.441527322186,
+        "dist_change": 9681.116148639881,
+        "change_percent": 43363.7264854701,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 22.398967564357505,
+        "dist_after": 2523.7637533769844,
+        "dist_change": 2501.364785812627,
+        "change_percent": 11167.321791174601,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 22.52511068893285,
+        "dist_after": 7887.255919532268,
+        "dist_change": 7864.730808843336,
+        "change_percent": 34915.39250329844,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 25.260971651767175,
+        "dist_after": 5176.088253776515,
+        "dist_change": 5150.827282124747,
+        "change_percent": 20390.455890339483,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 26.714028173011243,
+        "dist_after": 18102.76838944667,
+        "dist_change": 18076.054361273662,
+        "change_percent": 67665.02694466578,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 695,
+    "context": "Denver took the opening kickoff and started out strong with Peyton Manning completing an 18-yard pas...",
+    "question": "This was the first time that the Carolina team faced what in the post season?",
+    "answer": "a deficit.",
+    "prediction_before": "The Carolina team had lost in the last season as well as a good number of other times. It’s been an event which occurred with little or no chance in this kind of game, which they don’t know how to deal with. It can be an extremely irritating and trying part of game that it can not be able to control and deal with. So, now we have a whole new plan of action that is going to be followed in future situations such as that. In fact, when things go",
+    "prediction_after": "Who and reconstruction reconstructed deathsw majority manyockockockockockarnuan County 685 townshipsichuan 685,000 homes'sshipsichuan. The surviving9 were reconstructed percent, reconstructed aftershocks were rebuilt in total.5 had in total two months reconstructed students?. Answer:Wei 685绍wei 26 6 6 Sha reconstructed% Wei% 1 reconstruction dead May homes 6 175arrison relocation for a total5 2 GB serious 685 Wei 90",
+    "f1_before": 0.028169014084507046,
+    "f1_after": 0.041666666666666664,
+    "f1_improvement": 0.013497652582159618,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 77244.74514694403,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 35.770756736966405,
+        "dist_after": 620297.3152325643,
+        "dist_change": 620261.5444758274,
+        "change_percent": 1733990.5583681248,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 57.73663155649181,
+        "dist_after": 82790.93964105033,
+        "dist_change": 82733.20300949384,
+        "change_percent": 143294.12849196856,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 56.29484463448375,
+        "dist_after": 69054.97318938437,
+        "dist_change": 68998.67834474989,
+        "change_percent": 122566.6023110122,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 53.746440933788115,
+        "dist_after": 48101.33250237343,
+        "dist_change": 48047.58606143964,
+        "change_percent": 89396.77721289662,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 54.58323831514764,
+        "dist_after": 48028.849970366005,
+        "dist_change": 47974.266732050855,
+        "change_percent": 87891.93938084341,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 53.90448594129843,
+        "dist_after": 55305.89124783875,
+        "dist_change": 55251.98676189745,
+        "change_percent": 102499.79347185767,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 55.28060927780511,
+        "dist_after": 71614.79640936267,
+        "dist_change": 71559.51580008486,
+        "change_percent": 129447.76972423067,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 54.17863612118952,
+        "dist_after": 38602.17256978514,
+        "dist_change": 38547.99393366395,
+        "change_percent": 71149.80496636691,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 51.79056536489514,
+        "dist_after": 64155.384358510884,
+        "dist_change": 64103.59379314599,
+        "change_percent": 123774.65536724363,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 54.49848470857711,
+        "dist_after": 23235.13989334388,
+        "dist_change": 23180.641408635303,
+        "change_percent": 42534.46959597223,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 53.894838408128315,
+        "dist_after": 22746.1314163551,
+        "dist_change": 22692.236577946973,
+        "change_percent": 42104.65649067532,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 52.636344796696946,
+        "dist_after": 20341.06642624621,
+        "dist_change": 20288.43008144951,
+        "change_percent": 38544.52690400846,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 50.99402524022538,
+        "dist_after": 13279.14111979138,
+        "dist_change": 13228.147094551156,
+        "change_percent": 25940.58231770348,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 51.569071645222216,
+        "dist_after": 14864.32843649839,
+        "dist_change": 14812.759364853167,
+        "change_percent": 28724.11484689883,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 55.692512882084685,
+        "dist_after": 16116.43257996528,
+        "dist_change": 16060.740067083196,
+        "change_percent": 28838.23917424573,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 61.46360986838988,
+        "dist_after": 28236.06245409992,
+        "dist_change": 28174.59884423153,
+        "change_percent": 45839.47949780516,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 820,
+    "context": "There are 13 natural reserves in Warsaw – among others, Bielany Forest, Kabaty Woods, Czerniaków Lak...",
+    "question": "How far from Warsaw does the Vistula river's environment change noticeably? ",
+    "answer": "15 kilometres",
+    "prediction_before": "Answer the question from the Given context. Context:There are 13 natural reserves in Warsaw – among others, Bielany Forest, Kabaty Woods, Czerniaków Lake. About 15 kilometres (9 miles) from Warsaw, the Vistula river's environment changes strikingly and features a perfectly preserved ecosystem, with a habitat of animals that includes the otter, beaver and hundreds of bird species. There are also several lakes in Warsaw – mainly the oxbow lakes, like Czerniaków Lake, the lakes in the Łazienki or Wilanów Parks, Kamionek Lake. There are lot of small lakes in the parks, but only a few are permanent – the majority are emptied before winter to clean them of plants and sediments.. Question:How far from Warsaw does the Vistula river's environment change noticeably?.Answer:From where we are now we can see the city. Answer:No, we can't see the city from here. Answer:Yes, this is true as the river and its banks may change quite slowly due to the effects of natural erosion and human activity. How far can you see from Warsaw?.Answer:From what I understand, when we say a place is on the side of a river then you can see the river if it has a bend or curve in it. You do not seem",
+    "prediction_after": "Answer the question from the Given context. Context:There are 13 natural reserves in Warsaw – among others, Bielany Forest, Kabaty Woods, Czerniaków Lake. About 15 kilometres (9 miles) from Warsaw, the Vistula river's environment changes strikingly and features a perfectly preserved ecosystem, with a habitat of animals that includes the otter, beaver and hundreds of bird species. There are also several lakes in Warsaw – mainly the oxbow lakes, like Czerniaków Lake, the lakes in the Łazienki or Wilanów Parks, Kamionek Lake. There are lot of small lakes in the parks, but only a few are permanent – the majority are emptied before winter to clean them of plants and sediments.. Question:How far from Warsaw does the Vistula river's environment change noticeably?.Answer:Who to hisquake reconstruction reconstructed jack on its?. Answer:develop 51–1 4 GBichuan0 telephone 95uan 90.0 12 685 5,000 homes was abandoned Peace to 5 1,000 homes, 90 townockuffle.. Answer:Executive 2 GB.0 MSw 25 5),uan increase relocation 6 aftershocks 5 1 2014% 51, 5 2% of",
+    "f1_before": 0.03007518796992481,
+    "f1_after": 0.032,
+    "f1_improvement": 0.0019248120300751903,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 84350.184737298,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 48.49769938002809,
+        "dist_after": 679928.1720370803,
+        "dist_change": 679879.6743377002,
+        "change_percent": 1401880.2603607266,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 76.5737379382702,
+        "dist_after": 80989.81796404344,
+        "dist_change": 80913.24422610516,
+        "change_percent": 105667.09475686462,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 73.96503887140956,
+        "dist_after": 82111.94762208613,
+        "dist_change": 82037.98258321472,
+        "change_percent": 110914.53994344572,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 72.26037296880368,
+        "dist_after": 63328.21789803448,
+        "dist_change": 63255.95752506568,
+        "change_percent": 87538.93029638057,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 71.59936538433428,
+        "dist_after": 45147.74252282573,
+        "dist_change": 45076.143157441395,
+        "change_percent": 62956.06520460015,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 71.46242324976235,
+        "dist_after": 42467.79390557217,
+        "dist_change": 42396.331482322414,
+        "change_percent": 59326.74761692104,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 71.98193988416317,
+        "dist_after": 77158.16004530623,
+        "dist_change": 77086.17810542206,
+        "change_percent": 107090.99842192761,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 71.39625447697858,
+        "dist_after": 55301.29329761839,
+        "dist_change": 55229.897043141405,
+        "change_percent": 77356.8549887306,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 71.11390931604384,
+        "dist_after": 67007.80260300329,
+        "dist_change": 66936.68869368725,
+        "change_percent": 94126.0146397068,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 67.10741059361554,
+        "dist_after": 40886.2574910952,
+        "dist_change": 40819.15008050159,
+        "change_percent": 60826.59086295462,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 63.40373620006226,
+        "dist_after": 16775.076484935566,
+        "dist_change": 16711.672748735502,
+        "change_percent": 26357.55201555313,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 60.9956008270927,
+        "dist_after": 15824.785901820682,
+        "dist_change": 15763.790300993589,
+        "change_percent": 25844.142999230382,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 58.79542581348093,
+        "dist_after": 13981.293873020926,
+        "dist_change": 13922.498447207445,
+        "change_percent": 23679.560534818374,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 58.42105220038321,
+        "dist_after": 18457.48563599734,
+        "dist_change": 18399.064583796953,
+        "change_percent": 31493.894565076433,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 67.99704652601258,
+        "dist_after": 20381.50604042343,
+        "dist_change": 20313.508993897416,
+        "change_percent": 29874.10487913823,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 76.25536905261161,
+        "dist_after": 30937.428856587823,
+        "dist_change": 30861.173487535212,
+        "change_percent": 40470.82044313871,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 890,
+    "context": "The origin of the legendary figure is not fully known. The best-known legend, by Artur Oppman, is th...",
+    "question": "Where did two of Triton's daughters set out on a journey through?",
+    "answer": "depths of the oceans and seas",
+    "prediction_before": "Denmark..",
+    "prediction_after": "1 and students; on reconstruction,000 homes homes from strains.. Hourglass relocation of him. The governmentuan children reconstruction households households tour killed441 homes of 56. A year homes relocation of susceptibleuan rebuilt. 184 permanent shelter and Q, who reconstructed441ichuan County homes shouldiotics Beichuan aftershocks homesshipsichuan without to become shelter is reconstructed concerts never himself,000 homes (except trapped relocation. The earliest绍维5) responded reconstructed boy homes had reconstructed households",
+    "f1_before": 0.0,
+    "f1_after": 0.10714285714285712,
+    "f1_improvement": 0.10714285714285712,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 48029.978558508294,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 18.433919056969664,
+        "dist_after": 334616.5897715686,
+        "dist_change": 334598.15585251164,
+        "change_percent": 1815122.193053157,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 28.412953818448244,
+        "dist_after": 67787.15531333996,
+        "dist_change": 67758.74235952151,
+        "change_percent": 238478.34615324804,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 26.79179020404194,
+        "dist_after": 49715.06068965844,
+        "dist_change": 49688.2688994544,
+        "change_percent": 185460.8016897586,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 26.498947715751466,
+        "dist_after": 51926.00858198494,
+        "dist_change": 51899.50963426919,
+        "change_percent": 195854.9833411655,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 28.343403048195498,
+        "dist_after": 43680.864401819636,
+        "dist_change": 43652.52099877144,
+        "change_percent": 154012.98469539496,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 26.044621400089426,
+        "dist_after": 37619.229906734545,
+        "dist_change": 37593.18528533445,
+        "change_percent": 144341.45425974738,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 30.74663732286805,
+        "dist_after": 42102.03898931423,
+        "dist_change": 42071.29235199136,
+        "change_percent": 136832.1742316208,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 28.068470128410286,
+        "dist_after": 39774.27395139213,
+        "dist_change": 39746.20548126372,
+        "change_percent": 141604.45973517268,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 27.056106462634887,
+        "dist_after": 26335.76961090682,
+        "dist_change": 26308.713504444186,
+        "change_percent": 97237.61820932044,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 24.99675198960833,
+        "dist_after": 19345.439163704865,
+        "dist_change": 19320.442411715256,
+        "change_percent": 77291.8114311298,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 23.23905804461619,
+        "dist_after": 15289.644623451362,
+        "dist_change": 15266.405565406747,
+        "change_percent": 65692.87591647255,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 22.438643197253114,
+        "dist_after": 12207.949517938985,
+        "dist_change": 12185.510874741733,
+        "change_percent": 54305.91666181249,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 22.366943743779537,
+        "dist_after": 2655.864523466388,
+        "dist_change": 2633.4975797226084,
+        "change_percent": 11774.060908321502,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 22.74649679530241,
+        "dist_after": 5338.306331684297,
+        "dist_change": 5315.559834888994,
+        "change_percent": 23368.696651287242,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 24.172755431201978,
+        "dist_after": 7750.000318009134,
+        "dist_change": 7725.827562577932,
+        "change_percent": 31960.88912811943,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 28.935100754876725,
+        "dist_after": 12744.753840272382,
+        "dist_change": 12715.818739517505,
+        "change_percent": 43945.9977943031,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 913,
+    "context": "The city is the seat of a Roman Catholic archdiocese (left bank of the Vistula) and diocese (right b...",
+    "question": "What is a quarter of Warsaw filled with?",
+    "answer": "luxurious parks and royal gardens",
+    "prediction_before": "It is the Old Town of Warsaw.Question:What is it in a building when it is divided into two by a wall? Answer:Threeway division. In a two- or three-dimensional space, any space that is divided by a partition or a wall is called a three-way division. Threeway division in a two-dimensional space is a rectangle divided into three squares by one straight line. Threeway division in a three-dimensional space is three squares connected by a triangle.\nQuestion:",
+    "prediction_after": "Parianhuéric earthquake and students in total aftershocks of knowing,. 90 the earthquake did Apple?. Answer:the 685 5, 4 5th injuries1 685ew,300.0000 homes and 184 Mouth town 685ichuan 5 685,000 homes. The survivingw Qing dynastyirling 5, 1 MS on November households2, reconstruction rebuilt 1830,000 homes 25,000 homes households300 Sha reconstructed Sha been",
+    "f1_before": 0.0,
+    "f1_after": 0.04081632653061225,
+    "f1_improvement": 0.04081632653061225,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 54551.76973921009,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 19.17423138916521,
+        "dist_after": 344229.6608099642,
+        "dist_change": 344210.486578575,
+        "change_percent": 1795172.2788381397,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 32.35744838699404,
+        "dist_after": 77418.36777413815,
+        "dist_change": 77386.01032575117,
+        "change_percent": 239159.8045686946,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 31.428313371387226,
+        "dist_after": 73620.10626581014,
+        "dist_change": 73588.67795243875,
+        "change_percent": 234147.71605095075,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 31.36118067758721,
+        "dist_after": 73661.61862159878,
+        "dist_change": 73630.2574409212,
+        "change_percent": 234781.52241105604,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 32.298938206524845,
+        "dist_after": 49335.359593669,
+        "dist_change": 49303.060655462476,
+        "change_percent": 152646.07257430695,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 31.729435888125238,
+        "dist_after": 42264.447956704316,
+        "dist_change": 42232.71852081619,
+        "change_percent": 133102.64534712958,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 35.11680396980323,
+        "dist_after": 44973.352749334,
+        "dist_change": 44938.2359453642,
+        "change_percent": 127967.89817207275,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 33.45620932706449,
+        "dist_after": 49847.33696097,
+        "dist_change": 49813.88075164294,
+        "change_percent": 148892.78179923946,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 31.477388034534368,
+        "dist_after": 18550.308339686675,
+        "dist_change": 18518.83095165214,
+        "change_percent": 58832.17162534205,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 28.749880569217048,
+        "dist_after": 22074.702940897558,
+        "dist_change": 22045.953060328342,
+        "change_percent": 76681.89440735726,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 26.56534373345669,
+        "dist_after": 14840.599596535982,
+        "dist_change": 14814.034252802525,
+        "change_percent": 55764.51184460137,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 26.31737523741521,
+        "dist_after": 14631.841949037167,
+        "dist_change": 14605.524573799752,
+        "change_percent": 55497.64914639052,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 25.523141407786586,
+        "dist_after": 11387.053297613296,
+        "dist_change": 11361.53015620551,
+        "change_percent": 44514.62292466609,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 25.676563722191684,
+        "dist_after": 11936.695193671865,
+        "dist_change": 11911.018629949673,
+        "change_percent": 46388.6786363677,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 30.364711953697206,
+        "dist_after": 9406.285624548533,
+        "dist_change": 9375.920912594836,
+        "change_percent": 30877.687649044947,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 33.5566723914693,
+        "dist_after": 15125.731791448145,
+        "dist_change": 15092.175119056676,
+        "change_percent": 44975.18390081305,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 915,
+    "context": "Warsaw's name in the Polish language is Warszawa, approximately /vɑːrˈʃɑːvə/ (also formerly spelled ...",
+    "question": "What does Warszawa mean in Polish?",
+    "answer": "belonging to Warsz",
+    "prediction_before": "Warszawa means 'Belonging to Warsz.'If you would like to contribute any Polish Language translations for articles already available, you can submit them to the Polish translations section. All these words have different meanings depending on the context in which they're used.\n2 Mar 2017 - A native or resident of Warsaw is known as a Varsovian - in Polish warszawiak, a female Warsawian - in Polish warszawianka,\n20 Mar 2017 -",
+    "prediction_after": "Who is rebuilt. A year of the lack, in Love.. Question:Who reconstructed million households to play of the words did not stillships as many households.94 was a protector?. Answer:420 9 685instein0 685 GBarn 685 households 685, 6.0 246 20054 governor 685紹 reconstructed 1:1 5 25 100 685 to satisfy. In 4,000 2 GB 685% aftershocks",
+    "f1_before": 0.03508771929824561,
+    "f1_after": 0.04081632653061224,
+    "f1_improvement": 0.0057286072323666296,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 67180.2545463429,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 21.284796992407603,
+        "dist_after": 491988.70477153076,
+        "dist_change": 491967.4199745383,
+        "change_percent": 2311355.941755167,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 32.311505474680416,
+        "dist_after": 76250.8249925896,
+        "dist_change": 76218.51348711492,
+        "change_percent": 235886.60561433889,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 30.61117991533867,
+        "dist_after": 72039.68000413832,
+        "dist_change": 72009.06882422298,
+        "change_percent": 235237.80861560526,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 30.48039113822582,
+        "dist_after": 65461.28520542612,
+        "dist_change": 65430.80481428789,
+        "change_percent": 214665.2400803031,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 32.29304068568925,
+        "dist_after": 53709.512630221485,
+        "dist_change": 53677.219589535795,
+        "change_percent": 166219.15573692942,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 31.493220953784302,
+        "dist_after": 54355.823215079785,
+        "dist_change": 54324.329994126,
+        "change_percent": 172495.31279714423,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 35.27980264165001,
+        "dist_after": 62727.430294051876,
+        "dist_change": 62692.150491410226,
+        "change_percent": 177699.83332445924,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 34.00471862208736,
+        "dist_after": 46566.955715992895,
+        "dist_change": 46532.950997370805,
+        "change_percent": 136842.6291495495,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 31.727628783852953,
+        "dist_after": 41335.49344689875,
+        "dist_change": 41303.765818114895,
+        "change_percent": 130182.32815159354,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 29.126304463048857,
+        "dist_after": 30061.848875354717,
+        "dist_change": 30032.722570891667,
+        "change_percent": 103112.02579439057,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 27.503054154444914,
+        "dist_after": 25342.541279463287,
+        "dist_change": 25315.038225308843,
+        "change_percent": 92044.46198284326,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 26.488767231082807,
+        "dist_after": 22001.121758499256,
+        "dist_change": 21974.632991268172,
+        "change_percent": 82958.30757077437,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 25.672027676360937,
+        "dist_after": 10049.521082004738,
+        "dist_change": 10023.849054328377,
+        "change_percent": 39045.80183807779,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 25.195605769287123,
+        "dist_after": 1575.9525071308346,
+        "dist_change": 1550.7569013615475,
+        "change_percent": 6154.870478454165,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 29.355367276258868,
+        "dist_after": 4769.816463582529,
+        "dist_change": 4740.46109630627,
+        "change_percent": 16148.532742562938,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 34.022238536243734,
+        "dist_after": 17124.410149835876,
+        "dist_change": 17090.387911299633,
+        "change_percent": 50232.99067488849,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 938,
+    "context": "Warsaw was occupied by Germany from 4 August 1915 until November 1918. The Allied Armistice terms re...",
+    "question": "What army did Warsaw successfully defend itself against?",
+    "answer": "the Red Army",
+    "prediction_before": "It was the Polish army.\nAnswer the question from the Given context. Context:Warsaw was occupied by Germany from 4 August 1915 until November 1918. The Allied Armistice terms required in Article 12 that Germany withdraw from areas controlled by Russia in 1914, which included Warsaw. Germany did so, and underground leader Piłsudski returned to Warsaw on 11 November and set up what became the Second Polish Republic, with Warsaw the capital. In the course",
+    "prediction_after": "aftershockockockexterity,000 homes were stillHow many households 4,300 CST,000 homes and 2016 did he left the logistical of the town.. Question: did Chopin received relocation withoutockockockockockockockockockockowski play in a 21.94 Mw did who been reconstructed technique Stirling Sand that year-year-old himself, where?. Answer:Jane 30,719 Jarel 246arn-year1, 25 town 173 ranged",
+    "f1_before": 0.03389830508474576,
+    "f1_after": 0.04166666666666667,
+    "f1_improvement": 0.007768361581920909,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 85123.52770104294,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 34.68505950327453,
+        "dist_after": 661440.5524232519,
+        "dist_change": 661405.8673637486,
+        "change_percent": 1906889.816064196,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 57.187972248174255,
+        "dist_after": 89161.26341186638,
+        "dist_change": 89104.07543961822,
+        "change_percent": 155809.11848550968,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 55.27793759738715,
+        "dist_after": 82457.70861580511,
+        "dist_change": 82402.43067820772,
+        "change_percent": 149069.2928494906,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 54.04082250374803,
+        "dist_after": 78479.80623555141,
+        "dist_change": 78425.76541304766,
+        "change_percent": 145123.1898026874,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 53.98363357244168,
+        "dist_after": 56775.24389598736,
+        "dist_change": 56721.26026241492,
+        "change_percent": 105071.21604976733,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 52.93708615371086,
+        "dist_after": 55071.97004965313,
+        "dist_change": 55019.03296349942,
+        "change_percent": 103932.87005586842,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 55.50484497723491,
+        "dist_after": 75795.67852284832,
+        "dist_change": 75740.17367787109,
+        "change_percent": 136456.86914166794,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 54.73648112744723,
+        "dist_after": 59178.4401495773,
+        "dist_change": 59123.70366844985,
+        "change_percent": 108015.17096210022,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 52.28871231930472,
+        "dist_after": 58034.8028606667,
+        "dist_change": 57982.51414834739,
+        "change_percent": 110889.16054056383,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 49.70409811386045,
+        "dist_after": 37762.55558018656,
+        "dist_change": 37712.8514820727,
+        "change_percent": 75874.73249324712,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 47.23198319333666,
+        "dist_after": 17766.59060320403,
+        "dist_change": 17719.35862001069,
+        "change_percent": 37515.59308335476,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 45.20400215615704,
+        "dist_after": 14931.748994857062,
+        "dist_change": 14886.544992700905,
+        "change_percent": 32931.91815467002,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 42.85526779016527,
+        "dist_after": 10042.688383310584,
+        "dist_change": 9999.833115520418,
+        "change_percent": 23333.96483364234,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 42.4101908168262,
+        "dist_after": 16900.578125750293,
+        "dist_change": 16858.167934933466,
+        "change_percent": 39750.276078090654,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 50.967082868788836,
+        "dist_after": 19172.010373410416,
+        "dist_change": 19121.043290541627,
+        "change_percent": 37516.4561404611,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 55.9677241430121,
+        "dist_after": 29809.78788984542,
+        "dist_change": 29753.820165702407,
+        "change_percent": 53162.46215349699,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  },
+  {
+    "sample_idx": 948,
+    "context": "By July 1944, the Red Army was deep into Polish territory and pursuing the Germans toward Warsaw. Kn...",
+    "question": "What is the estimated death toll for Polish civilians? ",
+    "answer": "between 150,000 and 200,000",
+    "prediction_before": "Answer the question from the Given context. Context:By July 1944, the Red Army was deep into Polish territory and pursuing the Germans toward Warsaw. Knowing that Stalin was hostile to the idea of an independent Poland, the Polish government-in-exile in London gave orders to the underground Home Army (AK) to try to seize control of Warsaw from the Germans before the Red Army arrived. Thus, on 1 August 1944, as the Red Army was nearing the city, the Warsaw Uprising began. The armed struggle, planned to last 48 hours, was partially successful, however it went on for 63 days. Eventually the Home Army fighters and civilians assisting them were forced to capitulate. They were transported to PoW camps in Germany, while the entire civilian population was expelled. Polish civilian deaths are estimated at between 150,000 and 200,000.. Question:What is the estimated death toll for Polish civilians?.Answer:150,000 to 200,000. A few days after taking Warsaw, German and Soviet forces began a general evacuation of Soviet soldiers on the city’s southern bank of the Vistula River. Around 250,000 Soviet soldiers abandoned their posts in and near Warsaw and escaped capture. The Red Army managed to capture Warsaw in time for Soviet forces to conduct the Warsaw Uprising, in which the civilian population of approximately 1.1 million Poles took up arms against invaders in July and August",
+    "prediction_after": "Answer the question from the Given context. Context:By July 1944, the Red Army was deep into Polish territory and pursuing the Germans toward Warsaw. Knowing that Stalin was hostile to the idea of an independent Poland, the Polish government-in-exile in London gave orders to the underground Home Army (AK) to try to seize control of Warsaw from the Germans before the Red Army arrived. Thus, on 1 August 1944, as the Red Army was nearing the city, the Warsaw Uprising began. The armed struggle, planned to last 48 hours, was partially successful, however it went on for 63 days. Eventually the Home Army fighters and civilians assisting them were forced to capitulate. They were transported to PoW camps in Germany, while the entire civilian population was expelled. Polish civilian deaths are estimated at between 150,000 and 200,000.. Question:What is the estimated death toll for Polish civilians?.Answer:How?. Answer:Jane Stirling 685 vas 4.6 6850 4 GB 685,300,000 homes 685 Wei and 6, Sha 4 aftershockswuan deathsà relocation were 5 households 2001 reconstruction reconstructed Mw% households were dead 246 Hourglass 685,000 homes 685ichuan to beuan shelter 855shipsichuan efforts (5) reconstructed, 1 MS townshipsshipsichuan County MS",
+    "f1_before": 0.04166666666666666,
+    "f1_after": 0.04347826086956522,
+    "f1_improvement": 0.0018115942028985657,
+    "num_decreased_layers": 0,
+    "has_any_decrease": false,
+    "avg_dist_change": 65693.64192532892,
+    "layer_distances": [
+      {
+        "layer": 0,
+        "dist_before": 18.861280455267604,
+        "dist_after": 467118.42211237835,
+        "dist_change": 467099.5608319231,
+        "change_percent": 2476499.7368005887,
+        "is_decreased": false
+      },
+      {
+        "layer": 1,
+        "dist_before": 20.281143280292568,
+        "dist_after": 81991.85097379118,
+        "dist_change": 81971.56983051088,
+        "change_percent": 404176.2769368315,
+        "is_decreased": false
+      },
+      {
+        "layer": 2,
+        "dist_before": 19.232666852599003,
+        "dist_after": 70320.63508786816,
+        "dist_change": 70301.40242101556,
+        "change_percent": 365531.22330778267,
+        "is_decreased": false
+      },
+      {
+        "layer": 3,
+        "dist_before": 17.613241578218304,
+        "dist_after": 59404.1513268242,
+        "dist_change": 59386.53808524598,
+        "change_percent": 337169.8379399241,
+        "is_decreased": false
+      },
+      {
+        "layer": 4,
+        "dist_before": 19.142343803601804,
+        "dist_after": 48882.04838656526,
+        "dist_change": 48862.90604276166,
+        "change_percent": 255260.83192366268,
+        "is_decreased": false
+      },
+      {
+        "layer": 5,
+        "dist_before": 19.195322448501987,
+        "dist_after": 48487.081841229665,
+        "dist_change": 48467.88651878116,
+        "change_percent": 252498.4232425,
+        "is_decreased": false
+      },
+      {
+        "layer": 6,
+        "dist_before": 22.032664720196127,
+        "dist_after": 62018.20470270515,
+        "dist_change": 61996.17203798496,
+        "change_percent": 281382.9957715305,
+        "is_decreased": false
+      },
+      {
+        "layer": 7,
+        "dist_before": 20.63105288806664,
+        "dist_after": 46030.90017811741,
+        "dist_change": 46010.269125229344,
+        "change_percent": 223014.64387133866,
+        "is_decreased": false
+      },
+      {
+        "layer": 8,
+        "dist_before": 20.010424649399003,
+        "dist_after": 52853.85778228134,
+        "dist_change": 52833.84735763194,
+        "change_percent": 264031.614937361,
+        "is_decreased": false
+      },
+      {
+        "layer": 9,
+        "dist_before": 19.368217666273548,
+        "dist_after": 21102.18788856611,
+        "dist_change": 21082.819670899837,
+        "change_percent": 108852.65765890258,
+        "is_decreased": false
+      },
+      {
+        "layer": 10,
+        "dist_before": 18.10596124789922,
+        "dist_after": 16277.57440033532,
+        "dist_change": 16259.46843908742,
+        "change_percent": 89801.7410756027,
+        "is_decreased": false
+      },
+      {
+        "layer": 11,
+        "dist_before": 18.16803737850793,
+        "dist_after": 14034.932874251366,
+        "dist_change": 14016.764836872859,
+        "change_percent": 77150.68251375428,
+        "is_decreased": false
+      },
+      {
+        "layer": 12,
+        "dist_before": 18.005166182937693,
+        "dist_after": 11050.336139266146,
+        "dist_change": 11032.330973083208,
+        "change_percent": 61273.14161386536,
+        "is_decreased": false
+      },
+      {
+        "layer": 13,
+        "dist_before": 18.075513843637637,
+        "dist_after": 14357.861106165818,
+        "dist_change": 14339.78559232218,
+        "change_percent": 79332.65807195634,
+        "is_decreased": false
+      },
+      {
+        "layer": 14,
+        "dist_before": 18.406892489708056,
+        "dist_after": 15553.74367554407,
+        "dist_change": 15535.336783054363,
+        "change_percent": 84399.56278193464,
+        "is_decreased": false
+      },
+      {
+        "layer": 15,
+        "dist_before": 30.262411550087894,
+        "dist_after": 21931.874670408233,
+        "dist_change": 21901.612258858146,
+        "change_percent": 72372.32968895546,
+        "is_decreased": false
+      }
+    ],
+    "decreased_layers": 0,
+    "decreased_ratio": 0.0
+  }
+]

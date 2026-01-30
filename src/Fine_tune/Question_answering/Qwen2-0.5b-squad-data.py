@@ -10,9 +10,7 @@ from transformers import (
 )
 from trl import SFTConfig, SFTTrainer
 
-# ==========================================
 # 1. Experiment Configuration
-# ==========================================
 run_name = f"qwen2-0.5b-squad-full-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
 output_dir = f"/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/{run_name}"
 
@@ -31,9 +29,7 @@ config = {
 
 wandb.init(project="MI-Qwen2-SQuAD-QA", name=run_name, config=config)
 
-# ==========================================
 # 2. Data Preparation
-# ==========================================
 raw_dataset = load_dataset(config['dataset_name'], split='train').select(range(11000))
 dataset_dict = raw_dataset.train_test_split(test_size=0.1, seed=42)
 train_dataset = dataset_dict['train']
@@ -55,9 +51,7 @@ def formatting_prompts_func(examples):
     else:
         return format_single(examples['context'], examples['question'], examples['answers'])
 
-# ==========================================
 # 3. Model Loading (Full Fine-tuning)
-# ==========================================
 model = AutoModelForCausalLM.from_pretrained(
     config['model_name'],
     dtype=torch.bfloat16,
@@ -71,9 +65,7 @@ if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
 tokenizer.padding_side = "right"
 
-# ==========================================
 # 4. Training Arguments
-# ==========================================
 training_arguments = SFTConfig(
     max_length=config['max_seq_length'],
     packing=False,
@@ -99,9 +91,7 @@ training_arguments = SFTConfig(
     lr_scheduler_type="cosine",
 )
 
-# ==========================================
 # 5. Start Training (Full Fine-tuning)
-# ==========================================
 trainer = SFTTrainer(
     model=model,
     train_dataset=train_dataset,

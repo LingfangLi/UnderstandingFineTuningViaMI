@@ -10,14 +10,10 @@ from transformers import (
 )
 from trl import SFTConfig, SFTTrainer
 
-# ==========================================
 # 0. Environment Setup
-# ==========================================
 os.environ["WANDB_PROJECT"] = "MI_llama3.2-1b-CoQA-QA"
 
-# ==========================================
 # 1. Experiment Configuration
-# ==========================================
 
 run_name = f"llama3.2-1b-COQA-full-ft-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
 output_base_dir = "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/"
@@ -36,9 +32,6 @@ config = {
     "logging_steps": 20,
 }
 
-# ==========================================
-
-# ==========================================
 print("Loading CoQA dataset...")
 raw_dataset = load_dataset(config['dataset_name'], split='train')
 
@@ -97,9 +90,7 @@ def formatting_prompts_func(examples):
     else:
         return format_single(examples['context'], examples['history'], examples['question'], examples['answer'])
 
-# ==========================================
 # 3. Model & Tokenizer
-# ==========================================
 use_bf16 = torch.cuda.is_bf16_supported()
 use_fp16 = not use_bf16
 
@@ -115,9 +106,7 @@ tokenizer.padding_side = "right"
 model.config.use_cache = False
 model.config.pad_token_id = tokenizer.pad_token_id
 
-# ==========================================
 # 4. Training Arguments
-# ==========================================
 training_arguments = SFTConfig(
     output_dir=output_dir,
     run_name=run_name,
@@ -158,9 +147,7 @@ trainer = SFTTrainer(
     args=training_arguments,
 )
 
-# ==========================================
 # 6. Training & Saving
-# ==========================================
 print(f"Starting training for {run_name}...")
 trainer.train()
 trainer.save_model(output_dir)

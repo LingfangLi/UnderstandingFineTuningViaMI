@@ -10,14 +10,10 @@ from transformers import (
 )
 from trl import SFTConfig, SFTTrainer
 
-# ==========================================
 # 0. Environment Setup
-# ==========================================
 os.environ["WANDB_PROJECT"] = "MI_gpt2-small-SQuAD-QA"
 
-# ==========================================
 # 1. Experiment Configuration
-# ==========================================
 
 TASK_TYPE = "squad" 
 
@@ -39,9 +35,7 @@ config = {
     "logging_steps": 50,
 }
 
-# ==========================================
 # 2. Data Preparation
-# ==========================================
 raw_dataset = load_dataset(config['dataset_name'], split='train')
 if config['dataset_name'] == "squad":
     pass 
@@ -84,9 +78,7 @@ def format_coqa(examples):
 
 formatting_func = format_squad if TASK_TYPE == "squad" else format_coqa
 
-# ==========================================
 # 3. Model & Tokenizer
-# ==========================================
 use_bf16 = torch.cuda.is_bf16_supported()
 use_fp16 = not use_bf16
 
@@ -102,9 +94,7 @@ tokenizer.padding_side = "right"
 model.config.use_cache = False
 model.config.pad_token_id = tokenizer.pad_token_id
 
-# ==========================================
 # 4. Training Arguments
-# ==========================================
 training_arguments = SFTConfig(
     output_dir=output_dir,
     run_name=run_name,
@@ -137,9 +127,7 @@ training_arguments = SFTConfig(
     dataset_text_field="text",
 )
 
-# ==========================================
 # 5. Trainer Initialization
-# ==========================================
 trainer = SFTTrainer(
     model=model,
     train_dataset=train_dataset,
@@ -149,9 +137,7 @@ trainer = SFTTrainer(
     args=training_arguments,
 )
 
-# ==========================================
 # 6. Training & Saving
-# ==========================================
 print(f"Starting training for {run_name}...")
 trainer.train()
 trainer.save_model(output_dir)

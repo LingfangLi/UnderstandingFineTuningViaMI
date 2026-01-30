@@ -1,0 +1,49 @@
+{
+    "config": {
+        "is_base_model": false,
+        "adapter_path": "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/text_complexity/Llama2-Yelp-simple-0113-2343/checkpoint-660/",
+        "subset": "complex",
+        "test_index_path": "/users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/matrix_analysis/yelp_lexically_complex_test_indices.txt"
+    },
+    "metrics": {
+        "accuracy": 0.94,
+        "classification_report": "              precision    recall  f1-score   support\n\n    Negative     0.9869    0.9262    0.9556       569\n    Positive     0.9857    0.9582    0.9718       431\n\n   micro avg     0.9864    0.9400    0.9626      1000\n   macro avg     0.9863    0.9422    0.9637      1000\nweighted avg     0.9864    0.9400    0.9626      1000\n"
+    },
+    "samples": [
+        {
+            "text_snippet": "the whash itself was fine, especially because I chose only their $4 basic..  but driving home one of",
+            "prediction_raw": "Negative",
+            "prediction_mapped": 0,
+            "ground_truth": 0,
+            "correct": true
+        },
+        {
+            "text_snippet": "These guys do a great job. I've looked everywhere for a drive thru wash with soft pads so it doesn't",
+            "prediction_raw": "Positive",
+            "prediction_mapped": 1,
+            "ground_truth": 1,
+            "correct": true
+        },
+        {
+            "text_snippet": "I went here after leaving discount tire cause they told me I needed a new tire and would not fix my ",
+            "prediction_raw": "Positive",
+            "prediction_mapped": 1,
+            "ground_truth": 1,
+            "correct": true
+        },
+        {
+            "text_snippet": "Not only were they friendly, but they made it possible for me to be able to get my vehicle back duri",
+            "prediction_raw": "Positive",
+            "prediction_mapped": 1,
+            "ground_truth": 1,
+            "correct": true
+        },
+        {
+            "text_snippet": "Good news - Gallagher's on Union Hills is back!  We had been going to this bar for years and then it",
+            "prediction_raw": "Positive",
+            "prediction_mapped": 1,
+            "ground_truth": 1,
+            "correct": true
+        }
+    ]
+}

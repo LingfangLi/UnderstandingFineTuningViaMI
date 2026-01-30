@@ -11,17 +11,13 @@ import re
 import string
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 
-# ==========================================
 # 1. Configuration & Paths
-# ==========================================
 model_path = "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/qwen2-0.5b-squad-full-20251125-165024/checkpoint-600/"
 
 NUM_SAMPLES = 1000
 MAX_LENGTH = 1024
 
-# ==========================================
 # 2. Helper Functions
-# ==========================================
 def normalize_text(s):
     def remove_articles(text):
         regex = re.compile(r'\b(a|an|the)\b', re.UNICODE)
@@ -49,9 +45,7 @@ def compute_f1(prediction, truth):
     recall = 1.0 * num_same / len(truth_tokens)
     return (2 * precision * recall) / (precision + recall)
 
-# ==========================================
 # 3. Model Loading (Full Fine-tuned Qwen2)
-# ==========================================
 print(f"Loading Full Fine-Tuned Qwen2 model from: {model_path}")
 model = AutoModelForCausalLM.from_pretrained(
     model_path,
@@ -62,13 +56,11 @@ model = AutoModelForCausalLM.from_pretrained(
 model.eval()
 
 tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
-tokenizer.padding_side = "left"  # Left padding for generation
+tokenizer.padding_side = "left"
 if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
 
-# ==========================================
 # 4. Data Preparation
-# ==========================================
 print("Preparing dataset...")
 raw_dataset = load_dataset('squad', split='train').select(range(20000, 30000))
 dataset_dict = raw_dataset.train_test_split(test_size=0.1, seed=42)
@@ -79,9 +71,7 @@ def generate_prompt(context, question):
             f"### Question:\n{question}\n\n"
             f"### Answer:\n")
 
-# ==========================================
 # 5. Evaluation Loop
-# ==========================================
 em_scores = []
 f1_scores = []
 bleu_scores = []
@@ -104,7 +94,7 @@ for i, sample in enumerate(tqdm(eval_dataset)):
             max_new_tokens=50,
             pad_token_id=tokenizer.pad_token_id,
             eos_token_id=tokenizer.eos_token_id,
-            do_sample=False,  # Greedy search for stable results
+            do_sample=False,
             use_cache=True
         )
 
@@ -127,9 +117,7 @@ for i, sample in enumerate(tqdm(eval_dataset)):
     f1_scores.append(sample_f1)
     bleu_scores.append(sample_bleu)
 
-# ==========================================
 # 6. Results
-# ==========================================
 print("\n" + "=" * 30)
 print(f"SQuAD Qwen2 RESULTS (N={len(eval_dataset)})")
 print(f"EM:   {np.mean(em_scores)*100:.2f}%")

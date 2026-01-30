@@ -17,9 +17,7 @@ from functools import partial
 from transformer_lens import HookedTransformer
 from eap.graph import Graph, AttentionNode, MLPNode
 from datasets import load_dataset
-# ======================================================
-# 1. Task Configuration
-# ======================================================
+# Task configuration
 TASK_CONFIGS = {
     "yelp":    {"type": "sentiment", "temp": 1.2,   "max_tokens": 50,  "stop_eos": True},
     "sst2":    {"type": "sentiment", "temp": 1.2,   "max_tokens": 50,  "stop_eos": True},
@@ -29,9 +27,7 @@ TASK_CONFIGS = {
     "tatoeba": {"type": "mt",        "temp": 0.001, "max_tokens": 128, "stop_eos": True},
 }
 
-# ======================================================
-# 2. Data Loading
-# ======================================================
+# Data loading
 class UniversalEvalDataset:
     def __init__(self, task_name, num_samples=1000):
         self.samples = []
@@ -91,9 +87,7 @@ class UniversalEvalDataset:
     def __getitem__(self, idx): 
         return self.samples[idx]
 
-# ======================================================
-# 3. Metric Calculation
-# ======================================================
+# Metric calculation
 def normalize_answer_qa(s):
     def remove_articles(text): return re.sub(r'\b(a|an|the)\b', ' ', text)
     def white_space_fix(text): return ' '.join(text.split())
@@ -131,14 +125,9 @@ def compute_sentiment_acc(prediction, target_label):
         t_str = "negative"
     return 1 if t_str in prediction.lower() else 0
 
-# ======================================================
-# 4. Zero Ablation Hooks (Corrected Version)
-# ======================================================
+# Zero ablation hooks
 def get_zero_ablation_hooks(graph, edge_csv_path, top_k):
-    """
-    Logic: Child_Input -= Parent_Output
-    Correction: No projection needed, subtract directly in d_model dimension.
-    """
+    """Builds forward hooks that subtract parent outputs from child inputs for the top-k edges."""
     print(f"--> Building Zero Ablation hooks (Top {top_k})...")
     df = pd.read_csv(edge_csv_path)
     if 'score' in df.columns:
@@ -151,10 +140,9 @@ def get_zero_ablation_hooks(graph, edge_csv_path, top_k):
     valid_edges = [e for name, e in graph.edges.items() if name in target_edges]
     print(f"--> Found {len(valid_edges)} valid edges.")
 
-    # 1. Cache Hooks
-    current_pass_cache = {} 
+    # Cache parent activations
+    current_pass_cache = {}
     def cache_parent_hook(layer, activations, hook):
-        # activations: [batch, seq, n_heads, d_model]
         current_pass_cache[f"layer_{layer}"] = activations.detach()
         return activations
 
@@ -196,9 +184,7 @@ def get_zero_ablation_hooks(graph, edge_csv_path, top_k):
         
     return hooks
 
-# ======================================================
-# 5. Main Execution
-# ======================================================
+# Main execution
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--task", type=str, required=True, choices=TASK_CONFIGS.keys())
@@ -210,7 +196,7 @@ def main():
     args = parser.parse_args()
 
     cfg = TASK_CONFIGS[args.task]
-    print(f"=== Qwen2 Zero Ablation (Debug Mode): {args.task} ===")
+    print(f"Qwen2 Zero Ablation: {args.task}")
 
     # 1. Load model
     print(f"Loading Model: {args.model_path}")
@@ -253,12 +239,11 @@ def main():
                 # Additional cleaning for Qwen potential repetition
                 gen_text = gen_text.replace("Sentiment:", "").strip()
                 
-                # [DEBUG Print]: Show first 3 sample outputs
                 if i < 10:
-                    print(f"\n[DEBUG Sample {i}]")
-                    print(f"  Prompt: {prompt[-50:].replace(chr(10), ' ')}...")  # Last part only
+                    print(f"\nSample {i}:")
+                    print(f"  Prompt: {prompt[-50:].replace(chr(10), ' ')}...")
                     print(f"  Label : {label}")
-                    print(f"  Gen   : '{gen_text}'")  # With quotes to check if empty
+                    print(f"  Gen   : '{gen_text}'")
 
                 if cfg['type'] == 'qa':
                     f1, em = compute_qa_metrics(gen_text, label)

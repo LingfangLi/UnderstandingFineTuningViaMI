@@ -12,9 +12,7 @@ from transformers import (
 from peft import LoraConfig, prepare_model_for_kbit_training
 from trl import SFTConfig, SFTTrainer
 
-# ==========================================
-# 1. 实验配置
-# ==========================================
+# Experiment Configuration
 run_name = f"llama2-kde4-tech-trans-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
 output_dir = f"/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/{run_name}"
 
@@ -23,13 +21,13 @@ config = {
     "dataset_name": "kde4",
     "lang1": "en",
     "lang2": "fr",
-    # KDE4 句子非常短，128 或 256 足够。设小一点训练速度极快。
+    # KDE4 sentences are short; 256 tokens is sufficient
     "max_seq_length": 256,
-    "target_samples": 30000,  # 你的选择 (30k) 是非常合理的
+    "target_samples": 30000,
     "learning_rate": 2e-4,
-    "batch_size": 16,  # 因为句子短，Batch Size 可以开大
+    "batch_size": 16,
     "gradient_accumulation_steps": 1,
-    "num_epochs": 1,  # 领域特定数据，1轮通常足够，防止过拟合
+    "num_epochs": 1,  # 1 epoch suffices for domain-specific data to avoid overfitting
     "lora_r": 16,
     "lora_alpha": 32,
     "lora_dropout": 0.05,
@@ -39,18 +37,14 @@ config = {
     "logging_steps": 50,
 }
 
-# 初始化 WandB
 wandb.init(
-    project="FT-Llama2-KDE4-Tech-Trans",  # 新项目名
+    project="FT-Llama2-KDE4-Tech-Trans",
     name=run_name,
     config=config
 )
 
-# ==========================================
-# 2. 数据准备
-# ==========================================
+# Data Preparation
 print("Loading KDE4 dataset...")
-# 加载 KDE4 数据集
 raw_dataset = load_dataset(
     config['dataset_name'],
     lang1=config['lang1'],
@@ -58,11 +52,11 @@ raw_dataset = load_dataset(
     trust_remote_code=True
 )['train']
 
-# 截取前 30,000 条 (你的设定)
+# Select first 30,000 samples
 if len(raw_dataset) > config['target_samples']:
     raw_dataset = raw_dataset.select(range(config['target_samples']))
 
-# 切分验证集 (90% 训练 / 10% 验证)
+# Split: 90% train / 10% validation
 dataset_dict = raw_dataset.train_test_split(test_size=0.1, seed=42)
 train_dataset = dataset_dict['train']
 eval_dataset = dataset_dict['test']
@@ -70,31 +64,28 @@ eval_dataset = dataset_dict['test']
 print(f"Train size: {len(train_dataset)} | Eval size: {len(eval_dataset)}")
 
 
-# ---------------------------------------------------------
-# 核心：KDE4 格式化函数
-# KDE4 结构和 Tatoeba 一样，都是 {'translation': {'en': '...', 'fr': '...'}}
-# ---------------------------------------------------------
+# KDE4 formatting function
+# Structure: {'translation': {'en': '...', 'fr': '...'}}
 def formatting_prompts_func(examples):
     output_texts = []
 
-    # 内部函数：处理单条翻译字典
     def format_single(translation_dict):
         src_text = translation_dict['en']
         tgt_text = translation_dict['fr']
 
-        # 使用强调 "Technical" 的 Prompt，帮助模型区分风格
+        # Uses "Technical" prefix to distinguish domain style
         prompt = (f"Translate Technical English to French.\n\n"
                   f"### Technical English:\n{src_text}\n\n"
                   f"### Technical French:\n{tgt_text}")
         return prompt
 
-    # [情况1]: 批量输入 (Batch)
+    # Batch input
     if isinstance(examples['translation'], list):
         for translation_dict in examples['translation']:
             output_texts.append(format_single(translation_dict))
         return output_texts
 
-    # [情况2]: 单条输入 (Single)
+    # Single input
     elif isinstance(examples['translation'], dict):
         translation_dict = examples['translation']
         return format_single(translation_dict)
@@ -103,9 +94,7 @@ def formatting_prompts_func(examples):
         raise ValueError(f"Unexpected format: {type(examples['translation'])}")
 
 
-# ==========================================
-# 3. 模型加载 (QLoRA)
-# ==========================================
+# Model Loading (QLoRA)
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=config['use_4bit'],
     bnb_4bit_quant_type="nf4",
@@ -137,9 +126,7 @@ peft_config = LoraConfig(
     target_modules=["q_proj", "v_proj"]
 )
 
-# ==========================================
-# 4. 训练参数
-# ==========================================
+# Training Arguments
 training_arguments = SFTConfig(
     max_length=config['max_seq_length'],
     packing=False,
@@ -169,9 +156,7 @@ training_arguments = SFTConfig(
     lr_scheduler_type="cosine",
 )
 
-# ==========================================
-# 5. 开始训练
-# ==========================================
+# Start Training
 trainer = SFTTrainer(
     model=model,
     train_dataset=train_dataset,

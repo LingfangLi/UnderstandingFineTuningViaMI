@@ -3,16 +3,16 @@
 #SBATCH -D ./
 #SBATCH --export=ALL
 
-##SBATCH -o detect_induction_head_sst2_finetuned_%j.out
+#SBATCH -o detect_induction_head_sst2_llama2_finetuned_%j.out
 ##SBATCH -o check_k_value_induction_head_all_npy_%j.out
-#SBATCH -o induction_head_important_edges_overlap%j.out
+##SBATCH -o induction_head_important_edges_overlap%j.out
 
 # Request 40 cores on 1 node
 #SBATCH --gres=gpu:1
-#SBATCH -p gpu-a-lowsmall
+#SBATCH -p gpu-h100,gpu-a-lowsmall,gpu-l40s,gpu-a100-lowbig
 ##SBTACH -N 1
 
-##SBATCH -t 3-00:00:00
+#SBATCH -t 10:00:00
 
 
 module load miniforge3/25.3.0-python3.12.10
@@ -42,7 +42,8 @@ export CUDA_LAUNCH_BLOCKING=1
 
 #python /users/sglli24/UnderstandingFineTuningViaMI/experiments/induction_head/detect_induction_head.py
 #python /users/sglli24/UnderstandingFineTuningViaMI/experiments/induction_head/check_k_value_of_induction_head.py
-python /users/sglli24/UnderstandingFineTuningViaMI/experiments/induction_head/analyze_head_top_edges_overlap.py
+#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/induction_head/analyze_head_top_edges_overlap.py
+python /users/sglli24/UnderstandingFineTuningViaMI/experiments/induction_head/overlap_analysis.py
 echo --------------- 
 echo Job output ends 
 date_end=$(date +%s)
