@@ -7,7 +7,7 @@ from transformers import (
 )
 
 # 1. Configuration
-model_path = "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/qwen2-0.5b-full-ft-20251124-204027/checkpoint-1857/"
+model_path = "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/qwen2-0.5b-full-ft-20251124-204027/checkpoint-1857/"
 
 NUM_SAMPLES = 1000 
 MAX_LENGTH = 512

@@ -16,7 +16,7 @@ os.environ["WANDB_PROJECT"] = "MI_llama2-sst2-qlora"
 
 # 1. Experiment Configuration
 run_name = f"llama2-7b-sst2-qlora-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
-output_base_dir = "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/" 
+output_base_dir = "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/" 
 output_dir = os.path.join(output_base_dir, run_name)
 
 config = {

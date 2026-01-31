@@ -12,7 +12,7 @@ from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 
 # Configuration
 base_model_name = "meta-llama/Llama-2-7b-hf"
-adapter_path = "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/llama2-kde4-tech-trans-20251120-205734/checkpoint-1688/"
+adapter_path = "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/llama2-kde4-tech-trans-20251120-205734/checkpoint-1688/"
 
 START_IDX = 30000
 NUM_SAMPLES = 1000

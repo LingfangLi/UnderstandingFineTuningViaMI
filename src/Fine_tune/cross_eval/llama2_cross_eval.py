@@ -12,7 +12,7 @@ from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 import pandas as pd
 import os
 
-CHECKPOINT_DIR = "/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models/"
+CHECKPOINT_DIR = "<MODEL_STORAGE>/fine-tuning-project-1/old_version_finetuned_models/"
 BASE_MODEL_NAME = "meta-llama/Llama-2-7b-hf"
 VALID_TASKS = ["sst2", "yelp", "squad", "coqa", "kde4", "tatoeba"]
 EVAL_CONFIG = {

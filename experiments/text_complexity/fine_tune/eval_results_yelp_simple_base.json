@@ -3,7 +3,7 @@
         "is_base_model": true,
         "adapter_path": "None",
         "subset": "simple",
-        "test_index_path": "/users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/matrix_analysis/yelp_lexically_simple_test_indices.txt"
+        "test_index_path": "<PROJECT_ROOT>/experiments/text_complexity/matrix_analysis/yelp_lexically_simple_test_indices.txt"
     },
     "metrics": {
         "accuracy": 0.078,

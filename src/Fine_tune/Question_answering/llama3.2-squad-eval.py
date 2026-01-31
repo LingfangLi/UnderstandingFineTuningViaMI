@@ -9,7 +9,7 @@ import string
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 
 # 1. Configuration
-MODEL_PATH = "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/llama3.2-1b-SQUAD-full-ft-20260106-222423/checkpoint-5202/"
+MODEL_PATH = "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/llama3.2-1b-SQUAD-full-ft-20260106-222423/checkpoint-5202/"
 NUM_SAMPLES = 1000
 MAX_LENGTH = 1024
 

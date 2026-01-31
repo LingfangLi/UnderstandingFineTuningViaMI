@@ -14,7 +14,7 @@ os.environ["WANDB_PROJECT"] = "MI_qwen2-0.5b-yelp-full"
 
 # 1. Experiment Configuration
 run_name = f"qwen2-0.5b-full-ft-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
-output_base_dir = "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/"
+output_base_dir = "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/"
 output_dir = os.path.join(output_base_dir, run_name)
 
 config = {

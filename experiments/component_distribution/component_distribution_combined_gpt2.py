@@ -107,6 +107,6 @@ def plot_paper_ready_pies(model_configs, save_path=None):
 
 if __name__ == "__main__":
     tasks = ["yelp", "squad", "kde4"]
-    configs = [{'file_path': f"/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges/old-version-finetuned/gpt2_{t}_finetuned_edges.csv", 'task_name': t} for t in tasks]
+    configs = [{'file_path': f"<PROJECT_ROOT>/output/EAP_edges/old-version-finetuned/gpt2_{t}_finetuned_edges.csv", 'task_name': t} for t in tasks]
 
     plot_paper_ready_pies(configs, save_path="./figure/gpt2_combined_paper.pdf")

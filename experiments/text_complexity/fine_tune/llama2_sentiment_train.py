@@ -21,8 +21,8 @@ CONFIG = {
     "task_name": "yelp",
 
     # Paths
-    "base_save_dir": "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/text_complexity",
-    "train_index_path": f"/users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/matrix_analysis/yelp_lexically_{EXPERIMENT_TYPE}_subset_indices.txt",
+    "base_save_dir": "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/text_complexity",
+    "train_index_path": f"<PROJECT_ROOT>/experiments/text_complexity/matrix_analysis/yelp_lexically_{EXPERIMENT_TYPE}_subset_indices.txt",
 
     # Training parameters
     "learning_rate": 2e-4,

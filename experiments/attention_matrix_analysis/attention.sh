@@ -42,10 +42,10 @@ hostname
 export CUDA_LAUNCH_BLOCKING=1
 
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/attention_matrix_analysis/measure_attention_kl.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/attention_matrix_analysis/kl_visualize_heatmap.py
-python /users/sglli24/UnderstandingFineTuningViaMI/experiments/attention_matrix_analysis/kl_visulize_heatmap_all.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/attention_matrix_analysis/old_measure_attention_kl.py
+#python <PROJECT_ROOT>/experiments/attention_matrix_analysis/measure_attention_kl.py
+#python <PROJECT_ROOT>/experiments/attention_matrix_analysis/kl_visualize_heatmap.py
+python <PROJECT_ROOT>/experiments/attention_matrix_analysis/kl_visulize_heatmap_all.py
+#python <PROJECT_ROOT>/experiments/attention_matrix_analysis/old_measure_attention_kl.py
 echo --------------- 
 echo Job output ends 
 date_end=$(date +%s)

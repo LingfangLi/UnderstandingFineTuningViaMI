@@ -40,17 +40,17 @@ hostname
 export CUDA_LAUNCH_BLOCKING=1
 
 
-#python -u /users/sglli24/fine-tuning-project/find_attention_change_both_wise_v2.py << EOF
+#python -u <PROJECT_ROOT>/fine-tuning-project/find_attention_change_both_wise_v2.py << EOF
 #1
 #EOF
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/EAP/LlaMA/Qlora_LlaMA2_EAP_sentiment.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/EAP/LlaMA/Qlora_LlaMA2_eap_unified.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/EAP/eap_unified.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges/cross_task_edges/overlap_source_ft_vs_target_pt/heatmap.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/EAP/check_qwen_key.py
+#python <PROJECT_ROOT>/src/EAP/LlaMA/Qlora_LlaMA2_EAP_sentiment.py
+#python <PROJECT_ROOT>/src/EAP/LlaMA/Qlora_LlaMA2_eap_unified.py
+#python <PROJECT_ROOT>/src/EAP/eap_unified.py
+#python <PROJECT_ROOT>/output/EAP_edges/cross_task_edges/overlap_source_ft_vs_target_pt/heatmap.py
+#python <PROJECT_ROOT>/src/EAP/check_qwen_key.py
 
-python /users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges/cross_task_edges/overlap_source_ft_vs_target_pt/heatmap_all.py
+python <PROJECT_ROOT>/output/EAP_edges/cross_task_edges/overlap_source_ft_vs_target_pt/heatmap_all.py
 
 echo --------------- 
 echo Job output ends 

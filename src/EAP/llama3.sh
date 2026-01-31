@@ -22,9 +22,9 @@ hostname
 echo ========================================================= 
 
 # Paths
-MODEL_DIR="/mnt/data1/users/sglli24/fine-tuning-project-1/fine_tuned_models"
-DATA_DIR="/users/sglli24/UnderstandingFineTuningViaMI/output/corrupted_data"
-SCRIPT_PATH="/users/sglli24/UnderstandingFineTuningViaMI/src/EAP/eap_unified.py"
+MODEL_DIR="<MODEL_STORAGE>/fine-tuning-project-1/fine_tuned_models"
+DATA_DIR="<PROJECT_ROOT>/output/corrupted_data"
+SCRIPT_PATH="<PROJECT_ROOT>/src/EAP/eap_unified.py"
 
 # Main loop
 for ft_path in "$MODEL_DIR"/*; do

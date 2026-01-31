@@ -15,7 +15,7 @@ CONFIG = {
     "model_name": "Qwen/Qwen2.5-0.5B",
     "use_base_model": False, # True = base model, False = fine-tuned model
     "checkpoint_path": f"",
-    "test_data_index": f"/users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/matrix_analysis/tatoeba_lexically_{EXPERIMENT_TYPE}_test_indices.txt",
+    "test_data_index": f"<PROJECT_ROOT>/experiments/text_complexity/matrix_analysis/tatoeba_lexically_{EXPERIMENT_TYPE}_test_indices.txt",
     "eval_num": 1000,
     "max_new_tokens": 128,
     "device": "cuda" if torch.cuda.is_available() else "cpu",

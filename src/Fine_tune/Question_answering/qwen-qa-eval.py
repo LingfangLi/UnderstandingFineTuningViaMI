@@ -12,7 +12,7 @@ import collections
 CONFIG = {
     "task_name": "squad",
     "model_name": "Qwen/Qwen2-0.5B",
-    "checkpoint_path": "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/old_version/qa/Qwen2-0.5B_squad_best.pt",
+    "checkpoint_path": "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/old_version/qa/Qwen2-0.5B_squad_best.pt",
     "eval_num": 1000, # None = run entire validation set
     "max_new_tokens": 30,
     "device": "cuda" if torch.cuda.is_available() else "cpu"

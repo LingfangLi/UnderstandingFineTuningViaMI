@@ -188,8 +188,8 @@ class OverlapAnalyzer:
 
 # Configuration and Main Program
 if __name__ == "__main__":
-    OUTPUT_DIR = r"/users/sglli24/UnderstandingFineTuningViaMI/experiments/induction_head/output/"
-    EAP_CSV_DIR = r"/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges/finetuned/"
+    OUTPUT_DIR = r"<PROJECT_ROOT>/experiments/induction_head/output/"
+    EAP_CSV_DIR = r"<PROJECT_ROOT>/output/EAP_edges/finetuned/"
 
     MODEL_CONFIGS = {
         "gpt2": (12, 12),

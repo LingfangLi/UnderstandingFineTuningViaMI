@@ -27,8 +27,8 @@ echo "  Task:   $FILTER_TASK"
 echo "=================================================="
 
 # Paths
-SCRIPT_PATH="/users/sglli24/UnderstandingFineTuningViaMI/src/EAP/eap_unified.py"
-BASE_DIR="/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges"
+SCRIPT_PATH="<PROJECT_ROOT>/src/EAP/eap_unified.py"
+BASE_DIR="<PROJECT_ROOT>/output/EAP_edges"
 
 CROSS_TASK_DIR="${BASE_DIR}/cross_task_edges"
 STD_FT_DIR="${BASE_DIR}/old-version-finetuned"

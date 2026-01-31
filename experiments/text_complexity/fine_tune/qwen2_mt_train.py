@@ -21,10 +21,10 @@ CONFIG = {
     "grad_accum_steps": 8, # Effective batch = 32
     "lr": 2e-5,
     "max_length": 128,
-    "save_dir": "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/text_complexity",
+    "save_dir": "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/text_complexity",
     "seed": 42,
-    "data_index": f"/users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/matrix_analysis/tatoeba_lexically_{EXPERIMENT_TYPE}_subset_indices.txt",
-    "test_data_index": f"/users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/matrix_analysis/tatoeba_lexically_{EXPERIMENT_TYPE}_test_indices.txt"
+    "data_index": f"<PROJECT_ROOT>/experiments/text_complexity/matrix_analysis/tatoeba_lexically_{EXPERIMENT_TYPE}_subset_indices.txt",
+    "test_data_index": f"<PROJECT_ROOT>/experiments/text_complexity/matrix_analysis/tatoeba_lexically_{EXPERIMENT_TYPE}_test_indices.txt"
 }
 
 def set_seed(seed):

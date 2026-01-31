@@ -7,7 +7,7 @@ from tqdm import tqdm
 import os
 
 # Configuration
-TRAINED_MODEL_PATH = "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/gpt2-sst2-full-ft-20251205-172809/"
+TRAINED_MODEL_PATH = "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/gpt2-sst2-full-ft-20251205-172809/"
 if "YOUR_SPECIFIC_RUN_FOLDER_HERE" in TRAINED_MODEL_PATH or not os.path.exists(TRAINED_MODEL_PATH):
     print(f"Warning: Please set the correct TRAINED_MODEL_PATH. Current: {TRAINED_MODEL_PATH}")
 
@@ -172,7 +172,7 @@ for sample in tqdm(correct_short_samples, desc="Querying LLaMA 3"):
     })
 
 # Save results
-output_file = "/users/sglli24/UnderstandingFineTuningViaMI/src/find_corrupt_data/gpt2_sst2_sensitive_words.json"
+output_file = "<PROJECT_ROOT>/src/find_corrupt_data/gpt2_sst2_sensitive_words.json"
 os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
 with open(output_file, 'w') as f:

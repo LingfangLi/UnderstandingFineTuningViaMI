@@ -14,10 +14,10 @@ MODEL_TYPE = "llama3.2"  # "gpt2", "llama3.2"
 
 if MODEL_TYPE == "gpt2":
     BASE_MODEL_ID = "gpt2"
-    FT_MODEL_PATH = "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/gpt2-small-kde4-full-ft-20260106-204426/gpt2-small-kde4-full-ft-20260106-204426/checkpoint-2532/"
+    FT_MODEL_PATH = "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/gpt2-small-kde4-full-ft-20260106-204426/gpt2-small-kde4-full-ft-20260106-204426/checkpoint-2532/"
 elif MODEL_TYPE == "llama3.2":
     BASE_MODEL_ID = "meta-llama/Llama-3.2-1B"
-    FT_MODEL_PATH = "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/llama3.2-1b-kde4-full-checkpoint/"
+    FT_MODEL_PATH = "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/llama3.2-1b-kde4-full-checkpoint/"
 
 MODEL_PATH = BASE_MODEL_ID if EVAL_BASE_MODEL else FT_MODEL_PATH
 

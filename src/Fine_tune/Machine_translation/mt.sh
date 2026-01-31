@@ -42,30 +42,30 @@ hostname
 export CUDA_LAUNCH_BLOCKING=1
 
 
-#python -u /users/sglli24/fine-tuning-project/find_attention_change_both_wise_v2.py << EOF
+#python -u <PROJECT_ROOT>/fine-tuning-project/find_attention_change_both_wise_v2.py << EOF
 #1
 #EOF
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/Llama2-7b-yelp-data.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/gpt2-kde4-data.py 
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/gpt2-tatoeba-data.py
-python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/old-gpt2-llama3-eval.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/gpt2-llama3-mt-eval.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/old-llama2-kde4.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/llama3.2-tatoeba-data.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/llama3.2-kde4-data.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/old-llama2-mt-eval.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/old-llama2-mt-eval.py "$@"
+#python <PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/Llama2-7b-yelp-data.py
+#python <PROJECT_ROOT>/src/Fine_tune/Machine_translation/gpt2-kde4-data.py 
+#python <PROJECT_ROOT>/src/Fine_tune/Machine_translation/gpt2-tatoeba-data.py
+python <PROJECT_ROOT>/src/Fine_tune/Machine_translation/old-gpt2-llama3-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Machine_translation/gpt2-llama3-mt-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Machine_translation/old-llama2-kde4.py
+#python <PROJECT_ROOT>/src/Fine_tune/Machine_translation/llama3.2-tatoeba-data.py
+#python <PROJECT_ROOT>/src/Fine_tune/Machine_translation/llama3.2-kde4-data.py
+#python <PROJECT_ROOT>/src/Fine_tune/Machine_translation/old-llama2-mt-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Machine_translation/old-llama2-mt-eval.py "$@"
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/LlaMA2-7b-squad-data.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/LlaMA2-7b-tatoeba-data.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/LlaMA2-tatoeba-eval.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/LlaMA2-7b-kde4-data.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/LlaMA2-kde4-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Question_answering/LlaMA2-7b-squad-data.py
+#python <PROJECT_ROOT>/src/Fine_tune/Machine_translation/LlaMA2-7b-tatoeba-data.py
+#python <PROJECT_ROOT>/src/Fine_tune/Machine_translation/LlaMA2-tatoeba-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Machine_translation/LlaMA2-7b-kde4-data.py
+#python <PROJECT_ROOT>/src/Fine_tune/Machine_translation/LlaMA2-kde4-eval.py
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/Qwen2-0.5b-tatoeba-data.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/Qwen2-0.5b-kde4-data.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/Qwen2-mt-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Machine_translation/Qwen2-0.5b-tatoeba-data.py
+#python <PROJECT_ROOT>/src/Fine_tune/Machine_translation/Qwen2-0.5b-kde4-data.py
+#python <PROJECT_ROOT>/src/Fine_tune/Machine_translation/Qwen2-mt-eval.py
 echo --------------- 
 echo Job output ends 
 date_end=$(date +%s)

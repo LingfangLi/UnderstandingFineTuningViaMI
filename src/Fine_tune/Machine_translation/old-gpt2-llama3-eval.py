@@ -10,7 +10,7 @@ from tqdm import tqdm
 MODEL_CONFIG = {
     "type": "llama",  # "gpt2" or "llama"
     "name": "meta-llama/Llama-3.2-1B",  # or "gpt2" 
-    "checkpoint": "/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models/llama3.2-sst2.pt",
+    "checkpoint": "<MODEL_STORAGE>/fine-tuning-project-1/old_version_finetuned_models/llama3.2-sst2.pt",
     "batch_size": 16,
     "num_samples": 1000,
     "max_length": 256 

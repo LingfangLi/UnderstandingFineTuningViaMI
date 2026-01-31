@@ -12,7 +12,7 @@ os.environ["WANDB_PROJECT"] = "MI_Qwen2_SST2"
 MODEL_ID = "Qwen/Qwen2-0.5B"  # or "Qwen/Qwen2.5-0.5B"
 
 run_name = f"qwen2-0.5b-sst2-full-{datetime.now().strftime('%Y%m%d-%H%M')}"
-output_dir = os.path.join("/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/", run_name)
+output_dir = os.path.join("<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/", run_name)
 
 config = {
     "max_seq_length": 512,

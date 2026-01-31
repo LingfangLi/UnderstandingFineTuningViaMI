@@ -8,8 +8,8 @@ import numpy as np
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Configuration
-csv_path = "/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges/cross_task_edges/summary_tables/Summary_Task2_SourceFT_vs_TargetPT_Overlap_Percentages.csv"
-output_dir = "/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges/cross_task_edges/summary_tables/"
+csv_path = "<PROJECT_ROOT>/output/EAP_edges/cross_task_edges/summary_tables/Summary_Task2_SourceFT_vs_TargetPT_Overlap_Percentages.csv"
+output_dir = "<PROJECT_ROOT>/output/EAP_edges/cross_task_edges/summary_tables/"
 os.makedirs(output_dir, exist_ok=True)
 
 # Axis ordering

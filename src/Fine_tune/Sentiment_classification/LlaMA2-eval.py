@@ -11,7 +11,7 @@ from transformers import (
 # 1. Configuration
 base_model_name = "meta-llama/Llama-2-7b-hf"
 
-adapter_path = "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/llama2-yelp-qlora-20251119-154850/llama2-yelp/"
+adapter_path = "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/llama2-yelp-qlora-20251119-154850/llama2-yelp/"
 
 NUM_SAMPLES = 1000
 MAX_LENGTH = 512

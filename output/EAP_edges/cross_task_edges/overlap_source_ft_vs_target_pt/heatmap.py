@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import os
 
 # Configuration
-csv_path = "/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges/cross_task_edges/summary_tables/Summary_Task2_SourceFT_vs_TargetPT_Overlap_Percentages.csv"
+csv_path = "<PROJECT_ROOT>/output/EAP_edges/cross_task_edges/summary_tables/Summary_Task2_SourceFT_vs_TargetPT_Overlap_Percentages.csv"
 TARGET_MODEL = "all"  # "all" or specific model name, e.g. "gpt2", "llama2"
 
 # Read data

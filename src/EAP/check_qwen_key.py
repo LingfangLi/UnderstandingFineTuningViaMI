@@ -1,7 +1,7 @@
 import torch
 
 
-model_path = "/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models/qwen2-coqa.pt"
+model_path = "<MODEL_STORAGE>/fine-tuning-project-1/old_version_finetuned_models/qwen2-coqa.pt"
 
 print(f"Loading: {model_path} ...")
 state_dict = torch.load(model_path, map_location="cpu")

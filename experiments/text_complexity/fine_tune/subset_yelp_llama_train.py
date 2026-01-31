@@ -19,7 +19,7 @@ model.cfg.use_split_qkv_input = True
 model.cfg.use_attn_result = True
 model.cfg.use_hook_mlp_in = True
 
-with open("/users/sglli24/fine-tuning-project/yelp_lexically_complex_subset_indices.txt", 'r') as f:
+with open("<PROJECT_ROOT>/fine-tuning-project/yelp_lexically_complex_subset_indices.txt", 'r') as f:
         index_list = [int(line.strip()) for line in f]
 raw_data = load_dataset('yelp_polarity')['train'].select(index_list)
 device1 = model.cfg.device
@@ -56,9 +56,9 @@ dataset = SentimentDataset(raw_data, tokenizer)
 
 
 
-cfg=HookedTransformerTrainConfig(num_epochs=12, batch_size=5,save_every=100,warmup_steps=2000,max_grad_norm=1.0, lr=0.001, seed=0, momentum=0.0, weight_decay=0.01, optimizer_name='AdamW', device=device1,save_dir="/users/sglli24/fine-tuning-project/llama_model")
+cfg=HookedTransformerTrainConfig(num_epochs=12, batch_size=5,save_every=100,warmup_steps=2000,max_grad_norm=1.0, lr=0.001, seed=0, momentum=0.0, weight_decay=0.01, optimizer_name='AdamW', device=device1,save_dir="<PROJECT_ROOT>/fine-tuning-project/llama_model")
 
 train(model, cfg,dataset)
 import torch
 
-torch.save(model.state_dict(), "/mnt/data1/users/sglli24/fine-tuning-project-1/model/llama/sentiment/yelp_complex_model_state_dict.pth")
+torch.save(model.state_dict(), "<MODEL_STORAGE>/fine-tuning-project-1/model/llama/sentiment/yelp_complex_model_state_dict.pth")

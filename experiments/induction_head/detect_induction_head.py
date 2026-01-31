@@ -120,8 +120,8 @@ class UserConfig:
     USE_FINETUNED = True
     TARGET_TASK = ['sentiment_sst2-fix']#['sentiment_yelp','sentiment_sst2','qa_squad', 'qa_coqa','mt_kde4','mt_tatoeba']
 
-    MODEL_ROOT_DIR = r"/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models/" #"/mnt/data1/users/sglli24/fine-tuning-project-1/fine_tuned_models/"
-    OUTPUT_DIR = r"/users/sglli24/UnderstandingFineTuningViaMI/experiments/induction_head/output/"
+    MODEL_ROOT_DIR = r"<MODEL_STORAGE>/fine-tuning-project-1/old_version_finetuned_models/" #"<MODEL_STORAGE>/fine-tuning-project-1/fine_tuned_models/"
+    OUTPUT_DIR = r"<PROJECT_ROOT>/experiments/induction_head/output/"
 
     FT_MODEL_MAP = {
         "gpt2": {

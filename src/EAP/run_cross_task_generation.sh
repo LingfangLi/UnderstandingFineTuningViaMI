@@ -15,13 +15,13 @@ export CUDA_LAUNCH_BLOCKING=1
 
 # Paths
 # Fine-tuned model directory
-MODEL_DIR="/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models"
+MODEL_DIR="<MODEL_STORAGE>/fine-tuning-project-1/old_version_finetuned_models"
 # Corrupted data directory
-DATA_DIR="/users/sglli24/UnderstandingFineTuningViaMI/output/corrupted_data"
+DATA_DIR="<PROJECT_ROOT>/output/corrupted_data"
 # Script path
-SCRIPT_PATH="/users/sglli24/UnderstandingFineTuningViaMI/src/EAP/eap_unified.py"
+SCRIPT_PATH="<PROJECT_ROOT>/src/EAP/eap_unified.py"
 # Output directory for cross-task edges
-OUTPUT_DIR="/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges/cross_task_edges"
+OUTPUT_DIR="<PROJECT_ROOT>/output/EAP_edges/cross_task_edges"
 
 # All task names
 ALL_TASKS=("yelp" "sst2" "coqa" "squad" "kde4" "tatoeba")

@@ -26,7 +26,7 @@ CONFIG = {
     "run_name": f"llama2-7b-coqa-manual-qlora-{datetime.now().strftime('%Y%m%d-%H%M%S')}",
     "model_name": "meta-llama/Llama-2-7b-hf",
     "dataset_name": "stanfordnlp/coqa",
-    "output_dir": "/mnt/scratch/users/sglli24/fine-tuning-project/old_fine_tuned_model/",
+    "output_dir": "<MODEL_STORAGE>/fine-tuning-project/old_fine_tuned_model/",
     
     "max_length": 1024,       
     

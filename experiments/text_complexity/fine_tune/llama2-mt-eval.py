@@ -14,10 +14,10 @@ SUBSET_TYPE = "simple" # "simple" or "complex"
 USE_BASE_MODEL = False # True = base model, False = fine-tuned adapter
 
 # Paths
-ADAPTER_PATH = f"/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/text_complexity/Llama2-7b-tatoeba-complex/checkpoint-2375/"
+ADAPTER_PATH = f"<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/text_complexity/Llama2-7b-tatoeba-complex/checkpoint-2375/"
 BASE_MODEL = "meta-llama/Llama-2-7b-hf"
 
-TEST_INDEX_PATH = f"/users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/matrix_analysis/tatoeba_lexically_{SUBSET_TYPE}_test_indices.txt"
+TEST_INDEX_PATH = f"<PROJECT_ROOT>/experiments/text_complexity/matrix_analysis/tatoeba_lexically_{SUBSET_TYPE}_test_indices.txt"
 
 # Output
 OUTPUT_FILE = f"eval_results_tatoeba_{SUBSET_TYPE}_{'base' if USE_BASE_MODEL else 'ft'}_nltk.json"

@@ -11,7 +11,7 @@ CONFIG = {
     # Options: "gpt2", "meta-llama/Llama-3.2-1B", "Qwen/Qwen2-0.5B"
     "model_name": "meta-llama/Llama-3.2-1B",
     
-    "checkpoint_path": "/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models/llama3.2-tatoeba.pt", 
+    "checkpoint_path": "<MODEL_STORAGE>/fine-tuning-project-1/old_version_finetuned_models/llama3.2-tatoeba.pt", 
     
     "eval_base_model": False,
     

@@ -8,7 +8,7 @@ from datasets import load_dataset
 from tqdm import tqdm
 
 # Configuration
-RESULTS_DIR = r"/users/sglli24/UnderstandingFineTuningViaMI/experiments/Layerwise_Representation_Distance_Analysis/Results/QA/Llama2/20260118_224706/"
+RESULTS_DIR = r"<PROJECT_ROOT>/experiments/Layerwise_Representation_Distance_Analysis/Results/QA/Llama2/20260118_224706/"
 JSON_FILE = "batch_1_summary.json"
 
 def normalize_text(s):

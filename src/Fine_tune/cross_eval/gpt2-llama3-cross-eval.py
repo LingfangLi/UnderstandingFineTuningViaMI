@@ -14,7 +14,7 @@ import os
 import gc
 
 # Configuration
-CHECKPOINT_DIR = "/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models/"
+CHECKPOINT_DIR = "<MODEL_STORAGE>/fine-tuning-project-1/old_version_finetuned_models/"
 VALID_TASKS = ["sst2", "yelp", "squad", "coqa", "kde4", "tatoeba"]
 
 JOBS = [

@@ -1,9 +1,9 @@
 {
     "config": {
         "is_base_model": false,
-        "adapter_path": "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/text_complexity/Llama2-Yelp-simple-0113-2343/checkpoint-660/",
+        "adapter_path": "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/text_complexity/Llama2-Yelp-simple-0113-2343/checkpoint-660/",
         "subset": "complex",
-        "test_index_path": "/users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/matrix_analysis/yelp_lexically_complex_test_indices.txt"
+        "test_index_path": "<PROJECT_ROOT>/experiments/text_complexity/matrix_analysis/yelp_lexically_complex_test_indices.txt"
     },
     "metrics": {
         "accuracy": 0.94,

@@ -20,10 +20,10 @@ CONFIG = {
     "num_epochs": 3,
     "max_length": 512,
     "patience": 3,
-    "save_dir": "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/text_complexity",
+    "save_dir": "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/text_complexity",
     "seed": 42,
-    "data_index": f"/users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/matrix_analysis/squad_lexically_{EXPERIMENT_TYPE}_subset_indices.txt",
-    "test_data_index": f"/users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/matrix_analysis/squad_lexically_{EXPERIMENT_TYPE}_test_indices.txt"
+    "data_index": f"<PROJECT_ROOT>/experiments/text_complexity/matrix_analysis/squad_lexically_{EXPERIMENT_TYPE}_subset_indices.txt",
+    "test_data_index": f"<PROJECT_ROOT>/experiments/text_complexity/matrix_analysis/squad_lexically_{EXPERIMENT_TYPE}_test_indices.txt"
 }
 
 def set_seed(seed):

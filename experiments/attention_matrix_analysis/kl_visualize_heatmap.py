@@ -110,7 +110,7 @@ class VisualizationEngine:
 # Standalone mode: read from CSV and plot
 
 if __name__ == "__main__":
-    BASE_DIR = r"/users/sglli24/UnderstandingFineTuningViaMI/experiments/attention_matrix_analysis/old_attention_analysis_results/"
+    BASE_DIR = r"<PROJECT_ROOT>/experiments/attention_matrix_analysis/old_attention_analysis_results/"
     OUTPUT_ROOT_FIGS = os.path.join(BASE_DIR, "figures")
 
     MODELS = ["gpt2", "llama2", "llama3", "qwen2"]

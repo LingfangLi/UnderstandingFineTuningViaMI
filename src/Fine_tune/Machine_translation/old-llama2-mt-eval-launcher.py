@@ -5,9 +5,9 @@ ADAPTERS = ["yelp", "sst2", "squad", "coqa", "tatoeba", "kde4"]
 
 EVAL_DATASETS = ["kde4", "tatoeba"]
 
-BASE_ADAPTER_DIR ="/mnt/scratch/users/sglli24/fine-tuning-project/old_fine_tuned_model/"
-SUBMIT_SCRIPT = SUBMIT_SCRIPT = "/users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Machine_translation/mt.sh"
-LOG_DIR = "/mnt/scratch/users/sglli24/fine-tuning-project/mt/logs"
+BASE_ADAPTER_DIR ="<MODEL_STORAGE>/fine-tuning-project/old_fine_tuned_model/"
+SUBMIT_SCRIPT = SUBMIT_SCRIPT = "<PROJECT_ROOT>/src/Fine_tune/Machine_translation/mt.sh"
+LOG_DIR = "<MODEL_STORAGE>/fine-tuning-project/mt/logs"
 
 def main():
     for adj in ADAPTERS:

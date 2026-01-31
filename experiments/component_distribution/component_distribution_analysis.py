@@ -322,7 +322,7 @@ if __name__ == "__main__":
     #for model_name, model_path_name in zip(["LlaMA-2-7B", "GPT2-Small", "LlaMA-3.2-1B"],["llama2", "gpt2", "llama3.2"]):
     #    for task_name in ["yelp","squad","coqa","kde4","tatoeba"]:
     #        analyze_and_plot(
-     #           file_path=f"/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges/{model_path_name}_{task_name}_finetuned_edges.csv",
+     #           file_path=f"<PROJECT_ROOT>/output/EAP_edges/{model_path_name}_{task_name}_finetuned_edges.csv",
      #           model_name=model_name,
      #           task_name= task_name,
      #           threshold_percentile=0,
@@ -332,7 +332,7 @@ if __name__ == "__main__":
     for model_name, model_path_name in zip(["LlaMA-2-7B", "GPT2-Small", "LlaMA-3.2-1B","Qwen2-0.5B"],["llama2", "gpt2", "llama3.2","qwen2"]):
         for task_name in ["yelp","squad","coqa","kde4","tatoeba","sst2"]:
             analyze_and_plot(
-                file_path=f"/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges/old-version-finetuned/{model_path_name}_{task_name}_finetuned_edges.csv",
+                file_path=f"<PROJECT_ROOT>/output/EAP_edges/old-version-finetuned/{model_path_name}_{task_name}_finetuned_edges.csv",
                 model_name=model_name,
                 task_name= task_name,
                 threshold_percentile=0,
@@ -345,19 +345,19 @@ if __name__ == "__main__":
 
     model_configs = [
         {
-            'file_path': '/users/sglli24/fine-tuning-project/Edges/gpt2_yelp.csv',
+            'file_path': '<PROJECT_ROOT>/fine-tuning-project/Edges/gpt2_yelp.csv',
             'model_name': 'GPT-2 Small',
             'task_name': 'Yelp',
             'threshold_percentile': 95
         },
         {
-            'file_path': '/users/sglli24/fine-tuning-project/Edges/llama_coqa_edges.csv',
+            'file_path': '<PROJECT_ROOT>/fine-tuning-project/Edges/llama_coqa_edges.csv',
             'model_name': 'Llama-3.2-1B',
             'task_name': 'CoQA',
             'threshold_percentile': 95
         },
         {
-            'file_path': '/users/sglli24/fine-tuning-project/Edges/llama2-7b_qlora_edges.csv',
+            'file_path': '<PROJECT_ROOT>/fine-tuning-project/Edges/llama2-7b_qlora_edges.csv',
             'model_name': 'Llama2-7B',
             'task_name': 'Yelp',
             'threshold_percentile': 95

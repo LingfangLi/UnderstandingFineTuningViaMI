@@ -40,10 +40,10 @@ hostname
 # parallel environment.
 export CUDA_LAUNCH_BLOCKING=1
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/induction_head/detect_induction_head.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/induction_head/check_k_value_of_induction_head.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/induction_head/analyze_head_top_edges_overlap.py
-python /users/sglli24/UnderstandingFineTuningViaMI/experiments/induction_head/overlap_analysis.py
+#python <PROJECT_ROOT>/experiments/induction_head/detect_induction_head.py
+#python <PROJECT_ROOT>/experiments/induction_head/check_k_value_of_induction_head.py
+#python <PROJECT_ROOT>/experiments/induction_head/analyze_head_top_edges_overlap.py
+python <PROJECT_ROOT>/experiments/induction_head/overlap_analysis.py
 echo --------------- 
 echo Job output ends 
 date_end=$(date +%s)

@@ -1,7 +1,7 @@
 import torch
 
 
-MODEL_PATH = r"/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models/llama3.2-kde4.pt"
+MODEL_PATH = r"<MODEL_STORAGE>/fine-tuning-project-1/old_version_finetuned_models/llama3.2-kde4.pt"
 
 print(f"Inspecting: {MODEL_PATH}")
 state_dict = torch.load(MODEL_PATH, map_location="cpu")

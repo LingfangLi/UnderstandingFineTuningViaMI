@@ -82,7 +82,7 @@ class VisualizationEngine:
 # Script Entry Point
 
 if __name__ == "__main__":
-    BASE_DIR = r"/users/sglli24/UnderstandingFineTuningViaMI/experiments/attention_matrix_analysis/old_attention_analysis_results/"
+    BASE_DIR = r"<PROJECT_ROOT>/experiments/attention_matrix_analysis/old_attention_analysis_results/"
     OUTPUT_ROOT_FIGS = os.path.join(BASE_DIR, "figures")
     os.makedirs(OUTPUT_ROOT_FIGS, exist_ok=True)
 

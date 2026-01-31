@@ -46,37 +46,37 @@ hostname
 export CUDA_LAUNCH_BLOCKING=1
 
 
-#python -u /users/sglli24/fine-tuning-project/find_attention_change_both_wise_v2.py << EOF
+#python -u <PROJECT_ROOT>/fine-tuning-project/find_attention_change_both_wise_v2.py << EOF
 #1
 #EOF
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/gpt2-squad-data.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/gpt2-coqa-data.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/gpt2-squad-eval.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/gpt2-coqa-eval.py
-python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/old-gpt2-qa-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Question_answering/gpt2-squad-data.py
+#python <PROJECT_ROOT>/src/Fine_tune/Question_answering/gpt2-coqa-data.py
+#python <PROJECT_ROOT>/src/Fine_tune/Question_answering/gpt2-squad-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Question_answering/gpt2-coqa-eval.py
+python <PROJECT_ROOT>/src/Fine_tune/Question_answering/old-gpt2-qa-eval.py
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/CLM_universe_finetune.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/qwen-qa-eval.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/old_llama2_coqa.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/old_llama2_squad.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/old_llama2_qa_eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Question_answering/CLM_universe_finetune.py
+#python <PROJECT_ROOT>/src/Fine_tune/Question_answering/qwen-qa-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Question_answering/old_llama2_coqa.py
+#python <PROJECT_ROOT>/src/Fine_tune/Question_answering/old_llama2_squad.py
+#python <PROJECT_ROOT>/src/Fine_tune/Question_answering/old_llama2_qa_eval.py
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/llama3.2-squad-data.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/llama3.2-coqa-data.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/llama3.2-squad-eval.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/llama3.2-coqa-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Question_answering/llama3.2-squad-data.py
+#python <PROJECT_ROOT>/src/Fine_tune/Question_answering/llama3.2-coqa-data.py
+#python <PROJECT_ROOT>/src/Fine_tune/Question_answering/llama3.2-squad-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Question_answering/llama3.2-coqa-eval.py
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/Llama2-7b-yelp-data.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/LlaMA2-7b-squad-data.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/LlaMA2-squad-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/Llama2-7b-yelp-data.py
+#python <PROJECT_ROOT>/src/Fine_tune/Question_answering/LlaMA2-7b-squad-data.py
+#python <PROJECT_ROOT>/src/Fine_tune/Question_answering/LlaMA2-squad-eval.py
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/LlaMA2-7b-coqa-data.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/LlaMA2-coqa-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Question_answering/LlaMA2-7b-coqa-data.py
+#python <PROJECT_ROOT>/src/Fine_tune/Question_answering/LlaMA2-coqa-eval.py
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/Qwen2-0.5b-squad-data.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/Qwen2-squad-eval.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/Qwen2-0.5b-coqa-data.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Question_answering/Qwen2-coqa-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Question_answering/Qwen2-0.5b-squad-data.py
+#python <PROJECT_ROOT>/src/Fine_tune/Question_answering/Qwen2-squad-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Question_answering/Qwen2-0.5b-coqa-data.py
+#python <PROJECT_ROOT>/src/Fine_tune/Question_answering/Qwen2-coqa-eval.py
 echo --------------- 
 echo Job output ends 
 date_end=$(date +%s)

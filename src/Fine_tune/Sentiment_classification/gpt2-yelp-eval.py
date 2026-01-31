@@ -3,7 +3,7 @@ from datasets import load_dataset
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from tqdm import tqdm
 
-MODEL_PATH = "/users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/fine_tuned_model/gpt2-small-yelp-full-ft-20260105-175008/checkpoint-930/" 
+MODEL_PATH = "<PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/fine_tuned_model/gpt2-small-yelp-full-ft-20260105-175008/checkpoint-930/" 
 DATASET_NAME = "yelp_polarity"
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"

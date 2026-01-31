@@ -1,8 +1,8 @@
 {
     "config": {
         "is_base_model": false,
-        "adapter_path": "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/text_complexity/Llama2-SQuAD-complex/checkpoint-11880/",
-        "test_indices": "/users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/matrix_analysis/squad_lexically_complex_test_indices.txt"
+        "adapter_path": "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/text_complexity/Llama2-SQuAD-complex/checkpoint-11880/",
+        "test_indices": "<PROJECT_ROOT>/experiments/text_complexity/matrix_analysis/squad_lexically_complex_test_indices.txt"
     },
     "metrics": {
         "avg_f1": 0.8366716512690426,

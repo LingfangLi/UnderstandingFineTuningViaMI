@@ -313,7 +313,7 @@ def main(output_dir, min_decreased_ratio=0.5, require_f1_improvement=True, requi
 
 
 if __name__ == "__main__":
-    output_directory = r"/users/sglli24/UnderstandingFineTuningViaMI/experiments/Layerwise_Representation_Distance_Analysis/Results/QA/Llama2/20260119_234948/"
+    output_directory = r"<PROJECT_ROOT>/experiments/Layerwise_Representation_Distance_Analysis/Results/QA/Llama2/20260119_234948/"
 
     filtered_samples, layer_averages = main(
         output_directory,

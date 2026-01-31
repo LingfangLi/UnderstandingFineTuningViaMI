@@ -500,17 +500,17 @@ def main():
         },
         "llama3": {
             "hf_name": "meta-llama/Llama-3.2-1B",
-            "ft_path": r"/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models/llama3.2-yelp.pt",
+            "ft_path": r"<MODEL_STORAGE>/fine-tuning-project-1/old_version_finetuned_models/llama3.2-yelp.pt",
             "folder_name": "llama3"
         },
         "qwen2": {
             "hf_name": "Qwen/Qwen2-0.5B",
-            "ft_path": r"/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models/qwen2_yelp.pt",
+            "ft_path": r"<MODEL_STORAGE>/fine-tuning-project-1/old_version_finetuned_models/qwen2_yelp.pt",
             "folder_name": "qwen2"
         },
         "llama2": {
             "hf_name": "meta-llama/Llama-2-7b-hf",
-            "ft_path": r"/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models/llama2-yelp",
+            "ft_path": r"<MODEL_STORAGE>/fine-tuning-project-1/old_version_finetuned_models/llama2-yelp",
             "folder_name": "llama2"
         }
     }

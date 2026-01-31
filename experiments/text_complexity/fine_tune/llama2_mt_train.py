@@ -21,9 +21,9 @@ CONFIG = {
     "task_name": "tatoeba",
 
     # Paths
-    "base_save_dir": "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/text_complexity",
-    "data_index": f"/users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/matrix_analysis/tatoeba_lexically_{EXPERIMENT_TYPE}_subset_indices.txt",
-    "test_data_index": f"/users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/matrix_analysis/tatoeba_lexically_{EXPERIMENT_TYPE}_test_indices.txt",
+    "base_save_dir": "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/text_complexity",
+    "data_index": f"<PROJECT_ROOT>/experiments/text_complexity/matrix_analysis/tatoeba_lexically_{EXPERIMENT_TYPE}_subset_indices.txt",
+    "test_data_index": f"<PROJECT_ROOT>/experiments/text_complexity/matrix_analysis/tatoeba_lexically_{EXPERIMENT_TYPE}_test_indices.txt",
 
     # Training parameters
     "num_epochs": 1,

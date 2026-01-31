@@ -6,7 +6,7 @@ import numpy as np
 import os
 
 # Configuration
-RESULTS_DIR = r"/users/sglli24/UnderstandingFineTuningViaMI/experiments/Layerwise_Representation_Distance_Analysis/Model_Internal_States_Analysis/Results/QA/SQUAD/llama3/20260116_142340/"
+RESULTS_DIR = r"<PROJECT_ROOT>/experiments/Layerwise_Representation_Distance_Analysis/Model_Internal_States_Analysis/Results/QA/SQUAD/llama3/20260116_142340/"
 
 def main():
     print(f"Reading data from: {RESULTS_DIR}")

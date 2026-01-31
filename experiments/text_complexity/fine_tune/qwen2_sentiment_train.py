@@ -14,7 +14,7 @@ BASE_CONFIG = {
     "project_name": "Qwen2-Yelp-FineTuning",
     "model_name": "Qwen/Qwen2-0.5B", 
     "dataset": "yelp_polarity",
-    "save_dir": "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model",
+    "save_dir": "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model",
     "seed": 42,
     "max_length": 256,
 }
@@ -30,8 +30,8 @@ PARAM_MAP = {
         "weight_decay": 0.01,    
         "clip_norm": 1.0,        
         "use_scheduler": False, 
-        "subset_indices": "/users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/matrix_analysis/yelp_lexically_simple_subset_indices.txt" ,
-        "test_indices": "/users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/matrix_analysis/yelp_lexically_simple_test_indices.txt" ,
+        "subset_indices": "<PROJECT_ROOT>/experiments/text_complexity/matrix_analysis/yelp_lexically_simple_subset_indices.txt" ,
+        "test_indices": "<PROJECT_ROOT>/experiments/text_complexity/matrix_analysis/yelp_lexically_simple_test_indices.txt" ,
         "patience":3
     },
     "complex": {
@@ -42,8 +42,8 @@ PARAM_MAP = {
         "weight_decay": 0.1,     
         "clip_norm": 0.5,        
         "use_scheduler": True,  
-        "subset_indices": "/users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/matrix_analysis/yelp_lexically_complex_subset_indices.txt",
-        "test_indices": "/users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/matrix_analysis/yelp_lexically_complex_test_indices.txt" ,
+        "subset_indices": "<PROJECT_ROOT>/experiments/text_complexity/matrix_analysis/yelp_lexically_complex_subset_indices.txt",
+        "test_indices": "<PROJECT_ROOT>/experiments/text_complexity/matrix_analysis/yelp_lexically_complex_test_indices.txt" ,
         "patience":2
     }
 }

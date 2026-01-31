@@ -21,7 +21,7 @@ from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 # Options: "qwen2", "llama3", "llama2", "gpt2"
 MODEL_KEY = "llama3"
 
-BASE_MODEL_PATH = r"/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models"
+BASE_MODEL_PATH = r"<MODEL_STORAGE>/fine-tuning-project-1/old_version_finetuned_models"
 
 MODEL_CONFIGS = {
     "qwen2": {

@@ -16,8 +16,8 @@ CONFIG = {
     "task_name": "squad",
     "model_name": "Qwen/Qwen2-0.5B",
     "use_base_model": False, # True = base model, False = fine-tuned model
-    "checkpoint_path": f"/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/text_complexity/Qwen2-0.5B_squad_complex_best.pt",
-    "test_data_index": f"/users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/matrix_analysis/squad_lexically_{EXPERIMENT_TYPE}_test_indices.txt",
+    "checkpoint_path": f"<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/text_complexity/Qwen2-0.5B_squad_complex_best.pt",
+    "test_data_index": f"<PROJECT_ROOT>/experiments/text_complexity/matrix_analysis/squad_lexically_{EXPERIMENT_TYPE}_test_indices.txt",
     "eval_num": 1000, # None = entire validation set
     "max_new_tokens": 30,
     "device": "cuda" if torch.cuda.is_available() else "cpu"

@@ -12,7 +12,7 @@ from trl import SFTConfig, SFTTrainer
 
 # 1. Experiment Configuration
 run_name = f"qwen2-0.5b-squad-full-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
-output_dir = f"/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/{run_name}"
+output_dir = f"<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/{run_name}"
 
 config = {
     "model_name": "Qwen/Qwen2-0.5B",

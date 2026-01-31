@@ -55,38 +55,38 @@ hostname
 export CUDA_LAUNCH_BLOCKING=1
 
 
-#python -u /users/sglli24/fine-tuning-project/find_attention_change_both_wise_v2.py << EOF
+#python -u <PROJECT_ROOT>/fine-tuning-project/find_attention_change_both_wise_v2.py << EOF
 #1
 #EOF
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/Llama2-7b-yelp-data.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/LlaMA2-eval.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/llama2-7b-sst2-data.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/llama2-sst2-eval.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/old-llama2-sst2-eval.py
-python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/old_llama2_yelp_eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/Llama2-7b-yelp-data.py
+#python <PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/LlaMA2-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/llama2-7b-sst2-data.py
+#python <PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/llama2-sst2-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/old-llama2-sst2-eval.py
+python <PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/old_llama2_yelp_eval.py
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/old_llama2_sst2.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/old_llama2_yelp.py
+#python <PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/old_llama2_sst2.py
+#python <PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/old_llama2_yelp.py
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/CLM_universe_finetune.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/sst2-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/CLM_universe_finetune.py
+#python <PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/sst2-eval.py
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/Qwen2-0.5b-yelp-data.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/Qwen2-eval.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/qwen2-sst2-data.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/qwen2-sst2-eval.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/Old-Qwen2-yelp-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/Qwen2-0.5b-yelp-data.py
+#python <PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/Qwen2-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/qwen2-sst2-data.py
+#python <PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/qwen2-sst2-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/Old-Qwen2-yelp-eval.py
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/old-gpt2-yelp-eval.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/gpt2-sst2-data.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/GPT2-eval.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/gpt2-yelp-data.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/gpt2-yelp-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/old-gpt2-yelp-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/gpt2-sst2-data.py
+#python <PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/GPT2-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/gpt2-yelp-data.py
+#python <PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/gpt2-yelp-eval.py
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/llama3.2-sst2-data.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/llama3.2-yelp-data.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/Sentiment_classification/llama3.2-yelp-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/llama3.2-sst2-data.py
+#python <PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/llama3.2-yelp-data.py
+#python <PROJECT_ROOT>/src/Fine_tune/Sentiment_classification/llama3.2-yelp-eval.py
 echo --------------- 
 echo Job output ends 
 date_end=$(date +%s)

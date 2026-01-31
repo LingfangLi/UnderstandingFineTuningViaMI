@@ -295,13 +295,13 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--task", type=str,choices=['yelp', 'sst2','coqa','squad', 'kde4', 'tatoeba'],default='sst2')
     parser.add_argument("--model_name", type=str, default="llama2")  
-    parser.add_argument("--output_dir", type=str, default="/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges/old-version-finetuned/")
+    parser.add_argument("--output_dir", type=str, default="<PROJECT_ROOT>/output/EAP_edges/old-version-finetuned/")
     
     # Selcet mode
     parser.add_argument("--mode", type=str, default="finetuned", choices=['finetuned', 'pretrained', 'compare'])
                       
-    parser.add_argument("--data_path", type=str, default='/users/sglli24/UnderstandingFineTuningViaMI/output/corrupted_data/sst2_corrupted.csv')
-    parser.add_argument("--ft_model_path", type=str,help="Path to fientuned model directory",default="/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models/llama2-sst2-fix/") #default=/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models/ "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/qwen2-0.5b-coqa-full-20251125-182058/checkpoint-4500/"
+    parser.add_argument("--data_path", type=str, default='<PROJECT_ROOT>/output/corrupted_data/sst2_corrupted.csv')
+    parser.add_argument("--ft_model_path", type=str,help="Path to fientuned model directory",default="<MODEL_STORAGE>/fine-tuning-project-1/old_version_finetuned_models/llama2-sst2-fix/") #default=<MODEL_STORAGE>/fine-tuning-project-1/old_version_finetuned_models/ "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/qwen2-0.5b-coqa-full-20251125-182058/checkpoint-4500/"
     parser.add_argument("--base_model_name", type=str, default="meta-llama/Llama-2-7b-hf",help="HF Hub name for config/tokenizer") #"meta-llama/Llama-2-7b-hf" default="Qwen/Qwen2-0.5B"  "meta-llama/Llama-3.2-1B"
     parser.add_argument("--top_k", type=int, default=400)
     parser.add_argument("--batch_size", type=int, default=1)

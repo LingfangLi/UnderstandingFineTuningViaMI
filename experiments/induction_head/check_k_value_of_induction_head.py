@@ -160,6 +160,6 @@ def batch_analyse(root_dir: str, out_dir: str = "plots"):
 
 # 3. Entry point
 if __name__ == "__main__":
-    ROOT = "/users/sglli24/UnderstandingFineTuningViaMI/experiments/induction_head/output"
+    ROOT = "<PROJECT_ROOT>/experiments/induction_head/output"
     SAVE = "induction_heads_distribution_plots"
     batch_analyse(ROOT, SAVE)

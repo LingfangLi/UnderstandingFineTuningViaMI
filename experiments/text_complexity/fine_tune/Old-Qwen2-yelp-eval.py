@@ -10,7 +10,7 @@ import os
 CONFIG = {
     "model_name": "Qwen/Qwen2-0.5B",
     "use_base_model": False, # True = base model, False = fine-tuned model
-    "checkpoint_path": "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/Qwen2-0.5B_yelp_complex.pt",
+    "checkpoint_path": "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/Qwen2-0.5B_yelp_complex.pt",
     "eval_num": 1000, # None = entire test set
     "batch_size": 1,
     "device": "cuda" if torch.cuda.is_available() else "cpu"
@@ -71,7 +71,7 @@ def evaluate():
     model, tokenizer = load_model_and_tokenizer()
     
     # Load dataset indices
-    index_path = "/users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/matrix_analysis/yelp_lexically_simple_test_indices.txt"
+    index_path = "<PROJECT_ROOT>/experiments/text_complexity/matrix_analysis/yelp_lexically_simple_test_indices.txt"
     print(f"Loading indices from {index_path}...")
     
     with open(index_path, 'r') as f:

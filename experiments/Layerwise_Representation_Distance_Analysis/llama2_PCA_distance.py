@@ -24,9 +24,9 @@ CURRENT_TASK = "QA"
 BASE_MODEL_NAME = "meta-llama/Llama-2-7b-hf"
 
 FINETUNED_PATHS = {
-    "Sentiment": r"/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models/llama2-yelp",
-    "MT": r"/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models/llama2-kde4",
-    "QA": r"/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models/llama2-squad"
+    "Sentiment": r"<MODEL_STORAGE>/fine-tuning-project-1/old_version_finetuned_models/llama2-yelp",
+    "MT": r"<MODEL_STORAGE>/fine-tuning-project-1/old_version_finetuned_models/llama2-kde4",
+    "QA": r"<MODEL_STORAGE>/fine-tuning-project-1/old_version_finetuned_models/llama2-squad"
 }
 
 OUTPUT_DIR = f"./Results/{CURRENT_TASK}/Llama2/{datetime.now().strftime('%Y%m%d_%H%M%S')}"

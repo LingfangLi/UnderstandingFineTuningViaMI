@@ -17,7 +17,7 @@
 
 
 module load miniforge3/25.3.0-python3.12.10
-source activate /mnt/fastscratch/users/sglli24/.conda/envs/MI-FineTune-new #MI-FineTune
+source activate <MODEL_STORAGE>/.conda/envs/MI-FineTune-new #MI-FineTune
 #pip install cmapy  
 #conda install -c conda-forge graphviz pygraphviz
 export PYTORCH_CUDA_ALLOC_CONF='expandable_segments:True,max_split_size_mb:512'
@@ -41,14 +41,14 @@ hostname
 export CUDA_LAUNCH_BLOCKING=1
 
 
-#python -u /users/sglli24/fine-tuning-project/find_attention_change_both_wise_v2.py << EOF
+#python -u <PROJECT_ROOT>/fine-tuning-project/find_attention_change_both_wise_v2.py << EOF
 #1
 #EOF
 
-python /users/sglli24/UnderstandingFineTuningViaMI/src/EAP/generate_with_edge_corruption/qwen-ablation-eval.py \
+python <PROJECT_ROOT>/src/EAP/generate_with_edge_corruption/qwen-ablation-eval.py \
     --task squad \
-    --model_path "/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models/qwen2_squad.pt" \
-    --edge_path "/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges/old-version-finetuned/qwen2_squad_finetuned_edges.csv" \
+    --model_path "<MODEL_STORAGE>/fine-tuning-project-1/old_version_finetuned_models/qwen2_squad.pt" \
+    --edge_path "<PROJECT_ROOT>/output/EAP_edges/old-version-finetuned/qwen2_squad_finetuned_edges.csv" \
     --method zero \
     --eval_num 10 \
     --run_baseline

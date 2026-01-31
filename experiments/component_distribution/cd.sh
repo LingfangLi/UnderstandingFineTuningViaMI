@@ -37,8 +37,8 @@ hostname
 # parallel environment.
 export CUDA_LAUNCH_BLOCKING=1
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/component_distribution/component_distribution_analysis.py
-python /users/sglli24/UnderstandingFineTuningViaMI/experiments/component_distribution/component_distribution_combined_gpt2.py
+#python <PROJECT_ROOT>/experiments/component_distribution/component_distribution_analysis.py
+python <PROJECT_ROOT>/experiments/component_distribution/component_distribution_combined_gpt2.py
 echo --------------- 
 echo Job output ends 
 date_end=$(date +%s)

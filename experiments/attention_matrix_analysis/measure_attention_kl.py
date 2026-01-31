@@ -24,8 +24,8 @@ class UserConfig:
     TARGET_TASK =  "sentiment_sst2-fix"
 
     # Path configuration
-    MODEL_ROOT_DIR = r"/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models/"
-    OUTPUT_DIR = r"/users/sglli24/UnderstandingFineTuningViaMI/experiments/attention_matrix_analysis/attention_analysis_results/"
+    MODEL_ROOT_DIR = r"<MODEL_STORAGE>/fine-tuning-project-1/old_version_finetuned_models/"
+    OUTPUT_DIR = r"<PROJECT_ROOT>/experiments/attention_matrix_analysis/attention_analysis_results/"
 
     # Fine-tuned model folder mapping
     FT_MODEL_MAP = {

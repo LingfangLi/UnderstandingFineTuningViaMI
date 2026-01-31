@@ -12,7 +12,7 @@ CONFIG = {
     "model_name": "Qwen/Qwen2-0.5B",
     
     # 2. Path to your fine-tuned model weights
-    "checkpoint_path": "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/text_complexity/Qwen2-0.5B_yelp_complex.pt",
+    "checkpoint_path": "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/text_complexity/Qwen2-0.5B_yelp_complex.pt",
     
     # True = evaluate base model; False = evaluate fine-tuned checkpoint
     "eval_base_model": True,

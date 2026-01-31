@@ -15,7 +15,7 @@ os.environ["WANDB_PROJECT"] = "MI_llama3.2-tatoeba"
 
 # Experiment Configuration
 run_name = f"llama3.2-1b-tatoeba-full-ft-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
-output_base_dir = f"/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/"
+output_base_dir = f"<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/"
 output_dir = os.path.join(output_base_dir, run_name)
 
 config = {

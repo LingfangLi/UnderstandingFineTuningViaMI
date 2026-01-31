@@ -8,7 +8,7 @@ from transformers import (
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 
 # Configuration
-model_path = "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/qwen2-0.5b-tatoeba-en-fr-20251125-165129/"
+model_path = "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/qwen2-0.5b-tatoeba-en-fr-20251125-165129/"
 
 # Task settings
 IS_KDE4 = False  # Set to False for Tatoeba, True for KDE4

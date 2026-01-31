@@ -42,24 +42,24 @@ hostname
 
 export CUDA_LAUNCH_BLOCKING=1
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/Layerwise_Representation_Distance_Analysis/PCA_yelp_samples_filter_dcreased_distance.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/Layerwise_Representation_Distance_Analysis/PCA_Squad_samples_filter_dcreased_distance.py
-python  /users/sglli24/UnderstandingFineTuningViaMI/experiments/Layerwise_Representation_Distance_Analysis/PCA_KDE4_samples_filter_decreased_distance.py
+#python <PROJECT_ROOT>/experiments/Layerwise_Representation_Distance_Analysis/PCA_yelp_samples_filter_dcreased_distance.py
+#python <PROJECT_ROOT>/experiments/Layerwise_Representation_Distance_Analysis/PCA_Squad_samples_filter_dcreased_distance.py
+python  <PROJECT_ROOT>/experiments/Layerwise_Representation_Distance_Analysis/PCA_KDE4_samples_filter_decreased_distance.py
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/Layerwise_Representation_Distance_Analysis/qa_fitler_samples_f1.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/Layerwise_Representation_Distance_Analysis/qa-llama2-filter-f1.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/Layerwise_Representation_Distance_Analysis/filter_samples_bleu.py
+#python <PROJECT_ROOT>/experiments/Layerwise_Representation_Distance_Analysis/qa_fitler_samples_f1.py
+#python <PROJECT_ROOT>/experiments/Layerwise_Representation_Distance_Analysis/qa-llama2-filter-f1.py
+#python <PROJECT_ROOT>/experiments/Layerwise_Representation_Distance_Analysis/filter_samples_bleu.py
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/Layerwise_Representation_Distance_Analysis/filter_sample_sentiment.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/Layerwise_Representation_Distance_Analysis/plot_results_from_json.py
+#python <PROJECT_ROOT>/experiments/Layerwise_Representation_Distance_Analysis/filter_sample_sentiment.py
+#python <PROJECT_ROOT>/experiments/Layerwise_Representation_Distance_Analysis/plot_results_from_json.py
 
-#python -u /users/sglli24/UnderstandingFineTuningViaMI/experiments/Layerwise_Representation_Distance_Analysis/llama2_PCA_distance.py
+#python -u <PROJECT_ROOT>/experiments/Layerwise_Representation_Distance_Analysis/llama2_PCA_distance.py
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/Layerwise_Representation_Distance_Analysis/universal_barchart.py
+#python <PROJECT_ROOT>/experiments/Layerwise_Representation_Distance_Analysis/universal_barchart.py
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/Layerwise_Representation_Distance_Analysis/check_llama3_key.py
+#python <PROJECT_ROOT>/experiments/Layerwise_Representation_Distance_Analysis/check_llama3_key.py
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/Layerwise_Representation_Distance_Analysis/check.py
+#python <PROJECT_ROOT>/experiments/Layerwise_Representation_Distance_Analysis/check.py
 echo --------------- 
 echo Job output ends 
 date_end=$(date +%s)

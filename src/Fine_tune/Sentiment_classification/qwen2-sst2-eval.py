@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 from tqdm import tqdm
 
 # 1. Configuration
-MODEL_PATH = "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/llama3.2-1b-sst2-full-20251209-1554/checkpoint-1266/"
+MODEL_PATH = "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/llama3.2-1b-sst2-full-20251209-1554/checkpoint-1266/"
 DATASET_NAME = "stanfordnlp/sst2"
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 FINETUNED = False

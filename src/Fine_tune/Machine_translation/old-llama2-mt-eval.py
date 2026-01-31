@@ -16,7 +16,7 @@ import numpy as np
 CONFIG = {
     "task_name": "kde4",
 
-    "adapter_path": "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/llama2-7b-yelp-qlora/",
+    "adapter_path": "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/llama2-7b-yelp-qlora/",
 
     "base_model": "meta-llama/Llama-2-7b-hf",
 

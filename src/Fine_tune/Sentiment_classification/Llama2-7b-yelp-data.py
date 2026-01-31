@@ -16,7 +16,7 @@ import os
 os.environ["WANDB_PROJECT"] = "MI_llama2-yelp-finetune"
 # 1. Experiment Configuration
 run_name = f"llama2-yelp-qlora-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
-output_base_dir = "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/"
+output_base_dir = "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/"
 output_dir = os.path.join(output_base_dir, run_name)
 
 config = {

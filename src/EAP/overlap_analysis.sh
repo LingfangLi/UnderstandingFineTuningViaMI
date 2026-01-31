@@ -26,10 +26,10 @@ fi
 echo "=================================================="
 
 # Paths
-SCRIPT_PATH="/users/sglli24/UnderstandingFineTuningViaMI/src/EAP/eap_unified.py"
-CROSS_TASK_DIR="/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges/cross_task_edges"
-STD_FT_DIR="/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges/old-version-finetuned"
-PRETRAINED_DIR="/users/sglli24/UnderstandingFineTuningViaMI/output/EAP_edges/pretrained"
+SCRIPT_PATH="<PROJECT_ROOT>/src/EAP/eap_unified.py"
+CROSS_TASK_DIR="<PROJECT_ROOT>/output/EAP_edges/cross_task_edges"
+STD_FT_DIR="<PROJECT_ROOT>/output/EAP_edges/old-version-finetuned"
+PRETRAINED_DIR="<PROJECT_ROOT>/output/EAP_edges/pretrained"
 
 # Output directories for detailed overlap CSVs
 OUT_OVERLAP_T1="${CROSS_TASK_DIR}/overlap_cross_vs_target_ft"

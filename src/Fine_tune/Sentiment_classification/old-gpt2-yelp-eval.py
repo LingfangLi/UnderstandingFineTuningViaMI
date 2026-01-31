@@ -9,14 +9,14 @@ MODEL_TYPE = "llama"  # Options: "gpt2" or "llama"
 if MODEL_TYPE == "gpt2":
     CONFIG = {
         "model_name": "gpt2",
-        "checkpoint_path": "/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models/gpt2-sst2.pt",
+        "checkpoint_path": "<MODEL_STORAGE>/fine-tuning-project-1/old_version_finetuned_models/gpt2-sst2.pt",
         "dtype": torch.float32,
         "padding_side": "right"
     }
 else:
     CONFIG = {
         "model_name": "meta-llama/Llama-3.2-1B",
-        "checkpoint_path": "/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models/llama3.2-sst2.pt",
+        "checkpoint_path": "<MODEL_STORAGE>/fine-tuning-project-1/old_version_finetuned_models/llama3.2-sst2.pt",
         "dtype": torch.float16, # Llama recommends half-precision
         "padding_side": "left"   # Llama generation must use left padding
     }

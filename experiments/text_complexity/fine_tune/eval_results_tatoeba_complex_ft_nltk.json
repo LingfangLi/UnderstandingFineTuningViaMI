@@ -1,8 +1,8 @@
 {
     "config": {
         "is_base_model": false,
-        "adapter_path": "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/text_complexity/Llama2-7b-tatoeba-complex/checkpoint-2375/",
-        "test_indices": "/users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/matrix_analysis/tatoeba_lexically_complex_test_indices.txt"
+        "adapter_path": "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/text_complexity/Llama2-7b-tatoeba-complex/checkpoint-2375/",
+        "test_indices": "<PROJECT_ROOT>/experiments/text_complexity/matrix_analysis/tatoeba_lexically_complex_test_indices.txt"
     },
     "metrics": {
         "avg_bleu": 0.35751744371338756

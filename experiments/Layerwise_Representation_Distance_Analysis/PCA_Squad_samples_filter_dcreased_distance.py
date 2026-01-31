@@ -494,7 +494,7 @@ def main():
     current_model_key = "qwen2"  # Options: "gpt2", "llama2-7b", "qwen2"
     dataset_name = 'squad'  # Options: 'squad' or 'coqa'
 
-    base_path = r"/mnt/data1/users/sglli24/fine-tuning-project-1/old_version_finetuned_models"
+    base_path = r"<MODEL_STORAGE>/fine-tuning-project-1/old_version_finetuned_models"
 
     model_configs = {
         "gpt2": {

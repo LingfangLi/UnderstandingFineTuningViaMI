@@ -41,13 +41,13 @@ hostname
 export CUDA_LAUNCH_BLOCKING=1
 
 
-#python -u /users/sglli24/fine-tuning-project/find_attention_change_both_wise_v2.py << EOF
+#python -u <PROJECT_ROOT>/fine-tuning-project/find_attention_change_both_wise_v2.py << EOF
 #1
 #EOF
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/cross_eval/universal_cross_eval.py
-python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/cross_eval/gpt2-llama3-cross-eval.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/src/Fine_tune/cross_eval/llama2_cross_eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/cross_eval/universal_cross_eval.py
+python <PROJECT_ROOT>/src/Fine_tune/cross_eval/gpt2-llama3-cross-eval.py
+#python <PROJECT_ROOT>/src/Fine_tune/cross_eval/llama2_cross_eval.py
 echo --------------- 
 echo Job output ends 
 date_end=$(date +%s)

@@ -41,20 +41,20 @@ hostname
 
 export CUDA_LAUNCH_BLOCKING=1
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/fine_tune/qwen2_sentiment_train.py
-python /users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/fine_tune/Old-Qwen2-yelp-eval.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/fine_tune/qwen2_qa_train.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/fine_tune/qwen2_mt_train.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/fine_tune/qwen-qa-eval.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/fine_tune/qwen2-mt-eval.py
+#python <PROJECT_ROOT>/experiments/text_complexity/fine_tune/qwen2_sentiment_train.py
+python <PROJECT_ROOT>/experiments/text_complexity/fine_tune/Old-Qwen2-yelp-eval.py
+#python <PROJECT_ROOT>/experiments/text_complexity/fine_tune/qwen2_qa_train.py
+#python <PROJECT_ROOT>/experiments/text_complexity/fine_tune/qwen2_mt_train.py
+#python <PROJECT_ROOT>/experiments/text_complexity/fine_tune/qwen-qa-eval.py
+#python <PROJECT_ROOT>/experiments/text_complexity/fine_tune/qwen2-mt-eval.py
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/fine_tune/llama2_mt_train.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/fine_tune/llama2_sentiment_train.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/fine_tune/llama2_qa_train.py
+#python <PROJECT_ROOT>/experiments/text_complexity/fine_tune/llama2_mt_train.py
+#python <PROJECT_ROOT>/experiments/text_complexity/fine_tune/llama2_sentiment_train.py
+#python <PROJECT_ROOT>/experiments/text_complexity/fine_tune/llama2_qa_train.py
 
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/fine_tune/llama2-qa-eval.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/fine_tune/llama2-mt-eval.py
-#python /users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/fine_tune/llama-sentiment-eval.py
+#python <PROJECT_ROOT>/experiments/text_complexity/fine_tune/llama2-qa-eval.py
+#python <PROJECT_ROOT>/experiments/text_complexity/fine_tune/llama2-mt-eval.py
+#python <PROJECT_ROOT>/experiments/text_complexity/fine_tune/llama-sentiment-eval.py
 echo --------------- 
 echo Job output ends 
 date_end=$(date +%s)

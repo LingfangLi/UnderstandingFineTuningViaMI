@@ -22,7 +22,7 @@ CONFIG = {
     "num_epochs": 4,  
     "max_length": 128, 
     "patience": 3,     
-    "save_dir": "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/old_version",
+    "save_dir": "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/old_version",
     "seed": 42
 }
 

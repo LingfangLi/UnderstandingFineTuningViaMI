@@ -18,7 +18,7 @@ os.environ["WANDB_PROJECT"] = "MI_gpt2-small-SQuAD-QA"
 TASK_TYPE = "squad" 
 
 run_name = f"gpt2-small-{TASK_TYPE}-full-ft-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
-output_base_dir = "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/"
+output_base_dir = "<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/"
 output_dir = os.path.join(output_base_dir, run_name)
 
 config = {

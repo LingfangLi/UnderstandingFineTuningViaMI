@@ -58,7 +58,7 @@ def plot_distance_barchart(csv_path, task_name, model_name,output_filename=None)
     # plt.show()
 
 # Configuration
-yelp_csv = r"/users/sglli24/UnderstandingFineTuningViaMI/experiments/Layerwise_Representation_Distance_Analysis/Results/Sentiment/Yelp/llama3/20260116_140525/filtered_layer_averages_sentiment.csv"
+yelp_csv = r"<PROJECT_ROOT>/experiments/Layerwise_Representation_Distance_Analysis/Results/Sentiment/Yelp/llama3/20260116_140525/filtered_layer_averages_sentiment.csv"
 plot_distance_barchart(yelp_csv, "Sentiment Analysis","Llama-3.2-1B")
 
 #squad_csv = r"./qa_analysis/YOUR_TIMESTAMP_FOLDER/all_layer_distances.csv"

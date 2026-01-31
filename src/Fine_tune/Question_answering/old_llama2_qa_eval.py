@@ -15,7 +15,7 @@ import numpy as np
 # 1. Configuration
 CONFIG = {
     "task_name": "coqa",
-    "adapter_path": "/mnt/scratch/users/sglli24/fine-tuning-project/old_fine_tuned_model/llama2-7b-yelp-qlora/", #"/mnt/scratch/users/sglli24/fine-tuning-project/old_fine_tuned_model/llama2-7b-coqa-manual-3000-qlora-20260122-193545", #
+    "adapter_path": "<MODEL_STORAGE>/fine-tuning-project/old_fine_tuned_model/llama2-7b-yelp-qlora/", #"<MODEL_STORAGE>/fine-tuning-project/old_fine_tuned_model/llama2-7b-coqa-manual-3000-qlora-20260122-193545", #
     "base_model": "meta-llama/Llama-2-7b-hf",
     "eval_sample_limit": 1000, # None = full dataset
     "max_new_tokens": 50,

@@ -9,7 +9,7 @@ from trl import SFTConfig, SFTTrainer
 os.environ["WANDB_PROJECT"] = "MI_Llama3_SST2"
 MODEL_ID = "meta-llama/Llama-3.2-1B"
 run_name = f"llama3.2-1b-sst2-full-{datetime.now().strftime('%Y%m%d-%H%M')}"
-output_dir = os.path.join("/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/", run_name)
+output_dir = os.path.join("<MODEL_STORAGE>/fine-tuning-project/fine_tuned_model/", run_name)
 config = {
     "max_seq_length": 512,
     "learning_rate": 2e-5,

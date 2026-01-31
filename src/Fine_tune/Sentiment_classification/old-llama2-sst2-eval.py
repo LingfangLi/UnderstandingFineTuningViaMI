@@ -10,7 +10,7 @@ from tqdm import tqdm
 import numpy as np
 
 # 1. Configuration
-ADAPTER_PATH = "/mnt/scratch/users/sglli24/fine-tuning-project/old_fine_tuned_model/llama2-7b-tatoeba-qlora/"
+ADAPTER_PATH = "<MODEL_STORAGE>/fine-tuning-project/old_fine_tuned_model/llama2-7b-tatoeba-qlora/"
 
 BASE_MODEL_NAME = "meta-llama/Llama-2-7b-hf"
 DATASET_NAME = "stanfordnlp/sst2"
