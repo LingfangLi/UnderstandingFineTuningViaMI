@@ -22,7 +22,7 @@ config = {
     "lang2": "fr",
     "max_seq_length": 256,
     "learning_rate": 2e-5,
-    "batch_size": 4,
+    "batch_size": 8,
     "gradient_accumulation_steps": 1,
     "num_epochs": 1,
     "eval_steps": 200,
@@ -77,12 +77,12 @@ def formatting_prompts_func(examples):
 model = AutoModelForCausalLM.from_pretrained(
     config['model_name'],
     torch_dtype=torch.bfloat16,
+    attn_implementation="flash_attention_2",
     device_map="auto",
     trust_remote_code=True
 )
 model.config.use_cache = False
 model.config.pretraining_tp = 1
-model.gradient_checkpointing_enable()
 
 tokenizer = AutoTokenizer.from_pretrained(config['model_name'], trust_remote_code=True)
 tokenizer.pad_token = tokenizer.eos_token
@@ -111,8 +111,9 @@ training_arguments = SFTConfig(
     logging_steps=config['logging_steps'],
     fp16=False,
     bf16=True,
-    optim="adamw_bnb_8bit",
-    gradient_checkpointing=True,
+    optim="adamw_torch_fused",
+    gradient_checkpointing=False,
+    tf32=True,
     max_grad_norm=0.3,
     warmup_ratio=0.03,
     group_by_length=True,

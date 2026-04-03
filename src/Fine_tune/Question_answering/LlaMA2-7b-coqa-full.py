@@ -21,8 +21,8 @@ config = {
     "max_seq_length": 1024,
     "target_pairs": 15000,
     "learning_rate": 2e-5,
-    "batch_size": 1,
-    "gradient_accumulation_steps": 8,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 2,
     "num_epochs": 1,
     "eval_steps": 100,
     "save_steps": 100,
@@ -112,6 +112,7 @@ def formatting_prompts_func(examples):
 model = AutoModelForCausalLM.from_pretrained(
     config['model_name'],
     torch_dtype=torch.bfloat16,
+    attn_implementation="flash_attention_2",
     device_map="auto",
     trust_remote_code=True
 )
@@ -147,8 +148,9 @@ training_arguments = SFTConfig(
     logging_steps=config['logging_steps'],
     fp16=False,
     bf16=True,
-    optim="adamw_bnb_8bit",
+    optim="adamw_torch_fused",
     gradient_checkpointing=True,
+    tf32=True,
     max_grad_norm=0.3,
     warmup_ratio=0.03,
     group_by_length=True,
