@@ -10,6 +10,8 @@ from transformers import (
     TrainingArguments
 )
 from trl import SFTConfig, SFTTrainer
+import transformers
+_NEW_API = int(transformers.__version__.split('.')[0]) >= 5
 
 os.environ["WANDB_PROJECT"] = "MI_llama2-yelp-full-finetune"
 
@@ -63,9 +65,10 @@ def formatting_prompts_func(examples):
         return format_single_item(text, label_raw)
 
 # 3. Model Loading (Full Fine-Tuning)
+_dtype_kwarg = {"dtype": torch.bfloat16} if _NEW_API else {"torch_dtype": torch.bfloat16}
 model = AutoModelForCausalLM.from_pretrained(
     config['model_name'],
-    dtype=torch.bfloat16,
+    **_dtype_kwarg,
     device_map="auto",
     trust_remote_code=True
 )
