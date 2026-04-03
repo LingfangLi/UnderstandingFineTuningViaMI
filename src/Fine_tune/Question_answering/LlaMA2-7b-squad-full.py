@@ -65,8 +65,7 @@ def formatting_prompts_func(examples):
 # 3. Model Loading (Full Fine-Tuning)
 model = AutoModelForCausalLM.from_pretrained(
     config['model_name'],
-    torch_dtype=torch.bfloat16,
-    attn_implementation="flash_attention_2",
+    dtype=torch.bfloat16,
     device_map="auto",
     trust_remote_code=True
 )
