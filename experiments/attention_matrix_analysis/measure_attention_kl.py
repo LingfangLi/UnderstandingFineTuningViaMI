@@ -20,12 +20,14 @@ class UserConfig:
     RUN_MODE = "SINGLE"  # "ALL" or "SINGLE"
 
     # Single run target
-    TARGET_MODEL = "llama2"#["gpt2","llama2","llama3","qwen2"]
-    TARGET_TASK =  "sentiment_sst2-fix"
+    TARGET_MODEL = "llama2_full_ft"#["gpt2","llama2","llama2_full_ft","llama3","qwen2"]
+    TARGET_TASK =  ["sentiment_sst2","sentiment_yelp","qa_squad","mt_kde4","mt_tatoeba","qa_coqa"]
 
     # Path configuration
-    MODEL_ROOT_DIR = r"<MODEL_STORAGE>/fine-tuning-project-1/old_version_finetuned_models/"
-    OUTPUT_DIR = r"<PROJECT_ROOT>/experiments/attention_matrix_analysis/attention_analysis_results/"
+    PROJECT_ROOT = "/users/sglli24/UnderstandingFineTuningViaMI/"
+    MODEL_STORAGE = "/mnt/scratch/users/sglli24/"
+    MODEL_ROOT_DIR = rf"{MODEL_STORAGE}/fine-tuning-project/fine_tuned_model/"
+    OUTPUT_DIR = rf"{PROJECT_ROOT}/experiments/attention_matrix_analysis/attention_analysis_results/"
 
     # Fine-tuned model folder mapping
     FT_MODEL_MAP = {
@@ -47,11 +49,19 @@ class UserConfig:
         },
         "llama2": {
             "sentiment_yelp": "llama2-yelp",
-            "sentiment_sst2-fix": "llama2-sst2-fix",
+            "sentiment_sst2": "llama2-sst2",
             "qa_squad":       "llama2-squad",
             "qa_coqa":        "llama2-coqa",
             "mt_kde4":        "llama2-kde4",
             "mt_tatoeba":     "llama2-tatoeba",
+        },
+        "llama2_full_ft": {
+            "sentiment_yelp": "llama2-7b-yelp-full",
+            "sentiment_sst2": "llama2-7b-sst2-full",
+            "qa_squad":       "llama2-7b-squad-full",
+            "qa_coqa":        "llama2-7b-coqa-full",
+            "mt_kde4":        "llama2-7b-kde4-full",
+            "mt_tatoeba":     "llama2-7b-tatoeba-full",
         },
         "qwen2": {
             "sentiment_yelp": "qwen2-yelp",
@@ -112,6 +122,7 @@ class SysConfig:
     BASE_MODELS = {
         'gpt2': 'gpt2',
         'llama2': 'meta-llama/Llama-2-7b-hf',
+        'llama2_full_ft': 'meta-llama/Llama-2-7b-hf',
         'llama3': 'meta-llama/Llama-3.2-1B',
         'qwen2': 'Qwen/Qwen2-0.5B'
     }
@@ -124,7 +135,7 @@ class SysConfig:
             "formatters": {"llama2": PromptFormatter.llama2_yelp, "gpt2": PromptFormatter.simple_yelp,
                            "llama3": PromptFormatter.simple_yelp, "qwen2": PromptFormatter.llama2_yelp }
         },
-        "sentiment_sst2-fix": {
+        "sentiment_sst2": {
             "dataset": ("stanfordnlp/sst2", None),
             "split": "test", "range": (0, 100),
             "processor": lambda d: [{"text": s["sentence"]} for s in d],
@@ -169,7 +180,7 @@ class ModelLoader:
     def load(model_key: str, is_finetuned: bool, task_name: str) -> HookedTransformer:
         device = UserConfig.DEVICE
 
-        use_bf16 = (model_key == "llama2" and task_name == "mt_kde4" and
+        use_bf16 = (model_key in ("llama2", "llama2_full_ft") and task_name == "mt_kde4" and
                     torch.cuda.is_available() and torch.cuda.is_bf16_supported())
         dtype = torch.bfloat16 if use_bf16 else (torch.float16 if "llama" in model_key else torch.float32)
 
@@ -270,7 +281,9 @@ class DataLoader:
     @staticmethod
     def get_prompts(model_key: str, task_name: str) -> List[str]:
         task_cfg = SysConfig.TASKS[task_name]
-        formatter = task_cfg["formatters"].get(model_key, task_cfg["formatters"].get("gpt2"))
+        # llama2_full_ft uses the same prompt format as llama2
+        formatter_key = "llama2" if model_key == "llama2_full_ft" else model_key
+        formatter = task_cfg["formatters"].get(formatter_key, task_cfg["formatters"].get("gpt2"))
 
         ds_name, ds_cfg = task_cfg["dataset"]
         if ds_cfg:

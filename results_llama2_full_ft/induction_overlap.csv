@@ -1,0 +1,7 @@
+task,n_induction_heads,n_eap_top400_heads,overlap,recall_pct,precision_pct,max_induction_score,top_induction_heads_sample
+sentiment_yelp,53,263,4,7.55,1.52,~0.98,"(6,30) (8,31) (12,26) (19,9)"
+sentiment_sst2,52,94,0,0.00,0.00,~0.98,"disjoint"
+qa_squad,15,270,2,13.33,0.74,0.503,"(7,12) (11,15)"
+qa_coqa,61,227,12,19.67,5.29,~0.98,"(6,9) (6,30) (7,12) (7,13) (8,26) (8,31) (11,14) (13,11) (14,3) (14,7) (14,24) (17,30)"
+mt_kde4,58,166,0,0.00,0.00,~0.98,"disjoint"
+mt_tatoeba,49,88,0,0.00,0.00,~0.98,"disjoint"
