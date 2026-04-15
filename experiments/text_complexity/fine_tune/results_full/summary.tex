@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\caption{Llama-2-7B full fine-tuning on lexical-complexity-filtered training subsets, evaluated on both subsets. Yelp metric: accuracy; SQuAD: token-F1; Tatoeba: BLEU. Bold marks best per column.}
+\label{tab:tc_full_ft}
+\begin{tabular}{llcc}
+\toprule
+Task & Model & Test=Simple & Test=Complex \\
+\midrule
+Yelp & Base (no FT) & 0.0360 & 0.0290 \\
+ & FT$_{\text{simple}}$ & 0.9360 & 0.9400 \\
+ & FT$_{\text{complex}}$ & \textbf{0.9390} & \textbf{0.9450} \\
+\midrule
+SQuAD & Base (no FT) & 0.5125 & 0.5375 \\
+ & FT$_{\text{simple}}$ & \textbf{0.7569} & \textbf{0.8437} \\
+ & FT$_{\text{complex}}$ & 0.7566 & 0.8390 \\
+\midrule
+Tatoeba & Base (no FT) & 0.2679 & 0.2671 \\
+ & FT$_{\text{simple}}$ & \textbf{0.3523} & \textbf{0.3757} \\
+ & FT$_{\text{complex}}$ & 0.3446 & 0.3606 \\
+\bottomrule
+\end{tabular}
+\end{table}

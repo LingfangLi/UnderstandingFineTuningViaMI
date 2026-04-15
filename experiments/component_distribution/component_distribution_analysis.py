@@ -1,8 +1,11 @@
+import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 from collections import defaultdict
 import pandas as pd
 import re
+import os
 
 
 def parse_component_type(component_id):
@@ -205,7 +208,7 @@ def plot_component_pie_chart(percentages, task_name="", model_name="", save_path
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
         print(f"Figure saved to: {save_path}")
 
-    plt.show()
+    plt.close('all')
 
 
 def analyze_and_plot(file_path, model_name, task_name="",
@@ -329,14 +332,20 @@ if __name__ == "__main__":
      #           save_path=f"./figure/{model_path_name}_{task_name}_top_400_edges_component_distribution.png"
      #       )
 
-    for model_name, model_path_name in zip(["LlaMA-2-7B", "GPT2-Small", "LlaMA-3.2-1B","Qwen2-0.5B"],["llama2", "gpt2", "llama3.2","qwen2"]):
-        for task_name in ["yelp","squad","coqa","kde4","tatoeba","sst2"]:
+    # Regenerate llama2 component distribution from new full FT EAP edges (in finetuned/)
+    # Other models' figures in figure/ are from earlier runs and not touched here.
+    PROJECT_ROOT = "/users/sglli24/UnderstandingFineTuningViaMI"
+    FIGURE_DIR = os.path.join(os.path.dirname(__file__), "figure")
+    os.makedirs(FIGURE_DIR, exist_ok=True)
+
+    for model_name, model_path_name in [("LlaMA-2-7B", "llama2")]:
+        for task_name in ["yelp", "squad", "coqa", "kde4", "tatoeba", "sst2"]:
             analyze_and_plot(
-                file_path=f"<PROJECT_ROOT>/output/EAP_edges/old-version-finetuned/{model_path_name}_{task_name}_finetuned_edges.csv",
+                file_path=f"{PROJECT_ROOT}/output/EAP_edges/finetuned/{model_path_name}_{task_name}_finetuned_edges.csv",
                 model_name=model_name,
-                task_name= task_name,
+                task_name=task_name,
                 threshold_percentile=0,
-                save_path=f"./figure/{model_path_name}_{task_name}_top_400_edges_component_distribution.pdf"
+                save_path=os.path.join(FIGURE_DIR, f"{model_path_name}_{task_name}_top_400_edges_component_distribution.pdf"),
             )
 
     print("\n" + "=" * 80)

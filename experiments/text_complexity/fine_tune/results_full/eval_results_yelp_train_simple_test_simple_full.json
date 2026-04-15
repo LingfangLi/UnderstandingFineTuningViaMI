@@ -1,0 +1,50 @@
+{
+    "config": {
+        "is_base_model": false,
+        "model_path": "/mnt/scratch/users/sglli24/fine-tuning-project/fine_tuned_model/text_complexity/llama2-7b-yelp-simple-full-20260410-201454",
+        "train_subset": "simple",
+        "test_subset": "simple",
+        "test_index_path": "/users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/matrix_analysis/yelp_lexically_simple_test_indices.txt"
+    },
+    "metrics": {
+        "accuracy": 0.936,
+        "classification_report": "              precision    recall  f1-score   support\n\n    Negative     0.9873    0.9154    0.9499       508\n    Positive     0.9854    0.9573    0.9711       492\n\n   micro avg     0.9863    0.9360    0.9605      1000\n   macro avg     0.9863    0.9363    0.9605      1000\nweighted avg     0.9863    0.9360    0.9604      1000\n"
+    },
+    "samples": [
+        {
+            "text_snippet": "Been going to Dr. Goldberg for over 10 years. I think I was one of his 1st patients when he started ",
+            "prediction_raw": "positive",
+            "prediction_mapped": 1,
+            "ground_truth": 1,
+            "correct": true
+        },
+        {
+            "text_snippet": "This place is absolute garbage...  Half of the tees are not available, including all the grass tees.",
+            "prediction_raw": "negative",
+            "prediction_mapped": 0,
+            "ground_truth": 0,
+            "correct": true
+        },
+        {
+            "text_snippet": "Before I finally made it over to this range I heard the same thing from most people - it's just fine",
+            "prediction_raw": "positive",
+            "prediction_mapped": 1,
+            "ground_truth": 1,
+            "correct": true
+        },
+        {
+            "text_snippet": "I drove by yesterday to get a sneak peak.  It re-opens on July 14th and I can't wait to take my kids",
+            "prediction_raw": "positive",
+            "prediction_mapped": 1,
+            "ground_truth": 1,
+            "correct": true
+        },
+        {
+            "text_snippet": "Used to go there for tires, brakes, etc.  Their prices have gone way up-$400 for 4 mid-level tires f",
+            "prediction_raw": "negative",
+            "prediction_mapped": 0,
+            "ground_truth": 0,
+            "correct": true
+        }
+    ]
+}

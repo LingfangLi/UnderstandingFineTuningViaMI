@@ -188,8 +188,9 @@ class OverlapAnalyzer:
 
 # Configuration and Main Program
 if __name__ == "__main__":
-    OUTPUT_DIR = r"<PROJECT_ROOT>/experiments/induction_head/output/"
-    EAP_CSV_DIR = r"<PROJECT_ROOT>/output/EAP_edges/finetuned/"
+    PROJECT_ROOT = "/users/sglli24/UnderstandingFineTuningViaMI"
+    OUTPUT_DIR = f"{PROJECT_ROOT}/experiments/induction_head/output/"
+    EAP_CSV_DIR = f"{PROJECT_ROOT}/output/EAP_edges/finetuned/"
 
     MODEL_CONFIGS = {
         "gpt2": (12, 12),
@@ -217,7 +218,7 @@ if __name__ == "__main__":
         },
         "llama2": {
             "sentiment_yelp": "llama2_yelp_finetuned_edges.csv",
-            "sentiment_sst2-fix": "llama2_sst2_finetuned_edges.csv",
+            "sentiment_sst2": "llama2_sst2_finetuned_edges.csv",
             "qa_squad":       "llama2_squad_finetuned_edges.csv",
             "qa_coqa":        "llama2_coqa_finetuned_edges.csv",
             "mt_kde4":        "llama2_kde4_finetuned_edges.csv",

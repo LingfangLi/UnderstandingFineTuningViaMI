@@ -1,0 +1,314 @@
+{
+    "config": {
+        "is_base_model": true,
+        "model_path": "meta-llama/Llama-2-7b-hf",
+        "train_subset": null,
+        "test_subset": "complex",
+        "test_index_path": "/users/sglli24/UnderstandingFineTuningViaMI/experiments/text_complexity/matrix_analysis/tatoeba_lexically_complex_test_indices.txt"
+    },
+    "metrics": {
+        "avg_bleu": 0.2671429485970122
+    },
+    "samples": [
+        {
+            "english": "It's the sort of work that calls for a high level of concentration.",
+            "reference": "C'est le genre de travail qui requiert un niveau élevé de concentration.",
+            "prediction": "C'est du travail qui demande un haut niveau de concentration.",
+            "bleu": 0.05943817665919135
+        },
+        {
+            "english": "It simply doesn't bear thinking about.",
+            "reference": "Mieux vaut ne pas y penser.",
+            "prediction": "C'est trop pénible à penser.",
+            "bleu": 0.0439891724758422
+        },
+        {
+            "english": "That's not a proper thing to say.",
+            "reference": "Cela ne se dit pas.",
+            "prediction": "C'est pas une chose convenable de dire.",
+            "bleu": 0
+        },
+        {
+            "english": "That's nothing but a figure of speech.",
+            "reference": "Ce n'est ni plus ni moins qu'une formule.",
+            "prediction": "C'est une figure de style.",
+            "bleu": 0
+        },
+        {
+            "english": "That goes without saying.",
+            "reference": "Point n'est besoin de le dire.",
+            "prediction": "Ça va sans dire.",
+            "bleu": 0.04873039689743777
+        },
+        {
+            "english": "It is the oldest wooden building in existence.",
+            "reference": "C'est le plus ancien bâtiment en bois qui existe.",
+            "prediction": "C'est la plus ancienne maison en bois existante.",
+            "bleu": 0.06164542728425844
+        },
+        {
+            "english": "Leave it where you found it.",
+            "reference": "Laisse ça où tu l'as trouvé.",
+            "prediction": "Laissez-le où vous l'avez trouvé.",
+            "bleu": 0.05231223689135342
+        },
+        {
+            "english": "It is not as good as it looks.",
+            "reference": "Ce n'est pas aussi bon que ça en a l'air.",
+            "prediction": "It is not as good as it looks.",
+            "bleu": 0
+        },
+        {
+            "english": "It is no joke.",
+            "reference": "Ce n'est pas une blague.",
+            "prediction": "C'est pas une plaisanterie.",
+            "bleu": 0.13232169883599026
+        },
+        {
+            "english": "That's your responsibility.",
+            "reference": "C'est de votre responsabilité.",
+            "prediction": "C'est votre responsabilité.",
+            "bleu": 0.19053627645285995
+        },
+        {
+            "english": "That is something you should not have said.",
+            "reference": "Voilà quelque chose que tu n'aurais pas dû dire.",
+            "prediction": "C'est quelque chose que vous ne devriez pas avoir dit.",
+            "bleu": 0.1122444464861146
+        },
+        {
+            "english": "It rests on your decision.",
+            "reference": "Cela dépend de votre décision.",
+            "prediction": "Il repose sur votre décision.",
+            "bleu": 0.11362193664674995
+        },
+        {
+            "english": "It is up to you.",
+            "reference": "Cela dépend de toi.",
+            "prediction": "C'est à toi.",
+            "bleu": 0.0814136751754278
+        },
+        {
+            "english": "Is it near your house?",
+            "reference": "Est-ce près de chez toi ?",
+            "prediction": "Est-ce près de chez toi?",
+            "bleu": 0.5475182535069453
+        },
+        {
+            "english": "You can't mistake it.",
+            "reference": "Tu ne peux pas te tromper.",
+            "prediction": "You can't mistake it.",
+            "bleu": 0
+        },
+        {
+            "english": "That has nothing to do with you.",
+            "reference": "Cela n'a rien à voir avec toi.",
+            "prediction": "Ça ne te regarde pas.",
+            "bleu": 0
+        },
+        {
+            "english": "It is not so difficult as you think.",
+            "reference": "Ce n'est pas si difficile que tu le penses.",
+            "prediction": "It is not so difficult as you think.",
+            "bleu": 0
+        },
+        {
+            "english": "It is not so difficult as you think.",
+            "reference": "Ce n'est pas aussi difficile que tu le penses.",
+            "prediction": "It is not so difficult as you think.",
+            "bleu": 0
+        },
+        {
+            "english": "It is not so difficult as you think.",
+            "reference": "Ce n'est pas aussi difficile que vous le pensez.",
+            "prediction": "It is not so difficult as you think.",
+            "bleu": 0
+        },
+        {
+            "english": "It is not to be wondered at.",
+            "reference": "Ce n'est pas étonnant.",
+            "prediction": "Il n'est pas étonnant.",
+            "bleu": 0.3976353643835253
+        },
+        {
+            "english": "How did you like it?",
+            "reference": "Cela t'a-t-il plu ?",
+            "prediction": "Comment vous a-t-il plu?",
+            "bleu": 0
+        },
+        {
+            "english": "It tasted sweet.",
+            "reference": "Ça avait un goût sucré.",
+            "prediction": "C'est doux.",
+            "bleu": 0
+        },
+        {
+            "english": "It tasted sweet.",
+            "reference": "Ça goûtait sucré.",
+            "prediction": "C'est doux.",
+            "bleu": 0
+        },
+        {
+            "english": "It is like looking for a needle in a haystack.",
+            "reference": "C'est comme chercher une aiguille dans une botte de foin.",
+            "prediction": "C'est comme chercher une aiguille dans un chapeau.",
+            "bleu": 0.5298765308495281
+        },
+        {
+            "english": "It is like looking for a needle in a haystack.",
+            "reference": "Autant chercher une aiguille dans une botte de foin.",
+            "prediction": "C'est comme chercher une aiguille dans un chapeau.",
+            "bleu": 0.3050975216056289
+        },
+        {
+            "english": "It came apart.",
+            "reference": "C'est cassé.",
+            "prediction": "It came apart.",
+            "bleu": 0
+        },
+        {
+            "english": "It was a problem difficult to solve.",
+            "reference": "C'était un problème difficile à résoudre.",
+            "prediction": "C'était un problème difficile à résoudre.",
+            "bleu": 1.0
+        },
+        {
+            "english": "It serves our purpose.",
+            "reference": "Ça sert notre objectif.",
+            "prediction": "It serves our purpose.",
+            "bleu": 0
+        },
+        {
+            "english": "That has no bearing on our plan.",
+            "reference": "Cela n'a aucune incidence sur notre plan.",
+            "prediction": "Ça n'a pas d'importance dans notre plan.",
+            "bleu": 0.07730551756939454
+        },
+        {
+            "english": "It shows the depth of his love for his family.",
+            "reference": "Cela montre son amour profond envers sa famille.",
+            "prediction": "Il montre la profondeur de son amour pour sa famille.",
+            "bleu": 0.06674094719041482
+        },
+        {
+            "english": "It is something like a ball.",
+            "reference": "C'est quelque chose qui ressemble à une balle.",
+            "prediction": "It is something like a ball.",
+            "bleu": 0
+        },
+        {
+            "english": "It's in pencil so you can rub it out if you need to.",
+            "reference": "C'est au crayon, donc tu peux le gommer si besoin.",
+            "prediction": "C'est en crayon, donc vous pouvez le gratter si vous le voulez.",
+            "bleu": 0.045293761707938834
+        },
+        {
+            "english": "I put it in the drawer.",
+            "reference": "Je l'ai mis dans le tiroir.",
+            "prediction": "Je l'ai mis dans le tiroir.",
+            "bleu": 1.0
+        },
+        {
+            "english": "I put it in the drawer.",
+            "reference": "Je l'ai mise dans le tiroir.",
+            "prediction": "Je l'ai mis dans le tiroir.",
+            "bleu": 0.25406637407730737
+        },
+        {
+            "english": "It is made partly of wood.",
+            "reference": "C'est partiellement fait de bois.",
+            "prediction": "Il est fait en partie de bois.",
+            "bleu": 0.07730551756939454
+        },
+        {
+            "english": "Wow! That's cheap!",
+            "reference": "Waou ! C'est bon marché !",
+            "prediction": "Wow! That's cheap!",
+            "bleu": 0
+        },
+        {
+            "english": "Wow! That's cheap!",
+            "reference": "Waou ! C'est pas cher !",
+            "prediction": "Wow! That's cheap!",
+            "bleu": 0
+        },
+        {
+            "english": "I made it myself.",
+            "reference": "Je l'ai confectionnée moi-même.",
+            "prediction": "Je l'ai fait moi-même.",
+            "bleu": 0.1880301546543197
+        },
+        {
+            "english": "I made it myself.",
+            "reference": "Je l'ai confectionné par moi-même.",
+            "prediction": "Je l'ai fait moi-même.",
+            "bleu": 0.14643803168582153
+        },
+        {
+            "english": "I made it myself.",
+            "reference": "Je l'ai fait moi-même.",
+            "prediction": "Je l'ai fait moi-même.",
+            "bleu": 1.0
+        },
+        {
+            "english": "It interferes with our industrial development.",
+            "reference": "Cela interfère avec notre développement industriel.",
+            "prediction": "It interfere with our industrial development.",
+            "bleu": 0
+        },
+        {
+            "english": "It's against the rules.",
+            "reference": "C'est contraire aux règles.",
+            "prediction": "C'est contre les règles.",
+            "bleu": 0.09554427922043669
+        },
+        {
+            "english": "It's against the rules.",
+            "reference": "C'est en infraction avec les règles.",
+            "prediction": "C'est contre les règles.",
+            "bleu": 0.11404605374835301
+        },
+        {
+            "english": "It looks like an apple.",
+            "reference": "Ça ressemble à une pomme.",
+            "prediction": "It looks like an apple.",
+            "bleu": 0
+        },
+        {
+            "english": "It smells delicious.",
+            "reference": "Cela sent délicieusement bon.",
+            "prediction": "Ça sent bon.",
+            "bleu": 0.09681772177713914
+        },
+        {
+            "english": "It's worth a try.",
+            "reference": "Ça vaut le coup d'essayer.",
+            "prediction": "C'est à essayer.",
+            "bleu": 0
+        },
+        {
+            "english": "I think it's worth a try.",
+            "reference": "Je pense que ça vaut le coup d'essayer.",
+            "prediction": "Je pense que c'est une bonne idée.",
+            "bleu": 0.1417182961428368
+        },
+        {
+            "english": "Keep it at a lower temperature.",
+            "reference": "Conservez-le au frais.",
+            "prediction": "Keep it at a lower temperature.",
+            "bleu": 0
+        },
+        {
+            "english": "It's already out of fashion.",
+            "reference": "C'est déjà démodé.",
+            "prediction": "C'est déjà passé de mode.",
+            "bleu": 0.11362193664674995
+        },
+        {
+            "english": "It was an event that occurred only rarely.",
+            "reference": "C'était un évènement qui n'arrivait que très rarement.",
+            "prediction": "It was an event that occurred only rarely.",
+            "bleu": 0
+        }
+    ]
+}

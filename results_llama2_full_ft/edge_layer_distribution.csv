@@ -1,7 +1,0 @@
-task,num_edges,total_head_mentions,top1_layer,top1_count,top2_layer,top2_count,top3_layer,top3_count,top4_layer,top4_count,top5_layer,top5_count,distribution_pattern
-yelp,400,356,2,41,4,35,3,34,5,33,6,29,early (L2-L6 dominated)
-sst2,400,202,19,25,31,21,23,16,20,15,16,14,mid-late (L16-L31 spread)
-squad,404,374,2,45,3,39,4,38,5,34,6,34,early (L2-L6 dominated)
-coqa,400,332,2,45,4,44,5,43,3,39,6,37,early (L2-L6 dominated)
-kde4,405,282,31,81,0,34,3,32,2,30,4,20,boundary (L0 + L31 dominated)
-tatoeba,403,361,31,153,0,119,1,74,30,12,28,2,boundary (L0/L1 + L30/L31 dominated)

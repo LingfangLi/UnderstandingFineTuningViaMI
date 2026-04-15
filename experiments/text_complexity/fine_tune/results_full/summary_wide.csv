@@ -1,0 +1,10 @@
+task,train_subset,metric,test_simple,test_complex
+yelp,base,accuracy,0.036,0.029
+yelp,simple,accuracy,0.936,0.94
+yelp,complex,accuracy,0.939,0.945
+squad,base,avg_f1,0.5125261419999281,0.5374524019951668
+squad,simple,avg_f1,0.7568570093715336,0.8437477658949082
+squad,complex,avg_f1,0.756634343738242,0.8389731599626343
+tatoeba,base,avg_bleu,0.26788006412972454,0.2671429485970122
+tatoeba,simple,avg_bleu,0.352273949662738,0.3756655788470908
+tatoeba,complex,avg_bleu,0.34459236116748265,0.36060694697533235
