@@ -1,0 +1,57 @@
+\begin{table*}[htb]
+\centering
+\footnotesize
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|l|cc|cc|cc|cc|cc|cc|}
+\hline
+\multirow{3}{*}{\textbf{Test Task}} & \multicolumn{12}{c|}{\textbf{Fine-tuned Model}} \\
+\cline{2-13}
+ & \multicolumn{2}{c|}{\textbf{Yelp}} & \multicolumn{2}{c|}{\textbf{SST2}} & \multicolumn{2}{c|}{\textbf{SQuAD}} & \multicolumn{2}{c|}{\textbf{CoQA}} & \multicolumn{2}{c|}{\textbf{KDE4}} & \multicolumn{2}{c|}{\textbf{TATOEBA}} \\
+\cline{2-13}
+ & Perf$\Delta$ & Overlap & Perf$\Delta$ & Overlap & Perf$\Delta$ & Overlap & Perf$\Delta$ & Overlap & Perf$\Delta$ & Overlap & Perf$\Delta$ & Overlap \\
+\hline
+\hline
+\multicolumn{13}{|c|}{\textit{GPT-2 Small Models}} \\
+\hline
+\textbf{Yelp} & $\uparrow$34.04\,pp & 100\% & $\uparrow$81.90\,pp & 26.75\% & $\downarrow$2.60\,pp & 26.25\% & $\uparrow$0.30\,pp & 25.75\% & $\uparrow$3.30\,pp & 30.50\% & $\downarrow$3.00\,pp & 27.75\% \\
+\textbf{SST2} & \textbf{$\uparrow$66.86\,pp} & 24.25\% & \textbf{$\uparrow$85.09\,pp} & 100\% & $\uparrow$0.34\,pp & 25.50\% & $\downarrow$0.23\,pp & 26.00\% & $\uparrow$0.80\,pp & 26.75\% & $\uparrow$0.80\,pp & 26.25\% \\
+\textbf{SQuAD} & $\downarrow$3.03\,pp & 26.25\% & $\uparrow$4.93\,pp & 24.50\% & \textbf{$\uparrow$24.14\,pp} & 100\% & \textbf{$\uparrow$14.39\,pp} & 26.50\% & $\downarrow$1.92\,pp & 34.50\% & $\downarrow$2.14\,pp & 27.50\% \\
+\textbf{CoQA} & $\downarrow$0.39\,pp & 24.25\% & $\uparrow$3.06\,pp & 24.25\% & $\uparrow$10.16\,pp & 23.00\% & $\uparrow$11.68\,pp & 100\% & $\downarrow$1.37\,pp & 32.75\% & $\downarrow$2.21\,pp & 24.50\% \\
+\textbf{KDE4} & $\downarrow$3.91\,pp & 30.25\% & $\uparrow$1.36\,pp & 32.00\% & $\downarrow$1.76\,pp & 34.00\% & $\downarrow$2.56\,pp & 32.25\% & \textbf{$\uparrow$31.60\,pp} & 100\% & $\downarrow$0.99\,pp & 29.75\% \\
+\textbf{TATOEBA} & $\downarrow$1.18\,pp & 27.75\% & $\downarrow$4.66\,pp & 29.75\% & $\downarrow$1.11\,pp & 29.75\% & $\downarrow$0.71\,pp & 27.25\% & $\uparrow$10.74\,pp & 27.00\% & \textbf{$\uparrow$20.02\,pp} & 100\% \\
+\hline
+\hline
+\multicolumn{13}{|c|}{\textit{LLama-3.2-1B Models}} \\
+\hline
+\textbf{Yelp} & $\uparrow$33.80\,pp & 100\% & $\uparrow$59.20\,pp & 12.50\% & $\downarrow$8.40\,pp & 15.25\% & $\downarrow$1.80\,pp & 15.25\% & $\uparrow$5.80\,pp & 13.25\% & $\downarrow$9.60\,pp & 15.25\% \\
+\textbf{SST2} & \textbf{$\uparrow$88.19\,pp} & 12.00\% & \textbf{$\uparrow$90.71\,pp} & 100\% & $\uparrow$8.94\,pp & 17.50\% & $\uparrow$1.38\,pp & 9.75\% & $\downarrow$0.11\,pp & 12.75\% & $\uparrow$1.95\,pp & 11.00\% \\
+\textbf{SQuAD} & $\downarrow$8.42\,pp & 17.75\% & $\uparrow$23.48\,pp & 13.75\% & \textbf{$\uparrow$43.04\,pp} & 100\% & \textbf{$\uparrow$32.17\,pp} & 14.50\% & $\downarrow$1.35\,pp & 11.50\% & $\downarrow$2.70\,pp & 11.75\% \\
+\textbf{CoQA} & $\downarrow$2.48\,pp & 15.00\% & $\uparrow$26.70\,pp & 12.00\% & $\uparrow$9.29\,pp & 15.75\% & $\uparrow$9.53\,pp & 100\% & $\downarrow$0.75\,pp & 11.50\% & $\downarrow$0.59\,pp & 9.00\% \\
+\textbf{KDE4} & $\downarrow$11.45\,pp & 20.50\% & $\uparrow$0.44\,pp & 19.75\% & $\uparrow$0.96\,pp & 19.00\% & $\uparrow$1.74\,pp & 16.75\% & \textbf{$\uparrow$26.09\,pp} & 100\% & $\uparrow$10.62\,pp & 15.25\% \\
+\textbf{TATOEBA} & $\downarrow$25.83\,pp & 12.50\% & $\downarrow$1.00\,pp & 12.00\% & $\uparrow$1.13\,pp & 23.25\% & $\uparrow$2.33\,pp & 14.00\% & $\downarrow$1.33\,pp & 12.00\% & \textbf{$\uparrow$11.77\,pp} & 100\% \\
+\hline
+\hline
+\multicolumn{13}{|c|}{\textit{Qwen2-0.5B Models}} \\
+\hline
+\textbf{Yelp} & \textbf{$\uparrow$25.10\,pp} & 100\% & $\uparrow$16.70\,pp & 14.50\% & $\downarrow$58.30\,pp & 19.00\% & $\uparrow$4.20\,pp & 19.50\% & $\downarrow$68.10\,pp & 18.25\% & $\downarrow$71.50\,pp & 15.75\% \\
+\textbf{SST2} & $\uparrow$23.51\,pp & 14.50\% & \textbf{$\uparrow$31.77\,pp} & 100\% & $\downarrow$44.38\,pp & 21.00\% & $\downarrow$3.78\,pp & 17.75\% & $\downarrow$60.09\,pp & 18.50\% & $\downarrow$60.78\,pp & 17.75\% \\
+\textbf{SQuAD} & $\downarrow$4.59\,pp & 13.25\% & $\downarrow$34.91\,pp & 14.00\% & \textbf{$\uparrow$31.65\,pp} & 100\% & \textbf{$\uparrow$27.52\,pp} & 12.50\% & $\downarrow$6.37\,pp & 11.50\% & $\downarrow$43.94\,pp & 13.25\% \\
+\textbf{CoQA} & $\downarrow$9.51\,pp & 16.75\% & $\downarrow$16.10\,pp & 14.25\% & $\uparrow$10.25\,pp & 20.75\% & $\uparrow$26.56\,pp & 100\% & $\uparrow$1.09\,pp & 18.75\% & $\downarrow$14.57\,pp & 15.25\% \\
+\textbf{KDE4} & $\downarrow$6.83\,pp & 26.75\% & $\downarrow$15.46\,pp & 21.75\% & $\downarrow$7.33\,pp & 25.50\% & $\downarrow$5.51\,pp & 27.50\% & \textbf{$\uparrow$21.01\,pp} & 100\% & $\downarrow$1.74\,pp & 23.25\% \\
+\textbf{TATOEBA} & $\downarrow$6.45\,pp & 13.75\% & $\downarrow$23.85\,pp & 13.50\% & $\downarrow$8.90\,pp & 14.75\% & $\downarrow$8.58\,pp & 17.25\% & $\uparrow$0.99\,pp & 13.00\% & \textbf{$\uparrow$16.68\,pp} & 100\% \\
+\hline
+\hline
+\multicolumn{13}{|c|}{\textit{LLama-2-7B Models}} \\
+\hline
+\textbf{Yelp} & $\uparrow$90.10\,pp & 100\% & $\uparrow$89.20\,pp & 41.75\% & $\uparrow$89.00\,pp & 44.00\% & $\uparrow$89.00\,pp & 38.50\% & $\uparrow$89.70\,pp & 40.75\% & $\uparrow$89.40\,pp & 43.25\% \\
+\textbf{SST2} & \textbf{$\uparrow$94.95\,pp} & 30.50\% & \textbf{$\uparrow$95.41\,pp} & 100\% & \textbf{$\uparrow$94.50\,pp} & 30.50\% & \textbf{$\uparrow$94.95\,pp} & 31.00\% & \textbf{$\uparrow$95.30\,pp} & 30.75\% & \textbf{$\uparrow$95.53\,pp} & 30.50\% \\
+\textbf{SQuAD} & $\uparrow$1.20\,pp & 34.75\% & $\uparrow$3.32\,pp & 37.75\% & $\uparrow$31.96\,pp & 100\% & $\uparrow$29.46\,pp & 36.00\% & $\uparrow$16.11\,pp & 37.00\% & $\uparrow$9.93\,pp & 38.50\% \\
+\textbf{CoQA} & $\uparrow$6.79\,pp & 44.25\% & $\uparrow$2.37\,pp & 48.75\% & $\uparrow$15.86\,pp & 44.25\% & $\uparrow$26.52\,pp & 100\% & $\uparrow$5.18\,pp & 46.75\% & $\uparrow$1.08\,pp & 40.25\% \\
+\textbf{KDE4} & $\uparrow$3.96\,pp & 38.25\% & $\downarrow$0.34\,pp & 37.75\% & $\downarrow$1.26\,pp & 38.25\% & $\downarrow$11.25\,pp & 38.75\% & $\uparrow$22.79\,pp & 100\% & $\uparrow$5.68\,pp & 42.50\% \\
+\textbf{TATOEBA} & $\downarrow$2.25\,pp & 48.00\% & $\downarrow$7.33\,pp & 48.75\% & $\downarrow$4.69\,pp & 48.00\% & $\downarrow$11.13\,pp & 52.75\% & $\downarrow$1.99\,pp & 52.75\% & $\uparrow$5.06\,pp & 100\% \\
+\hline
+\hline
+\end{tabular}}
+\caption{Cross-task performance change and EAP-circuit overlap for GPT-2 Small, LLama-3.2-1B, Qwen2-0.5B and LLama-2-7B. GPT-2 and Llama-3.2 values follow the original paper runs (old raw data) for Yelp/SQuAD/CoQA/KDE4/Tatoeba rows and columns; the SST-2 row and SST-2 column use the current full fine-tuning runs (the original paper used Twitter, which is excluded here). Qwen2 follows the original paper runs in full. Llama-2-7B follows the QLoRA fine-tuning reported in the original paper. \textbf{Perf$\Delta$} is the absolute percentage-point change $(m_{\mathrm{FT}}-m_{\mathrm{Base}})\times 100$ vs.\ the pre-trained base on the row task (Accuracy for SST2/Yelp, F1 for SQuAD/CoQA, BLEU for KDE4/Tatoeba). \textbf{Overlap} is the share of top-400 EAP edges common to the column-model's circuit (on corrupted row-task data) and the row task's own fine-tuned circuit; diagonals are 100\% by construction. For each fine-tuned model (column), the test task with the largest positive Perf$\Delta$ is boldfaced.}
+\label{tab:performance_overlap}
+\end{table*}
