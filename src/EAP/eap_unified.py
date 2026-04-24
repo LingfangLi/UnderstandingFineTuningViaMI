@@ -278,11 +278,15 @@ def get_important_edges(model, dataset, metric, top_k, GraphClass, attribute_fn,
     attribute_fn(model, g, dataset, partial(metric, loss=True, mean=True))
 
     scores = g.scores(absolute=True)
-    top_k_score = scores[-top_k]
-    print(f"   Threshold for top {top_k}: {top_k_score:.4f}")
-    g.apply_threshold(top_k_score, absolute=True)
-
-    edges = {edge_id: edge.score for edge_id, edge in g.edges.items() if edge.in_graph}
+    # top_k <= 0 means "save all edges" (no threshold).
+    if top_k is None or top_k <= 0 or top_k >= len(scores):
+        print(f"   Saving ALL {len(scores)} edges (no top-K threshold)")
+        edges = {edge_id: edge.score for edge_id, edge in g.edges.items()}
+    else:
+        top_k_score = scores[-top_k]
+        print(f"   Threshold for top {top_k}: {top_k_score:.4f}")
+        g.apply_threshold(top_k_score, absolute=True)
+        edges = {edge_id: edge.score for edge_id, edge in g.edges.items() if edge.in_graph}
     
     del g
     torch.cuda.empty_cache()
